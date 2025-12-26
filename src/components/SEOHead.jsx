@@ -45,7 +45,7 @@ const seoData = {
 
 export default function SEOHead({ path }) {
     const data = seoData[path] || seoData['/'];
-    const fullUrl = `https://employee-rights-india.pages.dev${path}`;
+    const fullUrl = `https://employee-rights.rexonsofttech.in${path}`;
 
     return (
         <Helmet>
