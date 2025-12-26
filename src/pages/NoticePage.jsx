@@ -1,4 +1,5 @@
 import LawCard from '../components/LawCard';
+import SEOHead from '../components/SEOHead';
 import { Send, FileCheck, ShieldAlert, TimerOff, Handshake } from 'lucide-react';
 
 export default function NoticePage() {
@@ -31,6 +32,7 @@ export default function NoticePage() {
 
     return (
         <div className="py-12 px-4 bg-gray-50">
+            <SEOHead path="/notice-period" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Notice Period & Resignation</h1>

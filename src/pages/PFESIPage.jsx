@@ -1,6 +1,7 @@
 import LawCard from '../components/LawCard';
 import PFChecker from '../components/PFChecker';
 import SalaryCalculator from '../components/SalaryCalculator';
+import SEOHead from '../components/SEOHead';
 import { Landmark, Heart, ShieldAlert, History } from 'lucide-react';
 
 export default function PFESIPage() {
@@ -33,6 +34,7 @@ export default function PFESIPage() {
 
     return (
         <div className="py-12 px-4 bg-gray-50">
+            <SEOHead path="/pf-esi" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">PF & ESI Rules</h1>

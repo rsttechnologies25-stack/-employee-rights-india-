@@ -1,4 +1,5 @@
 import LawCard from '../components/LawCard';
+import SEOHead from '../components/SEOHead';
 import { FileText, Briefcase, Zap, ShieldAlert, BadgeCheck } from 'lucide-react';
 
 export default function ContractsPage() {
@@ -31,6 +32,7 @@ export default function ContractsPage() {
 
     return (
         <div className="py-12 px-4 bg-gray-50">
+            <SEOHead path="/contracts" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Contracts & Training Bonds</h1>

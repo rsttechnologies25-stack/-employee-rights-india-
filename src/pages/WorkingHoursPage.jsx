@@ -1,4 +1,5 @@
 import LawCard from '../components/LawCard';
+import SEOHead from '../components/SEOHead';
 import { Clock, Moon, ShieldAlert, PhoneOff, Zap } from 'lucide-react';
 
 export default function WorkingHoursPage() {
@@ -31,6 +32,7 @@ export default function WorkingHoursPage() {
 
     return (
         <div className="py-12 px-4 bg-gray-50">
+            <SEOHead path="/working-hours" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Working Hours & Overtime</h1>

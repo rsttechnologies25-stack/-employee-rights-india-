@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import { rightsCategories } from '../data/rightsData';
+import SEOHead from '../components/SEOHead';
 import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function RightsIndexPage() {
     return (
         <div className="py-12 px-4 bg-gray-50 min-h-screen">
+            <SEOHead path="/rights" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 text-center">
                     <div className="inline-flex items-center justify-center gap-3 mb-4">

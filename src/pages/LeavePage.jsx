@@ -1,4 +1,5 @@
 import LawCard from '../components/LawCard';
+import SEOHead from '../components/SEOHead';
 import { Calendar, Thermometer, Palmtree, PartyPopper, CalendarOff, AlertTriangle, CheckCircle, XCircle, Scale } from 'lucide-react';
 
 export default function LeavePage() {
@@ -54,12 +55,13 @@ export default function LeavePage() {
 
     return (
         <div className="py-12 px-4 bg-gray-50">
+            <SEOHead path="/leave-holidays" />
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">🏛️ Holidays & Leave Rights</h1>
                     <p className="text-gray-600 max-w-3xl">
-                        Understanding your statutory leave entitlements under Indian labor law. 
+                        Understanding your statutory leave entitlements under Indian labor law.
                         <span className="font-semibold text-primary"> Leave is a legal right, not a privilege.</span>
                     </p>
                 </div>
@@ -77,23 +79,22 @@ export default function LeavePage() {
                         <Scale className="w-8 h-8 text-primary" />
                         <h2 className="text-2xl font-bold">Can Employers Make You Work on Holidays?</h2>
                     </div>
-                    
+
                     <div className="bg-accent/10 border-l-4 border-accent p-4 rounded-r-lg mb-6">
                         <p className="text-gray-800 font-medium">
-                            ✅ <span className="font-bold">Short Answer: YES, but with conditions.</span> Employers may operate on holidays, 
+                            ✅ <span className="font-bold">Short Answer: YES, but with conditions.</span> Employers may operate on holidays,
                             but employees must be compensated with extra pay or a compensatory off.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         {holidayWorkRules.map((rule, idx) => (
-                            <div 
-                                key={idx} 
-                                className={`flex items-start gap-3 p-4 rounded-xl ${
-                                    rule.allowed 
-                                        ? 'bg-green-50 border border-green-200' 
+                            <div
+                                key={idx}
+                                className={`flex items-start gap-3 p-4 rounded-xl ${rule.allowed
+                                        ? 'bg-green-50 border border-green-200'
                                         : 'bg-red-50 border border-red-200'
-                                }`}
+                                    }`}
                             >
                                 {rule.allowed ? (
                                     <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -225,7 +226,7 @@ export default function LeavePage() {
                 <div className="bg-gradient-to-r from-primary to-accent rounded-2xl p-8 text-white mb-8">
                     <h3 className="text-xl font-bold mb-2">📌 Key Takeaway</h3>
                     <p className="text-lg">
-                        Employers may operate on holidays, but <span className="font-bold underline">employees must be compensated</span> with extra pay or a compensatory off. 
+                        Employers may operate on holidays, but <span className="font-bold underline">employees must be compensated</span> with extra pay or a compensatory off.
                         Leave is a <span className="font-bold">legal right, not a privilege</span>.
                     </p>
                 </div>
@@ -237,7 +238,7 @@ export default function LeavePage() {
                         <div>
                             <p className="font-bold text-yellow-800 mb-1">⚠️ Disclaimer</p>
                             <p className="text-yellow-700 text-sm">
-                                Leave rules may vary slightly by state and establishment type. This information is for general awareness purposes. 
+                                Leave rules may vary slightly by state and establishment type. This information is for general awareness purposes.
                                 For specific cases, consult your state's Shops & Establishments Act or a qualified labor law professional.
                             </p>
                         </div>

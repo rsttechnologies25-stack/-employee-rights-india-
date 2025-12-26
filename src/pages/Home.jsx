@@ -1,9 +1,11 @@
 import { ArrowRight, CheckCircle2, ShieldAlert, ShieldCheck, Database, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import SEOHead from '../components/SEOHead';
 
 export default function Home() {
     return (
         <div>
+            <SEOHead path="/" />
             {/* Hero Section */}
             <section className="bg-gradient-to-br from-primary to-[#1e3a8a] py-20 px-4">
                 <div className="max-w-4xl mx-auto text-center">
