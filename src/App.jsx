@@ -6,6 +6,7 @@ import PFESIPage from './pages/PFESIPage';
 import ContractsPage from './pages/ContractsPage';
 import NoticePage from './pages/NoticePage';
 import WorkingHoursPage from './pages/WorkingHoursPage';
+import LeavePage from './pages/LeavePage';
 import IllegalPracticesPage from './pages/IllegalPracticesPage';
 import RightsIndexPage from './pages/RightsIndexPage';
 import RightsDetailPage from './pages/RightsDetailPage';
@@ -24,6 +25,7 @@ function App() {
                         <Route path="/contracts" element={<ContractsPage />} />
                         <Route path="/notice-period" element={<NoticePage />} />
                         <Route path="/working-hours" element={<WorkingHoursPage />} />
+                        <Route path="/leave-holidays" element={<LeavePage />} />
                         <Route path="/illegal-practices" element={<IllegalPracticesPage />} />
                         <Route path="/rights" element={<RightsIndexPage />} />
                         <Route path="/rights/:categoryId" element={<RightsDetailPage />} />

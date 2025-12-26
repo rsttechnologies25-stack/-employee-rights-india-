@@ -25,6 +25,7 @@ export default function Navbar() {
                         <Link to="/contracts" className="text-gray-600 hover:text-primary font-medium transition-colors">Contracts & Bonds</Link>
                         <Link to="/notice-period" className="text-gray-600 hover:text-primary font-medium transition-colors">Notice Period</Link>
                         <Link to="/working-hours" className="text-gray-600 hover:text-primary font-medium transition-colors">Working Hours</Link>
+                        <Link to="/leave-holidays" className="text-gray-600 hover:text-primary font-medium transition-colors">Leave & Holidays</Link>
                         <Link to="/illegal-practices" className="text-gray-600 hover:text-primary font-medium transition-colors">Illegal Practices</Link>
                     </div>
 
@@ -44,6 +45,7 @@ export default function Navbar() {
                     <Link to="/contracts" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Contracts & Bonds</Link>
                     <Link to="/notice-period" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Notice Period</Link>
                     <Link to="/working-hours" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Working Hours</Link>
+                    <Link to="/leave-holidays" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Leave & Holidays</Link>
                     <Link to="/illegal-practices" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Illegal Practices</Link>
                 </div>
             )}
