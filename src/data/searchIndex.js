@@ -22,4 +22,5 @@ export const searchIndex = [
     { title: "Notice Buyout Calculator", path: "/tools/notice-buyout-calculator", type: "Tools" },
     { title: "Leave Encashment Calculator", path: "/tools/leave-encashment-calculator", type: "Tools" },
     { title: "Take-Home Salary Calculator", path: "/salary-calculator", type: "Tools" },
+    { title: "Official Complaint Guide", path: "/complaint-guide", type: "General" },
 ];

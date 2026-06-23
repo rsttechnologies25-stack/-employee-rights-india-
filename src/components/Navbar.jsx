@@ -68,6 +68,7 @@ const navGroups = [
         items: [
             { to: '/tools', label: 'Calculators' },
             { to: '/templates', label: 'Letter Templates' },
+            { to: '/complaint-guide', label: 'How to File Complaint' },
             { to: '/faq', label: 'Master FAQ' },
         ]
     },
