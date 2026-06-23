@@ -44,6 +44,8 @@ import NoticeBuyoutCalculatorPage from './pages/NoticeBuyoutCalculatorPage';
 import LeaveEncashmentCalculatorPage from './pages/LeaveEncashmentCalculatorPage';
 import FFCalculatorPage from './pages/FFCalculatorPage';
 import SalaryProrationCalculatorPage from './pages/SalaryProrationCalculatorPage';
+import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
+import PFCheckerPage from './pages/PFCheckerPage';
 import MaternityRightsPage from './pages/MaternityRightsPage';
 import POSHActPage from './pages/POSHActPage';
 import PIPGuidePage from './pages/PIPGuidePage';
@@ -96,6 +98,8 @@ function App() {
 
                         {/* Tools & Calculators */}
                         <Route path="/tools" element={<ToolsPage />} />
+                        <Route path="/salary-calculator" element={<SalaryCalculatorPage />} />
+                        <Route path="/pf-checker" element={<PFCheckerPage />} />
                         <Route path="/tools/notice-buyout-calculator" element={<NoticeBuyoutCalculatorPage />} />
                         <Route path="/tools/leave-encashment-calculator" element={<LeaveEncashmentCalculatorPage />} />
                         <Route path="/tools/ff-calculator" element={<FFCalculatorPage />} />
