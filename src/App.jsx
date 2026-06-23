@@ -48,6 +48,13 @@ const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPa
 const StateLawsIndexPage = lazy(() => import('./pages/StateLawsIndexPage'));
 const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
 
+// New Labour Codes Module
+const LabourCodesIndexPage = lazy(() => import('./pages/LabourCodesIndexPage'));
+const WageCodePage = lazy(() => import('./pages/WageCodePage'));
+const SocialSecurityCodePage = lazy(() => import('./pages/SocialSecurityCodePage'));
+const OSHCodePage = lazy(() => import('./pages/OSHCodePage'));
+const IRCodePage = lazy(() => import('./pages/IRCodePage'));
+
 function App() {
     return (
         <Router>
@@ -120,6 +127,13 @@ function App() {
                         {/* State Laws */}
                         <Route path="/state-labour-laws" element={<StateLawsIndexPage />} />
                         <Route path="/state-labour-laws/:stateSlug" element={<StateLawDetailPage />} />
+
+                        {/* New Labour Codes */}
+                        <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />
+                        <Route path="/new-labour-codes/wage-code" element={<WageCodePage />} />
+                        <Route path="/new-labour-codes/social-security-code" element={<SocialSecurityCodePage />} />
+                        <Route path="/new-labour-codes/osh-code" element={<OSHCodePage />} />
+                        <Route path="/new-labour-codes/ir-code" element={<IRCodePage />} />
                         </Routes>
                     </Suspense>
                 </main>

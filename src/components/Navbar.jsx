@@ -13,6 +13,7 @@ const navGroups = [
     {
         label: 'Workplace Rules',
         items: [
+            { to: '/new-labour-codes', label: 'New Labour Codes (2025)' },
             { to: '/state-labour-laws', label: 'State-Wise Labour Laws' },
             { to: '/working-hours', label: 'Working Hours & Overtime' },
             { to: '/leave-holidays', label: 'Leave & Holidays' },
