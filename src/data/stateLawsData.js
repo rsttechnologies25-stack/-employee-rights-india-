@@ -196,5 +196,10 @@ export const stateLawsData = {
     }
 };
 
-export const getAllStates = () => Object.values(stateLawsData);
+export const getAllStates = () => {
+    const states = Object.values(stateLawsData);
+    const tamilNadu = states.find(s => s.slug === 'tamil-nadu');
+    const others = states.filter(s => s.slug !== 'tamil-nadu').sort((a, b) => a.name.localeCompare(b.name));
+    return tamilNadu ? [tamilNadu, ...others] : others;
+};
 export const getStateBySlug = (slug) => stateLawsData[slug];
