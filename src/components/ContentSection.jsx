@@ -65,7 +65,16 @@ export function ContentList({ items, ordered = false, variant = 'default' }) {
                     ) : (
                         <span className={`w-1.5 h-1.5 ${variant === 'danger' ? 'bg-danger' : 'bg-primary'} rounded-full shrink-0 mt-2.5`} />
                     )}
-                    <span className="text-gray-700">{item}</span>
+                    <div className="text-gray-700">
+                        {typeof item === 'object' && item !== null ? (
+                            <>
+                                {item.title && <strong className="text-gray-900 block sm:inline">{item.title}: </strong>}
+                                {item.description}
+                            </>
+                        ) : (
+                            item
+                        )}
+                    </div>
                 </li>
             ))}
         </ul>
