@@ -178,7 +178,7 @@ const seoData = {
     }
 };
 
-export default function SEOHead({ path }) {
+export default function SEOHead({ path, schema }) {
     const data = seoData[path] || seoData['/'];
     const fullUrl = `https://employee-rights.rexonsofttech.in${path}`;
 
@@ -198,6 +198,13 @@ export default function SEOHead({ path }) {
             <meta name="twitter:title" content={data.title} />
             <meta name="twitter:description" content={data.description} />
             <meta name="twitter:url" content={fullUrl} />
+
+            {/* Dynamic Schema Injection */}
+            {schema && (
+                <script type="application/ld+json">
+                    {JSON.stringify(schema)}
+                </script>
+            )}
         </Helmet>
     );
 }

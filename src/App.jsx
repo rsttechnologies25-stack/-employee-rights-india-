@@ -1,59 +1,48 @@
+import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
 
-// Existing pages
-import Home from './pages/Home';
-import PFESIPage from './pages/PFESIPage';
-import ContractsPage from './pages/ContractsPage';
-import NoticePage from './pages/NoticePage';
-import WorkingHoursPage from './pages/WorkingHoursPage';
-import LeavePage from './pages/LeavePage';
-import IllegalPracticesPage from './pages/IllegalPracticesPage';
-import RightsIndexPage from './pages/RightsIndexPage';
-import RightsDetailPage from './pages/RightsDetailPage';
-
-// New Termination Module
-import TerminationProbationPage from './pages/TerminationProbationPage';
-import TerminationConfirmedPage from './pages/TerminationConfirmedPage';
-import WrongfulTerminationPage from './pages/WrongfulTerminationPage';
-
-// New F&F & Exit Module
-import FFSettlementPage from './pages/FFSettlementPage';
-import ExitProcessPage from './pages/ExitProcessPage';
-
-// New Letters Module
-import ExperienceLetterPage from './pages/ExperienceLetterPage';
-import RelievingLetterPage from './pages/RelievingLetterPage';
-import ServiceCertificatePage from './pages/ServiceCertificatePage';
-
-// New Salary Module
-import SalaryCalculationPage from './pages/SalaryCalculationPage';
-import PayCyclePage from './pages/PayCyclePage';
-import DelayedSalaryPage from './pages/DelayedSalaryPage';
-
-// New Gratuity Module
-import GratuityPage from './pages/GratuityPage';
-
-// New Tools & Templates
-import ToolsPage from './pages/ToolsPage';
-import TemplatesPage from './pages/TemplatesPage';
-import FAQPage from './pages/FAQPage';
-import NoticeBuyoutCalculatorPage from './pages/NoticeBuyoutCalculatorPage';
-import LeaveEncashmentCalculatorPage from './pages/LeaveEncashmentCalculatorPage';
-import FFCalculatorPage from './pages/FFCalculatorPage';
-import SalaryProrationCalculatorPage from './pages/SalaryProrationCalculatorPage';
-import SalaryCalculatorPage from './pages/SalaryCalculatorPage';
-import PFCheckerPage from './pages/PFCheckerPage';
-import MaternityRightsPage from './pages/MaternityRightsPage';
-import POSHActPage from './pages/POSHActPage';
-import PIPGuidePage from './pages/PIPGuidePage';
-import ForcedResignationPage from './pages/ForcedResignationPage';
-import MoonlightingPage from './pages/MoonlightingPage';
-import DataPrivacyPage from './pages/DataPrivacyPage';
-import Form16RightsPage from './pages/Form16RightsPage';
-import IncomeTaxCalculatorPage from './pages/IncomeTaxCalculatorPage';
+// Lazy loaded pages
+const Home = lazy(() => import('./pages/Home'));
+const PFESIPage = lazy(() => import('./pages/PFESIPage'));
+const ContractsPage = lazy(() => import('./pages/ContractsPage'));
+const NoticePage = lazy(() => import('./pages/NoticePage'));
+const WorkingHoursPage = lazy(() => import('./pages/WorkingHoursPage'));
+const LeavePage = lazy(() => import('./pages/LeavePage'));
+const IllegalPracticesPage = lazy(() => import('./pages/IllegalPracticesPage'));
+const RightsIndexPage = lazy(() => import('./pages/RightsIndexPage'));
+const RightsDetailPage = lazy(() => import('./pages/RightsDetailPage'));
+const TerminationProbationPage = lazy(() => import('./pages/TerminationProbationPage'));
+const TerminationConfirmedPage = lazy(() => import('./pages/TerminationConfirmedPage'));
+const WrongfulTerminationPage = lazy(() => import('./pages/WrongfulTerminationPage'));
+const FFSettlementPage = lazy(() => import('./pages/FFSettlementPage'));
+const ExitProcessPage = lazy(() => import('./pages/ExitProcessPage'));
+const ExperienceLetterPage = lazy(() => import('./pages/ExperienceLetterPage'));
+const RelievingLetterPage = lazy(() => import('./pages/RelievingLetterPage'));
+const ServiceCertificatePage = lazy(() => import('./pages/ServiceCertificatePage'));
+const SalaryCalculationPage = lazy(() => import('./pages/SalaryCalculationPage'));
+const PayCyclePage = lazy(() => import('./pages/PayCyclePage'));
+const DelayedSalaryPage = lazy(() => import('./pages/DelayedSalaryPage'));
+const GratuityPage = lazy(() => import('./pages/GratuityPage'));
+const ToolsPage = lazy(() => import('./pages/ToolsPage'));
+const TemplatesPage = lazy(() => import('./pages/TemplatesPage'));
+const FAQPage = lazy(() => import('./pages/FAQPage'));
+const NoticeBuyoutCalculatorPage = lazy(() => import('./pages/NoticeBuyoutCalculatorPage'));
+const LeaveEncashmentCalculatorPage = lazy(() => import('./pages/LeaveEncashmentCalculatorPage'));
+const FFCalculatorPage = lazy(() => import('./pages/FFCalculatorPage'));
+const SalaryProrationCalculatorPage = lazy(() => import('./pages/SalaryProrationCalculatorPage'));
+const SalaryCalculatorPage = lazy(() => import('./pages/SalaryCalculatorPage'));
+const PFCheckerPage = lazy(() => import('./pages/PFCheckerPage'));
+const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
+const POSHActPage = lazy(() => import('./pages/POSHActPage'));
+const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
+const ForcedResignationPage = lazy(() => import('./pages/ForcedResignationPage'));
+const MoonlightingPage = lazy(() => import('./pages/MoonlightingPage'));
+const DataPrivacyPage = lazy(() => import('./pages/DataPrivacyPage'));
+const Form16RightsPage = lazy(() => import('./pages/Form16RightsPage'));
+const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPage'));
 
 function App() {
     return (
@@ -62,7 +51,8 @@ function App() {
             <div className="min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary">
                 <Navbar />
                 <main className="flex-grow">
-                    <Routes>
+                    <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh] text-primary"><div className="animate-pulse flex flex-col items-center gap-4"><div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div><span className="font-bold text-gray-500">Loading...</span></div></div>}>
+                        <Routes>
                         {/* Existing Routes */}
                         <Route path="/" element={<Home />} />
                         <Route path="/pf-esi" element={<PFESIPage />} />
@@ -122,7 +112,8 @@ function App() {
 
                         {/* Master FAQ */}
                         <Route path="/faq" element={<FAQPage />} />
-                    </Routes>
+                        </Routes>
+                    </Suspense>
                 </main>
                 <Footer />
             </div>

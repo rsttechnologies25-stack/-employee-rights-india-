@@ -38,9 +38,26 @@ export default function FAQPage() {
 
     const totalCount = Object.values(allFaqs).reduce((sum, arr) => sum + arr.length, 0);
 
+    // Generate Schema for top 20 FAQs
+    const schemaData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": Object.values(allFaqs)
+            .flat()
+            .slice(0, 20)
+            .map(faq => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": faq.answer
+                }
+            }))
+    };
+
     return (
         <div>
-            <SEOHead path="/faq" />
+            <SEOHead path="/faq" schema={schemaData} />
             <PageHero
                 title="Employee Rights FAQ"
                 subtitle={`${totalCount}+ answered questions on termination, salary, gratuity, F&F, notice period, and more.`}
