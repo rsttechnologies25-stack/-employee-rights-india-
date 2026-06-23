@@ -49,7 +49,7 @@ export default function TamilNaduHubPage() {
                         </button>
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+                    <h1 className="text-4xl md:text-5xl font-extrabold mb-6 leading-tight text-white">
                         {t(tnHubData.hero).title}
                     </h1>
                     <p className="text-xl text-blue-100 max-w-2xl leading-relaxed">
