@@ -1,5 +1,5 @@
 import { lazy, Suspense } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
@@ -47,6 +47,10 @@ const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPa
 // New Programmatic SEO Module
 const StateLawsIndexPage = lazy(() => import('./pages/StateLawsIndexPage'));
 const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
+
+// Tamil Nadu Mega-Hub
+const TamilNaduHubPage = lazy(() => import('./pages/TamilNaduHubPage'));
+const TNSectorDetailPage = lazy(() => import('./pages/TNSectorDetailPage'));
 
 // New Labour Codes Module
 const LabourCodesIndexPage = lazy(() => import('./pages/LabourCodesIndexPage'));
@@ -126,7 +130,12 @@ function App() {
 
                         {/* State Laws */}
                         <Route path="/state-labour-laws" element={<StateLawsIndexPage />} />
+                        <Route path="/state-labour-laws/tamil-nadu" element={<Navigate to="/tamil-nadu" replace />} />
                         <Route path="/state-labour-laws/:stateSlug" element={<StateLawDetailPage />} />
+
+                        {/* Tamil Nadu Mega-Hub */}
+                        <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
+                        <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
 
                         {/* New Labour Codes */}
                         <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />

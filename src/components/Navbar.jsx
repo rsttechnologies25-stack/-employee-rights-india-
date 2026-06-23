@@ -4,6 +4,12 @@ import { useState, useRef, useEffect } from 'react';
 
 const navGroups = [
     {
+        label: "Tamil Nadu Hub",
+        items: [
+            { to: '/tamil-nadu', label: 'TN Mega-Hub (தமிழ்)' },
+        ]
+    },
+    {
         label: "Women's Rights",
         items: [
             { to: '/maternity-rights', label: 'Maternity Benefits' },
