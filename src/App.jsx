@@ -44,6 +44,10 @@ const DataPrivacyPage = lazy(() => import('./pages/DataPrivacyPage'));
 const Form16RightsPage = lazy(() => import('./pages/Form16RightsPage'));
 const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPage'));
 
+// New Programmatic SEO Module
+const StateLawsIndexPage = lazy(() => import('./pages/StateLawsIndexPage'));
+const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
+
 function App() {
     return (
         <Router>
@@ -112,6 +116,10 @@ function App() {
 
                         {/* Master FAQ */}
                         <Route path="/faq" element={<FAQPage />} />
+
+                        {/* State Laws */}
+                        <Route path="/state-labour-laws" element={<StateLawsIndexPage />} />
+                        <Route path="/state-labour-laws/:stateSlug" element={<StateLawDetailPage />} />
                         </Routes>
                     </Suspense>
                 </main>
