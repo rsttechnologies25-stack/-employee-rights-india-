@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import { ThemeProvider } from './context/ThemeContext';
 
 // Lazy loaded pages
 const Home = lazy(() => import('./pages/Home'));
@@ -61,10 +62,11 @@ const IRCodePage = lazy(() => import('./pages/IRCodePage'));
 
 function App() {
     return (
-        <Router>
-            <ScrollToTop />
-            <div className="min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary">
-                <Navbar />
+        <ThemeProvider>
+            <Router>
+                <ScrollToTop />
+                <div className="min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary bg-white dark:bg-gray-950 transition-colors duration-300">
+                    <Navbar />
                 <main className="flex-grow">
                     <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh] text-primary"><div className="animate-pulse flex flex-col items-center gap-4"><div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div><span className="font-bold text-gray-500">Loading...</span></div></div>}>
                         <Routes>
@@ -148,7 +150,8 @@ function App() {
                 </main>
                 <Footer />
             </div>
-        </Router>
+            </Router>
+        </ThemeProvider>
     );
 }
 

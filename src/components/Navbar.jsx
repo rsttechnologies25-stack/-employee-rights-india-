@@ -1,6 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, Menu, X, ChevronDown } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
+import { useTheme } from '../context/ThemeContext';
+import SearchBar from './SearchBar';
 
 const navGroups = [
     {
@@ -118,6 +120,7 @@ export default function Navbar() {
     const [openDropdown, setOpenDropdown] = useState(null);
     const [mobileExpanded, setMobileExpanded] = useState(null);
     const location = useLocation();
+    const { theme, toggleTheme } = useTheme();
 
     // Close mobile menu on route change
     useEffect(() => {
@@ -129,18 +132,26 @@ export default function Navbar() {
         <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
-                    <div className="flex items-center">
+                    <div className="flex items-center flex-1">
                         <Link to="/" className="flex items-center gap-2 group">
                             <ShieldCheck className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                            <div className="flex flex-col">
-                                <span className="text-lg font-bold text-gray-900 leading-tight">Employee Rights</span>
-                                <span className="text-[10px] text-accent font-semibold tracking-wider uppercase leading-none">RST Technologies</span>
+                            <div className="hidden sm:flex flex-col">
+                                <span className="font-bold text-xl leading-none tracking-tight text-gray-900 dark:text-white group-hover:text-primary transition-colors">Employee Rights</span>
+                                <span className="text-[10px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">India Guide</span>
                             </div>
                         </Link>
+                        <SearchBar />
                     </div>
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-5">
+                        <button 
+                            onClick={toggleTheme}
+                            className="p-2 text-gray-500 hover:text-primary transition-colors"
+                            aria-label="Toggle Dark Mode"
+                        >
+                            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
+                        </button>
                         <Link to="/rights" className="text-accent hover:text-accent-dark font-bold transition-colors text-sm">All Rights</Link>
                         {navGroups.map((group, idx) => (
                             <DropdownMenu
