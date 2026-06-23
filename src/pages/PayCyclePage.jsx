@@ -23,7 +23,7 @@ export default function PayCyclePage() {
                 icon={Calendar}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Salary & Pay', path: '/pay-cycle' },
@@ -34,16 +34,16 @@ export default function PayCyclePage() {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
                             <div className="p-5 bg-success/5 rounded-xl border border-success/20 text-center">
                                 <p className="text-4xl font-black text-success mb-2">7th</p>
-                                <p className="font-bold text-gray-800">Small Establishments</p>
-                                <p className="text-sm text-gray-500">Less than 1,000 employees</p>
+                                <p className="font-bold text-gray-800 dark:text-gray-200">Small Establishments</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Less than 1,000 employees</p>
                             </div>
                             <div className="p-5 bg-primary/5 rounded-xl border border-primary/20 text-center">
                                 <p className="text-4xl font-black text-primary mb-2">10th</p>
-                                <p className="font-bold text-gray-800">Large Establishments</p>
-                                <p className="text-sm text-gray-500">1,000 or more employees</p>
+                                <p className="font-bold text-gray-800 dark:text-gray-200">Large Establishments</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">1,000 or more employees</p>
                             </div>
                         </div>
-                        <p className="text-sm text-gray-600">These deadlines are under <strong>Section 5 of the Payment of Wages Act, 1936</strong>. Consistently paying after the 7th or 10th is a legal violation.</p>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">These deadlines are under <strong>Section 5 of the Payment of Wages Act, 1936</strong>. Consistently paying after the 7th or 10th is a legal violation.</p>
                     </ContentSection>
 
                     <ContentSection title="How the Monthly Pay Cycle Works" icon={Calendar} variant="default">
@@ -54,9 +54,9 @@ export default function PayCyclePage() {
                                 { phase: '7th or 10th (latest)', desc: 'Net salary credited to employee bank account.' },
                                 { phase: '15th–30th', desc: 'Employer files monthly PF/ESI challans and remits contributions to EPFO/ESIC.' },
                             ].map((p, idx) => (
-                                <div key={idx} className="flex gap-4 p-4 bg-white rounded-xl border border-gray-100">
+                                <div key={idx} className="flex gap-4 p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <div className="px-3 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold whitespace-nowrap">{p.phase}</div>
-                                    <p className="text-sm text-gray-700">{p.desc}</p>
+                                    <p className="text-sm text-gray-700 dark:text-gray-300">{p.desc}</p>
                                 </div>
                             ))}
                         </div>
@@ -80,8 +80,8 @@ export default function PayCyclePage() {
                         <p>No. Holding back salary as leverage is illegal. Common employer excuses vs. the legal reality:</p>
                         <div className="overflow-x-auto mt-4">
                             <table className="w-full text-sm">
-                                <thead><tr className="bg-gray-50"><th className="px-4 py-3 text-left text-gray-700 font-bold">Employer's Claim</th><th className="px-4 py-3 text-left text-gray-700 font-bold">Legal Reality</th></tr></thead>
-                                <tbody className="divide-y divide-gray-100 bg-white">
+                                <thead><tr className="bg-gray-50 dark:bg-gray-900"><th className="px-4 py-3 text-left text-gray-700 dark:text-gray-300 font-bold">Employer's Claim</th><th className="px-4 py-3 text-left text-gray-700 dark:text-gray-300 font-bold">Legal Reality</th></tr></thead>
+                                <tbody className="divide-y divide-gray-100 bg-white dark:bg-gray-950">
                                     <tr><td className="px-4 py-3">"Salary on hold until handover is complete"</td><td className="px-4 py-3 text-danger font-medium">Illegal — salary must be paid, handover is separate</td></tr>
                                     <tr><td className="px-4 py-3">"Hold until you sign the NDAs and clearance"</td><td className="px-4 py-3 text-danger font-medium">Illegal — coercion through salary hold</td></tr>
                                     <tr><td className="px-4 py-3">"Cash flow problem, will pay next month"</td><td className="px-4 py-3 text-danger font-medium">Not a legal excuse — employer is liable regardless</td></tr>

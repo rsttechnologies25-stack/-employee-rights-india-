@@ -9,7 +9,7 @@ const iconMap = {
 };
 
 const styleMap = {
-    default: 'bg-white border-gray-100',
+    default: 'bg-white dark:bg-gray-950 border-gray-100 dark:border-gray-800',
     success: 'bg-success/5 border-success/20',
     warning: 'bg-warning/5 border-warning/20',
     danger: 'bg-danger/5 border-danger/20',
@@ -36,10 +36,10 @@ export default function ContentSection({ title, icon, variant = 'default', child
                     {IconComponent && (
                         <IconComponent className={`w-6 h-6 ${iconColors[variant]} shrink-0`} />
                     )}
-                    <h2 className="text-xl font-bold text-gray-900">{title}</h2>
+                    <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">{title}</h2>
                 </div>
             )}
-            <div className="space-y-4 text-gray-700 leading-relaxed">
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
                 {children}
             </div>
         </section>
@@ -65,10 +65,10 @@ export function ContentList({ items, ordered = false, variant = 'default' }) {
                     ) : (
                         <span className={`w-1.5 h-1.5 ${variant === 'danger' ? 'bg-danger' : 'bg-primary'} rounded-full shrink-0 mt-2.5`} />
                     )}
-                    <div className="text-gray-700">
+                    <div className="text-gray-700 dark:text-gray-300">
                         {typeof item === 'object' && item !== null ? (
                             <>
-                                {item.title && <strong className="text-gray-900 block sm:inline">{item.title}: </strong>}
+                                {item.title && <strong className="text-gray-900 dark:text-gray-100 block sm:inline">{item.title}: </strong>}
                                 {item.description}
                             </>
                         ) : (

@@ -26,7 +26,7 @@ export default function NoticeBuyoutCalculator() {
         <div>
             <SEOHead path="/tools/notice-buyout-calculator" />
             <PageHero title="Notice Period Buyout Calculator" subtitle="Calculate how much you need to pay to leave before your notice period ends." icon={Clock} gradient="primary" />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'Notice Buyout Calculator', path: '/tools/notice-buyout-calculator' }]} />
                     <CalculatorCard title="Notice Period Buyout Calculator" description="Estimate the amount payable to exit before serving full notice" icon={Clock}

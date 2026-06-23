@@ -27,7 +27,7 @@ export default function Breadcrumb({ items }) {
             <Helmet>
                 <script type="application/ld+json">{JSON.stringify(schemaData)}</script>
             </Helmet>
-            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500 mb-8 flex-wrap">
+            <nav aria-label="Breadcrumb" className="flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400 mb-8 flex-wrap">
                 <Link to="/" className="hover:text-primary transition-colors flex items-center gap-1">
                     <Home className="w-4 h-4" />
                     <span className="hidden sm:inline">Home</span>
@@ -36,7 +36,7 @@ export default function Breadcrumb({ items }) {
                     <span key={idx} className="flex items-center gap-1.5">
                         <ChevronRight className="w-3.5 h-3.5 text-gray-300" />
                         {idx === items.length - 1 ? (
-                            <span className="text-gray-900 font-medium truncate max-w-[200px] sm:max-w-none">{item.label}</span>
+                            <span className="text-gray-900 dark:text-gray-100 font-medium truncate max-w-[200px] sm:max-w-none">{item.label}</span>
                         ) : (
                             <Link to={item.path} className="hover:text-primary transition-colors truncate max-w-[150px] sm:max-w-none">
                                 {item.label}

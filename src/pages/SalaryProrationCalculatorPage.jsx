@@ -33,7 +33,7 @@ export default function SalaryProrationCalculatorPage() {
         <div>
             <SEOHead path="/tools/salary-proration-calculator" />
             <PageHero title="Salary Proration Calculator" subtitle="Compare all 4 salary calculation methods side-by-side with your actual numbers." icon={Calculator} gradient="primary" />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'Salary Proration Calculator', path: '/tools/salary-proration-calculator' }]} />
                     <CalculatorCard title="Salary Proration Calculator" description="See exactly how much you get paid under each method your employer might use" icon={Calculator}
@@ -47,11 +47,11 @@ export default function SalaryProrationCalculatorPage() {
                         <div className="overflow-x-auto">
                             <table className="w-full text-sm">
                                 <thead>
-                                    <tr className="bg-gray-50">
-                                        <th className="px-4 py-3 text-left font-bold text-gray-700">Method</th>
-                                        <th className="px-4 py-3 text-right font-bold text-gray-700">Per Day</th>
-                                        <th className="px-4 py-3 text-right font-bold text-gray-700">Earned Salary</th>
-                                        <th className="px-4 py-3 text-left font-bold text-gray-700">Note</th>
+                                    <tr className="bg-gray-50 dark:bg-gray-900">
+                                        <th className="px-4 py-3 text-left font-bold text-gray-700 dark:text-gray-300">Method</th>
+                                        <th className="px-4 py-3 text-right font-bold text-gray-700 dark:text-gray-300">Per Day</th>
+                                        <th className="px-4 py-3 text-right font-bold text-gray-700 dark:text-gray-300">Earned Salary</th>
+                                        <th className="px-4 py-3 text-left font-bold text-gray-700 dark:text-gray-300">Note</th>
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
@@ -59,21 +59,21 @@ export default function SalaryProrationCalculatorPage() {
                                         const earned = (monthlySalary / m.divisor) * daysWorked;
                                         const isHighest = Math.abs(earned - best) < 0.01;
                                         return (
-                                            <tr key={idx} className={isHighest ? 'bg-success/5 border-success/20' : 'bg-white hover:bg-gray-50'}>
-                                                <td className="px-4 py-4 font-medium text-gray-900">
+                                            <tr key={idx} className={isHighest ? 'bg-success/5 border-success/20' : 'bg-white dark:bg-gray-950 hover:bg-gray-50 dark:bg-gray-900'}>
+                                                <td className="px-4 py-4 font-medium text-gray-900 dark:text-gray-100">
                                                     {m.label}
                                                     {isHighest && <span className="ml-2 text-[10px] bg-success text-white px-1.5 py-0.5 rounded-full font-bold">HIGHEST</span>}
                                                 </td>
                                                 <td className="px-4 py-4 text-right font-mono">{fmt(monthlySalary / m.divisor)}</td>
-                                                <td className={`px-4 py-4 text-right font-mono font-bold text-lg ${isHighest ? 'text-success' : 'text-gray-900'}`}>{fmt(earned)}</td>
-                                                <td className="px-4 py-4 text-xs text-gray-500">{m.desc}</td>
+                                                <td className={`px-4 py-4 text-right font-mono font-bold text-lg ${isHighest ? 'text-success' : 'text-gray-900 dark:text-gray-100'}`}>{fmt(earned)}</td>
+                                                <td className="px-4 py-4 text-xs text-gray-500 dark:text-gray-400">{m.desc}</td>
                                             </tr>
                                         );
                                     })}
                                 </tbody>
                                 <tfoot>
                                     <tr className="bg-gray-100">
-                                        <td colSpan="4" className="px-4 py-3 text-xs text-gray-500">
+                                        <td colSpan="4" className="px-4 py-3 text-xs text-gray-500 dark:text-gray-400">
                                             Difference between highest and lowest: <strong>{fmt(Math.max(...methods.map(m => (monthlySalary / m.divisor) * daysWorked)) - Math.min(...methods.map(m => (monthlySalary / m.divisor) * daysWorked)))}</strong>
                                         </td>
                                     </tr>

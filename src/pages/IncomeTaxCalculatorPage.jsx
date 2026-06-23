@@ -99,7 +99,7 @@ export default function IncomeTaxCalculatorPage() {
                 icon={Calculator}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-5xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'Income Tax Calculator', path: '/tools/income-tax-calculator' }]} />
 
@@ -110,8 +110,8 @@ export default function IncomeTaxCalculatorPage() {
                                 <div className="space-y-4">
                                     <CalcInput label="Gross Annual Salary (₹)" value={income} onChange={setIncome} type="number" min="0" step="50000" />
                                     
-                                    <div className="pt-4 border-t border-gray-100">
-                                        <h4 className="font-bold text-sm text-gray-900 mb-4">Old Regime Exemptions & Deductions</h4>
+                                    <div className="pt-4 border-t border-gray-100 dark:border-gray-800">
+                                        <h4 className="font-bold text-sm text-gray-900 dark:text-gray-100 mb-4">Old Regime Exemptions & Deductions</h4>
                                         <CalcInput label="Section 80C (EPF, LIC, ELSS) Max 1.5L" value={deductions} onChange={setDeductions} type="number" min="0" />
                                         <CalcInput label="Section 80CCD(1B) (NPS) Max 50K" value={nps} onChange={setNps} type="number" min="0" />
                                         <CalcInput label="HRA Exemption Amount" value={hra} onChange={setHra} type="number" min="0" />
@@ -119,14 +119,14 @@ export default function IncomeTaxCalculatorPage() {
                                         <CalcInput label="Home Loan Interest (Sec 24)" value={homeLoanInterest} onChange={setHomeLoanInterest} type="number" min="0" />
                                         <CalcInput label="LTA Exemption Amount" value={lta} onChange={setLta} type="number" min="0" />
                                     </div>
-                                    <p className="text-xs text-gray-500 mt-2">Standard Deduction of ₹50,000 is automatically applied to both regimes.</p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Standard Deduction of ₹50,000 is automatically applied to both regimes.</p>
                                 </div>
                             </CalculatorCard>
                         </div>
 
                         {/* Results */}
                         <div className="lg:col-span-7">
-                            <div className="bg-white rounded-2xl shadow-soft border border-gray-100 overflow-hidden sticky top-24">
+                            <div className="bg-white dark:bg-gray-950 rounded-2xl shadow-soft border border-gray-100 dark:border-gray-800 overflow-hidden sticky top-24">
                                 <div className="bg-primary p-6 text-white text-center">
                                     <h3 className="text-lg font-medium opacity-90 mb-1">Recommendation</h3>
                                     {winner === 'Equal' ? (
@@ -134,7 +134,7 @@ export default function IncomeTaxCalculatorPage() {
                                     ) : (
                                         <>
                                             <div className="text-3xl font-black">{winner} is Better</div>
-                                            <div className="text-sm font-medium mt-2 bg-white/20 inline-block px-3 py-1 rounded-full">
+                                            <div className="text-sm font-medium mt-2 bg-white dark:bg-gray-950/20 inline-block px-3 py-1 rounded-full">
                                                 Saves you ₹{difference.toLocaleString('en-IN')}
                                             </div>
                                         </>
@@ -144,23 +144,23 @@ export default function IncomeTaxCalculatorPage() {
                                 <div className="p-6">
                                     <div className="grid grid-cols-2 gap-4">
                                         {/* Old Regime Card */}
-                                        <div className={`p-4 rounded-xl border-2 transition-colors ${winner === 'Old Regime' ? 'border-success bg-success/5' : 'border-gray-100 bg-gray-50'}`}>
+                                        <div className={`p-4 rounded-xl border-2 transition-colors ${winner === 'Old Regime' ? 'border-success bg-success/5' : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900'}`}>
                                             <div className="text-center">
-                                                <div className="text-sm font-bold text-gray-600 mb-1">Old Regime Tax</div>
-                                                <div className={`text-2xl font-black ${winner === 'Old Regime' ? 'text-success' : 'text-gray-900'}`}>
+                                                <div className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">Old Regime Tax</div>
+                                                <div className={`text-2xl font-black ${winner === 'Old Regime' ? 'text-success' : 'text-gray-900 dark:text-gray-100'}`}>
                                                     ₹{oldTax.toLocaleString('en-IN')}
                                                 </div>
                                             </div>
-                                            <div className="mt-4 pt-4 border-t border-gray-200/50 text-xs space-y-2">
-                                                <div className="flex justify-between text-gray-600">
+                                            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700/50 text-xs space-y-2">
+                                                <div className="flex justify-between text-gray-600 dark:text-gray-400">
                                                     <span>Gross Income</span>
                                                     <span>₹{income.toLocaleString('en-IN')}</span>
                                                 </div>
-                                                <div className="flex justify-between text-gray-600">
+                                                <div className="flex justify-between text-gray-600 dark:text-gray-400">
                                                     <span>Deductions</span>
                                                     <span>-₹{(Number(deductions) + Number(nps) + Number(hra) + Number(medical) + Number(lta) + Number(homeLoanInterest) + STANDARD_DEDUCTION).toLocaleString('en-IN')}</span>
                                                 </div>
-                                                <div className="flex justify-between font-bold text-gray-900">
+                                                <div className="flex justify-between font-bold text-gray-900 dark:text-gray-100">
                                                     <span>Taxable Income</span>
                                                     <span>₹{Math.max(0, income - deductions - nps - hra - medical - lta - homeLoanInterest - STANDARD_DEDUCTION).toLocaleString('en-IN')}</span>
                                                 </div>
@@ -168,23 +168,23 @@ export default function IncomeTaxCalculatorPage() {
                                         </div>
 
                                         {/* New Regime Card */}
-                                        <div className={`p-4 rounded-xl border-2 transition-colors ${winner === 'New Regime' ? 'border-success bg-success/5' : 'border-gray-100 bg-gray-50'}`}>
+                                        <div className={`p-4 rounded-xl border-2 transition-colors ${winner === 'New Regime' ? 'border-success bg-success/5' : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900'}`}>
                                             <div className="text-center">
-                                                <div className="text-sm font-bold text-gray-600 mb-1">New Regime Tax</div>
-                                                <div className={`text-2xl font-black ${winner === 'New Regime' ? 'text-success' : 'text-gray-900'}`}>
+                                                <div className="text-sm font-bold text-gray-600 dark:text-gray-400 mb-1">New Regime Tax</div>
+                                                <div className={`text-2xl font-black ${winner === 'New Regime' ? 'text-success' : 'text-gray-900 dark:text-gray-100'}`}>
                                                     ₹{newTax.toLocaleString('en-IN')}
                                                 </div>
                                             </div>
-                                            <div className="mt-4 pt-4 border-t border-gray-200/50 text-xs space-y-2">
-                                                <div className="flex justify-between text-gray-600">
+                                            <div className="mt-4 pt-4 border-t border-gray-200 dark:border-gray-700/50 text-xs space-y-2">
+                                                <div className="flex justify-between text-gray-600 dark:text-gray-400">
                                                     <span>Gross Income</span>
                                                     <span>₹{income.toLocaleString('en-IN')}</span>
                                                 </div>
-                                                <div className="flex justify-between text-gray-600">
+                                                <div className="flex justify-between text-gray-600 dark:text-gray-400">
                                                     <span>Deductions</span>
                                                     <span>-₹{(STANDARD_DEDUCTION).toLocaleString('en-IN')}</span>
                                                 </div>
-                                                <div className="flex justify-between font-bold text-gray-900">
+                                                <div className="flex justify-between font-bold text-gray-900 dark:text-gray-100">
                                                     <span>Taxable Income</span>
                                                     <span>₹{Math.max(0, income - STANDARD_DEDUCTION).toLocaleString('en-IN')}</span>
                                                 </div>

@@ -23,7 +23,7 @@ export default function OSHCodePage() {
                 icon={Stethoscope}
                 gradient="green"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'New Labour Codes', path: '/new-labour-codes' },
@@ -36,7 +36,7 @@ export default function OSHCodePage() {
                         </p>
                         <div className="bg-green-50 border border-green-200 rounded-xl p-6 my-6">
                             <h3 className="font-bold text-green-900 mb-2">How it Actually Works</h3>
-                            <p className="text-gray-800">
+                            <p className="text-gray-800 dark:text-gray-200">
                                 The statutory maximum limit of <strong>48 working hours per week</strong> remains unchanged. What the OSH Code allows is flexibility in distributing these hours. If a company and its employees agree to a 4-day workweek, employees must work <strong>12 hours a day (12 x 4 = 48)</strong>. You get 3 days off, but your daily shifts become much longer.
                             </p>
                         </div>

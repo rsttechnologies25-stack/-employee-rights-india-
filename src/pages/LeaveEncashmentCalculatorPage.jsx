@@ -26,7 +26,7 @@ export default function LeaveEncashmentCalculatorPage() {
         <div>
             <SEOHead path="/tools/leave-encashment-calculator" />
             <PageHero title="Leave Encashment Calculator" subtitle="Calculate your earned leave encashment at the time of exit from a company." icon={Sun} gradient="accent" />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'Leave Encashment Calculator', path: '/tools/leave-encashment-calculator' }]} />
                     <CalculatorCard title="Leave Encashment Calculator" description="Estimate your earned leave encashment during F&F settlement" icon={Sun}
@@ -35,10 +35,10 @@ export default function LeaveEncashmentCalculatorPage() {
                             <CalcInput label="Basic Salary + DA (Monthly)" value={basicDa} onChange={v => setBasicDa(Number(v))} prefix="₹" placeholder="25000" helpText="Basic + Dearness Allowance only" />
                             <CalcInput label="Leave Balance (Days)" value={leaveDays} onChange={v => setLeaveDays(Number(v))} placeholder="15" suffix="days" />
                             <div>
-                                <label className="block text-sm font-bold text-gray-700 mb-2">Calculation Method</label>
+                                <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Calculation Method</label>
                                 <div className="flex gap-2">
                                     {[30, 26].map(d => (
-                                        <button key={d} onClick={() => setMethod(d)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${method === d ? 'bg-accent text-white' : 'bg-gray-50 text-gray-600 border border-gray-200'}`}>÷{d}</button>
+                                        <button key={d} onClick={() => setMethod(d)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${method === d ? 'bg-accent text-white' : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700'}`}>÷{d}</button>
                                     ))}
                                 </div>
                             </div>

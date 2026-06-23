@@ -48,7 +48,7 @@ export default function TNSectorDetailPage() {
                         
                         <button 
                             onClick={toggleLanguage}
-                            className="flex items-center gap-2 bg-white/10 border border-white/20 text-white px-4 py-2 rounded-xl font-bold hover:bg-white/20 transition-colors"
+                            className="flex items-center gap-2 bg-white dark:bg-gray-950/10 border border-white/20 text-white px-4 py-2 rounded-xl font-bold hover:bg-white dark:bg-gray-950/20 transition-colors"
                         >
                             <Globe className="w-4 h-4" />
                             {tnHubData.hero[lang === 'en' ? 'ta' : 'en'].toggleLabel}
@@ -60,46 +60,46 @@ export default function TNSectorDetailPage() {
                 </div>
             </div>
 
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto space-y-8">
                     
                     {/* Working Hours Card */}
-                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="p-3 bg-blue-50 text-blue-600 rounded-xl">
                                 <CheckCircle2 className="w-6 h-6" />
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                                 {lang === 'en' ? 'Working Hours & Overtime' : 'வேலை நேரம் மற்றும் கூடுதல் நேரம்'}
                             </h2>
                         </div>
-                        <p className="text-gray-700 leading-relaxed text-lg">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                             {content.content.workingHours}
                         </p>
                     </div>
 
                     {/* Leave Policy Card */}
-                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="p-3 bg-green-50 text-green-600 rounded-xl">
                                 <ShieldCheck className="w-6 h-6" />
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                                 {lang === 'en' ? 'Leave Policy & Holidays' : 'விடுமுறை விதிகள்'}
                             </h2>
                         </div>
-                        <p className="text-gray-700 leading-relaxed text-lg">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                             {content.content.leaves}
                         </p>
                     </div>
 
                     {/* Safety / Night Shift / Special Rules Card */}
-                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="p-3 bg-orange-50 text-orange-600 rounded-xl">
                                 <AlertTriangle className="w-6 h-6" />
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                                 {content.content.nightShift ? 
                                     (lang === 'en' ? 'Women Night Shift Rules' : 'பெண்கள் இரவு பணி விதிகள்') : 
                                  content.content.safety ? 
@@ -110,18 +110,18 @@ export default function TNSectorDetailPage() {
                                     (lang === 'en' ? 'Minimum Wages' : 'குறைந்தபட்ச ஊதியம்') : 'Special Rules'}
                             </h2>
                         </div>
-                        <p className="text-gray-700 leading-relaxed text-lg">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                             {content.content.nightShift || content.content.safety || content.content.rightToSit || content.content.wages}
                         </p>
                     </div>
 
                     {/* Termination / Welfare Card */}
-                    <div className="bg-white rounded-2xl p-6 md:p-8 border border-gray-100 shadow-soft">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
                             <div className="p-3 bg-red-50 text-red-600 rounded-xl">
                                 <AlertTriangle className="w-6 h-6" />
                             </div>
-                            <h2 className="text-xl font-bold text-gray-900">
+                            <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
                                 {content.content.termination ? 
                                     (lang === 'en' ? 'Termination & Layoffs' : 'பணிநீக்கம் விதிகள்') : 
                                  content.content.welfareBoard ? 
@@ -130,7 +130,7 @@ export default function TNSectorDetailPage() {
                                     (lang === 'en' ? 'Migrant Accommodation' : 'புலம்பெயர்ந்தோர் தங்குமிடம்') : 'Rules'}
                             </h2>
                         </div>
-                        <p className="text-gray-700 leading-relaxed text-lg">
+                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                             {content.content.termination || content.content.welfareBoard || content.content.accommodation}
                         </p>
                     </div>

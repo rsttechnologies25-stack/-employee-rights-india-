@@ -23,7 +23,7 @@ export default function MaternityRightsPage() {
                 icon={Baby}
                 gradient="purple"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Women\'s Rights', path: '/maternity-rights' }, { label: 'Maternity Benefits', path: '/maternity-rights' }]} />
 
@@ -37,11 +37,11 @@ export default function MaternityRightsPage() {
                                 { title: 'Medical Bonus', desc: '₹3,500 if pre-natal/post-natal care is not provided by employer.' },
                                 { title: '1 Month Extra', desc: 'Paid leave for illnesses arising out of pregnancy or delivery.' }
                             ].map((item, idx) => (
-                                <div key={idx} className="bg-white p-4 rounded-xl border border-success/20 flex gap-3">
+                                <div key={idx} className="bg-white dark:bg-gray-950 p-4 rounded-xl border border-success/20 flex gap-3">
                                     <CheckCircle2 className="w-5 h-5 text-success shrink-0" />
                                     <div>
-                                        <h4 className="font-bold text-gray-900 text-sm">{item.title}</h4>
-                                        <p className="text-sm text-gray-600 mt-1 leading-relaxed">{item.desc}</p>
+                                        <h4 className="font-bold text-gray-900 dark:text-gray-100 text-sm">{item.title}</h4>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1 leading-relaxed">{item.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -50,10 +50,10 @@ export default function MaternityRightsPage() {
 
                     <ContentSection title="Eligibility Criteria" icon={CheckCircle2} variant="default">
                         <div className="space-y-4">
-                            <p className="text-gray-700">To be eligible for maternity benefits, you must meet the following criteria:</p>
+                            <p className="text-gray-700 dark:text-gray-300">To be eligible for maternity benefits, you must meet the following criteria:</p>
                             <div className="bg-primary/5 p-6 rounded-xl border border-primary/10">
                                 <h3 className="font-bold text-primary mb-2 text-lg">The 80-Day Rule</h3>
-                                <p className="text-gray-700">You must have worked for the employer for at least <strong>80 days</strong> in the 12 months immediately preceding the date of your expected delivery.</p>
+                                <p className="text-gray-700 dark:text-gray-300">You must have worked for the employer for at least <strong>80 days</strong> in the 12 months immediately preceding the date of your expected delivery.</p>
                             </div>
                             <CalloutBox type="info" title="Applies to All Employment Types">
                                 The act applies universally. You are eligible whether you are on probation, a contract worker, a consultant, or a confirmed employee, as long as you meet the 80-day requirement.
@@ -63,8 +63,8 @@ export default function MaternityRightsPage() {
 
                     <ContentSection title="Protection from Termination" icon={AlertTriangle} variant="danger">
                         <div className="space-y-4">
-                            <p className="text-gray-700">The Maternity Benefit Act offers strong job security protections for pregnant women:</p>
-                            <ul className="list-disc pl-5 space-y-2 text-gray-700">
+                            <p className="text-gray-700 dark:text-gray-300">The Maternity Benefit Act offers strong job security protections for pregnant women:</p>
+                            <ul className="list-disc pl-5 space-y-2 text-gray-700 dark:text-gray-300">
                                 <li><strong>Section 12:</strong> It is unlawful for your employer to discharge or dismiss you during or on account of your maternity leave.</li>
                                 <li>It is illegal to issue a notice of discharge that would expire during your maternity leave.</li>
                                 <li>Taking maternity leave cannot be used as a reason to alter the conditions of your service to your disadvantage (e.g., demotion, salary reduction).</li>

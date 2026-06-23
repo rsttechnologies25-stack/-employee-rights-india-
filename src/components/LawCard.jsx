@@ -32,10 +32,10 @@ export default function LawCard({ title, description, status = 'green', icon: Ic
                 </div>
             </div>
             <h3 className="text-xl font-bold mb-3">{title}</h3>
-            <p className="text-gray-600 text-sm leading-relaxed mb-6">
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-6">
                 {description}
             </p>
-            <div className="flex items-center gap-2 mt-auto pt-4 border-t border-gray-50 text-xs font-semibold uppercase tracking-widest text-gray-400">
+            <div className="flex items-center gap-2 mt-auto pt-4 border-t border-gray-50 dark:border-gray-800 text-xs font-semibold uppercase tracking-widest text-gray-400">
                 <StatusIcon className={`w-4 h-4 ${status === 'green' ? 'text-success' : status === 'yellow' ? 'text-warning' : 'text-danger'}`} />
                 <span>Requirement Status</span>
             </div>

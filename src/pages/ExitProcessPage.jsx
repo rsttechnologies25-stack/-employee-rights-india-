@@ -46,7 +46,7 @@ export default function ExitProcessPage() {
                 icon={LogOut}
                 gradient="teal"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Exit Process & Documents', path: '/exit-process' }]} />
 
@@ -56,12 +56,12 @@ export default function ExitProcessPage() {
                             {exitDocuments.map((doc, idx) => {
                                 const badge = importanceBadge[doc.importance];
                                 return (
-                                    <div key={idx} className="p-4 bg-white rounded-xl border border-gray-100 shadow-soft">
+                                    <div key={idx} className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 shadow-soft">
                                         <div className="flex items-start justify-between gap-3 mb-2">
-                                            <h3 className="font-bold text-gray-900">{doc.title}</h3>
+                                            <h3 className="font-bold text-gray-900 dark:text-gray-100">{doc.title}</h3>
                                             <span className={`badge text-[10px] uppercase tracking-wider shrink-0 ${badge.className}`}>{badge.label}</span>
                                         </div>
-                                        <p className="text-sm text-gray-600 leading-relaxed">{doc.description}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{doc.description}</p>
                                     </div>
                                 );
                             })}
@@ -85,9 +85,9 @@ export default function ExitProcessPage() {
                         <p className="mb-4">Exit interviews are voluntary but can be useful. Common questions your employer may ask:</p>
                         <ul className="space-y-2">
                             {exitInterviewQuestions.map((q, idx) => (
-                                <li key={idx} className="flex gap-3 p-3 bg-gray-50 rounded-lg">
+                                <li key={idx} className="flex gap-3 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg">
                                     <span className="text-primary font-bold text-sm shrink-0">Q{idx + 1}.</span>
-                                    <span className="text-sm text-gray-700">{q}</span>
+                                    <span className="text-sm text-gray-700 dark:text-gray-300">{q}</span>
                                 </li>
                             ))}
                         </ul>

@@ -49,17 +49,17 @@ export default function TemplateCard({ template }) {
                         <FileText className="w-6 h-6 text-primary" />
                     </div>
                     {template.category && (
-                        <span className={`badge ${categoryColors[template.category] || 'bg-gray-100 text-gray-700'} text-[10px] uppercase tracking-wider`}>
+                        <span className={`badge ${categoryColors[template.category] || 'bg-gray-100 text-gray-700 dark:text-gray-300'} text-[10px] uppercase tracking-wider`}>
                             {template.category}
                         </span>
                     )}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{template.title}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed mb-6 flex-grow">{template.description}</p>
+                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">{template.title}</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-6 flex-grow">{template.description}</p>
                 <div className="flex gap-2 mt-auto">
                     <button
                         onClick={() => setShowPreview(true)}
-                        className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 text-gray-700 hover:bg-gray-50 text-sm font-medium transition-colors"
+                        className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:bg-gray-900 text-sm font-medium transition-colors"
                     >
                         <Eye className="w-4 h-4" /> Preview
                     </button>
@@ -82,15 +82,15 @@ export default function TemplateCard({ template }) {
             {/* Preview Modal */}
             {showPreview && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm" onClick={() => setShowPreview(false)}>
-                    <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
-                        <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                            <h3 className="text-lg font-bold text-gray-900">{template.title}</h3>
-                            <button onClick={() => setShowPreview(false)} className="text-gray-400 hover:text-gray-600 text-2xl font-light">×</button>
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl shadow-2xl max-w-2xl w-full max-h-[80vh] overflow-hidden" onClick={(e) => e.stopPropagation()}>
+                        <div className="flex items-center justify-between p-6 border-b border-gray-100 dark:border-gray-800">
+                            <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">{template.title}</h3>
+                            <button onClick={() => setShowPreview(false)} className="text-gray-400 hover:text-gray-600 dark:text-gray-400 text-2xl font-light">×</button>
                         </div>
                         <div className="p-6 overflow-y-auto max-h-[60vh]">
-                            <pre className="whitespace-pre-wrap text-sm text-gray-700 font-sans leading-relaxed">{template.content}</pre>
+                            <pre className="whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-300 font-sans leading-relaxed">{template.content}</pre>
                         </div>
-                        <div className="flex gap-3 p-6 border-t border-gray-100 bg-gray-50">
+                        <div className="flex gap-3 p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
                             <button onClick={handleCopy} className="btn-primary flex items-center gap-2 flex-1 justify-center">
                                 {copied ? <><Check className="w-4 h-4" /> Copied!</> : <><Copy className="w-4 h-4" /> Copy to Clipboard</>}
                             </button>

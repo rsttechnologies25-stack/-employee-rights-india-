@@ -23,7 +23,7 @@ export default function IRCodePage() {
                 icon={Users}
                 gradient="red"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'New Labour Codes', path: '/new-labour-codes' },
@@ -36,7 +36,7 @@ export default function IRCodePage() {
                         </p>
                         <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
                             <h3 className="font-bold text-red-900 mb-2">The 300 Employee Threshold</h3>
-                            <p className="text-gray-800">
+                            <p className="text-gray-800 dark:text-gray-200">
                                 Previously, any company with 100 or more employees needed prior government permission before conducting mass layoffs, retrenchments, or shutting down. The new IR Code <strong>increases this threshold to 300 employees</strong>. This means the vast majority of IT startups, mid-size agencies, and manufacturing units can now layoff workers without seeking government approval.
                             </p>
                         </div>

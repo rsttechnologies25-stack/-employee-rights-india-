@@ -32,7 +32,7 @@ export default function RelievingLetterPage() {
                 icon={Mail}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Letters & Documents', path: '/relieving-letter' },
@@ -66,12 +66,12 @@ export default function RelievingLetterPage() {
                     <ContentSection title="Common Disputes & Resolutions" icon={ShieldAlert} variant="warning">
                         <div className="space-y-4">
                             {scenarios.map((s, idx) => (
-                                <div key={idx} className="p-5 bg-white rounded-xl border border-gray-100">
-                                    <p className="font-bold text-gray-900 mb-2">{s.title}</p>
-                                    <p className="text-sm text-gray-600 mb-3">{s.desc}</p>
+                                <div key={idx} className="p-5 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
+                                    <p className="font-bold text-gray-900 dark:text-gray-100 mb-2">{s.title}</p>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{s.desc}</p>
                                     <div className="p-3 bg-success/5 rounded-lg border border-success/20">
                                         <span className="text-xs font-bold text-success uppercase">Resolution: </span>
-                                        <span className="text-xs text-gray-700">{s.resolution}</span>
+                                        <span className="text-xs text-gray-700 dark:text-gray-300">{s.resolution}</span>
                                     </div>
                                 </div>
                             ))}

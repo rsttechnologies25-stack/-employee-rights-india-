@@ -25,7 +25,7 @@ export default function ExperienceLetterPage() {
                 icon={FileText}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Letters & Documents', path: '/experience-letter' },
@@ -88,10 +88,10 @@ export default function ExperienceLetterPage() {
                                 { label: 'Authorized Signatory', required: true },
                                 { label: 'Company Seal / Stamp', required: false },
                             ].map((item, idx) => (
-                                <div key={idx} className={`p-3 rounded-lg flex items-center gap-2 ${item.required ? 'bg-success/5 border border-success/20' : 'bg-gray-50 border border-gray-100'}`}>
+                                <div key={idx} className={`p-3 rounded-lg flex items-center gap-2 ${item.required ? 'bg-success/5 border border-success/20' : 'bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800'}`}>
                                     <CheckCircle2 className={`w-4 h-4 shrink-0 ${item.required ? 'text-success' : 'text-gray-300'}`} />
                                     <div>
-                                        <span className="text-sm font-medium text-gray-800">{item.label}</span>
+                                        <span className="text-sm font-medium text-gray-800 dark:text-gray-200">{item.label}</span>
                                         {item.required && <span className="ml-2 text-[10px] text-success font-semibold">REQUIRED</span>}
                                     </div>
                                 </div>

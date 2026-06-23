@@ -34,7 +34,7 @@ export default function ServiceCertificatePage() {
                 icon={Award}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Letters & Documents', path: '/service-certificate' },
@@ -62,9 +62,9 @@ export default function ServiceCertificatePage() {
                                         <th className="px-4 py-3 font-bold text-primary">Experience Letter</th>
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100 bg-white">
+                                <tbody className="divide-y divide-gray-100 bg-white dark:bg-gray-950">
                                     <tr><td className="px-4 py-3">Legal Basis</td><td className="px-4 py-3">State S&E Acts (statutory)</td><td className="px-4 py-3">Common practice / company policy</td></tr>
-                                    <tr><td className="px-4 py-3">Mandatory?</td><td className="px-4 py-3 text-success font-medium">Yes (in applicable states)</td><td className="px-4 py-3 text-gray-500">Generally expected, not always mandated</td></tr>
+                                    <tr><td className="px-4 py-3">Mandatory?</td><td className="px-4 py-3 text-success font-medium">Yes (in applicable states)</td><td className="px-4 py-3 text-gray-500 dark:text-gray-400">Generally expected, not always mandated</td></tr>
                                     <tr><td className="px-4 py-3">Content</td><td className="px-4 py-3">Tenure, nature of work, conduct</td><td className="px-4 py-3">Tenure, designation, role highlights</td></tr>
                                     <tr><td className="px-4 py-3">Format</td><td className="px-4 py-3">Often prescribed by state authority</td><td className="px-4 py-3">Company's own format</td></tr>
                                     <tr><td className="px-4 py-3">Enforcement</td><td className="px-4 py-3">Labour Inspector can compel issuance</td><td className="px-4 py-3">Via Labour Commissioner/court</td></tr>
@@ -79,9 +79,9 @@ export default function ServiceCertificatePage() {
                     <ContentSection title="States with Explicit Statutory Requirements" icon={MapPin} variant="success">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                             {stateRules.map((s, idx) => (
-                                <div key={idx} className="p-4 bg-white rounded-xl border border-success/20">
-                                    <p className="font-bold text-sm text-gray-900 mb-1">{s.state}</p>
-                                    <p className="text-xs text-gray-600">{s.rule}</p>
+                                <div key={idx} className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-success/20">
+                                    <p className="font-bold text-sm text-gray-900 dark:text-gray-100 mb-1">{s.state}</p>
+                                    <p className="text-xs text-gray-600 dark:text-gray-400">{s.rule}</p>
                                 </div>
                             ))}
                         </div>

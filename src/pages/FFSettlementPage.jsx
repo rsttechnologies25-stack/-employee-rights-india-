@@ -47,7 +47,7 @@ export default function FFSettlementPage() {
                 icon={FileCheck}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Full & Final Settlement', path: '/full-final-settlement' }]} />
 
@@ -61,11 +61,11 @@ export default function FFSettlementPage() {
                     <ContentSection title="Components of F&F Settlement" icon={Banknote} variant="default">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {ffComponents.map((c, idx) => (
-                                <div key={idx} className="p-4 bg-white rounded-xl border border-gray-100 flex gap-3">
+                                <div key={idx} className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 flex gap-3">
                                     <span className="text-2xl shrink-0">{c.icon}</span>
                                     <div>
-                                        <p className="font-bold text-sm text-gray-900">{c.title}</p>
-                                        <p className="text-xs text-gray-600 mt-1">{c.desc}</p>
+                                        <p className="font-bold text-sm text-gray-900 dark:text-gray-100">{c.title}</p>
+                                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{c.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -81,9 +81,9 @@ export default function FFSettlementPage() {
                                 { day: 'Beyond 60 Days', desc: 'If no F&F without communication, send formal written demand to HR.' },
                                 { day: 'Beyond 90 Days', desc: 'File complaint with Labour Commissioner and send legal notice.' },
                             ].map((t, idx) => (
-                                <div key={idx} className="flex gap-4 items-start p-3 bg-white rounded-xl border border-gray-100">
+                                <div key={idx} className="flex gap-4 items-start p-3 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <div className="px-3 py-1 bg-primary/10 text-primary rounded-lg text-xs font-bold whitespace-nowrap">{t.day}</div>
-                                    <p className="text-sm text-gray-600">{t.desc}</p>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400">{t.desc}</p>
                                 </div>
                             ))}
                         </div>

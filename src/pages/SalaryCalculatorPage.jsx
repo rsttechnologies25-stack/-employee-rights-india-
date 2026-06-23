@@ -14,7 +14,7 @@ export default function SalaryCalculatorPage() {
                 icon={Calculator}
                 gradient="success"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-5xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'Salary Calculator', path: '/salary-calculator' }]} />
                     <div className="mt-8">

@@ -92,19 +92,19 @@ function DropdownMenu({ group, isOpen, onToggle, onClose }) {
         <div ref={ref} className="relative">
             <button
                 onClick={onToggle}
-                className="flex items-center gap-1 text-gray-600 hover:text-primary font-medium transition-colors text-sm"
+                className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-primary font-medium transition-colors text-sm"
             >
                 {group.label}
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
             {isOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-950 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 py-2 min-w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
                     {group.items.map((item) => (
                         <Link
                             key={item.to}
                             to={item.to}
                             onClick={onClose}
-                            className="block px-4 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 transition-colors"
+                            className="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-colors"
                         >
                             {item.label}
                         </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
     }, [location.pathname]);
 
     return (
-        <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
+        <nav className="bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 shadow-sm transition-colors duration-300">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between h-16">
                     <div className="flex items-center flex-1">
@@ -147,7 +147,7 @@ export default function Navbar() {
                     <div className="hidden lg:flex items-center space-x-5">
                         <button 
                             onClick={toggleTheme}
-                            className="p-2 text-gray-500 hover:text-primary transition-colors"
+                            className="p-2 text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                             aria-label="Toggle Dark Mode"
                         >
                             {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
@@ -166,7 +166,7 @@ export default function Navbar() {
 
                     {/* Mobile Toggle */}
                     <div className="lg:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 focus:outline-none p-2">
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 dark:text-gray-400 focus:outline-none p-2">
                             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
@@ -175,14 +175,14 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg max-h-[80vh] overflow-y-auto">
+                <div className="lg:hidden bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 shadow-lg max-h-[80vh] overflow-y-auto">
                     <div className="p-4 space-y-1">
                         {/* Direct links */}
                         {directLinks.map((link) => (
                             <Link
                                 key={link.to}
                                 to={link.to}
-                                className={`block px-4 py-3 rounded-lg font-medium transition-colors ${link.highlight ? 'text-accent hover:bg-accent/5 font-bold' : 'text-gray-600 hover:bg-gray-50 hover:text-primary'}`}
+                                className={`block px-4 py-3 rounded-lg font-medium transition-colors ${link.highlight ? 'text-accent hover:bg-accent/5 font-bold' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-900 hover:text-primary'}`}
                             >
                                 {link.label}
                             </Link>
@@ -190,10 +190,10 @@ export default function Navbar() {
 
                         {/* Grouped sections */}
                         {navGroups.map((group, idx) => (
-                            <div key={idx} className="border-t border-gray-50 pt-1 mt-1">
+                            <div key={idx} className="border-t border-gray-50 dark:border-gray-800 pt-1 mt-1">
                                 <button
                                     onClick={() => setMobileExpanded(mobileExpanded === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 font-semibold hover:bg-gray-50 rounded-lg transition-colors"
+                                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:bg-gray-900 rounded-lg transition-colors"
                                 >
                                     <span>{group.label}</span>
                                     <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${mobileExpanded === idx ? 'rotate-180' : ''}`} />
@@ -204,7 +204,7 @@ export default function Navbar() {
                                             <Link
                                                 key={item.to}
                                                 to={item.to}
-                                                className="block px-4 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                                                className="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
                                             >
                                                 {item.label}
                                             </Link>

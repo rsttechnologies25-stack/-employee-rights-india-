@@ -36,28 +36,28 @@ export default function SalaryCalculator() {
             <div className="p-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
                 <div className="space-y-6">
                     <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Enter Monthly Gross Salary (₹)</label>
+                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Enter Monthly Gross Salary (₹)</label>
                         <input
                             type="number"
                             value={gross}
                             onChange={(e) => setGross(e.target.value)}
-                            className="w-full px-4 py-4 rounded-xl border-2 border-gray-100 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-xl font-bold"
+                            className="w-full px-4 py-4 rounded-xl border-2 border-gray-100 dark:border-gray-800 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-xl font-bold"
                             placeholder="e.g. 50000"
                         />
                     </div>
 
                     <div className="space-y-4">
-                        <h4 className="font-bold text-gray-900 border-b pb-2">Components Breakdown</h4>
+                        <h4 className="font-bold text-gray-900 dark:text-gray-100 border-b pb-2">Components Breakdown</h4>
                         <div className="flex justify-between text-sm py-2">
-                            <span className="text-gray-500">Basic Salary (40%)</span>
+                            <span className="text-gray-500 dark:text-gray-400">Basic Salary (40%)</span>
                             <span className="font-semibold">₹{basic.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between text-sm py-2">
-                            <span className="text-gray-500">HRA (40% of Basic)</span>
+                            <span className="text-gray-500 dark:text-gray-400">HRA (40% of Basic)</span>
                             <span className="font-semibold">₹{hra.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between text-sm py-2">
-                            <span className="text-gray-500">Other Allowances</span>
+                            <span className="text-gray-500 dark:text-gray-400">Other Allowances</span>
                             <span className="font-semibold">₹{other.toLocaleString()}</span>
                         </div>
                     </div>
@@ -75,14 +75,14 @@ export default function SalaryCalculator() {
                 </div>
 
                 <div className="space-y-6">
-                    <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
-                        <h4 className="font-bold text-gray-900 mb-6 flex items-center gap-2">
+                    <div className="bg-gray-50 dark:bg-gray-900 rounded-2xl p-6 border border-gray-100 dark:border-gray-800">
+                        <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
                             <Receipt className="w-5 h-5 text-accent" />
                             Impact on Your Pay
                         </h4>
 
                         <div className="space-y-4">
-                            <div className="flex justify-between items-center p-3 bg-white rounded-lg shadow-sm">
+                            <div className="flex justify-between items-center p-3 bg-white dark:bg-gray-950 rounded-lg shadow-sm">
                                 <div className="text-sm">
                                     <p className="font-bold">Monthly Gross</p>
                                     <p className="text-[10px] text-gray-400">Total payable before deductions</p>
@@ -93,11 +93,11 @@ export default function SalaryCalculator() {
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="p-3 bg-red-50 rounded-lg border border-red-100">
                                     <p className="text-[10px] uppercase font-bold text-red-600 mb-1">Deductions (PF)</p>
-                                    <p className="font-bold text-gray-900">₹{employeePF.toLocaleString()}</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-100">₹{employeePF.toLocaleString()}</p>
                                 </div>
                                 <div className="p-3 bg-red-50 rounded-lg border border-red-100">
                                     <p className="text-[10px] uppercase font-bold text-red-600 mb-1">Deductions (ESI)</p>
-                                    <p className="font-bold text-gray-900">₹{employeeESI.toLocaleString()}</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-100">₹{employeeESI.toLocaleString()}</p>
                                 </div>
                             </div>
 

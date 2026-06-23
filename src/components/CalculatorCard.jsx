@@ -29,7 +29,7 @@ export default function CalculatorCard({ title, description, icon: Icon, childre
 export function CalcInput({ label, value, onChange, placeholder, type = 'number', suffix, prefix, helpText }) {
     return (
         <div>
-            <label className="block text-sm font-bold text-gray-700 mb-2">{label}</label>
+            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">{label}</label>
             <div className="relative">
                 {prefix && (
                     <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold">{prefix}</span>
@@ -38,7 +38,7 @@ export function CalcInput({ label, value, onChange, placeholder, type = 'number'
                     type={type}
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
-                    className={`w-full py-3 rounded-xl border-2 border-gray-100 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-lg font-bold ${prefix ? 'pl-8 pr-4' : 'px-4'} ${suffix ? 'pr-16' : ''}`}
+                    className={`w-full py-3 rounded-xl border-2 border-gray-100 dark:border-gray-800 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-lg font-bold ${prefix ? 'pl-8 pr-4' : 'px-4'} ${suffix ? 'pr-16' : ''}`}
                     placeholder={placeholder}
                 />
                 {suffix && (
@@ -52,7 +52,7 @@ export function CalcInput({ label, value, onChange, placeholder, type = 'number'
 
 export function CalcResult({ label, value, variant = 'default', sublabel }) {
     const styles = {
-        default: 'bg-gray-50 border-gray-100',
+        default: 'bg-gray-50 dark:bg-gray-900 border-gray-100 dark:border-gray-800',
         success: 'bg-success/10 border-success/20',
         danger: 'bg-danger/10 border-danger/20',
         primary: 'bg-primary/5 border-primary/10',
@@ -60,7 +60,7 @@ export function CalcResult({ label, value, variant = 'default', sublabel }) {
     };
 
     const textColors = {
-        default: 'text-gray-900',
+        default: 'text-gray-900 dark:text-gray-100',
         success: 'text-success',
         danger: 'text-danger',
         primary: 'text-primary',

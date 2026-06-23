@@ -17,11 +17,11 @@
 
 @layer components {
   .card {
-    @apply bg-white rounded-xl border border-gray-100 shadow-soft overflow-hidden transition-all duration-300;
+    @apply bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 shadow-soft overflow-hidden transition-all duration-300;
   }
 
   .card-hover {
-    @apply hover:shadow-md hover:-translate-y-1;
+    @apply hover:shadow-md hover:-translate-y-1 dark:hover:border-gray-700;
   }
 
   .badge {

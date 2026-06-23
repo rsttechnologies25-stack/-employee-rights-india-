@@ -64,12 +64,12 @@ export default function FAQPage() {
                 icon={HelpCircle}
                 gradient="purple"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'FAQ', path: '/faq' }]} />
 
                     {/* Search */}
-                    <div className="bg-white rounded-2xl border border-gray-100 shadow-soft p-6 mb-8">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-soft p-6 mb-8">
                         <div className="relative">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
                             <input
@@ -77,11 +77,11 @@ export default function FAQPage() {
                                 placeholder="Search all FAQ questions..."
                                 value={search}
                                 onChange={e => { setSearch(e.target.value); setActiveCategory('all'); }}
-                                className="w-full pl-12 pr-4 py-4 border-2 border-gray-100 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none text-lg"
+                                className="w-full pl-12 pr-4 py-4 border-2 border-gray-100 dark:border-gray-800 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none text-lg"
                             />
                         </div>
                         {search && searchResults && (
-                            <p className="mt-3 text-sm text-gray-500">{searchResults.length} result{searchResults.length !== 1 ? 's' : ''} found for "{search}"</p>
+                            <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">{searchResults.length} result{searchResults.length !== 1 ? 's' : ''} found for "{search}"</p>
                         )}
                     </div>
 
@@ -96,10 +96,10 @@ export default function FAQPage() {
                             <div className="flex gap-2 flex-wrap mb-8">
                                 <button
                                     onClick={() => setActiveCategory('all')}
-                                    className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === 'all' ? 'bg-primary text-white' : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'}`}
+                                    className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === 'all' ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:bg-gray-900'}`}
                                 >
                                     All Topics
-                                    <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === 'all' ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>{totalCount}</span>
+                                    <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === 'all' ? 'bg-white dark:bg-gray-950/20 text-white' : 'bg-gray-100 text-gray-500 dark:text-gray-400'}`}>{totalCount}</span>
                                 </button>
                                 {faqCategories.map(cat => {
                                     const IconComp = iconMap[cat.iconName];
@@ -107,11 +107,11 @@ export default function FAQPage() {
                                         <button
                                             key={cat.id}
                                             onClick={() => setActiveCategory(cat.id)}
-                                            className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === cat.id ? 'bg-primary text-white' : 'bg-white text-gray-600 border border-gray-200 hover:bg-gray-50'}`}
+                                            className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === cat.id ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:bg-gray-900'}`}
                                         >
                                             {IconComp && <IconComp className="w-4 h-4" />}
                                             {cat.label}
-                                            <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === cat.id ? 'bg-white/20 text-white' : 'bg-gray-100 text-gray-500'}`}>{allFaqs[cat.id]?.length || 0}</span>
+                                            <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === cat.id ? 'bg-white dark:bg-gray-950/20 text-white' : 'bg-gray-100 text-gray-500 dark:text-gray-400'}`}>{allFaqs[cat.id]?.length || 0}</span>
                                         </button>
                                     );
                                 })}

@@ -5,7 +5,7 @@ import { ArrowRight, ShieldCheck } from 'lucide-react';
 
 export default function RightsIndexPage() {
     return (
-        <div className="py-12 px-4 bg-gray-50 min-h-screen">
+        <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900 min-h-screen">
             <SEOHead path="/rights" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12 text-center">
@@ -13,7 +13,7 @@ export default function RightsIndexPage() {
                         <ShieldCheck className="w-10 h-10 text-primary" />
                         <h1 className="text-3xl md:text-4xl font-extrabold">Your Statutory Rights</h1>
                     </div>
-                    <p className="text-gray-600 max-w-2xl mx-auto">
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                         A comprehensive guide to employee rights under Indian labour law. Click on any category to learn what you're entitled to—and what is illegal.
                     </p>
                 </div>
@@ -32,12 +32,12 @@ export default function RightsIndexPage() {
                                         <Icon className="w-6 h-6 text-primary" />
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="text-lg font-bold mb-1 text-gray-900 group-hover:text-primary transition-colors">
+                                        <h3 className="text-lg font-bold mb-1 text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">
                                             {category.title}
                                         </h3>
                                     </div>
                                 </div>
-                                <p className="text-sm text-gray-600 leading-relaxed mb-4">
+                                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                                     {category.summary}
                                 </p>
                                 <div className="flex items-center gap-2 text-primary text-sm font-semibold">
@@ -48,9 +48,9 @@ export default function RightsIndexPage() {
                     })}
                 </div>
 
-                <div className="mt-16 bg-white rounded-2xl p-8 border border-gray-100 shadow-soft text-center">
+                <div className="mt-16 bg-white dark:bg-gray-950 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft text-center">
                     <h2 className="text-2xl font-bold mb-4">One-Line Summary</h2>
-                    <p className="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
                         Indian labour law guarantees <strong>minimum wages</strong>, <strong>timely payment</strong>, <strong>statutory bonuses</strong>, <strong>maternity protection</strong>, <strong>workplace safety</strong>, and <strong>fair exit settlements</strong>—violations can be reported to the Labour Commissioner.
                     </p>
                 </div>

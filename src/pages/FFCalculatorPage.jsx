@@ -35,7 +35,7 @@ export default function FFCalculatorPage() {
         <div>
             <SEOHead path="/tools/ff-calculator" />
             <PageHero title="F&F Settlement Calculator" subtitle="Estimate your Full & Final settlement — all components in one place." icon={FileCheck} gradient="primary" />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'F&F Calculator', path: '/tools/ff-calculator' }]} />
                     <CalculatorCard title="Full & Final Settlement Calculator" description="Comprehensive F&F estimation — salary, leave, gratuity, bonus, notice recovery" icon={FileCheck}
@@ -48,12 +48,12 @@ export default function FFCalculatorPage() {
                             <CalcInput label="Bonus Due (if any)" value={bonusDue} onChange={v => setBonusDue(Number(v))} prefix="₹" placeholder="0" helpText="Pro-rata or contractual bonus" />
                         </div>
 
-                        <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-4">
+                        <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 mb-4">
                             <div className="flex items-center justify-between mb-3">
-                                <p className="font-bold text-sm text-gray-700">Gratuity Eligible (5+ years service)?</p>
+                                <p className="font-bold text-sm text-gray-700 dark:text-gray-300">Gratuity Eligible (5+ years service)?</p>
                                 <div className="flex gap-2">
                                     {[true, false].map(v => (
-                                        <button key={v.toString()} onClick={() => setGratuityEligible(v)} className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${gratuityEligible === v ? 'bg-primary text-white' : 'bg-white border border-gray-200 text-gray-600'}`}>{v ? 'Yes' : 'No'}</button>
+                                        <button key={v.toString()} onClick={() => setGratuityEligible(v)} className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${gratuityEligible === v ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400'}`}>{v ? 'Yes' : 'No'}</button>
                                     ))}
                                 </div>
                             </div>
@@ -65,11 +65,11 @@ export default function FFCalculatorPage() {
                             )}
                         </div>
 
-                        <div className="p-4 bg-gray-50 rounded-xl border border-gray-100 mb-6">
-                            <p className="font-bold text-sm text-gray-700 mb-3">Notice Period Status</p>
+                        <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 mb-6">
+                            <p className="font-bold text-sm text-gray-700 dark:text-gray-300 mb-3">Notice Period Status</p>
                             <div className="flex gap-2 flex-wrap mb-3">
                                 {[{ id: 'served', label: 'Fully Served' }, { id: 'waived', label: 'Waived by Employer' }, { id: 'buyout', label: 'Partial Buyout' }].map(s => (
-                                    <button key={s.id} onClick={() => setNoticeStatus(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${noticeStatus === s.id ? 'bg-accent text-white' : 'bg-white border border-gray-200 text-gray-600'}`}>{s.label}</button>
+                                    <button key={s.id} onClick={() => setNoticeStatus(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${noticeStatus === s.id ? 'bg-accent text-white' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400'}`}>{s.label}</button>
                                 ))}
                             </div>
                             {noticeStatus === 'buyout' && (
@@ -84,7 +84,7 @@ export default function FFCalculatorPage() {
                             {bonusDue > 0 && <CalcResult label="Bonus / Incentives" value={fmt(bonusDue)} />}
                             {gratuityEligible && <CalcResult label="Gratuity" value={fmt(gratuity)} />}
                             {noticeRecovery > 0 && <CalcResult label="Notice Pay Recovery (Deduction)" value={'- ' + fmt(noticeRecovery)} variant="danger" />}
-                            <div className="border-t-2 border-gray-200 pt-3">
+                            <div className="border-t-2 border-gray-200 dark:border-gray-700 pt-3">
                                 <CalcResult label="Estimated F&F (Before Tax)" value={fmt(Math.max(0, total))} variant="success" sublabel="Before TDS deduction" />
                             </div>
                         </div>

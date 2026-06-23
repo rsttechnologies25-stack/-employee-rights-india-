@@ -47,23 +47,23 @@ export default function PFChecker() {
             <form onSubmit={calculate} className="p-8 space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Monthly Gross Salary (₹)</label>
+                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Monthly Gross Salary (₹)</label>
                         <input
                             type="number"
                             value={salary}
                             onChange={(e) => setSalary(e.target.value)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                             placeholder="e.g. 25000"
                             required
                         />
                     </div>
 
                     <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Employment Status</label>
+                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Employment Status</label>
                         <select
                             value={empType}
                             onChange={(e) => setEmpType(e.target.value)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white dark:bg-gray-950"
                         >
                             <option value="full-time">Full-time / Probation</option>
                             <option value="paid-intern">Paid Intern</option>
@@ -90,12 +90,12 @@ export default function PFChecker() {
                             {result.pf ? <CheckCircle2 className="w-6 h-6 text-success shrink-0" /> : <XCircle className="w-6 h-6 text-danger shrink-0" />}
                             <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                    <span className="font-bold text-gray-900">PF Status: Eligible</span>
+                                    <span className="font-bold text-gray-900 dark:text-gray-100">PF Status: Eligible</span>
                                     <span className={`badge ${result.pfType.includes('Mandatory') ? 'bg-success/10 text-success' : 'bg-primary/10 text-primary'}`}>
                                         {result.pfType}
                                     </span>
                                 </div>
-                                <p className="text-sm text-gray-600 leading-relaxed">{result.pfDesc}</p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{result.pfDesc}</p>
                             </div>
                         </div>
 
@@ -103,13 +103,13 @@ export default function PFChecker() {
                             {result.esi ? <CheckCircle2 className="w-6 h-6 text-success shrink-0" /> : <Info className="w-6 h-6 text-primary shrink-0" />}
                             <div>
                                 <div className="flex items-center gap-2 mb-1">
-                                    <span className="font-bold text-gray-900">ESI Status: {result.esi ? 'Active' : 'Not Covered'}</span>
+                                    <span className="font-bold text-gray-900 dark:text-gray-100">ESI Status: {result.esi ? 'Active' : 'Not Covered'}</span>
                                 </div>
-                                <p className="text-sm text-gray-600 leading-relaxed">{result.esiDesc}</p>
+                                <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{result.esiDesc}</p>
                             </div>
                         </div>
 
-                        <div className="bg-gray-50 p-4 rounded-lg flex items-center gap-3 text-xs text-gray-500">
+                        <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                             <Landmark className="w-4 h-4" />
                             <span>Note: PF applies to companies with 20+ employees. ESI applies to 10+ employees.</span>
                         </div>

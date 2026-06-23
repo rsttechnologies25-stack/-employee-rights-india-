@@ -41,7 +41,7 @@ function GratuityCalculatorInline() {
     const fmt = (n) => '₹' + Math.round(n).toLocaleString('en-IN');
 
     return (
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-soft overflow-hidden mb-8">
+        <div className="bg-white dark:bg-gray-950 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-soft overflow-hidden mb-8">
             <div className="bg-accent p-6 text-white">
                 <div className="flex items-center gap-3">
                     <Calculator className="w-7 h-7" />
@@ -58,28 +58,28 @@ function GratuityCalculatorInline() {
                         { label: 'Years of Service', value: years, setter: setYears },
                     ].map((inp, idx) => (
                         <div key={idx}>
-                            <label className="block text-sm font-bold text-gray-700 mb-2">{inp.label}</label>
+                            <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">{inp.label}</label>
                             <input type="number" value={inp.value} onChange={e => inp.setter(Number(e.target.value))}
-                                className="w-full px-4 py-3 border-2 border-gray-100 rounded-xl focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none font-bold text-lg" />
+                                className="w-full px-4 py-3 border-2 border-gray-100 dark:border-gray-800 rounded-xl focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none font-bold text-lg" />
                         </div>
                     ))}
                     <div>
-                        <label className="block text-sm font-bold text-gray-700 mb-2">Covered Under Act?</label>
+                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-2">Covered Under Act?</label>
                         <div className="flex gap-2">
-                            <button onClick={() => setCovered(true)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${covered ? 'bg-accent text-white' : 'bg-gray-50 text-gray-600 border border-gray-200'}`}>Yes (÷26)</button>
-                            <button onClick={() => setCovered(false)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${!covered ? 'bg-accent text-white' : 'bg-gray-50 text-gray-600 border border-gray-200'}`}>No (÷30)</button>
+                            <button onClick={() => setCovered(true)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${covered ? 'bg-accent text-white' : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700'}`}>Yes (÷26)</button>
+                            <button onClick={() => setCovered(false)} className={`flex-1 py-3 rounded-xl font-bold text-sm transition-all ${!covered ? 'bg-accent text-white' : 'bg-gray-50 dark:bg-gray-900 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700'}`}>No (÷30)</button>
                         </div>
                     </div>
                 </div>
 
-                <div className="bg-gray-50 rounded-xl p-5 space-y-3 mb-4">
+                <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-5 space-y-3 mb-4">
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-500">Formula</span>
-                        <span className="font-mono text-gray-700">(15 × {fmt(basicDa)} × {years}) ÷ {divisor}</span>
+                        <span className="text-gray-500 dark:text-gray-400">Formula</span>
+                        <span className="font-mono text-gray-700 dark:text-gray-300">(15 × {fmt(basicDa)} × {years}) ÷ {divisor}</span>
                     </div>
                     <div className="flex justify-between items-center text-sm">
-                        <span className="text-gray-500">Calculated Gratuity</span>
-                        <span className="font-mono font-bold text-gray-900">{fmt(gratuity)}</span>
+                        <span className="text-gray-500 dark:text-gray-400">Calculated Gratuity</span>
+                        <span className="font-mono font-bold text-gray-900 dark:text-gray-100">{fmt(gratuity)}</span>
                     </div>
                     {isExceeding && (
                         <div className="flex justify-between items-center text-sm">
@@ -87,8 +87,8 @@ function GratuityCalculatorInline() {
                             <span className="font-mono font-bold text-warning">Capped at {fmt(capped)}</span>
                         </div>
                     )}
-                    <div className="border-t border-gray-200 pt-3 flex justify-between items-center">
-                        <span className="font-bold text-gray-800">Gratuity Payable</span>
+                    <div className="border-t border-gray-200 dark:border-gray-700 pt-3 flex justify-between items-center">
+                        <span className="font-bold text-gray-800 dark:text-gray-200">Gratuity Payable</span>
                         <span className="font-black text-2xl text-accent font-mono">{fmt(capped)}</span>
                     </div>
                 </div>
@@ -115,7 +115,7 @@ export default function GratuityPage() {
                 icon={Award}
                 gradient="success"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Gratuity', path: '/gratuity' }]} />
 
@@ -124,11 +124,11 @@ export default function GratuityPage() {
                             {gratuityEligibilityRules.map((rule, idx) => (
                                 <div key={idx} className={`p-5 rounded-xl border ${statusColors[rule.status]}`}>
                                     <div className="flex items-start justify-between gap-3 mb-2">
-                                        <h3 className="font-bold text-gray-900">{rule.title}</h3>
+                                        <h3 className="font-bold text-gray-900 dark:text-gray-100">{rule.title}</h3>
                                         <span className={`badge text-[10px] uppercase ${badgeColors[rule.status]}`}>{badgeLabels[rule.status]}</span>
                                     </div>
-                                    <p className="text-sm text-gray-700 mb-2">{rule.description}</p>
-                                    {rule.note && <p className="text-xs text-gray-500 italic border-l-2 border-gray-200 pl-2">{rule.note}</p>}
+                                    <p className="text-sm text-gray-700 dark:text-gray-300 mb-2">{rule.description}</p>
+                                    {rule.note && <p className="text-xs text-gray-500 dark:text-gray-400 italic border-l-2 border-gray-200 dark:border-gray-700 pl-2">{rule.note}</p>}
                                 </div>
                             ))}
                         </div>
@@ -146,9 +146,9 @@ export default function GratuityPage() {
                                 { phase: 'Beyond 30 Days', desc: 'Interest at up to 10% per annum starts accruing on delayed gratuity.' },
                                 { phase: 'If Disputed/Refused', desc: 'File complaint with Controlling Authority (usually Labour Commissioner). They issue notice and conduct inquiry.' },
                             ].map((p, idx) => (
-                                <div key={idx} className="flex gap-4 p-4 bg-white rounded-xl border border-gray-100">
+                                <div key={idx} className="flex gap-4 p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <div className="px-3 py-1.5 bg-primary/10 text-primary rounded-lg text-xs font-bold whitespace-nowrap">{p.phase}</div>
-                                    <p className="text-sm text-gray-600">{p.desc}</p>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400">{p.desc}</p>
                                 </div>
                             ))}
                         </div>

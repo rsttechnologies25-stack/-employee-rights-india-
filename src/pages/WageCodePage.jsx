@@ -23,7 +23,7 @@ export default function WageCodePage() {
                 icon={HandCoins}
                 gradient="blue"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'New Labour Codes', path: '/new-labour-codes' },
@@ -36,7 +36,7 @@ export default function WageCodePage() {
                         </p>
                         <div className="bg-warning/10 border border-warning/20 rounded-xl p-6 my-6">
                             <h3 className="font-bold text-warning-dark mb-2">The New 50% Rule</h3>
-                            <p className="text-gray-800">
+                            <p className="text-gray-800 dark:text-gray-200">
                                 Under the new Code on Wages, <strong>Basic Pay + Dearness Allowance (DA) MUST be at least 50% of your Total Salary</strong>. All other allowances combined cannot exceed 50%.
                             </p>
                         </div>

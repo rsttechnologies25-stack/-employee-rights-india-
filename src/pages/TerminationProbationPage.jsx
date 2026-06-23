@@ -17,7 +17,7 @@ export default function TerminationProbationPage() {
                 icon={Clock}
                 gradient="danger"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Termination', path: '/termination/probation' },
@@ -25,22 +25,22 @@ export default function TerminationProbationPage() {
                     ]} />
 
                     {/* Quick Answer */}
-                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft mb-8">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-soft mb-8">
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                             <div className="p-4 bg-success/5 rounded-xl border border-success/20 text-center">
                                 <CheckCircle2 className="w-8 h-8 text-success mx-auto mb-2" />
                                 <p className="font-bold text-sm">PF applies from Day 1</p>
-                                <p className="text-xs text-gray-500">Even during probation</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">Even during probation</p>
                             </div>
                             <div className="p-4 bg-warning/5 rounded-xl border border-warning/20 text-center">
                                 <Clock className="w-8 h-8 text-warning mx-auto mb-2" />
                                 <p className="font-bold text-sm">1–30 days notice</p>
-                                <p className="text-xs text-gray-500">Per appointment letter</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">Per appointment letter</p>
                             </div>
                             <div className="p-4 bg-danger/5 rounded-xl border border-danger/20 text-center">
                                 <XCircle className="w-8 h-8 text-danger mx-auto mb-2" />
                                 <p className="font-bold text-sm">Discrimination = Illegal</p>
-                                <p className="text-xs text-gray-500">Even during probation</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">Even during probation</p>
                             </div>
                         </div>
                     </div>
@@ -68,9 +68,9 @@ export default function TerminationProbationPage() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-gray-100">
-                                    <tr className="bg-white"><td className="px-4 py-3 font-medium">During Probation</td><td className="px-4 py-3">7 to 30 days</td><td className="px-4 py-3 text-gray-600">As per appointment letter</td></tr>
-                                    <tr className="bg-white"><td className="px-4 py-3 font-medium">After Confirmation</td><td className="px-4 py-3">30 to 90 days</td><td className="px-4 py-3 text-gray-600">As per appointment letter</td></tr>
-                                    <tr className="bg-white"><td className="px-4 py-3 font-medium">Immediate Termination</td><td className="px-4 py-3">Salary in lieu</td><td className="px-4 py-3 text-gray-600">Pay equivalent salary for notice days</td></tr>
+                                    <tr className="bg-white dark:bg-gray-950"><td className="px-4 py-3 font-medium">During Probation</td><td className="px-4 py-3">7 to 30 days</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">As per appointment letter</td></tr>
+                                    <tr className="bg-white dark:bg-gray-950"><td className="px-4 py-3 font-medium">After Confirmation</td><td className="px-4 py-3">30 to 90 days</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">As per appointment letter</td></tr>
+                                    <tr className="bg-white dark:bg-gray-950"><td className="px-4 py-3 font-medium">Immediate Termination</td><td className="px-4 py-3">Salary in lieu</td><td className="px-4 py-3 text-gray-600 dark:text-gray-400">Pay equivalent salary for notice days</td></tr>
                                 </tbody>
                             </table>
                         </div>

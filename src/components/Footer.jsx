@@ -41,8 +41,8 @@ export default function Footer() {
                         <p className="text-sm leading-relaxed mb-3">
                             We do not collect, request, or store personal or sensitive user data.
                         </p>
-                        <p className="text-xs text-gray-500 mb-3">This website uses:</p>
-                        <ul className="text-xs text-gray-500 space-y-1 mb-4">
+                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">This website uses:</p>
+                        <ul className="text-xs text-gray-500 dark:text-gray-400 space-y-1 mb-4">
                             <li>• <strong>Google Analytics</strong> – to understand website usage</li>
                             <li>• <strong>Google AdSense</strong> – to display relevant advertisements</li>
                         </ul>
@@ -71,13 +71,13 @@ export default function Footer() {
                             RexonsoftTech
                         </a>
                     </div>
-                    <div className="text-gray-500">
+                    <div className="text-gray-500 dark:text-gray-400">
                         © {new Date().getFullYear()} RexonsoftTech. All Rights Reserved.
                     </div>
                 </div>
 
                 {/* Terms Notice */}
-                <div className="text-center mt-6 text-[10px] text-gray-600">
+                <div className="text-center mt-6 text-[10px] text-gray-600 dark:text-gray-400">
                     By using this website, you agree to our Privacy Policy and Terms & Conditions.
                 </div>
             </div>

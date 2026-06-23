@@ -49,12 +49,12 @@ export default function IllegalPracticesPage() {
     ];
 
     return (
-        <div className="py-12 px-4 bg-gray-50">
+        <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
             <SEOHead path="/illegal-practices" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4 text-danger">Illegal Employer Practices</h1>
-                    <p className="text-gray-600 max-w-2xl">Identify red flags and illegal demands. Protect yourself from workplace exploitation and fraudulent hiring practices.</p>
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl">Identify red flags and illegal demands. Protect yourself from workplace exploitation and fraudulent hiring practices.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -63,7 +63,7 @@ export default function IllegalPracticesPage() {
                     ))}
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border border-danger/10 shadow-soft">
+                <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 border border-danger/10 shadow-soft">
                     <div className="flex items-center gap-3 mb-6">
                         <Scale className="w-8 h-8 text-danger" />
                         <h2 className="text-2xl font-bold">How to Take Action?</h2>
@@ -71,15 +71,15 @@ export default function IllegalPracticesPage() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="space-y-4">
                             <h4 className="font-bold">Step 1: Document Everything</h4>
-                            <p className="text-sm text-gray-500">Keep copies of your offer letter, salary slips, and record illegal demands via email or recorded calls.</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">Keep copies of your offer letter, salary slips, and record illegal demands via email or recorded calls.</p>
                         </div>
                         <div className="space-y-4">
                             <h4 className="font-bold">Step 2: Written Protest</h4>
-                            <p className="text-sm text-gray-500">Send a formal email to HR/Management citing the illegal practice. Often, pointing out the law stops them.</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">Send a formal email to HR/Management citing the illegal practice. Often, pointing out the law stops them.</p>
                         </div>
                         <div className="space-y-4">
                             <h4 className="font-bold">Step 3: External Complaints</h4>
-                            <p className="text-sm text-gray-500">File a complaint on the Samadhan portal of Ministry of Labour or approach the local Labour Commissioner.</p>
+                            <p className="text-sm text-gray-500 dark:text-gray-400">File a complaint on the Samadhan portal of Ministry of Labour or approach the local Labour Commissioner.</p>
                         </div>
                     </div>
 

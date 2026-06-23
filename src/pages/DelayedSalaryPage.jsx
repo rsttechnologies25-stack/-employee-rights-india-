@@ -43,7 +43,7 @@ export default function DelayedSalaryPage() {
                 icon={AlertTriangle}
                 gradient="danger"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Salary & Pay', path: '/delayed-salary' },
@@ -51,22 +51,22 @@ export default function DelayedSalaryPage() {
                     ]} />
 
                     {/* Quick summary */}
-                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-soft mb-8">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-soft mb-8">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                             <div className="p-4 bg-danger/5 rounded-xl">
                                 <p className="text-3xl font-black text-danger mb-1">7th</p>
                                 <p className="text-sm font-bold">Legal Deadline</p>
-                                <p className="text-xs text-gray-500">For {'<'}1,000 employee companies</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">For {'<'}1,000 employee companies</p>
                             </div>
                             <div className="p-4 bg-warning/5 rounded-xl">
                                 <p className="text-3xl font-black text-warning mb-1">10x</p>
                                 <p className="text-sm font-bold">Penalty Available</p>
-                                <p className="text-xs text-gray-500">Compensation for unauthorized deductions</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">Compensation for unauthorized deductions</p>
                             </div>
                             <div className="p-4 bg-success/5 rounded-xl">
                                 <p className="text-3xl font-black text-success mb-1">Free</p>
                                 <p className="text-sm font-bold">Labour Commissioner</p>
-                                <p className="text-xs text-gray-500">No filing fee for wage complaints</p>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">No filing fee for wage complaints</p>
                             </div>
                         </div>
                     </div>
@@ -78,11 +78,11 @@ export default function DelayedSalaryPage() {
                     <ContentSection title="Step-by-Step: How to Recover Your Salary" icon={Scale} variant="info">
                         <div className="space-y-4">
                             {complaintSteps.map(s => (
-                                <div key={s.step} className="flex gap-4 p-5 bg-white rounded-xl border border-gray-100">
+                                <div key={s.step} className="flex gap-4 p-5 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <span className="w-9 h-9 bg-primary text-white rounded-full flex items-center justify-center font-black text-sm shrink-0">{s.step}</span>
                                     <div>
-                                        <p className="font-bold text-gray-900">{s.title}</p>
-                                        <p className="text-sm text-gray-600 mt-1">{s.desc}</p>
+                                        <p className="font-bold text-gray-900 dark:text-gray-100">{s.title}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{s.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -112,10 +112,10 @@ export default function DelayedSalaryPage() {
                                 { name: 'National Labour Helpline', desc: 'Dial 1800-11-2526 (Toll Free)', url: 'tel:18001112526', badge: 'Helpline' },
                             ].map((portal, idx) => (
                                 <a key={idx} href={portal.url} target="_blank" rel="noopener noreferrer"
-                                    className="p-4 bg-white rounded-xl border border-gray-100 hover:border-primary/30 hover:shadow-md transition-all flex items-start justify-between gap-3 group">
+                                    className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800 hover:border-primary/30 hover:shadow-md transition-all flex items-start justify-between gap-3 group">
                                     <div>
-                                        <p className="font-bold text-gray-900 group-hover:text-primary transition-colors">{portal.name}</p>
-                                        <p className="text-xs text-gray-500 mt-1">{portal.desc}</p>
+                                        <p className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">{portal.name}</p>
+                                        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">{portal.desc}</p>
                                     </div>
                                     <div className="flex flex-col items-end gap-1 shrink-0">
                                         <span className="badge bg-primary/10 text-primary text-[10px]">{portal.badge}</span>

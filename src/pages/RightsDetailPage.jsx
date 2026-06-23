@@ -9,7 +9,7 @@ export default function RightsDetailPage() {
     if (!category) {
         return (
             <div className="py-20 px-4 text-center">
-                <h1 className="text-2xl font-bold text-gray-900 mb-4">Category Not Found</h1>
+                <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Category Not Found</h1>
                 <Link to="/rights" className="text-primary hover:underline">← Back to All Rights</Link>
             </div>
         );
@@ -18,16 +18,16 @@ export default function RightsDetailPage() {
     const Icon = category.icon;
 
     return (
-        <div className="py-12 px-4 bg-gray-50 min-h-screen">
+        <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900 min-h-screen">
             <div className="max-w-4xl mx-auto">
                 <Link to="/rights" className="inline-flex items-center gap-2 text-primary hover:underline mb-8 text-sm font-medium">
                     <ArrowLeft className="w-4 h-4" /> Back to All Rights
                 </Link>
 
-                <div className="bg-white rounded-2xl shadow-soft border border-gray-100 overflow-hidden mb-8">
+                <div className="bg-white dark:bg-gray-950 rounded-2xl shadow-soft border border-gray-100 dark:border-gray-800 overflow-hidden mb-8">
                     <div className="bg-primary p-8 text-white">
                         <div className="flex items-center gap-4 mb-4">
-                            <div className="p-3 bg-white/10 rounded-xl">
+                            <div className="p-3 bg-white dark:bg-gray-950/10 rounded-xl">
                                 <Icon className="w-8 h-8" />
                             </div>
                             <h1 className="text-3xl font-extrabold">{category.title}</h1>
@@ -38,7 +38,7 @@ export default function RightsDetailPage() {
                     <div className="p-8 space-y-10">
                         {/* Entitlements */}
                         <section>
-                            <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-gray-900">
+                            <h2 className="text-xl font-bold mb-6 flex items-center gap-2 text-gray-900 dark:text-gray-100">
                                 <CheckCircle2 className="w-6 h-6 text-success" />
                                 Your Entitlements
                             </h2>
@@ -46,7 +46,7 @@ export default function RightsDetailPage() {
                                 {category.entitlements.map((item, idx) => (
                                     <li key={idx} className="flex gap-4 p-4 bg-success/5 rounded-xl border border-success/10">
                                         <span className="w-6 h-6 bg-success text-white rounded-full flex items-center justify-center text-xs font-bold shrink-0">{idx + 1}</span>
-                                        <span className="text-gray-700">{item}</span>
+                                        <span className="text-gray-700 dark:text-gray-300">{item}</span>
                                     </li>
                                 ))}
                             </ul>
@@ -60,7 +60,7 @@ export default function RightsDetailPage() {
                             </h2>
                             <ul className="space-y-4">
                                 {category.prohibitions.map((item, idx) => (
-                                    <li key={idx} className="flex gap-4 p-4 bg-danger/5 rounded-xl border border-danger/10 text-gray-700">
+                                    <li key={idx} className="flex gap-4 p-4 bg-danger/5 rounded-xl border border-danger/10 text-gray-700 dark:text-gray-300">
                                         <span className="text-danger shrink-0">{item.slice(0, 2)}</span>
                                         <span>{item.slice(3)}</span>
                                     </li>
@@ -74,7 +74,7 @@ export default function RightsDetailPage() {
                                 <Info className="w-5 h-5" />
                                 Why This Matters
                             </h2>
-                            <p className="text-gray-600 leading-relaxed">{category.whyItMatters}</p>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">{category.whyItMatters}</p>
                         </section>
                     </div>
                 </div>

@@ -17,7 +17,7 @@ export default function TerminationConfirmedPage() {
                 icon={UserX}
                 gradient="danger"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Termination', path: '/termination/after-confirmation' },
@@ -49,7 +49,7 @@ export default function TerminationConfirmedPage() {
                             ].map(s => (
                                 <div key={s.step} className="flex gap-4">
                                     <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">{s.step}</span>
-                                    <div><p className="font-bold text-gray-900">{s.title}</p><p className="text-sm text-gray-600">{s.desc}</p></div>
+                                    <div><p className="font-bold text-gray-900 dark:text-gray-100">{s.title}</p><p className="text-sm text-gray-600 dark:text-gray-400">{s.desc}</p></div>
                                 </div>
                             ))}
                         </div>
@@ -91,7 +91,7 @@ export default function TerminationConfirmedPage() {
                                         <th className="px-4 py-3 font-bold text-primary">Gratuity</th>
                                     </tr>
                                 </thead>
-                                <tbody className="divide-y divide-gray-100 bg-white">
+                                <tbody className="divide-y divide-gray-100 bg-white dark:bg-gray-950">
                                     <tr><td className="px-4 py-3 font-medium">Retrenchment</td><td className="px-4 py-3">1–3 months</td><td className="px-4 py-3">15 days/year of service</td><td className="px-4 py-3 text-success font-medium">Yes (if 5+ yrs)</td></tr>
                                     <tr><td className="px-4 py-3 font-medium">Dismissal (misconduct)</td><td className="px-4 py-3">None required</td><td className="px-4 py-3">None</td><td className="px-4 py-3 text-warning font-medium">May be forfeited</td></tr>
                                     <tr><td className="px-4 py-3 font-medium">Termination (no fault)</td><td className="px-4 py-3">As per contract</td><td className="px-4 py-3">None (unless negotiated)</td><td className="px-4 py-3 text-success font-medium">Yes (if 5+ yrs)</td></tr>

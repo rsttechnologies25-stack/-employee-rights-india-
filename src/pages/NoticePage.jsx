@@ -31,12 +31,12 @@ export default function NoticePage() {
     ];
 
     return (
-        <div className="py-12 px-4 bg-gray-50">
+        <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
             <SEOHead path="/notice-period" />
             <div className="max-w-7xl mx-auto">
                 <div className="mb-12">
                     <h1 className="text-3xl md:text-4xl font-extrabold mb-4">Notice Period & Resignation</h1>
-                    <p className="text-gray-600 max-w-2xl">Exiting a company gracefully and legally. Understanding your obligations and rights during the transition.</p>
+                    <p className="text-gray-600 dark:text-gray-400 max-w-2xl">Exiting a company gracefully and legally. Understanding your obligations and rights during the transition.</p>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
@@ -45,7 +45,7 @@ export default function NoticePage() {
                     ))}
                 </div>
 
-                <div className="bg-white rounded-2xl p-8 border border-gray-100 shadow-soft">
+                <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                     <div className="flex items-center gap-3 mb-6">
                         <Send className="w-8 h-8 text-primary" />
                         <h2 className="text-2xl font-bold">Standard Resignation Process</h2>
@@ -55,28 +55,28 @@ export default function NoticePage() {
                             <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">1</div>
                             <div>
                                 <h4 className="font-bold">Formal Resignation</h4>
-                                <p className="text-sm text-gray-500">Send an email clearly stating your last working day as per your contract's notice period.</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Send an email clearly stating your last working day as per your contract's notice period.</p>
                             </div>
                         </div>
                         <div className="flex gap-4">
                             <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">2</div>
                             <div>
                                 <h4 className="font-bold">Knowledge Transfer (KT)</h4>
-                                <p className="text-sm text-gray-500">Actively participate in the handover process. This is your primary legal obligation during notice.</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Actively participate in the handover process. This is your primary legal obligation during notice.</p>
                             </div>
                         </div>
                         <div className="flex gap-4">
                             <div className="bg-primary text-white w-8 h-8 rounded-full flex items-center justify-center font-bold shrink-0">3</div>
                             <div>
                                 <h4 className="font-bold">Exit Interview & F&F</h4>
-                                <p className="text-sm text-gray-500">Complete the exit formalities and ensure you receive a signed copy of your relieving letter.</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Complete the exit formalities and ensure you receive a signed copy of your relieving letter.</p>
                             </div>
                         </div>
                     </div>
 
                     <div className="mt-8 bg-warning/5 border border-warning/20 p-4 rounded-xl flex items-start gap-4">
                         <TimerOff className="w-6 h-6 text-warning shrink-0" />
-                        <p className="text-xs text-gray-600 leading-relaxed uppercase tracking-wide font-bold">
+                        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed uppercase tracking-wide font-bold">
                             Warning: If an employer threatens to "blackmark" your profile on BGV portals, this is an illegal intimidation tactic.
                             BGV agencies only verify facts (tenure, role, salary).
                         </p>

@@ -81,7 +81,7 @@ export default function ToolsPage() {
                 icon={Wrench}
                 gradient="teal"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-6xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools & Calculators', path: '/tools' }]} />
 
@@ -96,8 +96,8 @@ export default function ToolsPage() {
                                         </div>
                                         <span className={`badge text-[10px] uppercase tracking-wider ${calc.badgeClass}`}>{calc.badge}</span>
                                     </div>
-                                    <h2 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">{calc.title}</h2>
-                                    <p className="text-sm text-gray-600 flex-grow">{calc.description}</p>
+                                    <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2 group-hover:text-primary transition-colors">{calc.title}</h2>
+                                    <p className="text-sm text-gray-600 dark:text-gray-400 flex-grow">{calc.description}</p>
                                     <div className="mt-4 flex items-center gap-2 text-primary font-semibold text-sm">
                                         <span>Open Calculator</span>
                                         <span className="group-hover:translate-x-1 transition-transform">→</span>
@@ -108,8 +108,8 @@ export default function ToolsPage() {
                     </div>
 
                     <div className="mt-12 p-6 bg-primary/5 rounded-2xl border border-primary/10">
-                        <h2 className="text-lg font-bold text-gray-900 mb-2">About These Calculators</h2>
-                        <p className="text-sm text-gray-600 leading-relaxed">All calculations are estimates based on standard Indian labour law formulas. Actual amounts may vary based on your company policy, employment contract, applicable state laws, and tax bracket. These tools are for awareness and planning purposes only. For precise legal advice, consult a qualified labour law professional.</p>
+                        <h2 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-2">About These Calculators</h2>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">All calculations are estimates based on standard Indian labour law formulas. Actual amounts may vary based on your company policy, employment contract, applicable state laws, and tax bracket. These tools are for awareness and planning purposes only. For precise legal advice, consult a qualified labour law professional.</p>
                     </div>
                 </div>
             </div>

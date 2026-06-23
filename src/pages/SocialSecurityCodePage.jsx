@@ -23,7 +23,7 @@ export default function SocialSecurityCodePage() {
                 icon={ShieldPlus}
                 gradient="indigo"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'New Labour Codes', path: '/new-labour-codes' },
@@ -36,7 +36,7 @@ export default function SocialSecurityCodePage() {
                         </p>
                         <div className="bg-indigo-50 border border-indigo-200 rounded-xl p-6 my-6">
                             <h3 className="font-bold text-indigo-900 mb-2">Inclusion of Gig and Platform Workers</h3>
-                            <p className="text-gray-800">
+                            <p className="text-gray-800 dark:text-gray-200">
                                 The new Code on Social Security mandates the creation of a <strong>National Social Security Board</strong> specifically for unorganized workers, gig workers, and platform workers. Aggregators (like Uber/Swiggy) must contribute <strong>1% to 2% of their annual turnover</strong> to a social security fund dedicated to these workers.
                             </p>
                         </div>

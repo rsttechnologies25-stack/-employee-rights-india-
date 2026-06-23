@@ -36,7 +36,7 @@ export default function WrongfulTerminationPage() {
                 icon={ShieldAlert}
                 gradient="danger"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Termination', path: '/termination/wrongful' },
@@ -46,11 +46,11 @@ export default function WrongfulTerminationPage() {
                     <ContentSection title="Examples of Illegal / Wrongful Termination" icon={ShieldAlert} variant="danger">
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             {illegalExamples.map((ex, idx) => (
-                                <div key={idx} className="p-4 bg-white rounded-xl border border-danger/20 flex gap-3">
+                                <div key={idx} className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-danger/20 flex gap-3">
                                     <span className="text-danger font-bold text-xl shrink-0">✗</span>
                                     <div>
-                                        <p className="font-bold text-sm text-gray-900">{ex.title}</p>
-                                        <p className="text-xs text-gray-600 mt-1">{ex.desc}</p>
+                                        <p className="font-bold text-sm text-gray-900 dark:text-gray-100">{ex.title}</p>
+                                        <p className="text-xs text-gray-600 dark:text-gray-400 mt-1">{ex.desc}</p>
                                     </div>
                                 </div>
                             ))}
@@ -74,11 +74,11 @@ export default function WrongfulTerminationPage() {
                     <ContentSection title="Step-by-Step: How to File a Labour Complaint" icon={FileText} variant="info">
                         <div className="space-y-4">
                             {complaintSteps.map(s => (
-                                <div key={s.step} className="flex gap-4 p-4 bg-white rounded-xl border border-gray-100">
+                                <div key={s.step} className="flex gap-4 p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <span className="w-8 h-8 bg-primary text-white rounded-full flex items-center justify-center font-bold text-sm shrink-0">{s.step}</span>
                                     <div>
-                                        <p className="font-bold text-gray-900">{s.title}</p>
-                                        <p className="text-sm text-gray-600 mt-1">{s.desc}</p>
+                                        <p className="font-bold text-gray-900 dark:text-gray-100">{s.title}</p>
+                                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">{s.desc}</p>
                                     </div>
                                 </div>
                             ))}

@@ -53,7 +53,7 @@ export default function SearchBar() {
                 {query && (
                     <button 
                         onClick={() => setQuery('')}
-                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600"
+                        className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 dark:text-gray-400"
                     >
                         <X className="w-3 h-3" />
                     </button>
@@ -68,7 +68,7 @@ export default function SearchBar() {
                                 <Link
                                     to={result.path}
                                     onClick={handleSelect}
-                                    className="block px-4 py-2.5 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                                    className="block px-4 py-2.5 hover:bg-gray-50 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors"
                                 >
                                     <p className="text-sm font-medium text-gray-900 dark:text-gray-100">{result.title}</p>
                                     <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{result.type}</p>

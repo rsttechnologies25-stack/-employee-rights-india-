@@ -14,7 +14,7 @@ export default function PFCheckerPage() {
                 icon={Briefcase}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tools', path: '/tools' }, { label: 'PF Checker', path: '/pf-checker' }]} />
                     <div className="mt-8">

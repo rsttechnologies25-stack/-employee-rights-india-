@@ -36,7 +36,7 @@ export default function SalaryCalculationPage() {
                 icon={Calculator}
                 gradient="primary"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'Salary & Pay', path: '/salary-calculation' },
@@ -47,13 +47,13 @@ export default function SalaryCalculationPage() {
                         <p>Indian labour law does not prescribe a specific method for pro-rating salaries. Companies choose from these four approaches:</p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
                             {salaryMethods.map((m, idx) => (
-                                <div key={idx} className="p-5 bg-white rounded-xl border border-gray-100">
+                                <div key={idx} className="p-5 bg-white dark:bg-gray-950 rounded-xl border border-gray-100 dark:border-gray-800">
                                     <h3 className="font-bold text-primary mb-2">{m.name}</h3>
-                                    <p className="text-xs text-gray-500 font-mono bg-gray-50 px-2 py-1 rounded mb-2">{m.formula}</p>
-                                    <p className="text-xs text-gray-600 mb-2">{m.description}</p>
+                                    <p className="text-xs text-gray-500 dark:text-gray-400 font-mono bg-gray-50 dark:bg-gray-900 px-2 py-1 rounded mb-2">{m.formula}</p>
+                                    <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">{m.description}</p>
                                     <div className="text-xs">
                                         <span className="text-success font-semibold">Example: </span>
-                                        <span className="text-gray-700">{m.example}</span>
+                                        <span className="text-gray-700 dark:text-gray-300">{m.example}</span>
                                     </div>
                                 </div>
                             ))}
@@ -61,7 +61,7 @@ export default function SalaryCalculationPage() {
                     </ContentSection>
 
                     {/* Live Comparison Calculator */}
-                    <div className="bg-white rounded-2xl border border-gray-100 shadow-soft overflow-hidden mb-8">
+                    <div className="bg-white dark:bg-gray-950 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-soft overflow-hidden mb-8">
                         <div className="bg-primary p-6 text-white">
                             <div className="flex items-center gap-3">
                                 <TrendingUp className="w-7 h-7" />
@@ -79,20 +79,20 @@ export default function SalaryCalculationPage() {
                                     { label: 'LOP Days', value: lopDays, setter: setLopDays },
                                 ].map((inp, idx) => (
                                     <div key={idx}>
-                                        <label className="block text-sm font-bold text-gray-700 mb-1">{inp.label}</label>
+                                        <label className="block text-sm font-bold text-gray-700 dark:text-gray-300 mb-1">{inp.label}</label>
                                         <input type="number" value={inp.value} onChange={e => inp.setter(Number(e.target.value))}
-                                            className="w-full px-4 py-3 border-2 border-gray-100 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none font-bold text-lg" />
+                                            className="w-full px-4 py-3 border-2 border-gray-100 dark:border-gray-800 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none font-bold text-lg" />
                                     </div>
                                 ))}
                             </div>
                             <div className="overflow-x-auto">
                                 <table className="w-full text-sm">
                                     <thead>
-                                        <tr className="bg-gray-50">
-                                            <th className="px-4 py-3 text-left font-bold text-gray-700">Method</th>
-                                            <th className="px-4 py-3 text-right font-bold text-gray-700">Per Day Rate</th>
-                                            <th className="px-4 py-3 text-right font-bold text-gray-700">Salary Earned</th>
-                                            <th className="px-4 py-3 text-right font-bold text-gray-700">LOP Deduction</th>
+                                        <tr className="bg-gray-50 dark:bg-gray-900">
+                                            <th className="px-4 py-3 text-left font-bold text-gray-700 dark:text-gray-300">Method</th>
+                                            <th className="px-4 py-3 text-right font-bold text-gray-700 dark:text-gray-300">Per Day Rate</th>
+                                            <th className="px-4 py-3 text-right font-bold text-gray-700 dark:text-gray-300">Salary Earned</th>
+                                            <th className="px-4 py-3 text-right font-bold text-gray-700 dark:text-gray-300">LOP Deduction</th>
                                         </tr>
                                     </thead>
                                     <tbody className="divide-y divide-gray-100">
@@ -102,8 +102,8 @@ export default function SalaryCalculationPage() {
                                             { name: '÷26 Method (Best for Employee)', data: div26, best: true },
                                             { name: '÷Working Days', data: divWD, best: false },
                                         ].map((row, idx) => (
-                                            <tr key={idx} className={row.best ? 'bg-success/5' : 'bg-white hover:bg-gray-50'}>
-                                                <td className="px-4 py-3 font-medium text-gray-900">{row.name}{row.best && <span className="ml-2 text-[10px] bg-success text-white px-1.5 py-0.5 rounded-full">HIGHEST</span>}</td>
+                                            <tr key={idx} className={row.best ? 'bg-success/5' : 'bg-white dark:bg-gray-950 hover:bg-gray-50 dark:bg-gray-900'}>
+                                                <td className="px-4 py-3 font-medium text-gray-900 dark:text-gray-100">{row.name}{row.best && <span className="ml-2 text-[10px] bg-success text-white px-1.5 py-0.5 rounded-full">HIGHEST</span>}</td>
                                                 <td className="px-4 py-3 text-right font-mono">{fmt(row.data.perDay)}</td>
                                                 <td className="px-4 py-3 text-right font-mono font-bold">{fmt(row.data.earned)}</td>
                                                 <td className="px-4 py-3 text-right font-mono text-danger">-{fmt(row.data.lop)}</td>

@@ -57,7 +57,7 @@ export default function StateLawDetailPage() {
                 icon={MapPin}
                 gradient="blue"
             />
-            <div className="py-12 px-4 bg-gray-50">
+            <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900">
                 <div className="max-w-4xl mx-auto">
                     <Breadcrumb items={[
                         { label: 'State Labour Laws', path: '/state-labour-laws' },
@@ -99,22 +99,22 @@ export default function StateLawDetailPage() {
                         </div>
 
                         <div className="mt-8 bg-blue-50/50 rounded-2xl p-6 border border-blue-100">
-                            <h3 className="font-bold text-gray-900 mb-3 flex items-center gap-2">
+                            <h3 className="font-bold text-gray-900 dark:text-gray-100 mb-3 flex items-center gap-2">
                                 <Calendar className="w-5 h-5 text-blue-600" />
                                 Mandatory National & Festival Holidays
                             </h3>
-                            <p className="text-gray-700 leading-relaxed">
+                            <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                                 {stateData.nationalHolidays}
                             </p>
-                            <p className="text-sm text-gray-500 mt-4 italic">
+                            <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 italic">
                                 Note: If an employee is required to work on a mandatory national holiday, the employer must provide compensatory time off or pay double wages (2x) for that day as per the Act.
                             </p>
                         </div>
                     </ContentSection>
 
-                    <div className="mt-12 bg-white rounded-2xl border border-gray-100 p-8 shadow-soft">
-                        <h2 className="text-2xl font-bold text-gray-900 mb-4">Does this apply to IT/Software Companies?</h2>
-                        <p className="text-gray-600 leading-relaxed mb-4">
+                    <div className="mt-12 bg-white dark:bg-gray-950 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 shadow-soft">
+                        <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Does this apply to IT/Software Companies?</h2>
+                        <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
                             Yes. IT and software companies, BPOs, and KPOs are classified as "Commercial Establishments" under the <strong>{stateData.actName}</strong>. 
                             While some states grant IT companies exemptions from specific clauses (like keeping the office open 24x7 or 365 days), the fundamental rights regarding maximum working hours, overtime pay, and statutory leaves still strictly apply.
                         </p>

@@ -68,7 +68,7 @@ function App() {
                 <div className="min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary bg-white dark:bg-gray-950 transition-colors duration-300">
                     <Navbar />
                 <main className="flex-grow">
-                    <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh] text-primary"><div className="animate-pulse flex flex-col items-center gap-4"><div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div><span className="font-bold text-gray-500">Loading...</span></div></div>}>
+                    <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh] text-primary"><div className="animate-pulse flex flex-col items-center gap-4"><div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div><span className="font-bold text-gray-500 dark:text-gray-400">Loading...</span></div></div>}>
                         <Routes>
                         {/* Existing Routes */}
                         <Route path="/" element={<Home />} />
