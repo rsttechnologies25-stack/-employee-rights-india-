@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle2, ShieldAlert, ShieldCheck, Database, Lock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
+import SearchBar from '../components/SearchBar';
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
                     <p className="text-xl md:text-2xl text-blue-100 mb-10 font-medium">
                         Know your employee rights. Clarify doubts in minutes.
                     </p>
+                    <SearchBar />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <Link to="/pf-esi" className="bg-white dark:bg-gray-950 text-primary hover:bg-gray-50 dark:bg-gray-900 px-8 py-4 rounded-xl font-bold text-lg shadow-lg flex items-center justify-center gap-2 transition-all group">
                             PF & ESI Rules <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

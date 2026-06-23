@@ -2,7 +2,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
-import SearchBar from './SearchBar';
 
 const navGroups = [
     {
@@ -141,7 +140,6 @@ export default function Navbar() {
                                 <span className="text-[10px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">India Guide</span>
                             </div>
                         </Link>
-                        <SearchBar />
                     </div>
 
                     {/* Desktop Navigation */}
