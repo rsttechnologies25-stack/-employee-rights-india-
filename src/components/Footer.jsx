@@ -41,6 +41,9 @@ export default function Footer() {
                             <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
                                 Income Tax Dept (ITR/TDS) <ExternalLink className="w-3 h-3" />
                             </a>
+                            <a href="https://labour.tn.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-primary-light font-medium">
+                                Tamil Nadu Labour Dept <ExternalLink className="w-3 h-3" />
+                            </a>
                         </div>
                     </div>
 
