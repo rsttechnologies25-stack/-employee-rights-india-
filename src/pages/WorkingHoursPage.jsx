@@ -1,6 +1,7 @@
 import LawCard from '../components/LawCard';
 import SEOHead from '../components/SEOHead';
-import { Clock, Moon, ShieldAlert, PhoneOff, Zap } from 'lucide-react';
+import ContentSection, { CalloutBox } from '../components/ContentSection';
+import { Clock, Moon, ShieldAlert, PhoneOff, Zap, Coffee, RefreshCw } from 'lucide-react';
 
 export default function WorkingHoursPage() {
     const hourCards = [
@@ -84,6 +85,66 @@ export default function WorkingHoursPage() {
                         </div>
                     </div>
                 </div>
+
+                <ContentSection title="Lunch & Rest Break Rules" icon={Coffee} variant="info">
+                    <div className="space-y-4">
+                        <p>Under Indian labour laws (including the Factories Act and State Shops & Establishments Acts), employers are legally mandated to provide rest intervals to employees. This is a statutory right to ensure worker health and prevent exhaustion.</p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
+                            <div className="p-5 bg-white border border-gray-100 rounded-xl shadow-sm">
+                                <h4 className="font-bold text-gray-900 mb-2">The 5-Hour Rule</h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">No employee can be required to work for more than <strong>5 consecutive hours</strong> without a rest interval of at least <strong>30 minutes</strong>. This is typically designated as the lunch break.</p>
+                            </div>
+                            <div className="p-5 bg-white border border-gray-100 rounded-xl shadow-sm">
+                                <h4 className="font-bold text-gray-900 mb-2">Tea / Short Breaks</h4>
+                                <p className="text-sm text-gray-600 leading-relaxed">In addition to the mandatory 30-minute lunch break, it is standard industry practice to allow two short 10-15 minute tea/coffee breaks, though these are governed by company policy.</p>
+                            </div>
+                        </div>
+
+                        <CalloutBox type="warning" title="Are lunch breaks paid?">
+                            Statutory rest intervals (like the 30-minute lunch break) are generally <strong>unpaid</strong> and are not counted towards the 9 hours of actual working time. That is why a typical full-time shift is often 9.5 hours (9 hours of actual work + 30 mins unpaid lunch break). The total time from entry to exit is known as "Spreadover" and is capped at 10.5 to 12 hours depending on the state.
+                        </CalloutBox>
+                    </div>
+                </ContentSection>
+
+                <ContentSection title="Shift Timings & Rotational Shifts" icon={RefreshCw} variant="default">
+                    <div className="space-y-4">
+                        <p>Many industries (IT/ITES, healthcare, manufacturing) operate 24/7, requiring employees to work in rotational shifts. While employers have the right to dictate shift schedules, they must adhere to these legal protections:</p>
+                        
+                        <div className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm mt-4">
+                            <ul className="space-y-5 text-sm text-gray-700">
+                                <li className="flex gap-4">
+                                    <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">1</div>
+                                    <div>
+                                        <strong className="text-gray-900 block mb-1">Minimum Rest Between Shifts:</strong>
+                                        Legally, there must be a minimum continuous rest period (usually 10.5 to 12 hours) between the end of one shift and the beginning of the next. Forcing an employee to work "back-to-back" shifts (e.g., ending at 2 AM and returning at 9 AM) without adequate rest is a violation.
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">2</div>
+                                    <div>
+                                        <strong className="text-gray-900 block mb-1">Advance Notice for Roster Changes:</strong>
+                                        Employers are required to provide the shift roster reasonably in advance. Abruptly changing your shift timing with zero notice period, causing severe personal disruption, is considered an unfair labor practice.
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">3</div>
+                                    <div>
+                                        <strong className="text-gray-900 block mb-1">Split Shifts & Spreadover:</strong>
+                                        If your shift is split into two parts (e.g., 4 hours morning, break, 4 hours evening), the total "spreadover"—the time from the start of the first half to the end of the second half—cannot legally exceed the state's limit (typically 10.5 or 12 hours).
+                                    </div>
+                                </li>
+                                <li className="flex gap-4">
+                                    <div className="w-6 h-6 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">4</div>
+                                    <div>
+                                        <strong className="text-gray-900 block mb-1">Shift Allowances:</strong>
+                                        While night shift allowances are standard practice in the IT/BPO sectors, they are <strong>not legally mandated</strong> by central labor laws. Shift allowances are governed entirely by your employment contract or company policy.
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </ContentSection>
             </div>
         </div>
     );

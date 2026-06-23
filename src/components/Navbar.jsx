@@ -1,9 +1,121 @@
-import { Link } from 'react-router-dom';
-import { ShieldCheck, Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { ShieldCheck, Menu, X, ChevronDown } from 'lucide-react';
+import { useState, useRef, useEffect } from 'react';
+
+const navGroups = [
+    {
+        label: "Women's Rights",
+        items: [
+            { to: '/maternity-rights', label: 'Maternity Benefits' },
+            { to: '/posh-act', label: 'POSH Act (Harassment)' },
+        ]
+    },
+    {
+        label: 'Workplace Rules',
+        items: [
+            { to: '/working-hours', label: 'Working Hours & Overtime' },
+            { to: '/leave-holidays', label: 'Leave & Holidays' },
+            { to: '/contracts', label: 'Contracts & Bonds' },
+            { to: '/illegal-practices', label: 'Illegal Employer Practices' },
+            { to: '/moonlighting', label: 'Moonlighting & Dual Jobs' },
+            { to: '/data-privacy', label: 'Data Privacy & Tracking' },
+        ]
+    },
+    {
+        label: 'Termination & Exit',
+        items: [
+            { to: '/notice-period', label: 'Notice Period Rules' },
+            { to: '/pip-guide', label: 'PIP (Performance Plan) Rights' },
+            { to: '/forced-resignation', label: 'Forced Resignation' },
+            { to: '/termination/probation', label: 'Termination During Probation' },
+            { to: '/termination/after-confirmation', label: 'Termination After Confirmation' },
+            { to: '/termination/wrongful', label: 'Wrongful Termination' },
+            { to: '/full-final-settlement', label: 'Full & Final Settlement' },
+            { to: '/exit-process', label: 'Exit Process' },
+        ]
+    },
+    {
+        label: 'Salary & Tax',
+        items: [
+            { to: '/salary-calculation', label: 'Salary Calculation Rules' },
+            { to: '/pay-cycle', label: 'Pay Cycle Guide' },
+            { to: '/delayed-salary', label: 'Delayed Salary' },
+            { to: '/form-16-rights', label: 'Form 16 & TDS Rights' },
+        ]
+    },
+    {
+        label: 'Benefits & Docs',
+        items: [
+            { to: '/gratuity', label: 'Gratuity Rights' },
+            { to: '/pf-esi', label: 'PF & ESI Rules' },
+            { to: '/experience-letter', label: 'Experience Letter' },
+            { to: '/relieving-letter', label: 'Relieving Letter' },
+            { to: '/service-certificate', label: 'Service Certificate' },
+        ]
+    },
+    {
+        label: 'Tools & FAQ',
+        items: [
+            { to: '/tools', label: 'Calculators' },
+            { to: '/templates', label: 'Letter Templates' },
+            { to: '/faq', label: 'Master FAQ' },
+        ]
+    },
+];
+
+const directLinks = [
+    { to: '/rights', label: 'All Rights Index', highlight: true },
+];
+
+function DropdownMenu({ group, isOpen, onToggle, onClose }) {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        const handleClick = (e) => {
+            if (ref.current && !ref.current.contains(e.target)) onClose();
+        };
+        if (isOpen) document.addEventListener('mousedown', handleClick);
+        return () => document.removeEventListener('mousedown', handleClick);
+    }, [isOpen, onClose]);
+
+    return (
+        <div ref={ref} className="relative">
+            <button
+                onClick={onToggle}
+                className="flex items-center gap-1 text-gray-600 hover:text-primary font-medium transition-colors text-sm"
+            >
+                {group.label}
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </button>
+            {isOpen && (
+                <div className="absolute top-full left-0 mt-2 bg-white rounded-xl shadow-lg border border-gray-100 py-2 min-w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                    {group.items.map((item) => (
+                        <Link
+                            key={item.to}
+                            to={item.to}
+                            onClick={onClose}
+                            className="block px-4 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 transition-colors"
+                        >
+                            {item.label}
+                        </Link>
+                    ))}
+                </div>
+            )}
+        </div>
+    );
+}
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [openDropdown, setOpenDropdown] = useState(null);
+    const [mobileExpanded, setMobileExpanded] = useState(null);
+    const location = useLocation();
+
+    // Close mobile menu on route change
+    useEffect(() => {
+        setIsOpen(false);
+        setMobileExpanded(null);
+    }, [location.pathname]);
 
     return (
         <nav className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -19,18 +131,23 @@ export default function Navbar() {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-6">
-                        <Link to="/rights" className="text-accent hover:text-accent-dark font-bold transition-colors">All Rights</Link>
-                        <Link to="/pf-esi" className="text-gray-600 hover:text-primary font-medium transition-colors">PF & ESI</Link>
-                        <Link to="/contracts" className="text-gray-600 hover:text-primary font-medium transition-colors">Contracts & Bonds</Link>
-                        <Link to="/notice-period" className="text-gray-600 hover:text-primary font-medium transition-colors">Notice Period</Link>
-                        <Link to="/working-hours" className="text-gray-600 hover:text-primary font-medium transition-colors">Working Hours</Link>
-                        <Link to="/leave-holidays" className="text-gray-600 hover:text-primary font-medium transition-colors">Leave & Holidays</Link>
-                        <Link to="/illegal-practices" className="text-gray-600 hover:text-primary font-medium transition-colors">Illegal Practices</Link>
+                    {/* Desktop Navigation */}
+                    <div className="hidden lg:flex items-center space-x-5">
+                        <Link to="/rights" className="text-accent hover:text-accent-dark font-bold transition-colors text-sm">All Rights</Link>
+                        {navGroups.map((group, idx) => (
+                            <DropdownMenu
+                                key={idx}
+                                group={group}
+                                isOpen={openDropdown === idx}
+                                onToggle={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                                onClose={() => setOpenDropdown(null)}
+                            />
+                        ))}
                     </div>
 
-                    <div className="md:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 focus:outline-none">
+                    {/* Mobile Toggle */}
+                    <div className="lg:hidden flex items-center">
+                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 focus:outline-none p-2">
                             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                         </button>
                     </div>
@@ -39,14 +156,45 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden bg-white border-t border-gray-100 p-4 space-y-3 shadow-lg">
-                    <Link to="/rights" onClick={() => setIsOpen(false)} className="block text-accent hover:text-accent-dark font-bold">All Rights</Link>
-                    <Link to="/pf-esi" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">PF & ESI</Link>
-                    <Link to="/contracts" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Contracts & Bonds</Link>
-                    <Link to="/notice-period" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Notice Period</Link>
-                    <Link to="/working-hours" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Working Hours</Link>
-                    <Link to="/leave-holidays" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Leave & Holidays</Link>
-                    <Link to="/illegal-practices" onClick={() => setIsOpen(false)} className="block text-gray-600 hover:text-primary font-medium">Illegal Practices</Link>
+                <div className="lg:hidden bg-white border-t border-gray-100 shadow-lg max-h-[80vh] overflow-y-auto">
+                    <div className="p-4 space-y-1">
+                        {/* Direct links */}
+                        {directLinks.map((link) => (
+                            <Link
+                                key={link.to}
+                                to={link.to}
+                                className={`block px-4 py-3 rounded-lg font-medium transition-colors ${link.highlight ? 'text-accent hover:bg-accent/5 font-bold' : 'text-gray-600 hover:bg-gray-50 hover:text-primary'}`}
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+
+                        {/* Grouped sections */}
+                        {navGroups.map((group, idx) => (
+                            <div key={idx} className="border-t border-gray-50 pt-1 mt-1">
+                                <button
+                                    onClick={() => setMobileExpanded(mobileExpanded === idx ? null : idx)}
+                                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 font-semibold hover:bg-gray-50 rounded-lg transition-colors"
+                                >
+                                    <span>{group.label}</span>
+                                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${mobileExpanded === idx ? 'rotate-180' : ''}`} />
+                                </button>
+                                {mobileExpanded === idx && (
+                                    <div className="pl-4 space-y-0.5 pb-2">
+                                        {group.items.map((item) => (
+                                            <Link
+                                                key={item.to}
+                                                to={item.to}
+                                                className="block px-4 py-2.5 text-sm text-gray-600 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                                            >
+                                                {item.label}
+                                            </Link>
+                                        ))}
+                                    </div>
+                                )}
+                            </div>
+                        ))}
+                    </div>
                 </div>
             )}
         </nav>

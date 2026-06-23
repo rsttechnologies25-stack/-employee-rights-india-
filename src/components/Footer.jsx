@@ -65,11 +65,14 @@ export default function Footer() {
                     <div className="flex items-center gap-1">
                         Built with <Heart className="w-3 h-3 text-red-500 fill-current" /> for Indian Employees
                     </div>
-                    <div className="text-center">
-                        <span className="text-white font-bold">RST Technologies / RexonSoftTech</span>
+                    <div className="text-center text-gray-400">
+                        Empowering awareness, created by{' '}
+                        <a href="https://www.rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-primary transition-colors">
+                            RexonsoftTech
+                        </a>
                     </div>
                     <div className="text-gray-500">
-                        © {new Date().getFullYear()} RST Technologies. All Rights Reserved.
+                        © {new Date().getFullYear()} RexonsoftTech. All Rights Reserved.
                     </div>
                 </div>
 
