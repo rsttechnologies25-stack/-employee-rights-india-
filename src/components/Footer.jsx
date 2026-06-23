@@ -32,6 +32,15 @@ export default function Footer() {
                             <a href="https://labour.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
                                 Ministry of Labour <ExternalLink className="w-3 h-3" />
                             </a>
+                            <a href="https://samadhan.labour.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                Samadhan Portal (Disputes) <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href="https://pgportal.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                CPGRAMS (Grievance) <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                Income Tax Dept (ITR/TDS) <ExternalLink className="w-3 h-3" />
+                            </a>
                         </div>
                     </div>
 
