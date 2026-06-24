@@ -62,7 +62,7 @@ export default function Footer() {
                         {/* Social Media */}
                         <h4 className="text-white font-semibold text-sm mb-2">Follow Us</h4>
                         <div className="flex items-center gap-4">
-                            <a href="https://www.instagram.com/rsttechnologies25/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-sm">
+                            <a href="https://www.instagram.com/rexonsofttech/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-sm">
                                 <Instagram className="w-4 h-4" /> Instagram
                             </a>
                             <a href="https://www.facebook.com/people/Rexonsofttech-Rexonsofttech/pfbid0ZVtdv6PMbpnEUAMtoZqVVhkUZD37YrqvjefAaGPT6idmYzzYZDRDdL4eTcDwGsMsl/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-sm">
