@@ -4,7 +4,7 @@
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const BOT_NAME = 'RightsBot';
-export const BOT_TAGLINE = 'Your AI Labour Law Assistant';
+export const BOT_TAGLINE = 'Your Labour Law Assistant';
 
 export const QUICK_QUESTIONS = [
     'What is my PF eligibility?',
