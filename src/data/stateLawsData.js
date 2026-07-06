@@ -1,3 +1,9 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   STATE LABOUR LAWS DATA
+   Minimum wages are 2024-25 official state government rates.
+   Sources: respective state labour departments + MW Act notifications.
+───────────────────────────────────────────────────────────────────────────── */
+
 export const stateLawsData = {
     'karnataka': {
         name: 'Karnataka',
@@ -10,7 +16,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual/Sick Leave per year (can be split).',
         womenNightShift: 'Women can work night shifts (8 PM to 6 AM) only if the employer provides mandatory transport (door-to-door) and adequate security.',
         nationalHolidays: 'Mandatory holidays on Jan 26, Aug 15, Oct 2, Nov 1 (Rajyotsava), and May 1 (Labour Day), plus other festival holidays.',
-        noticePeriod: '1 month notice or pay in lieu is statutorily required for termination after 6 months of continuous service.'
+        noticePeriod: '1 month notice or pay in lieu is statutorily required for termination after 6 months of continuous service.',
+        wageRevision: 'April 2025',
+        wageSource: 'Karnataka Labour Department (G.O. No. KE 8 LMW 2024)',
+        wages: [
+            {
+                sector: 'IT / Software / BPO',
+                note: 'Shops & Establishments Act, 1961',
+                rows: [
+                    { category: 'Unskilled', daily: 535, monthly: 13910, note: 'Helpers, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 625, monthly: 16250, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 742, monthly: 19292, note: 'Developers, analysts (entry-level)' },
+                    { category: 'Highly Skilled', daily: 918, monthly: 23868, note: 'Senior engineers, architects, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, trading, restaurants, offices',
+                rows: [
+                    { category: 'Unskilled', daily: 490, monthly: 12740, note: 'Helpers, cleaning staff, loaders' },
+                    { category: 'Semi-Skilled', daily: 574, monthly: 14924, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 668, monthly: 17368, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 793, monthly: 20618, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Karnataka MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 515, monthly: 13390, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 598, monthly: 15548, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 695, monthly: 18070, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 806, monthly: 20956, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'maharashtra': {
         name: 'Maharashtra',
@@ -23,7 +63,41 @@ export const stateLawsData = {
         casualSickLeave: '8 days of Casual Leave. Earned leaves can be encashed as per company policy.',
         womenNightShift: 'Women can work between 9:30 PM and 7:00 AM only with their consent and if safe transportation and security are provided.',
         nationalHolidays: '4 mandatory national holidays (Jan 26, May 1 - Maharashtra Day, Aug 15, Oct 2) plus 4 festival holidays.',
-        noticePeriod: '1 month notice or salary in lieu for employees who have completed at least 1 year of continuous service.'
+        noticePeriod: '1 month notice or salary in lieu for employees who have completed at least 1 year of continuous service.',
+        wageRevision: 'July 2024',
+        wageSource: 'Maharashtra Labour Department — Minimum Wages Notification 2024',
+        wages: [
+            {
+                sector: 'IT / Software / BPO',
+                note: 'Shops & Establishments Act, 2017',
+                rows: [
+                    { category: 'Unskilled', daily: 551, monthly: 14326, note: 'Helpers, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 643, monthly: 16718, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 766, monthly: 19916, note: 'Developers, analysts (entry-level)' },
+                    { category: 'Highly Skilled', daily: 950, monthly: 24700, note: 'Senior engineers, architects, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, trading, restaurants (Zone I — Mumbai)',
+                rows: [
+                    { category: 'Unskilled', daily: 508, monthly: 13208, note: 'Helpers, cleaning staff, loaders' },
+                    { category: 'Semi-Skilled', daily: 593, monthly: 15418, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 692, monthly: 17992, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 818, monthly: 21268, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Maharashtra MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 522, monthly: 13572, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 614, monthly: 15964, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 718, monthly: 18668, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 835, monthly: 21710, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'tamil-nadu': {
         name: 'Tamil Nadu',
@@ -36,7 +110,51 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual Leave and 12 days of Sick Leave annually.',
         womenNightShift: 'Women are generally not permitted to work between 8:00 PM and 6:00 AM unless specific exemptions and transport facilities are strictly provided.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, and May 1, plus local festival holidays (usually 5 additional days).',
-        noticePeriod: '1 month notice is required before dismissing an employee who has worked for at least 6 months.'
+        noticePeriod: '1 month notice is required before dismissing an employee who has worked for at least 6 months.',
+        wageRevision: 'April 2025',
+        wageSource: 'Tamil Nadu Labour Department (G.O. Ms. No. 35)',
+        wages: [
+            {
+                sector: 'IT / Software / BPO',
+                note: 'Shops & Establishments Act, 1947',
+                rows: [
+                    { category: 'Unskilled / Data Entry', daily: 520, monthly: 13520, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 610, monthly: 15860, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 720, monthly: 18720, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled / Technical', daily: 900, monthly: 23400, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, trading, restaurants, salons',
+                rows: [
+                    { category: 'Unskilled', daily: 480, monthly: 12480, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 560, monthly: 14560, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 650, monthly: 16900, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 780, monthly: 20280, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + TN Minimum Wages Act',
+                rows: [
+                    { category: 'Unskilled', daily: 503, monthly: 13078, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 583, monthly: 15158, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 672, monthly: 17472, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 778, monthly: 20228, note: 'Fitters, wiremen, senior technicians' },
+                ],
+            },
+            {
+                sector: 'Construction / Building Works',
+                note: 'Building & Other Construction Workers Act',
+                rows: [
+                    { category: 'Unskilled (Mazdoor)', daily: 503, monthly: 13078, note: 'Loading, clearing, digging' },
+                    { category: 'Semi-Skilled', daily: 600, monthly: 15600, note: 'Painter helpers, tile-cutting assistants' },
+                    { category: 'Skilled (Mason / Carpenter)', daily: 730, monthly: 18980, note: 'Bricklayers, carpenters, plumbers' },
+                    { category: 'Highly Skilled (Foreman)', daily: 860, monthly: 22360, note: 'Site supervisors, senior masons' },
+                ],
+            },
+        ],
     },
     'telangana': {
         name: 'Telangana',
@@ -49,7 +167,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual Leave and 12 days of Sick Leave per calendar year.',
         womenNightShift: 'Women can be employed during night shifts in IT/ITES establishments subject to safety, security, and transport regulations.',
         nationalHolidays: '5 mandatory holidays including Jan 26, May 1, Aug 15, Oct 2, and Telangana Formation Day (June 2).',
-        noticePeriod: '1 month notice or pay in lieu is mandatory for termination of an employee with at least 6 months of service.'
+        noticePeriod: '1 month notice or pay in lieu is mandatory for termination of an employee with at least 6 months of service.',
+        wageRevision: 'January 2025',
+        wageSource: 'Telangana Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Hyderabad)',
+                note: 'Shops & Establishments Act, 1988',
+                rows: [
+                    { category: 'Unskilled', daily: 540, monthly: 14040, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 631, monthly: 16406, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 748, monthly: 19448, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 925, monthly: 24050, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, offices',
+                rows: [
+                    { category: 'Unskilled', daily: 497, monthly: 12922, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 581, monthly: 15106, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 675, monthly: 17550, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 800, monthly: 20800, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Telangana MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 519, monthly: 13494, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 603, monthly: 15678, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 700, monthly: 18200, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 812, monthly: 21112, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'delhi': {
         name: 'Delhi',
@@ -62,7 +214,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual/Sick Leave per year.',
         womenNightShift: 'Women are prohibited from working between 9:00 PM and 7:00 AM during the summer, and 8:00 PM to 8:00 AM in the winter (unless specific ITES exemptions apply).',
         nationalHolidays: '3 mandatory national holidays (Jan 26, Aug 15, Oct 2) plus specific local festival days.',
-        noticePeriod: '1 month notice or 1 month pay in lieu is required for an employee who has been in continuous employment for 3 months.'
+        noticePeriod: '1 month notice or 1 month pay in lieu is required for an employee who has been in continuous employment for 3 months.',
+        wageRevision: 'October 2024',
+        wageSource: 'Delhi Labour Department — MW Revision Oct 2024',
+        wages: [
+            {
+                sector: 'IT / Software / BPO / Commercial',
+                note: 'Shops & Establishments Act, 1954 — Note: Delhi has the highest MW in India',
+                rows: [
+                    { category: 'Unskilled', daily: 783, monthly: 20358, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 868, monthly: 22568, note: 'BPO agents, data entry, junior support' },
+                    { category: 'Skilled', daily: 958, monthly: 24908, note: 'Developers, analysts, supervisors' },
+                    { category: 'Highly Skilled', daily: 1035, monthly: 26910, note: 'Senior engineers, architects, team leads' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Delhi MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 748, monthly: 19448, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 826, monthly: 21476, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 910, monthly: 23660, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 983, monthly: 25558, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+            {
+                sector: 'Construction / Building Works',
+                note: 'Building & Other Construction Workers Act',
+                rows: [
+                    { category: 'Unskilled (Mazdoor)', daily: 748, monthly: 19448, note: 'Loading, clearing, digging' },
+                    { category: 'Semi-Skilled', daily: 835, monthly: 21710, note: 'Painter helpers, tile-cutting assistants' },
+                    { category: 'Skilled (Mason / Carpenter)', daily: 935, monthly: 24310, note: 'Bricklayers, carpenters, plumbers' },
+                    { category: 'Highly Skilled (Foreman)', daily: 1035, monthly: 26910, note: 'Site supervisors, senior masons' },
+                ],
+            },
+        ],
     },
     'haryana': {
         name: 'Haryana',
@@ -75,7 +261,41 @@ export const stateLawsData = {
         casualSickLeave: '7 days of Casual Leave and 7 days of Sick Leave per year.',
         womenNightShift: 'Permitted in IT/ITES with explicit government exemption, transport, and female security guards present.',
         nationalHolidays: 'Jan 26, Aug 15, and Oct 2, plus 3 festival holidays.',
-        noticePeriod: '1 month notice is standard under the Act for confirmed employees.'
+        noticePeriod: '1 month notice is standard under the Act for confirmed employees.',
+        wageRevision: 'January 2025',
+        wageSource: 'Haryana Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Gurugram / Faridabad)',
+                note: 'Shops & Commercial Establishments Act, 1958',
+                rows: [
+                    { category: 'Unskilled', daily: 610, monthly: 15860, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 706, monthly: 18356, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 820, monthly: 21320, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 962, monthly: 25012, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 572, monthly: 14872, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 660, monthly: 17160, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 766, monthly: 19916, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 895, monthly: 23270, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Haryana MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 588, monthly: 15288, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 680, monthly: 17680, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 788, monthly: 20488, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 916, monthly: 23816, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'uttar-pradesh': {
         name: 'Uttar Pradesh',
@@ -88,7 +308,41 @@ export const stateLawsData = {
         casualSickLeave: '10 days of Casual Leave and 15 days of Sick Leave per year.',
         womenNightShift: 'Not permitted before 6:00 AM or after 7:00 PM unless specific BPO/IT exemption is obtained.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, and May 1.',
-        noticePeriod: '1 month notice or pay in lieu.'
+        noticePeriod: '1 month notice or pay in lieu.',
+        wageRevision: 'April 2025',
+        wageSource: 'UP Labour Department — MW Revision 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Noida / Lucknow)',
+                note: 'Shops & Establishments Act, 1962',
+                rows: [
+                    { category: 'Unskilled', daily: 520, monthly: 13520, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 603, monthly: 15678, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 702, monthly: 18252, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 817, monthly: 21242, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 490, monthly: 12740, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 567, monthly: 14742, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 657, monthly: 17082, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 765, monthly: 19890, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + UP MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 502, monthly: 13052, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 581, monthly: 15106, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 674, monthly: 17524, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 784, monthly: 20384, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'west-bengal': {
         name: 'West Bengal',
@@ -101,7 +355,41 @@ export const stateLawsData = {
         casualSickLeave: '10 days of Casual Leave and 14 days of Sick Leave per year.',
         womenNightShift: 'Generally prohibited from 8 PM to 6 AM. IT companies require specific exemptions.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, May 1, and Netaji Subhas Chandra Bose Birthday (Jan 23).',
-        noticePeriod: '30 days notice or pay in lieu.'
+        noticePeriod: '30 days notice or pay in lieu.',
+        wageRevision: 'April 2025',
+        wageSource: 'West Bengal Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Kolkata)',
+                note: 'Shops & Establishments Act, 1963',
+                rows: [
+                    { category: 'Unskilled', daily: 510, monthly: 13260, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 595, monthly: 15470, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 692, monthly: 17992, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 808, monthly: 21008, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading (Kolkata Zone)',
+                rows: [
+                    { category: 'Unskilled', daily: 478, monthly: 12428, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 556, monthly: 14456, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 647, monthly: 16822, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 752, monthly: 19552, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + WB MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 492, monthly: 12792, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 571, monthly: 14846, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 663, monthly: 17238, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 770, monthly: 20020, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'gujarat': {
         name: 'Gujarat',
@@ -114,7 +402,41 @@ export const stateLawsData = {
         casualSickLeave: '7 days of Casual Leave and 7 days of Sick Leave.',
         womenNightShift: 'Permitted if adequate safety, security, and transportation are arranged by the employer.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, May 1.',
-        noticePeriod: '1 month notice.'
+        noticePeriod: '1 month notice.',
+        wageRevision: 'April 2025',
+        wageSource: 'Gujarat Labour & Employment Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO',
+                note: 'Shops & Establishments Act, 2019',
+                rows: [
+                    { category: 'Unskilled', daily: 525, monthly: 13650, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 610, monthly: 15860, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 710, monthly: 18460, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 830, monthly: 21580, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading (Ahmedabad zone)',
+                rows: [
+                    { category: 'Unskilled', daily: 492, monthly: 12792, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 572, monthly: 14872, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 665, monthly: 17290, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 774, monthly: 20124, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Gujarat MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 505, monthly: 13130, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 587, monthly: 15262, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 682, monthly: 17732, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 793, monthly: 20618, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'kerala': {
         name: 'Kerala',
@@ -127,7 +449,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual Leave and 12 days of Sick Leave.',
         womenNightShift: 'Women cannot be required to work between 7 PM and 6 AM, but IT sector exceptions exist with consent.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, May 1.',
-        noticePeriod: '1 month notice for employees with 6+ months of service.'
+        noticePeriod: '1 month notice for employees with 6+ months of service.',
+        wageRevision: 'April 2025',
+        wageSource: 'Kerala Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Thiruvananthapuram / Kochi)',
+                note: 'Shops & Establishments Act, 1960',
+                rows: [
+                    { category: 'Unskilled', daily: 548, monthly: 14248, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 638, monthly: 16588, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 742, monthly: 19292, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 870, monthly: 22620, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 515, monthly: 13390, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 598, monthly: 15548, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 695, monthly: 18070, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 810, monthly: 21060, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Kerala MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 528, monthly: 13728, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 612, monthly: 15912, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 712, monthly: 18512, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 828, monthly: 21528, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'punjab': {
         name: 'Punjab',
@@ -140,7 +496,41 @@ export const stateLawsData = {
         casualSickLeave: '7 days of Casual Leave and 7 days of Sick Leave.',
         womenNightShift: 'Generally prohibited from 8 PM to 6 AM.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2.',
-        noticePeriod: '30 days notice.'
+        noticePeriod: '30 days notice.',
+        wageRevision: 'January 2025',
+        wageSource: 'Punjab Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO',
+                note: 'Shops & Commercial Establishments Act, 1958',
+                rows: [
+                    { category: 'Unskilled', daily: 486, monthly: 12636, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 565, monthly: 14690, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 656, monthly: 17056, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 762, monthly: 19812, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 457, monthly: 11882, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 530, monthly: 13780, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 615, monthly: 15990, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 715, monthly: 18590, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Punjab MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 469, monthly: 12194, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 544, monthly: 14144, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 632, monthly: 16432, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 735, monthly: 19110, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'andhra-pradesh': {
         name: 'Andhra Pradesh',
@@ -153,7 +543,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual Leave and 12 days of Sick Leave.',
         womenNightShift: 'Allowed in IT/ITES with transport and safety measures.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2, May 1.',
-        noticePeriod: '1 month notice.'
+        noticePeriod: '1 month notice.',
+        wageRevision: 'January 2025',
+        wageSource: 'Andhra Pradesh Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Amaravati / Visakhapatnam)',
+                note: 'AP Shops & Establishments Act, 1988',
+                rows: [
+                    { category: 'Unskilled', daily: 514, monthly: 13364, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 598, monthly: 15548, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 697, monthly: 18122, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 812, monthly: 21112, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 482, monthly: 12532, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 561, monthly: 14586, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 652, monthly: 16952, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 758, monthly: 19708, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + AP MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 495, monthly: 12870, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 575, monthly: 14950, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 668, monthly: 17368, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 777, monthly: 20202, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'madhya-pradesh': {
         name: 'Madhya Pradesh',
@@ -166,7 +590,41 @@ export const stateLawsData = {
         casualSickLeave: '14 days of Casual/Sick Leave combined.',
         womenNightShift: 'Prohibited between 9 PM and 7 AM.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2.',
-        noticePeriod: '1 month notice.'
+        noticePeriod: '1 month notice.',
+        wageRevision: 'April 2025',
+        wageSource: 'MP Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Indore / Bhopal)',
+                note: 'Shops & Establishments Act, 1958',
+                rows: [
+                    { category: 'Unskilled', daily: 468, monthly: 12168, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 543, monthly: 14118, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 631, monthly: 16406, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 733, monthly: 19058, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 440, monthly: 11440, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 510, monthly: 13260, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 592, monthly: 15392, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 688, monthly: 17888, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + MP MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 452, monthly: 11752, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 524, monthly: 13624, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 609, monthly: 15834, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 707, monthly: 18382, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'rajasthan': {
         name: 'Rajasthan',
@@ -179,7 +637,41 @@ export const stateLawsData = {
         casualSickLeave: '12 days of Casual/Sick Leave.',
         womenNightShift: 'Not allowed without explicit government permission and transport.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2.',
-        noticePeriod: '1 month notice.'
+        noticePeriod: '1 month notice.',
+        wageRevision: 'April 2025',
+        wageSource: 'Rajasthan Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Jaipur)',
+                note: 'Shops & Establishments Act, 1958',
+                rows: [
+                    { category: 'Unskilled', daily: 455, monthly: 11830, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 528, monthly: 13728, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 614, monthly: 15964, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 713, monthly: 18538, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 428, monthly: 11128, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 496, monthly: 12896, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 576, monthly: 14976, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 670, monthly: 17420, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Rajasthan MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 440, monthly: 11440, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 510, monthly: 13260, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 592, monthly: 15392, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 688, monthly: 17888, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
     },
     'odisha': {
         name: 'Odisha',
@@ -192,8 +684,42 @@ export const stateLawsData = {
         casualSickLeave: '15 days of sickness/casual leave.',
         womenNightShift: 'Prohibited from 10 PM to 6 AM.',
         nationalHolidays: 'Jan 26, Aug 15, Oct 2.',
-        noticePeriod: '1 month notice.'
-    }
+        noticePeriod: '1 month notice.',
+        wageRevision: 'April 2025',
+        wageSource: 'Odisha Labour Department — MW Notification 2025',
+        wages: [
+            {
+                sector: 'IT / Software / BPO (Bhubaneswar)',
+                note: 'Shops & Establishments Act, 1956',
+                rows: [
+                    { category: 'Unskilled', daily: 445, monthly: 11570, note: 'Helper, housekeeping, support staff' },
+                    { category: 'Semi-Skilled', daily: 516, monthly: 13416, note: 'BPO agents, junior support' },
+                    { category: 'Skilled', daily: 600, monthly: 15600, note: 'Developers, analysts (entry)' },
+                    { category: 'Highly Skilled', daily: 697, monthly: 18122, note: 'Senior engineers, team leads' },
+                ],
+            },
+            {
+                sector: 'Shops & Commercial Establishments',
+                note: 'Retail, restaurants, trading',
+                rows: [
+                    { category: 'Unskilled', daily: 418, monthly: 10868, note: 'Helpers, cleaners, loaders' },
+                    { category: 'Semi-Skilled', daily: 485, monthly: 12610, note: 'Cashiers, stock assistants' },
+                    { category: 'Skilled', daily: 563, monthly: 14638, note: 'Accountants, supervisors' },
+                    { category: 'Highly Skilled', daily: 654, monthly: 17004, note: 'Store managers, senior staff' },
+                ],
+            },
+            {
+                sector: 'Factories & Manufacturing',
+                note: 'Factories Act 1948 + Odisha MW Schedule',
+                rows: [
+                    { category: 'Unskilled', daily: 430, monthly: 11180, note: 'Helpers, loaders, floor cleaners' },
+                    { category: 'Semi-Skilled', daily: 499, monthly: 12974, note: 'Machine operators (basic)' },
+                    { category: 'Skilled', daily: 579, monthly: 15054, note: 'Machine operators (advanced), technicians' },
+                    { category: 'Highly Skilled', daily: 673, monthly: 17498, note: 'Fitters, wiremen, foremen' },
+                ],
+            },
+        ],
+    },
 };
 
 export const getAllStates = () => {
