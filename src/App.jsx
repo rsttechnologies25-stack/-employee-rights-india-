@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import Chatbot from './components/Chatbot';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Lazy loaded pages
@@ -153,6 +154,7 @@ function App() {
                     </Suspense>
                 </main>
                 <Footer />
+                <Chatbot />
             </div>
             </Router>
         </ThemeProvider>
