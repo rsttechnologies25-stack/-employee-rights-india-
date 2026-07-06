@@ -1,11 +1,12 @@
-# robots.txt for Employee Rights India
+# robots.txt — Employee Rights India
 # https://employee-rights.rexonsofttech.in
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://employee-rights.rexonsofttech.in/sitemap.xml
+# Disallow build artifacts
+Disallow: /src/
+Disallow: /.git/
 
-# Crawl-delay (optional, be polite to servers)
-Crawl-delay: 1
+# Sitemaps
+Sitemap: https://employee-rights.rexonsofttech.in/sitemap.xml

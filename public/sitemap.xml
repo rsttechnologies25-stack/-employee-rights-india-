@@ -1,51 +1,408 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ═══ HOMEPAGE ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/</loc>
-    <lastmod>2024-12-26</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- ═══ CORE RIGHTS ═══ -->
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/pf-esi</loc>
-    <lastmod>2024-12-26</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/rights</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/contracts</loc>
-    <lastmod>2024-12-26</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/pf-esi</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/notice-period</loc>
-    <lastmod>2024-12-26</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/working-hours</loc>
-    <lastmod>2024-12-26</lastmod>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/leave-holidays</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/gratuity</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ═══ TERMINATION & EXIT ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/notice-period</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/termination/probation</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/termination/after-confirmation</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/termination/wrongful</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/full-final-settlement</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/exit-process</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/leave-holidays</loc>
-    <lastmod>2024-12-26</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/pip-guide</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/forced-resignation</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══ SALARY & TAX ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/salary-calculation</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/pay-cycle</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/delayed-salary</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/form-16-rights</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══ DOCUMENTS & LETTERS ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/experience-letter</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/relieving-letter</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/service-certificate</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/templates</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══ WORKPLACE RULES ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/contracts</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/illegal-practices</loc>
-    <lastmod>2024-12-26</lastmod>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/rights</loc>
-    <lastmod>2024-12-26</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/moonlighting</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/data-privacy</loc>
+    <lastmod>2025-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- ═══ WOMEN'S RIGHTS ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/maternity-rights</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/posh-act</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ═══ TOOLS & CALCULATORS ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/salary-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/ff-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/notice-buyout-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/leave-encashment-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/salary-proration-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/income-tax-calculator</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══ FAQ & COMPLAINT ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/faq</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/complaint-guide</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ═══ NEW LABOUR CODES ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/wage-code</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/social-security-code</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/osh-code</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/ir-code</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ═══ STATE LABOUR LAWS INDEX ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- ═══ STATE DETAIL PAGES — MINIMUM WAGES 2025 ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/tamil-nadu</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/karnataka</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/maharashtra</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/telangana</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/delhi</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/haryana</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/uttar-pradesh</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/kerala</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/west-bengal</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/gujarat</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/punjab</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/andhra-pradesh</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/madhya-pradesh</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/rajasthan</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/odisha</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- ═══ TAMIL NADU HUB ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu-minimum-wages</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/it-software</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/manufacturing</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/shops-establishments</loc>
+    <lastmod>2025-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
