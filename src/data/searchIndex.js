@@ -23,4 +23,8 @@ export const searchIndex = [
     { title: "Leave Encashment Calculator", path: "/tools/leave-encashment-calculator", type: "Tools" },
     { title: "Take-Home Salary Calculator", path: "/salary-calculator", type: "Tools" },
     { title: "Official Complaint Guide", path: "/complaint-guide", type: "General" },
+    { title: "Tamil Nadu Minimum Wages 2025", path: "/tamil-nadu-minimum-wages", type: "Tamil Nadu" },
+    { title: "TN Minimum Wages IT Sector", path: "/tamil-nadu-minimum-wages", type: "Tamil Nadu" },
+    { title: "TN Minimum Wages Factory Workers", path: "/tamil-nadu-minimum-wages", type: "Tamil Nadu" },
+    { title: "Are Delhi Wages Applicable in Tamil Nadu?", path: "/tamil-nadu-minimum-wages", type: "Tamil Nadu" },
 ];

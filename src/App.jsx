@@ -53,6 +53,7 @@ const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
 // Tamil Nadu Mega-Hub
 const TamilNaduHubPage = lazy(() => import('./pages/TamilNaduHubPage'));
 const TNSectorDetailPage = lazy(() => import('./pages/TNSectorDetailPage'));
+const TNMinimumWagesPage = lazy(() => import('./pages/TNMinimumWagesPage'));
 
 // New Labour Codes Module
 const LabourCodesIndexPage = lazy(() => import('./pages/LabourCodesIndexPage'));
@@ -140,6 +141,7 @@ function App() {
                         {/* Tamil Nadu Mega-Hub */}
                         <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
                         <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
+                        <Route path="/tamil-nadu-minimum-wages" element={<TNMinimumWagesPage />} />
 
                         {/* New Labour Codes */}
                         <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />

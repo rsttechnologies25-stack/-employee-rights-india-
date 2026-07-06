@@ -62,6 +62,27 @@ export default function TamilNaduHubPage() {
                 <div className="max-w-5xl mx-auto">
                     <Breadcrumb items={[{ label: 'Tamil Nadu Hub', path: '/tamil-nadu' }]} />
 
+                    {/* ── Minimum Wages Highlight Banner ── */}
+                    <Link
+                        to="/tamil-nadu-minimum-wages"
+                        className="mt-10 flex items-center gap-4 bg-gradient-to-r from-green-600 to-emerald-600 text-white rounded-2xl p-5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all group block"
+                    >
+                        <div className="p-3 bg-white/20 rounded-xl flex-shrink-0">
+                            <Banknote className="w-7 h-7" />
+                        </div>
+                        <div className="flex-1">
+                            <p className="font-bold text-lg leading-snug">
+                                {lang === 'en' ? '📊 Tamil Nadu Minimum Wages 2025 — Sector-Wise Table' : '📊 தமிழ்நாடு குறைந்தபட்ச ஊதியம் 2025 — துறை வாரிய அட்டவணை'}
+                            </p>
+                            <p className="text-green-100 text-sm mt-0.5">
+                                {lang === 'en'
+                                    ? 'IT, Shops, Factories, Construction — official rates with your complaint rights'
+                                    : 'IT, கடைகள், தொழிற்சாலைகள், கட்டுமானம் — அதிகாரப்பூர்வ விகிதங்கள் மற்றும் புகார் உரிமைகள்'}
+                            </p>
+                        </div>
+                        <ArrowRight className="w-5 h-5 opacity-70 group-hover:translate-x-1 transition-transform flex-shrink-0" />
+                    </Link>
+
                     <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mt-12 mb-8 border-b pb-4">
                         {lang === 'en' ? 'Sector-Specific Rules' : 'துறை சார்ந்த விதிகள்'}
                     </h2>

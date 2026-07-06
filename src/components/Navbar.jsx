@@ -8,6 +8,7 @@ const navGroups = [
         label: "Tamil Nadu Hub",
         items: [
             { to: '/tamil-nadu', label: 'TN Mega-Hub (தமிழ்)' },
+            { to: '/tamil-nadu-minimum-wages', label: 'TN Minimum Wages 2025' },
         ]
     },
     {
