@@ -21,6 +21,7 @@ const navGroups = [
     {
         label: 'Workplace Rules',
         items: [
+            { to: '/whats-new', label: '🆕 What\'s New 2025–2026' },
             { to: '/new-labour-codes', label: 'New Labour Codes (2025)' },
             { to: '/state-labour-laws', label: 'State-Wise Labour Laws' },
             { to: '/working-hours', label: 'Working Hours & Overtime' },

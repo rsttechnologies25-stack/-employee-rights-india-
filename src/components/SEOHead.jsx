@@ -11,6 +11,11 @@ const seoData = {
         description: 'Free guide to Indian labour laws. PF, ESI, minimum wages, notice period, gratuity, leave rules, salary rights and how to file complaints. Know your rights today!',
         keywords: 'employee rights india, indian labour law, worker rights, pf esi rules, notice period india, minimum wages india 2025',
     },
+    '/whats-new': {
+        title: 'New Labour Laws 2025-2026 India — What Changed for Employees',
+        description: 'All latest Indian labour law updates — Budget 2025 ₹12L tax exemption, PF interest 8.25%, 4 Labour Codes status, gig worker rights, POSH digital updates, maternity rights.',
+        keywords: 'new labour laws india 2025 2026, budget 2025 tax exemption, labour code updates india, gig worker rights india, pf interest rate 2025',
+    },
     '/pf-esi': {
         title: 'PF & ESI Rules in India 2025 — Eligibility, Contribution & Rights',
         description: 'Complete guide to Provident Fund (PF) and ESI rules in India. Eligibility, contribution rates, UAN, EPFO grievance and your rights as an employee.',

@@ -34,6 +34,22 @@ export default function Home() {
                 </div>
             </section>
 
+            {/* ── WHAT'S NEW BANNER ── */}
+            <section className="bg-gradient-to-r from-indigo-700 via-purple-700 to-blue-700 py-4 px-4">
+                <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3">
+                    <div className="flex items-center gap-3">
+                        <span className="bg-white/20 text-white text-xs font-bold px-2.5 py-1 rounded-full animate-pulse">🆕 UPDATED</span>
+                        <p className="text-white text-sm font-medium">
+                            <span className="font-bold">New Laws 2025–2026:</span> ₹12L tax exemption · PF 8.25% · Labour Codes · Gig Worker rights
+                        </p>
+                    </div>
+                    <Link to="/whats-new"
+                        className="flex-shrink-0 bg-white text-indigo-700 text-sm font-bold px-4 py-2 rounded-full hover:bg-indigo-50 transition-colors flex items-center gap-1.5">
+                        See All Updates <ArrowRight className="w-3.5 h-3.5" />
+                    </Link>
+                </div>
+            </section>
+
             {/* Trust Section */}
             <section className="py-16 px-4 bg-white dark:bg-gray-950">
                 <div className="max-w-5xl mx-auto">

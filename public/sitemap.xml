@@ -4,9 +4,15 @@
   <!-- ═══ HOMEPAGE ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/</loc>
-    <lastmod>2025-07-06</lastmod>
+    <lastmod>2025-07-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/whats-new</loc>
+    <lastmod>2025-07-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
 
   <!-- ═══ CORE RIGHTS ═══ -->

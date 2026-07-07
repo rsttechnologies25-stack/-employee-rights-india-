@@ -62,6 +62,7 @@ const WageCodePage = lazy(() => import('./pages/WageCodePage'));
 const SocialSecurityCodePage = lazy(() => import('./pages/SocialSecurityCodePage'));
 const OSHCodePage = lazy(() => import('./pages/OSHCodePage'));
 const IRCodePage = lazy(() => import('./pages/IRCodePage'));
+const WhatsNewPage = lazy(() => import('./pages/WhatsNewPage'));
 
 function App() {
     return (
@@ -143,6 +144,9 @@ function App() {
                         <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
                         <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
                         <Route path="/tamil-nadu-minimum-wages" element={<TNMinimumWagesPage />} />
+
+                        {/* What's New */}
+                        <Route path="/whats-new" element={<WhatsNewPage />} />
 
                         {/* New Labour Codes */}
                         <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />
