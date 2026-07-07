@@ -80,11 +80,11 @@ export default function Footer() {
                     <div className="text-center text-gray-400">
                         Empowering awareness, created by{' '}
                         <a href="https://www.rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-primary transition-colors">
-                            RexonsoftTech
+                            RexonSoftTech
                         </a>
                     </div>
                     <div className="text-gray-500 dark:text-gray-400">
-                        © {new Date().getFullYear()} RexonsoftTech. All Rights Reserved.
+                        © {new Date().getFullYear()} RexonSoftTech. All Rights Reserved.
                     </div>
                 </div>
 
