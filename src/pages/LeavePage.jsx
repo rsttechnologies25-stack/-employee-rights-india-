@@ -135,8 +135,16 @@ export default function LeavePage() {
                             What if the company completely denies Earned Leave?
                         </h3>
                         <p className="text-red-700 text-sm mb-3">
-                            Refusing to provide Earned Leave (or providing 0 days of EL) is a direct violation of <span className="font-bold">Section 79 of the Factories Act, 1948</span> (for factory workers) and the respective <span className="font-bold">State Shops and Establishments Act (e.g., Section 15 or 22)</span> (for IT, BPO, retail, corporate, and all commercial employees). No private employment contract or HR policy can override this statutory right.
+                            Refusing to provide Earned Leave (or providing 0 days of EL) is a direct statutory violation. No private employment contract or HR policy can override these laws:
                         </p>
+                        <ul className="text-sm text-red-700 list-disc list-inside space-y-1 mb-4 font-medium bg-red-100/50 p-3 rounded-lg border border-red-200">
+                            <li><span className="font-bold">Section 79</span> of the Factories Act, 1948 (For factory & manufacturing workers)</li>
+                            <li><span className="font-bold">Section 15</span> of the Karnataka Shops & Commercial Establishments Act, 1961 (For IT/BPO in Bangalore/Karnataka)</li>
+                            <li><span className="font-bold">Section 18</span> of the Maharashtra Shops & Establishments Act, 2017 (For IT/Corporate in Mumbai/Pune)</li>
+                            <li><span className="font-bold">Section 22</span> of the Delhi Shops & Establishments Act, 1954 (For IT/Corporate in Delhi NCR)</li>
+                            <li><span className="font-bold">Section 25</span> of the Tamil Nadu Shops & Establishments Act, 1947 (For IT/BPO in Chennai/Tamil Nadu)</li>
+                            <li><span className="font-bold">Section 16</span> of the Telangana Shops & Establishments Act, 1988 (For IT/Corporate in Hyderabad)</li>
+                        </ul>
                         <ul className="text-sm text-red-700 list-decimal list-inside space-y-2">
                             <li><span className="font-medium">Demand Encashment at Exit:</span> Even if they didn't "allow" you to take the leave, you are legally entitled to claim the monetary encashment value of those statutory leaves (back-calculated from your joining date) when you resign.</li>
                             <li><span className="font-medium">File a Grievance:</span> Use our <a href="/tools/grievance-generator" className="underline font-bold">Grievance Generator</a> to draft a formal legal notice demanding statutory leave compliance.</li>
