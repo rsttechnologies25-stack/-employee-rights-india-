@@ -89,10 +89,10 @@ export default function LeavePage() {
                             <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
                                 <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-1 flex items-center gap-2">
                                     <CheckCircle className="w-5 h-5 text-green-600" />
-                                    Accrual Rate
+                                    Statutory Minimums
                                 </h3>
                                 <p className="text-sm text-gray-700 dark:text-gray-300">
-                                    Usually 1 day for every 20 days worked (as per Factories Act). In some Shops & Establishments Acts, it's 1 day for every 15-20 days worked. For adults, it's typically 15-18 days per year.
+                                    The legal minimum is <span className="font-bold">15 days of Earned Leave (PL) per year</span> for most states (or 1 day for every 20 days worked). If a company provides less than 15 days of EL/PL annually, they are directly violating the law.
                                 </p>
                             </div>
                             <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
