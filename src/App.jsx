@@ -48,6 +48,10 @@ const PIPDefensePage = lazy(() => import('./pages/PIPDefensePage'));
 const GratuityCalculatorPage = lazy(() => import('./pages/GratuityCalculatorPage'));
 const ExitScannerPage = lazy(() => import('./pages/ExitScannerPage'));
 const LegalMapPage = lazy(() => import('./pages/LegalMapPage'));
+const ShamContractorScannerPage = lazy(() => import('./pages/ShamContractorScannerPage'));
+const HRACalculatorPage = lazy(() => import('./pages/HRACalculatorPage'));
+const MaternityTrackerPage = lazy(() => import('./pages/MaternityTrackerPage'));
+const NightShiftAuditPage = lazy(() => import('./pages/NightShiftAuditPage'));
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
@@ -139,6 +143,10 @@ function App() {
                         <Route path="/tools/gratuity-calculator" element={<GratuityCalculatorPage />} />
                         <Route path="/tools/exit-scanner" element={<ExitScannerPage />} />
                         <Route path="/legal-map" element={<LegalMapPage />} />
+                        <Route path="/tools/sham-contractor" element={<ShamContractorScannerPage />} />
+                        <Route path="/tools/hra-calculator" element={<HRACalculatorPage />} />
+                        <Route path="/tools/maternity-tracker" element={<MaternityTrackerPage />} />
+                        <Route path="/tools/night-shift-audit" element={<NightShiftAuditPage />} />
 
                         <Route path="/maternity-rights" element={<MaternityRightsPage />} />
                         <Route path="/posh-act" element={<POSHActPage />} />

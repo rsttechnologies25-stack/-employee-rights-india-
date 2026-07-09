@@ -70,6 +70,10 @@ const navGroups = [
         items: [
             { to: '/tools', label: 'Calculators & Tools Hub' },
             { to: '/legal-map', label: 'State Legal Hub (Map)' },
+            { to: '/tools/sham-contractor', label: 'Sham Contractor Scanner' },
+            { to: '/tools/hra-calculator', label: 'HRA Exemption Optimizer' },
+            { to: '/tools/maternity-tracker', label: 'Maternity Benefit Tracker' },
+            { to: '/tools/night-shift-audit', label: 'Night Shift Safety Audit' },
             { to: '/tools/pf-analyzer', label: 'PF & Pension Analyzer' },
             { to: '/tools/pip-defense', label: 'PIP Defense Kit' },
             { to: '/tools/gratuity-calculator', label: 'Gratuity Calculator' },

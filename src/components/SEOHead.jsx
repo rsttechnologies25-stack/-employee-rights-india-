@@ -191,6 +191,26 @@ const seoData = {
         description: 'Find your state\'s specific labor laws, minimum wages, and regional labour commissioner directory in one place.',
         keywords: 'state labor laws india, shops and establishments act, minimum wage by state, labour commissioner directory',
     },
+    '/tools/sham-contractor': {
+        title: 'Sham Contractor Scanner - Employee vs Contractor Test India',
+        description: 'Take the legal control test to see if your employer is illegally classifying you as a contractor under Section 194J to avoid paying PF, Gratuity, and leaves.',
+        keywords: 'sham contractor india, employee vs contractor test, 194j vs 192, independent contractor labor law',
+    },
+    '/tools/hra-calculator': {
+        title: 'HRA Tax Exemption Optimizer - Least of 3 Rule Calculator',
+        description: 'Calculate your exact House Rent Allowance (HRA) tax exemption using the Income Tax Least of 3 rule for Metro and Non-Metro cities.',
+        keywords: 'hra calculator india, hra exemption calculator, hra least of 3 rule, house rent allowance tax free',
+    },
+    '/tools/maternity-tracker': {
+        title: 'Maternity Benefit Legal Tracker - 26 Weeks Calculator India',
+        description: 'Calculate your exact 26-week maternity leave timeline and verify your statutory rights under the Maternity Benefit (Amendment) Act, 2017.',
+        keywords: 'maternity leave calculator india, 26 weeks maternity leave, maternity benefit act rights, pregnancy termination protection',
+    },
+    '/tools/night-shift-audit': {
+        title: 'Night Shift Safety Audit for Women - Compliance India',
+        description: 'Audit your company\'s safety compliance for women working night shifts. Check mandatory rules like GPS cabs, female security, and written consent.',
+        keywords: 'night shift rules for women india, female employee night shift, shops and establishments act night shift, bpo women safety rules',
+    },
     '/tools/labour-directory': {
         title: 'Regional Labour Commissioner Office Directory — Contacts',
         description: 'Find contact phone numbers, official email addresses, physical office addresses, and official websites of local and district labour departments across India.',

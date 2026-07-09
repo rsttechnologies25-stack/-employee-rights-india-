@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins } from 'lucide-react';
+import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins, UserX, Home, Baby, Moon } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
@@ -12,6 +12,38 @@ const calculators = [
         path: '/salary-calculator',
         badge: 'Popular',
         badgeClass: 'bg-success/10 text-success',
+    },
+    {
+        icon: UserX,
+        title: '"Sham Contractor" Scanner',
+        description: 'Take the legal control test to see if you are an employee illegally disguised as a contractor.',
+        path: '/tools/sham-contractor',
+        badge: 'Legal Tool',
+        badgeClass: 'bg-red-100 text-red-700',
+    },
+    {
+        icon: Home,
+        title: 'HRA Tax Exemption Optimizer',
+        description: 'Calculate your exact House Rent Allowance tax-free amount using the Income Tax Least of 3 rule.',
+        path: '/tools/hra-calculator',
+        badge: 'Tax Saver',
+        badgeClass: 'bg-green-100 text-green-700',
+    },
+    {
+        icon: Baby,
+        title: 'Maternity Benefit Legal Tracker',
+        description: 'Calculate your exact 26-week timeline and verify your statutory rights for maternity leave.',
+        path: '/tools/maternity-tracker',
+        badge: 'Women\'s Rights',
+        badgeClass: 'bg-pink-100 text-pink-700',
+    },
+    {
+        icon: Moon,
+        title: 'Night Shift Safety Audit',
+        description: 'Audit your company\'s safety compliance for women working night shifts (cabs, security, etc).',
+        path: '/tools/night-shift-audit',
+        badge: 'Safety',
+        badgeClass: 'bg-indigo-100 text-indigo-700',
     },
     {
         icon: DollarSign,
