@@ -68,7 +68,7 @@ The ₹783–₹1,035/day figures on social media are **Delhi's rates** only.
 • **Haryana:** ₹572 → ₹962
 
 Check your state's page for exact sector-wise rates.`,
-        link: { label: 'State-Wise Minimum Wages', path: '/state-labour-laws' },
+        link: { label: 'Official Minimum Wages Guide', path: '/minimum-wages' },
     },
     // ── NOTICE PERIOD ────────────────────────────────
     {
@@ -322,7 +322,41 @@ Each state has its own Shops & Establishments Act with different rules for:
 Tamil Nadu • Karnataka • Maharashtra • Telangana • Delhi • Haryana • UP • West Bengal • Gujarat • Kerala • Punjab • Andhra Pradesh • MP • Rajasthan • Odisha
 
 Use the State Labour Laws section to find exact rules and minimum wages for your state.`,
-        link: { label: 'Browse All State Laws', path: '/state-labour-laws' },
+    },
+    // ── HOLIDAYS ─────────────────────────────────────
+    {
+        keywords: ['holiday', 'holidays', 'festival holiday', 'national holiday', 'comp off', 'working on holiday'],
+        answer: `**Holidays & Leave Rights in India:**
+
+• **Mandatory Holidays:** Every employee is entitled to 3 national holidays: Republic Day (Jan 26), Independence Day (Aug 15), and Gandhi Jayanti (Oct 2).
+• **State/Festival Holidays:** Typically 5-9 additional holidays are declared by employers based on state rules.
+• **Working on a Holiday:** If required to work, you MUST receive double wages (2x) OR a paid compensatory off (comp-off) on another day.
+• **Weekly Off:** You are legally entitled to at least one weekly rest day (usually Sunday).
+• **Tip:** Refusing both comp-off and double pay is a violation. Check your state's specific 2026 holiday calendar!`,
+        link: { label: 'Check Leave & Holidays Guide', path: '/leave-holidays' },
+    },
+    // ── WHAT'S NEW 2025–2026 ─────────────────────────
+    {
+        keywords: ['whats new', 'what is new', 'new laws', '2025 updates', '2026 updates', 'recent updates', 'budget 2025', 'new rules'],
+        answer: `**New Labour Law Updates (2025–2026):**
+
+• **Tax Rebate:** Under the new tax regime, individuals earning up to ₹12 lakhs/year pay zero tax (Budget 2025).
+• **PF Interest Rate:** The EPFO has finalized an 8.25% interest rate for the financial year.
+• **New Labour Codes:** The four codes (Wages, Social Security, OSH, IR) are being progressively adopted by states with unified definitions.
+• **Gig Workers:** State-level welfare boards are launching social security funds for platform workers.
+• **POSH Digital:** New guidelines for online harassment and digital work safety are active.`,
+        link: { label: "Read What's New 2025-2026", path: '/whats-new' },
+    },
+    // ── INCOME TAX ───────────────────────────────────
+    {
+        keywords: ['tax', 'income tax', 'tds deduction', 'tax rate', 'itr', 'new tax regime', 'tax exemption'],
+        answer: `**Income Tax & TDS Rights in India:**
+
+• **TDS Deduction:** Your employer can deduct TDS only if your taxable income exceeds the tax slabs.
+• **Form 16:** Every employer who deducts TDS is legally obligated to issue Form 16 by **June 15** every year.
+• **New Tax Slabs (2025):** Standard deduction is ₹75,000, and income up to ₹12 Lakhs (with rebates) can be tax-free under the New Tax Regime.
+• **Proof Submission:** You have the right to declare savings/investments to prevent excess TDS deductions.`,
+        link: { label: 'Use Income Tax Calculator', path: '/tools/income-tax-calculator' },
     },
     // ── FALLBACK ────────────────────────────────────
     {

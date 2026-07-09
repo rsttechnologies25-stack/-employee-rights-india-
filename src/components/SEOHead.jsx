@@ -146,6 +146,36 @@ const seoData = {
         description: 'Compare the Old and New tax regimes for salaried employees in India to find which saves you more money in FY 2025-26.',
         keywords: 'income tax calculator india 2025, old vs new tax regime, salary tax calculator india, FY 2025-26 tax',
     },
+    '/tools/minimum-wage-checker': {
+        title: 'Minimum Wage Compliance Checker India — Verify Your Pay',
+        description: 'Verify if your monthly basic salary meets the legal minimum wage limit in your state, industry sector, and skill level in India.',
+        keywords: 'minimum wage compliance checker, salary check minimum wage, are you underpaid india, salary compliance calculator',
+    },
+    '/tools/overtime-tracker': {
+        title: 'Overtime & Shift Hours Tracker — Calculate 2x Overtime Earnings',
+        description: 'Track daily shift times, breaks, and calculate total regular & overtime hours. Estimate double-rate (2x) overtime pay based on state rules.',
+        keywords: 'overtime tracker india, work hours log, shift tracker, overtime pay calculator, double wages overtime',
+    },
+    '/tools/grievance-generator': {
+        title: 'Labour Grievance Complaint Letter Generator — Legal Drafts',
+        description: 'Generate legally structured, statute-cited formal grievance letters for unpaid salary, withheld relieving certificates, PF issues, and wrongful termination in India.',
+        keywords: 'labour complaint draft, delayed salary letter, relieving letter withheld complaint, PF non-deposit grievance letter, conciliation officer draft',
+    },
+    '/tools/clause-analyzer': {
+        title: 'Employment Agreement Clause Validity Checker India',
+        description: 'Check the legal validity of notice periods, training bonds, salary deductions, and post-employment non-compete clauses under Indian Contract Act Section 27.',
+        keywords: 'non-compete clause validity, training bond legal check, short notice penalty, contract scanner india, employee contract law',
+    },
+    '/tools/labour-directory': {
+        title: 'Regional Labour Commissioner Office Directory — Contacts',
+        description: 'Find contact phone numbers, official email addresses, physical office addresses, and official websites of local and district labour departments across India.',
+        keywords: 'labour office address, district labour commissioner contact, file labour complaint office, state labour commissioner email, AP, Karnataka, Maharashtra labour offices',
+    },
+    '/tools/severance-calculator': {
+        title: 'Retrenchment Severance Pay Calculator India — Section 25F',
+        description: 'Estimate legal retrenchment severance pay (15 days average wage per completed year of service) and contractual notice pay under the Industrial Disputes Act.',
+        keywords: 'severance pay calculator india, retrenchment compensation calculator, section 25F severance, layoff compensation, industrial disputes act calculation',
+    },
     '/maternity-rights': {
         title: 'Maternity Leave Rights India — 26 Weeks Paid Leave Law',
         description: '26 weeks of paid maternity leave for first 2 children, protection against termination, crèche facility rights and ESI maternity benefits in India.',
@@ -195,6 +225,11 @@ const seoData = {
         title: 'New Labour Codes India 2025 — 4 Codes That Change Everything',
         description: 'India\'s 4 new Labour Codes explained — Wage Code, Social Security Code, OSH Code, IR Code. How they affect your salary, PF, leave and job security.',
         keywords: 'new labour codes india 2025, wage code india, social security code india, labour codes employee rights',
+    },
+    '/minimum-wages': {
+        title: 'Minimum Wages in India 2025-2026 — Official State-Wise Rates',
+        description: 'Complete guide to minimum wages in India for 2025-2026. Official state-wise daily and monthly rates for unskilled, skilled, IT and commercial sectors.',
+        keywords: 'minimum wages india 2025, state-wise minimum wages, minimum wage act 1948, salary rights india, minimum wage per day',
     },
     '/state-labour-laws': {
         title: 'State-Wise Labour Laws India 2025 — Minimum Wages & SE Acts',

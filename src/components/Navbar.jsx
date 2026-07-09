@@ -48,6 +48,7 @@ const navGroups = [
     {
         label: 'Salary & Tax',
         items: [
+            { to: '/minimum-wages', label: 'Minimum Wages' },
             { to: '/salary-calculation', label: 'Salary Calculation Rules' },
             { to: '/pay-cycle', label: 'Pay Cycle Guide' },
             { to: '/delayed-salary', label: 'Delayed Salary' },
@@ -68,6 +69,12 @@ const navGroups = [
         label: 'Tools & FAQ',
         items: [
             { to: '/tools', label: 'Calculators' },
+            { to: '/tools/minimum-wage-checker', label: 'Minimum Wage Checker' },
+            { to: '/tools/overtime-tracker', label: 'Overtime Tracker' },
+            { to: '/tools/grievance-generator', label: 'Grievance Generator' },
+            { to: '/tools/clause-analyzer', label: 'Contract Clause Analyzer' },
+            { to: '/tools/labour-directory', label: 'Labour Office Directory' },
+            { to: '/tools/severance-calculator', label: 'Severance Calculator' },
             { to: '/templates', label: 'Letter Templates' },
             { to: '/complaint-guide', label: 'How to File Complaint' },
             { to: '/faq', label: 'Master FAQ' },

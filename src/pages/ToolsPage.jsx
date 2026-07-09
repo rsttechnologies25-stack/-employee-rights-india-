@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote } from 'lucide-react';
+import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
@@ -68,6 +68,54 @@ const calculators = [
         path: '/tools/income-tax-calculator',
         badge: 'Tax',
         badgeClass: 'bg-indigo-100 text-indigo-700',
+    },
+    {
+        icon: IndianRupee,
+        title: 'Minimum Wage Checker',
+        description: 'Verify if your monthly salary meets the legal minimum wage limit in your state and sector.',
+        path: '/tools/minimum-wage-checker',
+        badge: 'Compliance',
+        badgeClass: 'bg-green-100 text-green-700',
+    },
+    {
+        icon: Clock,
+        title: 'Overtime & Shift Tracker',
+        description: 'Log daily hours worked, calculate overtime, and estimate double-rate earnings.',
+        path: '/tools/overtime-tracker',
+        badge: 'Work Hours',
+        badgeClass: 'bg-blue-100 text-blue-700',
+    },
+    {
+        icon: FileText,
+        title: 'Grievance Draft Generator',
+        description: 'Draft professionally written, legally cited complaint letters for delayed salary, letters, PF, or wrongful termination.',
+        path: '/tools/grievance-generator',
+        badge: 'Legal',
+        badgeClass: 'bg-red-100 text-red-700',
+    },
+    {
+        icon: Scale,
+        title: 'Contract Clause Analyzer',
+        description: 'Paste notice periods, training bonds, or non-competes to check their validity under Indian law.',
+        path: '/tools/clause-analyzer',
+        badge: 'Contract Check',
+        badgeClass: 'bg-indigo-100 text-indigo-700',
+    },
+    {
+        icon: MapPin,
+        title: 'Labour Office Directory',
+        description: 'Search official contact directories, websites, and emails for regional and district labour offices across India.',
+        path: '/tools/labour-directory',
+        badge: 'Contacts',
+        badgeClass: 'bg-teal-100 text-teal-700',
+    },
+    {
+        icon: Briefcase,
+        title: 'Retrenchment Severance Calculator',
+        description: 'Estimate legal retrenchment severance pay and notice pay under Section 25F of the Industrial Disputes Act.',
+        path: '/tools/severance-calculator',
+        badge: 'Statutory Pay',
+        badgeClass: 'bg-orange-100 text-orange-700',
     },
 ];
 

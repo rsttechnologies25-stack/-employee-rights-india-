@@ -37,6 +37,12 @@ const FFCalculatorPage = lazy(() => import('./pages/FFCalculatorPage'));
 const SalaryProrationCalculatorPage = lazy(() => import('./pages/SalaryProrationCalculatorPage'));
 const SalaryCalculatorPage = lazy(() => import('./pages/SalaryCalculatorPage'));
 const PFCheckerPage = lazy(() => import('./pages/PFCheckerPage'));
+const MinimumWageCheckerPage = lazy(() => import('./pages/MinimumWageCheckerPage'));
+const OvertimeTrackerPage = lazy(() => import('./pages/OvertimeTrackerPage'));
+const GrievanceGeneratorPage = lazy(() => import('./pages/GrievanceGeneratorPage'));
+const ClauseAnalyzerPage = lazy(() => import('./pages/ClauseAnalyzerPage'));
+const LabourDirectoryPage = lazy(() => import('./pages/LabourDirectoryPage'));
+const SeveranceCalculatorPage = lazy(() => import('./pages/SeveranceCalculatorPage'));
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
@@ -55,6 +61,7 @@ const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
 const TamilNaduHubPage = lazy(() => import('./pages/TamilNaduHubPage'));
 const TNSectorDetailPage = lazy(() => import('./pages/TNSectorDetailPage'));
 const TNMinimumWagesPage = lazy(() => import('./pages/TNMinimumWagesPage'));
+const MinimumWagesPage = lazy(() => import('./pages/MinimumWagesPage'));
 
 // New Labour Codes Module
 const LabourCodesIndexPage = lazy(() => import('./pages/LabourCodesIndexPage'));
@@ -116,6 +123,12 @@ function App() {
                         <Route path="/tools/ff-calculator" element={<FFCalculatorPage />} />
                         <Route path="/tools/salary-proration-calculator" element={<SalaryProrationCalculatorPage />} />
                         <Route path="/tools/income-tax-calculator" element={<IncomeTaxCalculatorPage />} />
+                        <Route path="/tools/minimum-wage-checker" element={<MinimumWageCheckerPage />} />
+                        <Route path="/tools/overtime-tracker" element={<OvertimeTrackerPage />} />
+                        <Route path="/tools/grievance-generator" element={<GrievanceGeneratorPage />} />
+                        <Route path="/tools/clause-analyzer" element={<ClauseAnalyzerPage />} />
+                        <Route path="/tools/labour-directory" element={<LabourDirectoryPage />} />
+                        <Route path="/tools/severance-calculator" element={<SeveranceCalculatorPage />} />
 
                         <Route path="/maternity-rights" element={<MaternityRightsPage />} />
                         <Route path="/posh-act" element={<POSHActPage />} />
@@ -144,6 +157,7 @@ function App() {
                         <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
                         <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
                         <Route path="/tamil-nadu-minimum-wages" element={<TNMinimumWagesPage />} />
+                        <Route path="/minimum-wages" element={<MinimumWagesPage />} />
 
                         {/* What's New */}
                         <Route path="/whats-new" element={<WhatsNewPage />} />

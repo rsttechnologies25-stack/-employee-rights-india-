@@ -73,6 +73,78 @@ export default function LeavePage() {
                     ))}
                 </div>
 
+                {/* Earned Leave (EL/PL) Rules Section */}
+                <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft mb-8">
+                    <div className="flex items-center gap-3 mb-6">
+                        <Palmtree className="w-8 h-8 text-primary" />
+                        <h2 className="text-2xl font-bold">Earned Leave (EL/PL) Rules & Rights</h2>
+                    </div>
+                    
+                    <p className="text-gray-600 dark:text-gray-400 mb-6">
+                        Earned Leave (also called Privilege Leave) is the most critical statutory leave type. Under the Factories Act and State Shops & Establishments Acts, these are your core rights:
+                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                            <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
+                                <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-1 flex items-center gap-2">
+                                    <CheckCircle className="w-5 h-5 text-green-600" />
+                                    Accrual Rate
+                                </h3>
+                                <p className="text-sm text-gray-700 dark:text-gray-300">
+                                    Usually 1 day for every 20 days worked (as per Factories Act). In some Shops & Establishments Acts, it's 1 day for every 15-20 days worked. For adults, it's typically 15-18 days per year.
+                                </p>
+                            </div>
+                            <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
+                                <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-1 flex items-center gap-2">
+                                    <CheckCircle className="w-5 h-5 text-green-600" />
+                                    Carry Forward
+                                </h3>
+                                <p className="text-sm text-gray-700 dark:text-gray-300">
+                                    Unused EL <span className="font-bold">MUST</span> be carried forward to the next year. Most states cap the maximum accumulation (usually 30, 45, or up to 60 days). "Lapsing" EL without offering encashment when the cap is reached is illegal.
+                                </p>
+                            </div>
+                        </div>
+                        <div className="space-y-4">
+                            <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
+                                <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-1 flex items-center gap-2">
+                                    <CheckCircle className="w-5 h-5 text-green-600" />
+                                    Encashment Rights
+                                </h3>
+                                <p className="text-sm text-gray-700 dark:text-gray-300">
+                                    You have a statutory right to encash unused EL at the time of resignation or termination. The calculation is typically based on your Basic + DA (some courts rule Gross Salary).
+                                </p>
+                            </div>
+                            <div className="bg-primary/5 border-l-4 border-primary p-4 rounded-r-lg">
+                                <h3 className="font-bold text-gray-800 dark:text-gray-200 mb-1 flex items-center gap-2">
+                                    <XCircle className="w-5 h-5 text-red-600" />
+                                    Illegal Employer Practices
+                                </h3>
+                                <ul className="text-sm text-gray-700 dark:text-gray-300 list-disc list-inside mt-1 space-y-1">
+                                    <li>"Use it or lose it" policies (forced lapsing)</li>
+                                    <li>Refusing encashment during Full & Final Settlement</li>
+                                    <li>Refusing EL because employee is on notice period</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mt-6 bg-red-50 border border-red-200 p-5 rounded-xl">
+                        <h3 className="text-red-800 font-bold mb-2 flex items-center gap-2">
+                            <AlertTriangle className="w-5 h-5" />
+                            What if the company completely denies Earned Leave?
+                        </h3>
+                        <p className="text-red-700 text-sm mb-3">
+                            Refusing to provide Earned Leave (or providing 0 days of EL) is a direct violation of the <span className="font-bold">State Shops and Establishments Act</span> and <span className="font-bold">Factories Act</span>. No private employment contract or HR policy can override this statutory right.
+                        </p>
+                        <ul className="text-sm text-red-700 list-decimal list-inside space-y-2">
+                            <li><span className="font-medium">Demand Encashment at Exit:</span> Even if they didn't "allow" you to take the leave, you are legally entitled to claim the monetary encashment value of those statutory leaves (back-calculated from your joining date) when you resign.</li>
+                            <li><span className="font-medium">File a Grievance:</span> Use our <a href="/tools/grievance-generator" className="underline font-bold">Grievance Generator</a> to draft a formal legal notice demanding statutory leave compliance.</li>
+                            <li><span className="font-medium">Labour Office Complaint:</span> You can file a formal complaint with the Regional Labour Commissioner (find your local office in the <a href="/tools/labour-directory" className="underline font-bold">Labour Directory</a>).</li>
+                        </ul>
+                    </div>
+                </div>
+
                 {/* Can Employer Make You Work on Holidays? */}
                 <div className="bg-white dark:bg-gray-950 rounded-2xl p-8 border border-gray-100 dark:border-gray-800 shadow-soft mb-8">
                     <div className="flex items-center gap-3 mb-6">
