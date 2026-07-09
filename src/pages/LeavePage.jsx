@@ -135,7 +135,7 @@ export default function LeavePage() {
                             What if the company completely denies Earned Leave?
                         </h3>
                         <p className="text-red-700 text-sm mb-3">
-                            Refusing to provide Earned Leave (or providing 0 days of EL) is a direct violation of the <span className="font-bold">State Shops and Establishments Act</span> and <span className="font-bold">Factories Act</span>. No private employment contract or HR policy can override this statutory right.
+                            Refusing to provide Earned Leave (or providing 0 days of EL) is a direct violation of <span className="font-bold">Section 79 of the Factories Act, 1948</span> (for factory workers) and the respective <span className="font-bold">State Shops and Establishments Act (e.g., Section 15 or 22)</span> (for office/IT employees). No private employment contract or HR policy can override this statutory right.
                         </p>
                         <ul className="text-sm text-red-700 list-decimal list-inside space-y-2">
                             <li><span className="font-medium">Demand Encashment at Exit:</span> Even if they didn't "allow" you to take the leave, you are legally entitled to claim the monetary encashment value of those statutory leaves (back-calculated from your joining date) when you resign.</li>
