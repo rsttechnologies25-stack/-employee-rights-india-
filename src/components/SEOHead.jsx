@@ -163,8 +163,33 @@ const seoData = {
     },
     '/tools/clause-analyzer': {
         title: 'Employment Agreement Clause Validity Checker India',
-        description: 'Check the legal validity of notice periods, training bonds, salary deductions, and post-employment non-compete clauses under Indian Contract Act Section 27.',
-        keywords: 'non-compete clause validity, training bond legal check, short notice penalty, contract scanner india, employee contract law',
+        description: 'Instantly check if your employment contract contains illegal clauses (void non-competes, illegal bonds, unfair notice periods) under the Indian Contract Act.',
+        keywords: 'employment contract checker, non compete validity india, illegal training bond checker, employment agreement review',
+    },
+    '/tools/pf-analyzer': {
+        title: 'PF & Pension Analyzer - Check EPF Evasion India',
+        description: 'Calculate your accurate Provident Fund (EPF) deductions, check your EPS pension split, and scan your CTC for illegal PF evasion by your employer.',
+        keywords: 'pf calculator india, epf eps split, pf evasion checker, vivekananda vidyamandir pf ruling',
+    },
+    '/tools/pip-defense': {
+        title: 'PIP Defense Kit & Rebuttal Generator India',
+        description: 'Analyze your Performance Improvement Plan (PIP) to check if it\'s an illegal silent layoff setup. Generate a formal HR rebuttal to protect your rights.',
+        keywords: 'pip defense india, performance improvement plan rebuttal, unfair pip template, silent layoff india',
+    },
+    '/tools/gratuity-calculator': {
+        title: 'Gratuity Eligibility & Payout Calculator India',
+        description: 'Calculate your exact Gratuity payout in India. Check if you qualify under the 4 years and 240 days Supreme Court rule.',
+        keywords: 'gratuity calculator india, 4 years 240 days gratuity rule, gratuity eligibility checker',
+    },
+    '/tools/exit-scanner': {
+        title: 'Exit Interview Red Flag Scanner India',
+        description: 'Scan your exit interview or resignation process for illegal HR demands like non-competes, training bonds, or withheld settlements.',
+        keywords: 'exit interview red flags, illegal non compete india, illegal training bond, fnf withheld',
+    },
+    '/legal-map': {
+        title: 'Interactive State Legal Hub - Labor Laws India',
+        description: 'Find your state\'s specific labor laws, minimum wages, and regional labour commissioner directory in one place.',
+        keywords: 'state labor laws india, shops and establishments act, minimum wage by state, labour commissioner directory',
     },
     '/tools/labour-directory': {
         title: 'Regional Labour Commissioner Office Directory — Contacts',

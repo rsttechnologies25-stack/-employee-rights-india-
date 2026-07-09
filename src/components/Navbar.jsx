@@ -68,7 +68,12 @@ const navGroups = [
     {
         label: 'Tools & FAQ',
         items: [
-            { to: '/tools', label: 'Calculators' },
+            { to: '/tools', label: 'Calculators & Tools Hub' },
+            { to: '/legal-map', label: 'State Legal Hub (Map)' },
+            { to: '/tools/pf-analyzer', label: 'PF & Pension Analyzer' },
+            { to: '/tools/pip-defense', label: 'PIP Defense Kit' },
+            { to: '/tools/gratuity-calculator', label: 'Gratuity Calculator' },
+            { to: '/tools/exit-scanner', label: 'Exit Interview Scanner' },
             { to: '/tools/minimum-wage-checker', label: 'Minimum Wage Checker' },
             { to: '/tools/overtime-tracker', label: 'Overtime Tracker' },
             { to: '/tools/grievance-generator', label: 'Grievance Generator' },

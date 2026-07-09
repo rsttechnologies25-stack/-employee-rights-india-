@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin } from 'lucide-react';
+import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
@@ -11,6 +11,46 @@ const calculators = [
         description: 'Calculate your in-hand salary from CTC — deductions, PF, tax, and take-home.',
         path: '/salary-calculator',
         badge: 'Popular',
+        badgeClass: 'bg-success/10 text-success',
+    },
+    {
+        icon: DollarSign,
+        title: 'PF & Pension Analyzer',
+        description: 'Calculate EPF/EPS splits and scan for illegal CTC manipulation by HR.',
+        path: '/tools/pf-analyzer',
+        badge: 'New',
+        badgeClass: 'bg-red-100 text-red-700',
+    },
+    {
+        icon: ShieldAlert,
+        title: 'PIP Defense Kit',
+        description: 'Analyze your Performance Improvement Plan and generate a legal rebuttal draft.',
+        path: '/tools/pip-defense',
+        badge: 'Defense Toolkit',
+        badgeClass: 'bg-primary/10 text-primary',
+    },
+    {
+        icon: Coins,
+        title: 'Gratuity Payout Calculator',
+        description: 'Check 4-year/240-day eligibility and calculate your statutory gratuity payout.',
+        path: '/tools/gratuity-calculator',
+        badge: 'New',
+        badgeClass: 'bg-primary/10 text-primary',
+    },
+    {
+        icon: Search,
+        title: 'Exit Interview Scanner',
+        description: 'Scan HR exit demands (like NDAs, Non-Competes, Bonds) for legal enforceability.',
+        path: '/tools/exit-scanner',
+        badge: 'Legal Tool',
+        badgeClass: 'bg-accent/10 text-accent',
+    },
+    {
+        icon: Map,
+        title: 'Interactive State Legal Hub',
+        description: 'Find your specific state labor laws, minimum wages, and labour commissioner.',
+        path: '/legal-map',
+        badge: 'Essential',
         badgeClass: 'bg-success/10 text-success',
     },
     {

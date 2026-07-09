@@ -43,6 +43,11 @@ const GrievanceGeneratorPage = lazy(() => import('./pages/GrievanceGeneratorPage
 const ClauseAnalyzerPage = lazy(() => import('./pages/ClauseAnalyzerPage'));
 const LabourDirectoryPage = lazy(() => import('./pages/LabourDirectoryPage'));
 const SeveranceCalculatorPage = lazy(() => import('./pages/SeveranceCalculatorPage'));
+const PFAnalyzerPage = lazy(() => import('./pages/PFAnalyzerPage'));
+const PIPDefensePage = lazy(() => import('./pages/PIPDefensePage'));
+const GratuityCalculatorPage = lazy(() => import('./pages/GratuityCalculatorPage'));
+const ExitScannerPage = lazy(() => import('./pages/ExitScannerPage'));
+const LegalMapPage = lazy(() => import('./pages/LegalMapPage'));
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
@@ -129,6 +134,11 @@ function App() {
                         <Route path="/tools/clause-analyzer" element={<ClauseAnalyzerPage />} />
                         <Route path="/tools/labour-directory" element={<LabourDirectoryPage />} />
                         <Route path="/tools/severance-calculator" element={<SeveranceCalculatorPage />} />
+                        <Route path="/tools/pf-analyzer" element={<PFAnalyzerPage />} />
+                        <Route path="/tools/pip-defense" element={<PIPDefensePage />} />
+                        <Route path="/tools/gratuity-calculator" element={<GratuityCalculatorPage />} />
+                        <Route path="/tools/exit-scanner" element={<ExitScannerPage />} />
+                        <Route path="/legal-map" element={<LegalMapPage />} />
 
                         <Route path="/maternity-rights" element={<MaternityRightsPage />} />
                         <Route path="/posh-act" element={<POSHActPage />} />
