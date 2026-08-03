@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins, UserX, Home, Baby, Moon } from 'lucide-react';
+import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins, UserX, Home, Baby, Moon, Gift, FileX } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
@@ -12,6 +12,38 @@ const calculators = [
         path: '/salary-calculator',
         badge: 'Popular',
         badgeClass: 'bg-success/10 text-success',
+    },
+    {
+        icon: Gift,
+        title: 'Bonus Resignation Analyzer',
+        description: 'Check if you are legally entitled to your statutory or variable bonus after resigning.',
+        path: '/tools/bonus-analyzer',
+        badge: 'Survival Kit',
+        badgeClass: 'bg-orange-100 text-orange-700',
+    },
+    {
+        icon: FileX,
+        title: 'Offer Revocation Guide',
+        description: 'Legal steps to claim compensation if a company revokes your offer letter.',
+        path: '/tools/offer-revocation',
+        badge: 'Survival Kit',
+        badgeClass: 'bg-orange-100 text-orange-700',
+    },
+    {
+        icon: ShieldAlert,
+        title: 'BGV Defamation Shield',
+        description: 'Check if your manager\'s threats to tank your background verification are illegal.',
+        path: '/tools/bgv-shield',
+        badge: 'Survival Kit',
+        badgeClass: 'bg-orange-100 text-orange-700',
+    },
+    {
+        icon: Briefcase,
+        title: 'Mass Layoff Survival Kit',
+        description: 'Audit your mass layoff severance package for Chapter VB compliance.',
+        path: '/tools/layoff-survival',
+        badge: 'Survival Kit',
+        badgeClass: 'bg-orange-100 text-orange-700',
     },
     {
         icon: UserX,

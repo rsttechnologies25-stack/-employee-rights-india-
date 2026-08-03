@@ -70,6 +70,10 @@ const navGroups = [
         items: [
             { to: '/tools', label: 'Calculators & Tools Hub' },
             { to: '/legal-map', label: 'State Legal Hub (Map)' },
+            { to: '/tools/bonus-analyzer', label: 'Bonus & Variable Pay Analyzer' },
+            { to: '/tools/offer-revocation', label: 'Offer Revocation Guide' },
+            { to: '/tools/bgv-shield', label: 'BGV Defamation Shield' },
+            { to: '/tools/layoff-survival', label: 'Mass Layoff Survival Kit' },
             { to: '/tools/sham-contractor', label: 'Sham Contractor Scanner' },
             { to: '/tools/hra-calculator', label: 'HRA Exemption Optimizer' },
             { to: '/tools/maternity-tracker', label: 'Maternity Benefit Tracker' },

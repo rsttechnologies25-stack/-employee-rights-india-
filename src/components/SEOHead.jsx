@@ -211,6 +211,26 @@ const seoData = {
         description: 'Audit your company\'s safety compliance for women working night shifts. Check mandatory rules like GPS cabs, female security, and written consent.',
         keywords: 'night shift rules for women india, female employee night shift, shops and establishments act night shift, bpo women safety rules',
     },
+    '/tools/bonus-analyzer': {
+        title: 'Bonus & Variable Pay Resignation Analyzer India',
+        description: 'Find out if your employer is illegally withholding your statutory bonus or variable pay during your notice period. Know your rights under the Payment of Bonus Act.',
+        keywords: 'statutory bonus resignation india, variable pay notice period, payment of bonus act 1965, active employee clause illegal',
+    },
+    '/tools/offer-revocation': {
+        title: 'Offer Letter Revoked? Promissory Estoppel Rights India',
+        description: 'What to do if a company revokes your job offer after you resigned. Learn about Promissory Estoppel and how to claim compensation for lost wages in India.',
+        keywords: 'offer letter revoked india, promissory estoppel employment, job offer cancelled after resignation, compensation for revoked offer',
+    },
+    '/tools/bgv-shield': {
+        title: 'BGV Defamation Shield - Background Verification Rights India',
+        description: 'Is your manager threatening to ruin your background verification (BGV)? Learn your rights against corporate defamation and illegal \'absconding\' tags.',
+        keywords: 'bgv defamation india, manager threatening bad reference, failed background check india, absconding tag illegal, section 499 ipc',
+    },
+    '/tools/layoff-survival': {
+        title: 'Mass Layoff Survival Kit - Severance Rights India',
+        description: 'Fired in a mass layoff? Audit your severance package to ensure you aren\'t being cheated out of your legal rights under Chapter VB of the Industrial Disputes Act.',
+        keywords: 'mass layoff rights india, chapter vb industrial disputes act, 15 days severance pay, tech layoff india rights',
+    },
     '/tools/labour-directory': {
         title: 'Regional Labour Commissioner Office Directory — Contacts',
         description: 'Find contact phone numbers, official email addresses, physical office addresses, and official websites of local and district labour departments across India.',

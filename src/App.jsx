@@ -52,6 +52,10 @@ const ShamContractorScannerPage = lazy(() => import('./pages/ShamContractorScann
 const HRACalculatorPage = lazy(() => import('./pages/HRACalculatorPage'));
 const MaternityTrackerPage = lazy(() => import('./pages/MaternityTrackerPage'));
 const NightShiftAuditPage = lazy(() => import('./pages/NightShiftAuditPage'));
+const BonusAnalyzerPage = lazy(() => import('./pages/BonusAnalyzerPage'));
+const OfferRevocationPage = lazy(() => import('./pages/OfferRevocationPage'));
+const BGVShieldPage = lazy(() => import('./pages/BGVShieldPage'));
+const LayoffSurvivalKitPage = lazy(() => import('./pages/LayoffSurvivalKitPage'));
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
@@ -147,6 +151,10 @@ function App() {
                         <Route path="/tools/hra-calculator" element={<HRACalculatorPage />} />
                         <Route path="/tools/maternity-tracker" element={<MaternityTrackerPage />} />
                         <Route path="/tools/night-shift-audit" element={<NightShiftAuditPage />} />
+                        <Route path="/tools/bonus-analyzer" element={<BonusAnalyzerPage />} />
+                        <Route path="/tools/offer-revocation" element={<OfferRevocationPage />} />
+                        <Route path="/tools/bgv-shield" element={<BGVShieldPage />} />
+                        <Route path="/tools/layoff-survival" element={<LayoffSurvivalKitPage />} />
 
                         <Route path="/maternity-rights" element={<MaternityRightsPage />} />
                         <Route path="/posh-act" element={<POSHActPage />} />
