@@ -4,6 +4,7 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
 import InternalLinks from '../components/InternalLinks';
+import FAQSection from '../components/FAQSection';
 
 const categories = [
     { id: 'salary', label: 'Unpaid/Delayed Salary' },
