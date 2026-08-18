@@ -1,3 +1,4 @@
+import React from 'react';
 import { BookOpen, AlertCircle, ArrowRight, HandCoins, ShieldPlus, Users, Stethoscope } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';

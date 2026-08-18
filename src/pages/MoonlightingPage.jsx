@@ -1,3 +1,4 @@
+import React from 'react';
 import { Moon, Briefcase, EyeOff, FileKey, AlertTriangle, Store } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

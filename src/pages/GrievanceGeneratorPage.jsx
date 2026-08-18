@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useMemo } from 'react';
 import { FileText, Copy, Download, Check, AlertOctagon, Info, ArrowRight } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

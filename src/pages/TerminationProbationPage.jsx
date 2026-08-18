@@ -1,3 +1,4 @@
+import React from 'react';
 import { UserX, AlertTriangle, ShieldAlert, FileText, Clock, Banknote, CheckCircle2, XCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

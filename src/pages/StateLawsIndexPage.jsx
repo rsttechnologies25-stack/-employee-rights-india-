@@ -1,3 +1,4 @@
+import React from 'react';
 import { MapPin, ArrowRight, BookOpen } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';

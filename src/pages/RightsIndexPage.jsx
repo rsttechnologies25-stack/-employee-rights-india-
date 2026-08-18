@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { rightsCategories } from '../data/rightsData';
 import SEOHead from '../components/SEOHead';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Moon, ShieldAlert, AlertTriangle, CheckCircle, Scale, ShieldCheck } from 'lucide-react';

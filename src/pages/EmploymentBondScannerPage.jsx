@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Scale, AlertTriangle, CheckCircle, FileText, ShieldAlert, BookOpen, HelpCircle } from 'lucide-react';

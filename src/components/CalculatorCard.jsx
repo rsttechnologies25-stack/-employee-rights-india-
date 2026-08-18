@@ -1,3 +1,4 @@
+import React from 'react';
 import { Info, AlertTriangle } from 'lucide-react';
 
 export default function CalculatorCard({ title, description, icon: Icon, children, assumptions }) {

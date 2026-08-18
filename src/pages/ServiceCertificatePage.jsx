@@ -1,3 +1,4 @@
+import React from 'react';
 import { Award, AlertTriangle, MapPin } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

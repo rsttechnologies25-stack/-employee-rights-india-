@@ -1,3 +1,4 @@
+import React from 'react';
 import { ShieldCheck, ShieldAlert, XCircle, HelpCircle } from 'lucide-react';
 
 export default function LawCard({ title, description, status = 'green', icon: Icon = HelpCircle }) {

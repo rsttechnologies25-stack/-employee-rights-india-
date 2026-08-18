@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Calendar, AlertTriangle, CheckCircle, Scale, Baby, CalendarHeart, XCircle } from 'lucide-react';

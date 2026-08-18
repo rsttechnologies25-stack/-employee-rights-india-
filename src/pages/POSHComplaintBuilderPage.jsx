@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { ShieldCheck, Lock, FileText, CheckCircle, Copy, Check, AlertCircle, Clock, HeartHandshake } from 'lucide-react';

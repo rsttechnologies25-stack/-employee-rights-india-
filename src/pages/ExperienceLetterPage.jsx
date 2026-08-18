@@ -1,3 +1,4 @@
+import React from 'react';
 import { FileText, AlertTriangle, CheckCircle2, ExternalLink } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

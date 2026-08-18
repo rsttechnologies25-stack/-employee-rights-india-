@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { IndianRupee, ShieldCheck, AlertOctagon, Scale, ArrowRight, Gavel, HelpCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { CheckSquare, Square, ClipboardCheck } from 'lucide-react';
 

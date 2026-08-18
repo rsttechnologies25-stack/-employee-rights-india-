@@ -1,3 +1,4 @@
+import React from 'react';
 import LawCard from '../components/LawCard';
 import SEOHead from '../components/SEOHead';
 import { FileText, Briefcase, Zap, ShieldAlert, BadgeCheck } from 'lucide-react';

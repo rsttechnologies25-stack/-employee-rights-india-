@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { MapPin, Globe, ArrowRight, Laptop, Factory, Store, HardHat, Baby, CalendarDays, Banknote } from 'lucide-react';
 import { Link } from 'react-router-dom';

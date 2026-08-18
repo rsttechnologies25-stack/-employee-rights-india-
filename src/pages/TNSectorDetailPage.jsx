@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import { Globe, MapPin, CheckCircle2, AlertTriangle, ShieldCheck } from 'lucide-react';

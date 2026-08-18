@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useMemo } from 'react';
 import { FileText, Search } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

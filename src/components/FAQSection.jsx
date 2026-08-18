@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import * as HelmetModule from 'react-helmet-async';
 import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';

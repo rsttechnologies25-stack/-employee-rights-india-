@@ -1,3 +1,4 @@
+import React from 'react';
 import LawCard from '../components/LawCard';
 import SEOHead from '../components/SEOHead';
 import { Calendar, Thermometer, Palmtree, PartyPopper, CalendarOff, AlertTriangle, CheckCircle, XCircle, Scale } from 'lucide-react';

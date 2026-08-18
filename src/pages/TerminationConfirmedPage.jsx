@@ -1,3 +1,4 @@
+import React from 'react';
 import { UserX, Scale, Gavel, AlertTriangle, CheckCircle2, Banknote, FileCheck } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

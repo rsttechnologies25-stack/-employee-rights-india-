@@ -1,3 +1,4 @@
+import React from 'react';
 import LawCard from '../components/LawCard';
 import SEOHead from '../components/SEOHead';
 import { Send, FileCheck, ShieldAlert, TimerOff, Handshake } from 'lucide-react';

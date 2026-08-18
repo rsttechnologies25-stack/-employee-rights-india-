@@ -1,3 +1,4 @@
+import React from 'react';
 import { Mail, AlertTriangle, ShieldAlert, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

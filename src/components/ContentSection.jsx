@@ -1,3 +1,4 @@
+import React from 'react';
 import { CheckCircle2, AlertTriangle, Info, Ban, Scale } from 'lucide-react';
 
 const iconMap = {

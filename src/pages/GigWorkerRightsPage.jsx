@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Bike, ShieldAlert, Award, FileText, Check, Copy, HelpCircle, AlertTriangle, ExternalLink } from 'lucide-react';

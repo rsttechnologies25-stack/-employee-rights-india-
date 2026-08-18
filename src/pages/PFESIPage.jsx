@@ -1,3 +1,4 @@
+import React from 'react';
 import LawCard from '../components/LawCard';
 import PFChecker from '../components/PFChecker';
 import SalaryCalculator from '../components/SalaryCalculator';

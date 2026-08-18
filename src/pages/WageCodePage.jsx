@@ -1,3 +1,4 @@
+import React from 'react';
 import { HandCoins, AlertTriangle, TrendingDown, TrendingUp, HelpCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

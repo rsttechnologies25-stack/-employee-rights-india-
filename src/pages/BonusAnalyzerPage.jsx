@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Gift, AlertTriangle, CheckCircle, Scale, Coins, Briefcase } from 'lucide-react';

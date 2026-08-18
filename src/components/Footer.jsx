@@ -1,3 +1,4 @@
+import React from 'react';
 import { ExternalLink, Heart, Instagram, Facebook, ShieldCheck, FileText, Scale, Lock, Mail, Info } from 'lucide-react';
 import { Link } from 'react-router-dom';
 

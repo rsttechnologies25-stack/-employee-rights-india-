@@ -1,3 +1,4 @@
+import React from 'react';
 import { Target, AlertTriangle, ShieldCheck, FileSignature, CheckCircle2 } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

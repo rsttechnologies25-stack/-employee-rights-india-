@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useRef, useEffect } from 'react';
 import { Search, X, ArrowRight, FileText, Calculator, ShieldAlert, Scale, HelpCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';

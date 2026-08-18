@@ -1,3 +1,4 @@
+import React from 'react';
 import { Monitor, EyeOff, Shield, Smartphone, Laptop } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

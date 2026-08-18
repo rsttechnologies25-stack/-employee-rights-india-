@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Scale, FileText, CheckCircle, AlertTriangle, Copy, Check, Printer, Shield, ArrowRight } from 'lucide-react';

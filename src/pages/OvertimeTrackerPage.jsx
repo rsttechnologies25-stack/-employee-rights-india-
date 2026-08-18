@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useEffect } from 'react';
 import { Clock, Plus, Trash2, Printer, AlertTriangle, ShieldCheck, HelpCircle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

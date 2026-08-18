@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useMemo } from 'react';
 import { MapPin, Phone, Mail, Globe, Search, Info, AlertTriangle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

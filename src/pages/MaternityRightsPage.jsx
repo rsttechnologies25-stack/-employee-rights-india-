@@ -1,3 +1,4 @@
+import React from 'react';
 import { Baby, Shield, CheckCircle2, AlertTriangle } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

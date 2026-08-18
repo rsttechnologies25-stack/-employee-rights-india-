@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun, Compass, HelpCircle, FileText, Scale } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Sun } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

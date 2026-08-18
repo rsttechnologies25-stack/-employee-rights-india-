@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Briefcase, ShieldAlert, CheckCircle, AlertTriangle, Calculator, FileText } from 'lucide-react';

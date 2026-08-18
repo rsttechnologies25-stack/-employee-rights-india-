@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Calculator, CheckCircle2, XCircle, Info, Landmark } from 'lucide-react';
 

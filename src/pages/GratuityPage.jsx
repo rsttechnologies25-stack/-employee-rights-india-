@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import { Award, AlertTriangle, Calculator } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

@@ -1,3 +1,4 @@
+import React from 'react';
 export default function PageHero({ title, subtitle, icon: Icon, gradient = 'primary', children }) {
     const gradients = {
         primary: 'from-primary to-[#1e3a8a]',

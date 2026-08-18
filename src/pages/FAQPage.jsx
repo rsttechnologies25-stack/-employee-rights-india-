@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useMemo } from 'react';
 import { HelpCircle, Search, Clock, UserX, Bell, Calculator, AlertCircle, FileCheck, FileText, Mail, Award } from 'lucide-react';
 import SEOHead from '../components/SEOHead';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Calendar, Calculator, CheckCircle, AlertTriangle, Copy, Check, ArrowRight, ShieldCheck, Mail } from 'lucide-react';

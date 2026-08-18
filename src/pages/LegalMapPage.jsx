@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Map, Search, ExternalLink, MapPin, Scale, ChevronRight } from 'lucide-react';

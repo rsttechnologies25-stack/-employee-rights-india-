@@ -1,3 +1,4 @@
+import React from 'react';
 import { ArrowRight, CheckCircle2, ShieldAlert, ShieldCheck, Database, Lock, Compass, HelpCircle, FileText, Scale, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';

@@ -1,3 +1,4 @@
+import React from 'react';
 import { useState, useMemo } from 'react';
 import { FileText, Copy, Download, Check, Eye } from 'lucide-react';
 
