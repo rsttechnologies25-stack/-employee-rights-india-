@@ -3,6 +3,8 @@ import { useState } from 'react';
 import SEOHead from '../components/SEOHead';
 import { Scale, FileText, CheckCircle, AlertTriangle, Copy, Check, Printer, Shield, ArrowRight } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
+import PDFExportButton from '../components/PDFExportButton';
+import ShareButtons from '../components/ShareButtons';
 
 export default function LegalNoticeGeneratorPage() {
     const [noticeType, setNoticeType] = useState('ff_dues'); // 'ff_dues', 'relieving_letter', 'pf_delay', 'illegal_deduction'
@@ -266,21 +268,29 @@ Former Employee, ${companyName || '[Company Name]'}`;
 
                 {/* Notice Output */}
                 <div className="bg-white dark:bg-gray-950 p-6 rounded-2xl shadow-soft border border-gray-100 dark:border-gray-800">
-                    <div className="flex justify-between items-center mb-4">
+                    <div className="flex justify-between items-center mb-4 flex-wrap gap-3">
                         <h3 className="text-xl font-bold flex items-center gap-2">
                             <FileText className="w-5 h-5 text-primary" />
                             Drafted Legal Notice
                         </h3>
-                        <button 
-                            onClick={handleCopy}
-                            className="px-4 py-2 bg-primary text-white rounded-lg text-sm font-semibold flex items-center gap-1.5 hover:bg-primary/90 transition-all"
-                        >
-                            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                            {copied ? 'Copied Notice' : 'Copy Notice Text'}
-                        </button>
+                        <div className="flex items-center gap-2 flex-wrap">
+                            <ShareButtons title="Legal Demand Notice for Employers" />
+                            <PDFExportButton
+                                documentTitle="Formal Legal Demand Notice"
+                                documentContent={generateLegalNotice()}
+                                buttonText="Print / Export PDF"
+                            />
+                            <button 
+                                onClick={handleCopy}
+                                className="px-4 py-2.5 bg-primary text-white rounded-xl text-xs font-bold flex items-center gap-1.5 hover:bg-primary/90 transition-all shadow-soft"
+                            >
+                                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                                {copied ? 'Copied' : 'Copy Text'}
+                            </button>
+                        </div>
                     </div>
 
-                    <pre className="p-4 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl text-xs sm:text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-sans max-h-[500px] overflow-y-auto">
+                    <pre className="p-5 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl text-xs sm:text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap font-sans max-h-[500px] overflow-y-auto leading-relaxed select-all">
                         {generateLegalNotice()}
                     </pre>
                 </div>

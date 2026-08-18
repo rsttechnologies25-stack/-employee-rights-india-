@@ -5,6 +5,7 @@ import { ArrowLeft, CheckCircle2, Ban, Info, ExternalLink, Scale, ShieldCheck, F
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import LegalMetadataBadge from '../components/LegalMetadataBadge';
+import ShareButtons from '../components/ShareButtons';
 
 export default function RightsDetailPage() {
     const { categoryId } = useParams();
@@ -42,11 +43,14 @@ export default function RightsDetailPage() {
 
             <div className="max-w-5xl mx-auto space-y-8">
                 
-                {/* Navigation Breadcrumb */}
-                <Breadcrumb items={[
-                    { label: 'All Rights', path: '/rights' },
-                    { label: cleanLabel, path: `/rights/${category.id}` }
-                ]} />
+                {/* Navigation Breadcrumb & Share */}
+                <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                    <Breadcrumb items={[
+                        { label: 'All Rights', path: '/rights' },
+                        { label: cleanLabel, path: `/rights/${category.id}` }
+                    ]} />
+                    <ShareButtons title={`${cleanLabel} Statutory Guide`} />
+                </div>
 
                 {/* Hero Card */}
                 <div className="bg-gradient-to-br from-primary via-indigo-900 to-blue-950 rounded-3xl p-8 sm:p-10 text-white shadow-xl">

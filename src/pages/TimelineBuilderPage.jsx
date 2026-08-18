@@ -4,6 +4,8 @@ import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
 import { Clock, Plus, Trash2, Printer, Download, FileText, CheckCircle2 } from 'lucide-react';
+import PDFExportButton from '../components/PDFExportButton';
+import ShareButtons from '../components/ShareButtons';
 
 const sampleEvents = [
     { id: 1, date: '2026-08-01', event: 'Submitted Resignation via Email', person: 'HR Manager (Rahul)', comms: 'Official Email Thread', proof: 'Email Sent Receipt & Acknowledgment', notes: 'Gave 30 days notice period with Last Working Day as 31 Aug 2026' },
@@ -174,12 +176,19 @@ export default function TimelineBuilderPage() {
                                 </h3>
                                 <p className="text-xs text-gray-500">Ready to attach as Annexure with Labour Petition or Legal Notice</p>
                             </div>
-                            <button
-                                onClick={handlePrint}
-                                className="px-4 py-2 bg-primary text-white font-bold rounded-xl text-xs flex items-center gap-1.5 hover:bg-primary/90 shadow-soft"
-                            >
-                                <Printer className="w-3.5 h-3.5" /> Print / Save Chronology PDF
-                            </button>
+                            <div className="flex items-center gap-2 flex-wrap">
+                                <ShareButtons title="Employment Dispute Case Timeline" />
+                                <PDFExportButton
+                                    documentTitle="Chronological Statement of Facts"
+                                    documentContent={
+                                        `ANNEXURE: CHRONOLOGICAL STATEMENT OF FACTS & INCIDENT DOSSIER\n\n` +
+                                        events.map((ev, idx) => 
+                                            `[${idx + 1}] DATE: ${ev.date}\n    INCIDENT: ${ev.event}\n    PERSON INVOLVED: ${ev.person}\n    COMMUNICATION CHANNEL: ${ev.comms}\n    SUPPORTING EVIDENCE: ${ev.proof}\n    NOTES/IMPACT: ${ev.notes}\n`
+                                        ).join('\n')
+                                    }
+                                    buttonText="Export Chronology PDF"
+                                />
+                            </div>
                         </div>
 
                         {events.length === 0 ? (

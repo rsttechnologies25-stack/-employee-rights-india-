@@ -48,3 +48,64 @@
     @apply border-l-4 border-danger;
   }
 }
+
+/* ─── PRINT & A4 LETTERHEAD STYLES ─── */
+@media print {
+  /* Hide non-printable UI elements */
+  nav,
+  footer,
+  header,
+  .no-print,
+  button,
+  .btn-primary,
+  .btn-accent,
+  [role="dialog"] > div:first-child,
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111827 !important;
+    font-size: 12pt !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Make containers full width */
+  .max-w-4xl,
+  .max-w-5xl,
+  .max-w-6xl,
+  .max-w-7xl,
+  .container {
+    max-width: 100% !important;
+    width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  /* Ensure card backgrounds are crisp white and borders are sharp */
+  .card,
+  .print-clean {
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    background: #ffffff !important;
+  }
+
+  /* Prevent page breaks inside important blocks */
+  p,
+  li,
+  .break-inside-avoid {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure links print their destination if needed or look clean */
+  a {
+    color: #111827 !important;
+    text-decoration: none !important;
+  }
+}

@@ -6,6 +6,8 @@ import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
 import InternalLinks from '../components/InternalLinks';
 import FAQSection from '../components/FAQSection';
+import PDFExportButton from '../components/PDFExportButton';
+import ShareButtons from '../components/ShareButtons';
 
 const categories = [
     { id: 'salary', label: 'Unpaid/Delayed Salary' },
@@ -427,27 +429,35 @@ Phone: ${phone}`;
                         <div className="lg:col-span-7 bg-white dark:bg-gray-950 rounded-2xl border border-gray-150 dark:border-gray-800 shadow-soft p-6 flex flex-col justify-between min-h-[450px]">
                             
                             <div>
-                                <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
-                                    <Info className="w-5 h-5 text-primary" /> Live Grievance Draft
-                                </h3>
+                                <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+                                    <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                                        <Info className="w-5 h-5 text-primary" /> Live Grievance Draft
+                                    </h3>
+                                    <ShareButtons title="Grievance Complaint Letter Draft" />
+                                </div>
 
-                                <div className="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-100 dark:border-gray-850 shadow-inner max-h-[400px] overflow-y-auto font-sans leading-relaxed text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap select-all">
+                                <div className="p-5 bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-150 dark:border-gray-800 shadow-inner max-h-[400px] overflow-y-auto font-sans leading-relaxed text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap select-all">
                                     {grievanceDraft}
                                 </div>
                             </div>
 
-                            <div className="flex gap-3 mt-6">
+                            <div className="flex gap-3 mt-6 flex-wrap">
                                 <button
                                     onClick={handleCopy}
                                     className="bg-primary text-white hover:bg-primary/95 flex items-center justify-center gap-2 flex-grow py-3 rounded-xl font-bold transition-all shadow-soft"
                                 >
                                     {copied ? <><Check className="w-5 h-5" /> Copied!</> : <><Copy className="w-5 h-5" /> Copy Draft</>}
                                 </button>
+                                <PDFExportButton
+                                    documentTitle={`Formal Labour Grievance - ${categories.find(c => c.id === selectedCategory)?.label || 'Complaint'}`}
+                                    documentContent={grievanceDraft}
+                                    buttonText="Print / Export PDF"
+                                />
                                 <button
                                     onClick={handleDownload}
-                                    className="bg-accent text-white hover:bg-accent-dark flex items-center justify-center gap-2 flex-grow py-3 rounded-xl font-bold transition-all shadow-soft"
+                                    className="bg-gray-100 dark:bg-gray-850 text-gray-800 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold transition-all shadow-soft"
                                 >
-                                    <Download className="w-5 h-5" /> Download Draft (.txt)
+                                    <Download className="w-5 h-5" /> .txt
                                 </button>
                             </div>
                         </div>

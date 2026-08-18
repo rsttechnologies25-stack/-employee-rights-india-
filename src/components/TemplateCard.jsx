@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useMemo } from 'react';
 import { FileText, Copy, Download, Check, Eye } from 'lucide-react';
+import PDFExportButton from './PDFExportButton';
 
 export default function TemplateCard({ template }) {
     const [copied, setCopied] = useState(false);
@@ -161,12 +162,17 @@ export default function TemplateCard({ template }) {
                         </div>
 
                         {/* Footer Controls */}
-                        <div className="flex gap-3 p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900">
-                            <button onClick={handleCopy} className="bg-primary text-white hover:bg-primary/95 flex items-center gap-2 flex-1 justify-center py-3 rounded-xl font-bold transition-colors">
+                        <div className="flex gap-3 p-6 border-t border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 flex-wrap">
+                            <button onClick={handleCopy} className="bg-primary text-white hover:bg-primary/95 flex items-center gap-2 flex-1 justify-center py-3 rounded-xl font-bold transition-colors shadow-soft">
                                 {copied ? <><Check className="w-5 h-5" /> Copied!</> : <><Copy className="w-5 h-5" /> Copy Custom Letter</>}
                             </button>
-                            <button onClick={handleDownload} className="bg-accent text-white hover:bg-accent-dark flex items-center gap-2 flex-1 justify-center py-3 rounded-xl font-bold transition-colors">
-                                <Download className="w-5 h-5" /> Download (.txt)
+                            <PDFExportButton
+                                documentTitle={template.title}
+                                documentContent={customizedContent}
+                                buttonText="Print / Export PDF"
+                            />
+                            <button onClick={handleDownload} className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-700 flex items-center gap-2 px-4 py-3 rounded-xl font-bold transition-colors">
+                                <Download className="w-5 h-5" /> .txt
                             </button>
                         </div>
 
