@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins, UserX, Home, Baby, Moon, Gift, FileX } from 'lucide-react';
+import { Wrench, Calculator, Briefcase, Award, Clock, FileCheck, Banknote, IndianRupee, FileText, Scale, MapPin, DollarSign, ShieldAlert, Search, Map, Coins, UserX, Home, Baby, Moon, Gift, FileX, Bike, ShieldCheck, Calendar } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
@@ -12,6 +12,46 @@ const calculators = [
         path: '/salary-calculator',
         badge: 'Popular',
         badgeClass: 'bg-success/10 text-success',
+    },
+    {
+        icon: Scale,
+        title: 'Legal Notice Generator',
+        description: 'Draft advocate-grade legal demand notices for unpaid salary, delayed PF, and withheld letters.',
+        path: '/tools/legal-notice-generator',
+        badge: 'New Suite',
+        badgeClass: 'bg-primary/10 text-primary font-bold',
+    },
+    {
+        icon: Scale,
+        title: 'Bond & Non-Compete Scanner',
+        description: 'Check whether service bonds or post-employment non-compete clauses are legally void.',
+        path: '/tools/employment-bond-scanner',
+        badge: 'Section 27',
+        badgeClass: 'bg-blue-100 text-blue-700',
+    },
+    {
+        icon: Calendar,
+        title: 'Notice & Leave Adjustment',
+        description: 'Calculate net notice shortfall by offsetting accrued Earned Leaves against notice days.',
+        path: '/tools/notice-adjustment-calculator',
+        badge: 'Cost Saver',
+        badgeClass: 'bg-emerald-100 text-emerald-700',
+    },
+    {
+        icon: ShieldCheck,
+        title: 'POSH Complaint Builder',
+        description: 'Draft a confidential formal sexual harassment complaint to the ICC with interim relief.',
+        path: '/tools/posh-complaint-builder',
+        badge: 'Confidential',
+        badgeClass: 'bg-rose-100 text-rose-700',
+    },
+    {
+        icon: Bike,
+        title: 'Gig Worker Rights Hub',
+        description: 'Deactivation appeal generator and social security rights for Blinkit, Swiggy, Zomato & Uber.',
+        path: '/tools/gig-worker-rights',
+        badge: 'Gig Economy',
+        badgeClass: 'bg-amber-100 text-amber-700',
     },
     {
         icon: Gift,

@@ -231,6 +231,31 @@ const seoData = {
         description: 'Fired in a mass layoff? Audit your severance package to ensure you aren\'t being cheated out of your legal rights under Chapter VB of the Industrial Disputes Act.',
         keywords: 'mass layoff rights india, chapter vb industrial disputes act, 15 days severance pay, tech layoff india rights',
     },
+    '/tools/employment-bond-scanner': {
+        title: 'Employment Bond & Non-Compete Validity Scanner India — Section 27',
+        description: 'Check whether your company\'s service bond, training penalty, or post-employment non-compete clause is legally enforceable in Indian courts.',
+        keywords: 'employment bond legal in india, section 27 contract act non compete, service agreement bond penalty, resign before bond period',
+    },
+    '/tools/notice-adjustment-calculator': {
+        title: 'Notice Period Shortfall & Leave Adjustment Calculator India',
+        description: 'Calculate net notice buyout recovery by offsetting accumulated Earned Leaves against your notice shortfall. Avoid illegal gross salary deductions.',
+        keywords: 'notice period buyout calculator, adjust leaves against notice period, notice period shortfall formula, basic vs gross notice buyout',
+    },
+    '/tools/posh-complaint-builder': {
+        title: 'Confidential POSH Complaint Builder & ICC Inquiry Tracker India',
+        description: 'Draft a formal, legally structured sexual harassment complaint under the POSH Act, 2013 with interim relief requests and 90-day inquiry timeline tracking.',
+        keywords: 'posh complaint format india, how to file posh complaint, internal complaints committee sample letter, posh act section 12 interim relief',
+    },
+    '/tools/gig-worker-rights': {
+        title: 'Gig & Platform Worker Rights Hub India — Blinkit, Swiggy, Zomato, Uber',
+        description: 'Know your legal protections under the Gig Workers Welfare Acts in India. Generate formal appeal letters for unfair ID block and account deactivation.',
+        keywords: 'gig worker rights india, swiggy zomato id block appeal, blinkit partner deactivation, rajasthan gig workers act, karnataka gig workers bill',
+    },
+    '/tools/legal-notice-generator': {
+        title: 'Formal Legal Demand Notice Generator for Employees India',
+        description: 'Draft an official, advocate-grade legal demand notice for unpaid salary, withheld relieving letters, illegal notice pay deductions, and delayed PF contributions.',
+        keywords: 'legal notice format for unpaid salary, legal notice for relieving letter, legal demand letter to employer india, section 15 payment of wages legal notice',
+    },
     '/tools/labour-directory': {
         title: 'Regional Labour Commissioner Office Directory — Contacts',
         description: 'Find contact phone numbers, official email addresses, physical office addresses, and official websites of local and district labour departments across India.',

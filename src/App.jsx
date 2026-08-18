@@ -56,6 +56,11 @@ const BonusAnalyzerPage = lazy(() => import('./pages/BonusAnalyzerPage'));
 const OfferRevocationPage = lazy(() => import('./pages/OfferRevocationPage'));
 const BGVShieldPage = lazy(() => import('./pages/BGVShieldPage'));
 const LayoffSurvivalKitPage = lazy(() => import('./pages/LayoffSurvivalKitPage'));
+const EmploymentBondScannerPage = lazy(() => import('./pages/EmploymentBondScannerPage'));
+const NoticeAdjustmentCalculatorPage = lazy(() => import('./pages/NoticeAdjustmentCalculatorPage'));
+const POSHComplaintBuilderPage = lazy(() => import('./pages/POSHComplaintBuilderPage'));
+const GigWorkerRightsPage = lazy(() => import('./pages/GigWorkerRightsPage'));
+const LegalNoticeGeneratorPage = lazy(() => import('./pages/LegalNoticeGeneratorPage'));
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
@@ -155,6 +160,11 @@ function App() {
                         <Route path="/tools/offer-revocation" element={<OfferRevocationPage />} />
                         <Route path="/tools/bgv-shield" element={<BGVShieldPage />} />
                         <Route path="/tools/layoff-survival" element={<LayoffSurvivalKitPage />} />
+                        <Route path="/tools/employment-bond-scanner" element={<EmploymentBondScannerPage />} />
+                        <Route path="/tools/notice-adjustment-calculator" element={<NoticeAdjustmentCalculatorPage />} />
+                        <Route path="/tools/posh-complaint-builder" element={<POSHComplaintBuilderPage />} />
+                        <Route path="/tools/gig-worker-rights" element={<GigWorkerRightsPage />} />
+                        <Route path="/tools/legal-notice-generator" element={<LegalNoticeGeneratorPage />} />
 
                         <Route path="/maternity-rights" element={<MaternityRightsPage />} />
                         <Route path="/posh-act" element={<POSHActPage />} />

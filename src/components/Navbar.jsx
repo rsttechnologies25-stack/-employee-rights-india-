@@ -70,6 +70,11 @@ const navGroups = [
         items: [
             { to: '/tools', label: 'Calculators & Tools Hub' },
             { to: '/legal-map', label: 'State Legal Hub (Map)' },
+            { to: '/tools/legal-notice-generator', label: 'Legal Notice Generator' },
+            { to: '/tools/employment-bond-scanner', label: 'Bond & Non-Compete Scanner' },
+            { to: '/tools/notice-adjustment-calculator', label: 'Notice & Leave Adjustment' },
+            { to: '/tools/posh-complaint-builder', label: 'POSH Complaint Builder' },
+            { to: '/tools/gig-worker-rights', label: 'Gig Worker Rights Hub' },
             { to: '/tools/bonus-analyzer', label: 'Bonus & Variable Pay Analyzer' },
             { to: '/tools/offer-revocation', label: 'Offer Revocation Guide' },
             { to: '/tools/bgv-shield', label: 'BGV Defamation Shield' },
