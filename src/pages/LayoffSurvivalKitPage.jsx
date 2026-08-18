@@ -68,13 +68,13 @@ export default function LayoffSurvivalKitPage() {
                                     <div className="flex gap-3">
                                         <button 
                                             onClick={() => handleAnswer(item.id, true)} 
-                                            className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers[item.id] === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                                            className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers[item.id] === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                                         >
                                             Yes
                                         </button>
                                         <button 
                                             onClick={() => handleAnswer(item.id, false)} 
-                                            className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers[item.id] === false ? 'bg-red-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                                            className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers[item.id] === false ? 'bg-red-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                                         >
                                             No
                                         </button>

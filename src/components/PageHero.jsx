@@ -14,7 +14,7 @@ export default function PageHero({ title, subtitle, icon: Icon, gradient = 'prim
             <div className="max-w-7xl mx-auto">
                 <div className="flex items-start gap-4 mb-4">
                     {Icon && (
-                        <div className="p-3 bg-white dark:bg-gray-950/10 rounded-xl backdrop-blur-sm">
+                        <div className="p-3.5 bg-white/15 dark:bg-white/10 rounded-2xl backdrop-blur-md border border-white/25 shadow-lg shrink-0">
                             <Icon className="w-8 h-8 text-white" />
                         </div>
                     )}

@@ -155,7 +155,7 @@ export default function MinimumWageCheckerPage() {
                                                     className={`p-3 rounded-xl border text-center text-xs font-semibold transition-all ${
                                                         selectedRowIndex === idx
                                                             ? 'border-green-500 bg-green-600 text-white font-bold'
-                                                            : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-350'
+                                                            : 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300'
                                                     }`}
                                                 >
                                                     {row.category}
@@ -163,7 +163,7 @@ export default function MinimumWageCheckerPage() {
                                             ))}
                                         </div>
                                         {rowData?.note && (
-                                            <p className="text-xs text-gray-450 dark:text-gray-500 mt-1 italic">
+                                            <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 italic">
                                                 * Applies to: {rowData.note}
                                             </p>
                                         )}
@@ -182,7 +182,7 @@ export default function MinimumWageCheckerPage() {
                                             value={monthlySalary}
                                             onChange={(e) => setMonthlySalary(e.target.value)}
                                             placeholder="e.g. 15000"
-                                            className="w-full pl-8 pr-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-900 text-base font-bold text-gray-850 dark:text-gray-150 outline-none focus:ring-2 focus:ring-green-500"
+                                            className="w-full pl-8 pr-4 py-3.5 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 text-base font-bold text-gray-900 dark:text-gray-100 outline-none focus:ring-2 focus:ring-green-500"
                                         />
                                     </div>
                                 </div>
@@ -210,7 +210,7 @@ export default function MinimumWageCheckerPage() {
 
                                         <div className="my-6">
                                             <p className="text-xs font-bold text-gray-400 uppercase tracking-wide">Legal State Minimum</p>
-                                            <p className="text-3xl font-black text-gray-850 dark:text-gray-100">
+                                            <p className="text-3xl font-black text-gray-900 dark:text-gray-100">
                                                 ₹{complianceResult.minMonthly.toLocaleString('en-IN')}/mo
                                             </p>
                                             <p className="text-xs text-gray-400 mt-1">₹{complianceResult.minDaily}/day</p>
@@ -268,7 +268,7 @@ export default function MinimumWageCheckerPage() {
                             </div>
                             <Link
                                 to="/complaint-guide"
-                                className="bg-white text-red-650 hover:bg-red-50 text-base font-extrabold px-6 py-4 rounded-xl shadow-md transition-all shrink-0 flex items-center gap-2 group"
+                                className="bg-white text-red-700 hover:bg-red-50 text-base font-extrabold px-6 py-4 rounded-xl shadow-md transition-all shrink-0 flex items-center gap-2 group"
                             >
                                 How to Complain <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </Link>
@@ -280,7 +280,7 @@ export default function MinimumWageCheckerPage() {
                         <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-6 flex items-center gap-2">
                             <Gavel className="w-6 h-6 text-green-600" /> Key Minimum Wage Rules
                         </h2>
-                        <ul className="space-y-4 text-sm text-gray-650 dark:text-gray-400">
+                        <ul className="space-y-4 text-sm text-gray-700 dark:text-gray-300">
                             <li className="flex items-start gap-2.5">
                                 <span className="text-green-600 font-bold shrink-0 mt-0.5">•</span>
                                 <p><strong>Overtime Double Pay (2x):</strong> Working beyond 8–9 hours/day requires overtime pay at double the ordinary wage rate. Employers cannot waive this using compensatory off unless the worker agrees.</p>

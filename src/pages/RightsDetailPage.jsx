@@ -81,7 +81,7 @@ export default function RightsDetailPage() {
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <BookOpen className="w-5 h-5 text-primary" /> Governing Legislative Acts & Sections
                         </h2>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
                             These statutory provisions empower employees with legally enforceable rights across India:
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
@@ -170,7 +170,7 @@ export default function RightsDetailPage() {
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <FileText className="w-5 h-5 text-primary" /> Documents & Evidence to Preserve
                         </h2>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
                             Gather these documents before submitting your petition or legal notice:
                         </p>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">

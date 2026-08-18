@@ -29,9 +29,9 @@ export default function ChecklistCard({ title, items, description }) {
                         <span className="text-blue-200">Progress</span>
                         <span className="font-bold">{checked.size}/{items.length} ({progress}%)</span>
                     </div>
-                    <div className="w-full bg-white dark:bg-gray-950/20 rounded-full h-2.5">
+                    <div className="w-full bg-white/20 dark:bg-white/20 rounded-full h-2.5">
                         <div
-                            className="bg-white dark:bg-gray-950 rounded-full h-2.5 transition-all duration-500 ease-out"
+                            className="bg-white rounded-full h-2.5 transition-all duration-500 ease-out shadow-sm"
                             style={{ width: `${progress}%` }}
                         />
                     </div>
@@ -45,16 +45,16 @@ export default function ChecklistCard({ title, items, description }) {
                                 onClick={() => toggle(idx)}
                                 className={`w-full flex items-start gap-3 p-3 rounded-xl text-left transition-all duration-200 ${
                                     checked.has(idx)
-                                        ? 'bg-success/5 border border-success/20'
-                                        : 'bg-gray-50 dark:bg-gray-900 border border-gray-100 dark:border-gray-800 hover:bg-gray-100'
+                                        ? 'bg-success/5 border border-success/20 text-gray-500 dark:text-gray-400'
+                                        : 'bg-gray-50 dark:bg-gray-900 border border-gray-150 dark:border-gray-800 hover:bg-gray-100 dark:hover:bg-gray-850'
                                 }`}
                             >
                                 {checked.has(idx) ? (
                                     <CheckSquare className="w-5 h-5 text-success shrink-0 mt-0.5" />
                                 ) : (
-                                    <Square className="w-5 h-5 text-gray-300 shrink-0 mt-0.5" />
+                                    <Square className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0 mt-0.5" />
                                 )}
-                                <span className={`text-sm ${checked.has(idx) ? 'text-gray-500 dark:text-gray-400 line-through' : 'text-gray-700 dark:text-gray-300'}`}>
+                                <span className={`text-sm ${checked.has(idx) ? 'line-through text-gray-500 dark:text-gray-400' : 'text-gray-800 dark:text-gray-200'}`}>
                                     {item}
                                 </span>
                             </button>

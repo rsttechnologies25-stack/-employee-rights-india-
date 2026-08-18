@@ -70,13 +70,13 @@ export default function NightShiftAuditPage() {
                                     <div className="flex gap-3">
                                         <button 
                                             onClick={() => handleAnswer(item.id, true)} 
-                                            className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers[item.id] === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                                            className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers[item.id] === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                                         >
                                             Yes
                                         </button>
                                         <button 
                                             onClick={() => handleAnswer(item.id, false)} 
-                                            className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers[item.id] === false ? 'bg-red-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}
+                                            className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers[item.id] === false ? 'bg-red-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                                         >
                                             No
                                         </button>
@@ -89,10 +89,10 @@ export default function NightShiftAuditPage() {
                     {/* Results Section */}
                     <div className="space-y-6">
                         {!isComplete ? (
-                            <div className="bg-white dark:bg-gray-950 p-8 rounded-2xl shadow-soft border border-gray-100 dark:border-gray-800 h-full flex flex-col items-center justify-center text-center sticky top-24">
-                                <ShieldAlert className="w-12 h-12 text-gray-300 mb-4" />
-                                <p className="text-gray-500 font-medium">Answer all {checklistItems.length} questions to generate your company's safety compliance report.</p>
-                                <div className="w-full bg-gray-200 rounded-full h-2.5 mt-6">
+                            <div className="bg-white dark:bg-gray-950 p-8 rounded-2xl shadow-soft border border-gray-150 dark:border-gray-800 h-full flex flex-col items-center justify-center text-center sticky top-24">
+                                <ShieldAlert className="w-12 h-12 text-gray-300 dark:text-gray-600 mb-4" />
+                                <p className="text-gray-600 dark:text-gray-400 font-medium">Answer all {checklistItems.length} questions to generate your company's safety compliance report.</p>
+                                <div className="w-full bg-gray-200 dark:bg-gray-800 rounded-full h-2.5 mt-6">
                                     <div className="bg-primary h-2.5 rounded-full" style={{ width: `${(answeredCount / checklistItems.length) * 100}%` }}></div>
                                 </div>
                                 <p className="text-xs text-gray-400 mt-2">{answeredCount} of {checklistItems.length} answered</p>

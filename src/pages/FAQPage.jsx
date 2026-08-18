@@ -78,7 +78,7 @@ export default function FAQPage() {
                                 placeholder="Search all FAQ questions..."
                                 value={search}
                                 onChange={e => { setSearch(e.target.value); setActiveCategory('all'); }}
-                                className="w-full pl-12 pr-4 py-4 border-2 border-gray-100 dark:border-gray-800 rounded-xl focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none text-lg"
+                                className="w-full pl-12 pr-4 py-4 border-2 border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-primary focus:ring-4 focus:ring-primary/10 outline-none text-lg"
                             />
                         </div>
                         {search && searchResults && (
@@ -97,10 +97,10 @@ export default function FAQPage() {
                             <div className="flex gap-2 flex-wrap mb-8">
                                 <button
                                     onClick={() => setActiveCategory('all')}
-                                    className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === 'all' ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:bg-gray-900'}`}
+                                    className={`px-4 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${activeCategory === 'all' ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-950 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900'}`}
                                 >
                                     All Topics
-                                    <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === 'all' ? 'bg-white dark:bg-gray-950/20 text-white' : 'bg-gray-100 text-gray-500 dark:text-gray-400'}`}>{totalCount}</span>
+                                    <span className={`text-xs px-2 py-0.5 rounded-full ${activeCategory === 'all' ? 'bg-white/20 text-white font-black' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}>{totalCount}</span>
                                 </button>
                                 {faqCategories.map(cat => {
                                     const IconComp = iconMap[cat.iconName];
@@ -108,11 +108,11 @@ export default function FAQPage() {
                                         <button
                                             key={cat.id}
                                             onClick={() => setActiveCategory(cat.id)}
-                                            className={`px-4 py-2.5 rounded-lg font-medium text-sm transition-all flex items-center gap-2 ${activeCategory === cat.id ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 text-gray-600 dark:text-gray-400 border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:bg-gray-900'}`}
+                                            className={`px-4 py-2.5 rounded-xl font-bold text-sm transition-all flex items-center gap-2 ${activeCategory === cat.id ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-950 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900'}`}
                                         >
                                             {IconComp && <IconComp className="w-4 h-4" />}
                                             {cat.label}
-                                            <span className={`text-xs px-1.5 py-0.5 rounded-full ${activeCategory === cat.id ? 'bg-white dark:bg-gray-950/20 text-white' : 'bg-gray-100 text-gray-500 dark:text-gray-400'}`}>{allFaqs[cat.id]?.length || 0}</span>
+                                            <span className={`text-xs px-2 py-0.5 rounded-full ${activeCategory === cat.id ? 'bg-white/20 text-white font-black' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'}`}>{allFaqs[cat.id]?.length || 0}</span>
                                         </button>
                                     );
                                 })}

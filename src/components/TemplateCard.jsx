@@ -21,6 +21,10 @@ export default function TemplateCard({ template }) {
         return initial;
     });
 
+    const handleInputChange = (ph, val) => {
+        setValues(prev => ({ ...prev, [ph]: val }));
+    };
+
     // Compute customized content in real-time
     const customizedContent = useMemo(() => {
         let content = template.content;
@@ -139,7 +143,7 @@ export default function TemplateCard({ template }) {
                                                     value={values[ph]}
                                                     onChange={(e) => handleInputChange(ph, e.target.value)}
                                                     placeholder={`e.g. ${cleanLabel(ph)}`}
-                                                    className="px-3.5 py-2 border border-gray-200 dark:border-gray-700 rounded-xl bg-gray-50 dark:bg-gray-900 text-sm text-gray-800 dark:text-gray-250 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                                    className="px-3.5 py-2 border border-gray-200 dark:border-gray-700 rounded-xl bg-white dark:bg-gray-900 text-sm text-gray-900 dark:text-gray-100 outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
                                                 />
                                             </div>
                                         ))}
@@ -149,8 +153,8 @@ export default function TemplateCard({ template }) {
 
                             {/* Right Side: Real-time Preview */}
                             <div className="p-6 bg-gray-50 dark:bg-gray-900/50 overflow-y-auto max-h-[50vh] md:max-h-[65vh]">
-                                <h4 className="font-bold text-sm text-gray-400 uppercase tracking-wider mb-4">Live Preview</h4>
-                                <div className="bg-white dark:bg-gray-950 p-6 rounded-xl border border-gray-100 dark:border-gray-850 shadow-inner font-sans leading-relaxed text-sm text-gray-750 dark:text-gray-300 whitespace-pre-wrap select-all">
+                                <h4 className="font-bold text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">Live Preview</h4>
+                                <div className="bg-white dark:bg-gray-950 p-6 rounded-xl border border-gray-150 dark:border-gray-800 shadow-inner font-sans leading-relaxed text-sm text-gray-800 dark:text-gray-200 whitespace-pre-wrap select-all">
                                     {customizedContent}
                                 </div>
                             </div>

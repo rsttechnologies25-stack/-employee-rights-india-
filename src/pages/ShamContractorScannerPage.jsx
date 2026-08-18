@@ -89,8 +89,8 @@ export default function ShamContractorScannerPage() {
                             <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                 <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">1. Does the company dictate your exact working hours (e.g., 9 to 5) or require daily attendance/login?</p>
                                 <div className="flex gap-3">
-                                    <button onClick={() => handleAnswer('hours', true)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.hours === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>Yes</button>
-                                    <button onClick={() => handleAnswer('hours', false)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.hours === false ? 'bg-gray-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>No</button>
+                                    <button onClick={() => handleAnswer('hours', true)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.hours === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>Yes</button>
+                                    <button onClick={() => handleAnswer('hours', false)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.hours === false ? 'bg-gray-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>No</button>
                                 </div>
                             </div>
 
@@ -98,8 +98,8 @@ export default function ShamContractorScannerPage() {
                             <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                 <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">2. Did the company provide you with a company laptop, software licenses, or core equipment?</p>
                                 <div className="flex gap-3">
-                                    <button onClick={() => handleAnswer('equipment', true)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.equipment === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>Yes</button>
-                                    <button onClick={() => handleAnswer('equipment', false)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.equipment === false ? 'bg-gray-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>No</button>
+                                    <button onClick={() => handleAnswer('equipment', true)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.equipment === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>Yes</button>
+                                    <button onClick={() => handleAnswer('equipment', false)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.equipment === false ? 'bg-gray-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>No</button>
                                 </div>
                             </div>
 
@@ -107,8 +107,8 @@ export default function ShamContractorScannerPage() {
                             <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                 <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">3. Are you contractually prohibited from working for other clients simultaneously?</p>
                                 <div className="flex gap-3">
-                                    <button onClick={() => handleAnswer('exclusivity', true)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.exclusivity === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>Yes</button>
-                                    <button onClick={() => handleAnswer('exclusivity', false)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.exclusivity === false ? 'bg-gray-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>No</button>
+                                    <button onClick={() => handleAnswer('exclusivity', true)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.exclusivity === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>Yes</button>
+                                    <button onClick={() => handleAnswer('exclusivity', false)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.exclusivity === false ? 'bg-gray-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>No</button>
                                 </div>
                             </div>
 
@@ -116,8 +116,8 @@ export default function ShamContractorScannerPage() {
                             <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                 <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">4. Are you integrated into the core team (e.g., you have a company email address, attend daily standups)?</p>
                                 <div className="flex gap-3">
-                                    <button onClick={() => handleAnswer('integration', true)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.integration === true ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>Yes</button>
-                                    <button onClick={() => handleAnswer('integration', false)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.integration === false ? 'bg-gray-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>No</button>
+                                    <button onClick={() => handleAnswer('integration', true)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.integration === true ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>Yes</button>
+                                    <button onClick={() => handleAnswer('integration', false)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.integration === false ? 'bg-gray-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>No</button>
                                 </div>
                             </div>
                             
@@ -125,8 +125,8 @@ export default function ShamContractorScannerPage() {
                             <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
                                 <p className="font-semibold text-gray-800 dark:text-gray-200 mb-3">5. Do you take on personal financial risk if the project fails (e.g., you don't get paid if the client doesn't like the result)?</p>
                                 <div className="flex gap-3">
-                                    <button onClick={() => handleAnswer('risk', true)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.risk === true ? 'bg-gray-500 text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>Yes (I bear risk)</button>
-                                    <button onClick={() => handleAnswer('risk', false)} className={`flex-1 py-2 rounded-lg font-medium transition-colors ${answers.risk === false ? 'bg-primary text-white' : 'bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-700'}`}>No (Fixed monthly pay)</button>
+                                    <button onClick={() => handleAnswer('risk', true)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.risk === true ? 'bg-gray-600 text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>Yes (I bear risk)</button>
+                                    <button onClick={() => handleAnswer('risk', false)} className={`flex-1 py-2.5 rounded-xl font-bold transition-all ${answers.risk === false ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>No (Fixed monthly pay)</button>
                                 </div>
                             </div>
                         </div>

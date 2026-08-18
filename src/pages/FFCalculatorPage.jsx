@@ -54,7 +54,7 @@ export default function FFCalculatorPage() {
                                 <p className="font-bold text-sm text-gray-700 dark:text-gray-300">Gratuity Eligible (5+ years service)?</p>
                                 <div className="flex gap-2">
                                     {[true, false].map(v => (
-                                        <button key={v.toString()} onClick={() => setGratuityEligible(v)} className={`px-4 py-1.5 rounded-lg text-sm font-bold transition-all ${gratuityEligible === v ? 'bg-primary text-white' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400'}`}>{v ? 'Yes' : 'No'}</button>
+                                        <button key={v.toString()} onClick={() => setGratuityEligible(v)} className={`px-4 py-1.5 rounded-xl text-sm font-bold transition-all ${gratuityEligible === v ? 'bg-primary text-white shadow-soft' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>{v ? 'Yes' : 'No'}</button>
                                     ))}
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ export default function FFCalculatorPage() {
                             <p className="font-bold text-sm text-gray-700 dark:text-gray-300 mb-3">Notice Period Status</p>
                             <div className="flex gap-2 flex-wrap mb-3">
                                 {[{ id: 'served', label: 'Fully Served' }, { id: 'waived', label: 'Waived by Employer' }, { id: 'buyout', label: 'Partial Buyout' }].map(s => (
-                                    <button key={s.id} onClick={() => setNoticeStatus(s.id)} className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${noticeStatus === s.id ? 'bg-accent text-white' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400'}`}>{s.label}</button>
+                                    <button key={s.id} onClick={() => setNoticeStatus(s.id)} className={`px-4 py-2 rounded-xl text-sm font-bold transition-all ${noticeStatus === s.id ? 'bg-accent text-white shadow-soft' : 'bg-white dark:bg-gray-950 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'}`}>{s.label}</button>
                                 ))}
                             </div>
                             {noticeStatus === 'buyout' && (
