@@ -37,6 +37,7 @@ const LeaveEncashmentCalculatorPage = lazy(() => import('./pages/LeaveEncashment
 const FFCalculatorPage = lazy(() => import('./pages/FFCalculatorPage'));
 const SalaryProrationCalculatorPage = lazy(() => import('./pages/SalaryProrationCalculatorPage'));
 const SalaryCalculatorPage = lazy(() => import('./pages/SalaryCalculatorPage'));
+const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPage'));
 const PFCheckerPage = lazy(() => import('./pages/PFCheckerPage'));
 const MinimumWageCheckerPage = lazy(() => import('./pages/MinimumWageCheckerPage'));
 const OvertimeTrackerPage = lazy(() => import('./pages/OvertimeTrackerPage'));
