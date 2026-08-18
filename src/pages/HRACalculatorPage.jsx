@@ -70,12 +70,12 @@ export default function HRACalculatorPage() {
                 </div>
 
                 {/* CRITICAL WARNING FOR NEW TAX REGIME */}
-                <div className="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl mb-8 shadow-sm">
+                <div className="bg-red-50 dark:bg-red-950/40 border-l-4 border-red-500 p-5 rounded-r-xl mb-8 shadow-sm">
                     <div className="flex items-start gap-3">
-                        <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0" />
+                        <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400 flex-shrink-0" />
                         <div>
-                            <h3 className="font-bold text-red-800 text-lg">Important: The New Tax Regime (FY 2024-25 onwards)</h3>
-                            <p className="text-red-700 text-sm mt-1 font-medium">
+                            <h3 className="font-bold text-red-800 dark:text-red-300 text-lg">Important: The New Tax Regime (FY 2024-25 onwards)</h3>
+                            <p className="text-red-700 dark:text-red-200 text-sm mt-1 font-medium">
                                 If you have opted for the <span className="font-bold">New Tax Regime</span>, you CANNOT claim any HRA exemption. The entire HRA component you receive from your employer will be 100% taxable. This calculator is only applicable if you opt for the <span className="font-bold">Old Tax Regime</span>.
                             </p>
                         </div>

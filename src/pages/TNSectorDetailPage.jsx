@@ -66,7 +66,7 @@ export default function TNSectorDetailPage() {
                     {/* Working Hours Card */}
                     <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-blue-50 text-blue-600 rounded-xl">
+                            <div className="p-3 bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 rounded-xl">
                                 <CheckCircle2 className="w-6 h-6" />
                             </div>
                             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
@@ -81,7 +81,7 @@ export default function TNSectorDetailPage() {
                     {/* Leave Policy Card */}
                     <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-green-50 text-green-600 rounded-xl">
+                            <div className="p-3 bg-green-50 dark:bg-green-950/50 text-green-600 dark:text-green-400 rounded-xl">
                                 <ShieldCheck className="w-6 h-6" />
                             </div>
                             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
@@ -96,7 +96,7 @@ export default function TNSectorDetailPage() {
                     {/* Safety / Night Shift / Special Rules Card */}
                     <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-orange-50 text-orange-600 rounded-xl">
+                            <div className="p-3 bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 rounded-xl">
                                 <AlertTriangle className="w-6 h-6" />
                             </div>
                             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">
@@ -118,7 +118,7 @@ export default function TNSectorDetailPage() {
                     {/* Termination / Welfare Card */}
                     <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 md:p-8 border border-gray-100 dark:border-gray-800 shadow-soft">
                         <div className="flex items-center gap-3 mb-4">
-                            <div className="p-3 bg-red-50 text-red-600 rounded-xl">
+                            <div className="p-3 bg-red-50 dark:bg-red-950/50 text-red-600 dark:text-red-400 rounded-xl">
                                 <AlertTriangle className="w-6 h-6" />
                             </div>
                             <h2 className="text-xl font-bold text-gray-900 dark:text-gray-100">

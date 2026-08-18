@@ -139,15 +139,15 @@ export default function MaternityTrackerPage() {
                                 </div>
                             </div>
                         ) : !results.isEligible ? (
-                            <div className="bg-red-50 border border-red-200 p-6 rounded-2xl shadow-sm">
+                            <div className="bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 p-6 rounded-2xl shadow-sm">
                                 <div className="flex items-center gap-3 mb-3">
-                                    <XCircle className="w-8 h-8 text-red-600" />
-                                    <h3 className="text-2xl font-bold text-red-800">Not Eligible for Statutory Pay</h3>
+                                    <XCircle className="w-8 h-8 text-red-600 dark:text-red-400" />
+                                    <h3 className="text-2xl font-bold text-red-800 dark:text-red-300">Not Eligible for Statutory Pay</h3>
                                 </div>
-                                <p className="text-red-700 text-sm mb-4">
+                                <p className="text-red-700 dark:text-red-200 text-sm mb-4">
                                     Under Section 5(2) of the Maternity Benefit Act, an employee must have worked in the establishment for a period of not less than <span className="font-bold">80 days</span> in the twelve months immediately preceding the expected delivery date to claim statutory paid maternity leave.
                                 </p>
-                                <p className="text-red-700 text-sm font-bold">
+                                <p className="text-red-700 dark:text-red-300 text-sm font-bold">
                                     However, you still cannot be legally terminated for being pregnant.
                                 </p>
                             </div>

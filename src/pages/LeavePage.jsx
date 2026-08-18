@@ -129,15 +129,15 @@ export default function LeavePage() {
                         </div>
                     </div>
 
-                    <div className="mt-6 bg-red-50 border border-red-200 p-5 rounded-xl">
-                        <h3 className="text-red-800 font-bold mb-2 flex items-center gap-2">
+                    <div className="mt-6 bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 p-5 rounded-xl">
+                        <h3 className="text-red-800 dark:text-red-300 font-bold mb-2 flex items-center gap-2">
                             <AlertTriangle className="w-5 h-5" />
                             What if the company completely denies Earned Leave?
                         </h3>
-                        <p className="text-red-700 text-sm mb-3">
+                        <p className="text-red-700 dark:text-red-200 text-sm mb-3">
                             Refusing to provide Earned Leave (or providing 0 days of EL) is a direct statutory violation. No private employment contract or HR policy can override these laws:
                         </p>
-                        <ul className="text-sm text-red-700 list-disc list-inside space-y-1 mb-4 font-medium bg-red-100/50 p-3 rounded-lg border border-red-200">
+                        <ul className="text-sm text-red-700 dark:text-red-200 list-disc list-inside space-y-1 mb-4 font-medium bg-red-100/50 dark:bg-red-900/30 p-3 rounded-lg border border-red-200 dark:border-red-800">
                             <li><span className="font-bold">Section 79</span> of the Factories Act, 1948 (For factory & manufacturing workers)</li>
                             <li><span className="font-bold">Section 15</span> of the Karnataka Shops & Commercial Establishments Act, 1961 (For IT/BPO in Bangalore/Karnataka)</li>
                             <li><span className="font-bold">Section 18</span> of the Maharashtra Shops & Establishments Act, 2017 (For IT/Corporate in Mumbai/Pune)</li>
@@ -145,7 +145,7 @@ export default function LeavePage() {
                             <li><span className="font-bold">Section 25</span> of the Tamil Nadu Shops & Establishments Act, 1947 (For IT/BPO in Chennai/Tamil Nadu)</li>
                             <li><span className="font-bold">Section 16</span> of the Telangana Shops & Establishments Act, 1988 (For IT/Corporate in Hyderabad)</li>
                         </ul>
-                        <ul className="text-sm text-red-700 list-decimal list-inside space-y-2">
+                        <ul className="text-sm text-red-700 dark:text-red-200 list-decimal list-inside space-y-2">
                             <li><span className="font-medium">Demand Encashment at Exit:</span> Even if they didn't "allow" you to take the leave, you are legally entitled to claim the monetary encashment value of those statutory leaves (back-calculated from your joining date) when you resign.</li>
                             <li><span className="font-medium">File a Grievance:</span> Use our <a href="/tools/grievance-generator" className="underline font-bold">Grievance Generator</a> to draft a formal legal notice demanding statutory leave compliance.</li>
                             <li><span className="font-medium">Labour Office Complaint:</span> You can file a formal complaint with the Regional Labour Commissioner (find your local office in the <a href="/tools/labour-directory" className="underline font-bold">Labour Directory</a>).</li>
@@ -172,16 +172,16 @@ export default function LeavePage() {
                             <div
                                 key={idx}
                                 className={`flex items-start gap-3 p-4 rounded-xl ${rule.allowed
-                                        ? 'bg-green-50 border border-green-200'
-                                        : 'bg-red-50 border border-red-200'
+                                        ? 'bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800'
+                                        : 'bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800'
                                     }`}
                             >
                                 {rule.allowed ? (
-                                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                    <CheckCircle className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                                 ) : (
-                                    <XCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+                                    <XCircle className="w-5 h-5 text-red-600 dark:text-red-400 flex-shrink-0 mt-0.5" />
                                 )}
-                                <span className={`text-sm ${rule.allowed ? 'text-green-800' : 'text-red-800'}`}>
+                                <span className={`text-sm ${rule.allowed ? 'text-green-800 dark:text-green-200' : 'text-red-800 dark:text-red-200'}`}>
                                     {rule.text}
                                 </span>
                             </div>

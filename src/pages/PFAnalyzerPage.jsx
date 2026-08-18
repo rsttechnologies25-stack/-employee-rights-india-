@@ -123,15 +123,15 @@ export default function PFAnalyzerPage() {
                     {/* Results Area */}
                     <div className="lg:col-span-3 space-y-6">
                         {scamAlert && (
-                            <div className="bg-red-50 border-l-4 border-red-500 p-5 rounded-r-xl shadow-sm">
+                            <div className="bg-red-50 dark:bg-red-950/40 border-l-4 border-red-500 p-5 rounded-r-xl shadow-sm">
                                 <div className="flex items-start gap-3">
-                                    <AlertTriangle className="w-6 h-6 text-red-600 flex-shrink-0" />
+                                    <AlertTriangle className="w-6 h-6 text-red-600 dark:text-red-400 flex-shrink-0" />
                                     <div>
-                                        <h3 className="font-bold text-red-800 text-lg">⚠️ Warning: Potential PF Evasion</h3>
-                                        <p className="text-red-700 text-sm mt-1">
+                                        <h3 className="font-bold text-red-800 dark:text-red-300 text-lg">⚠️ Warning: Potential PF Evasion</h3>
+                                        <p className="text-red-700 dark:text-red-200 text-sm mt-1">
                                             Your Basic Salary is less than 50% of your Gross Salary. 
                                         </p>
-                                        <p className="text-red-700 text-sm mt-2 font-medium">
+                                        <p className="text-red-700 dark:text-red-200 text-sm mt-2 font-medium">
                                             Under the landmark Supreme Court ruling (*Vivekananda Vidyamandir vs. RPFC, 2019*), employers cannot arbitrarily pack your salary with "special allowances" to keep your Basic Pay artificially low. This is a common tactic to evade paying their fair share of PF. Unless those allowances are tied to specific varying expenses (like overtime or actual travel), they must be included in your Basic for PF calculation.
                                         </p>
                                     </div>

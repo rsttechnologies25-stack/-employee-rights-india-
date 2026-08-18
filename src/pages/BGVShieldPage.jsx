@@ -120,26 +120,26 @@ export default function BGVShieldPage() {
                             </div>
                         ) : (
                             <div className={`p-6 rounded-2xl shadow-sm border animate-fade-in ${
-                                status === 'danger' ? 'bg-red-50 border-red-200' : 
-                                status === 'warning' ? 'bg-yellow-50 border-yellow-200' : 
-                                'bg-green-50 border-green-200'
+                                status === 'danger' ? 'bg-red-50 dark:bg-red-950/40 border-red-200 dark:border-red-800' : 
+                                status === 'warning' ? 'bg-yellow-50 dark:bg-yellow-950/40 border-yellow-200 dark:border-yellow-800' : 
+                                'bg-green-50 dark:bg-green-950/40 border-green-200 dark:border-green-800'
                             }`}>
                                 <div className="flex items-center gap-3 mb-4">
-                                    {status === 'danger' ? <AlertTriangle className="w-8 h-8 text-red-600" /> : 
-                                     status === 'warning' ? <AlertTriangle className="w-8 h-8 text-yellow-600" /> : 
-                                     <CheckCircle className="w-8 h-8 text-green-600" />}
+                                    {status === 'danger' ? <AlertTriangle className="w-8 h-8 text-red-600 dark:text-red-400" /> : 
+                                     status === 'warning' ? <AlertTriangle className="w-8 h-8 text-yellow-600 dark:text-yellow-400" /> : 
+                                     <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />}
                                     <h3 className={`text-2xl font-bold ${
-                                        status === 'danger' ? 'text-red-800' : 
-                                        status === 'warning' ? 'text-yellow-800' : 
-                                        'text-green-800'
+                                        status === 'danger' ? 'text-red-800 dark:text-red-300' : 
+                                        status === 'warning' ? 'text-yellow-800 dark:text-yellow-300' : 
+                                        'text-green-800 dark:text-green-300'
                                     }`}>
                                         {status === 'danger' ? 'Actionable Defamation Detected' : 
                                          status === 'warning' ? 'Employer is Factually Correct' : 'Safe / Defensive Position'}
                                     </h3>
                                 </div>
                                 <p className={`font-medium ${
-                                    status === 'danger' ? 'text-red-900' : 
-                                    status === 'warning' ? 'text-yellow-900' : 'text-green-900'
+                                    status === 'danger' ? 'text-red-900 dark:text-red-200' : 
+                                    status === 'warning' ? 'text-yellow-900 dark:text-yellow-200' : 'text-green-900 dark:text-green-200'
                                 }`}>
                                     {analysis}
                                 </p>

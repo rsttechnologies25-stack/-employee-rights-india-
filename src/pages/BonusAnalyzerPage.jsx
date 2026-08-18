@@ -206,27 +206,27 @@ export default function BonusAnalyzerPage() {
                             </div>
                         ) : (
                             <div className={`p-6 rounded-2xl shadow-sm border animate-fade-in ${
-                                results.severity === 'success' ? 'bg-green-50 border-green-200' : 
-                                results.severity === 'warning' ? 'bg-yellow-50 border-yellow-200' : 
-                                'bg-red-50 border-red-200'
+                                results.severity === 'success' ? 'bg-green-50 dark:bg-green-950/40 border-green-200 dark:border-green-800' : 
+                                results.severity === 'warning' ? 'bg-yellow-50 dark:bg-yellow-950/40 border-yellow-200 dark:border-yellow-800' : 
+                                'bg-red-50 dark:bg-red-950/40 border-red-200 dark:border-red-800'
                             }`}>
                                 <div className="flex items-center gap-3 mb-4">
-                                    {results.severity === 'success' ? <CheckCircle className="w-8 h-8 text-green-600" /> : 
-                                     results.severity === 'warning' ? <AlertTriangle className="w-8 h-8 text-yellow-600" /> : 
-                                     <AlertTriangle className="w-8 h-8 text-red-600" />}
+                                    {results.severity === 'success' ? <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" /> : 
+                                     results.severity === 'warning' ? <AlertTriangle className="w-8 h-8 text-yellow-600 dark:text-yellow-400" /> : 
+                                     <AlertTriangle className="w-8 h-8 text-red-600 dark:text-red-400" />}
                                     <h3 className={`text-2xl font-bold ${
-                                        results.severity === 'success' ? 'text-green-800' : 
-                                        results.severity === 'warning' ? 'text-yellow-800' : 
-                                        'text-red-800'
+                                        results.severity === 'success' ? 'text-green-800 dark:text-green-300' : 
+                                        results.severity === 'warning' ? 'text-yellow-800 dark:text-yellow-300' : 
+                                        'text-red-800 dark:text-red-300'
                                     }`}>
                                         {results.rightsMessage}
                                     </h3>
                                 </div>
-                                <div className="bg-white/80 dark:bg-gray-900/50 p-5 rounded-xl border border-black/5 mt-4">
+                                <div className="bg-white/80 dark:bg-gray-900/80 p-5 rounded-xl border border-black/5 dark:border-gray-800 mt-4">
                                     <p className={`font-medium ${
-                                        results.severity === 'success' ? 'text-green-900 dark:text-green-100' : 
-                                        results.severity === 'warning' ? 'text-yellow-900 dark:text-yellow-100' : 
-                                        'text-red-900 dark:text-red-100'
+                                        results.severity === 'success' ? 'text-green-900 dark:text-green-200' : 
+                                        results.severity === 'warning' ? 'text-yellow-900 dark:text-yellow-200' : 
+                                        'text-red-900 dark:text-red-200'
                                     }`}>
                                         {results.legalBacking}
                                     </p>

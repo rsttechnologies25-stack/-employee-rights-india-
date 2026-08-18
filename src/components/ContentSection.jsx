@@ -83,11 +83,11 @@ export function ContentList({ items, ordered = false, variant = 'default' }) {
 
 export function CalloutBox({ type = 'info', title, children }) {
     const styles = {
-        info: 'bg-blue-50 border-blue-200 text-blue-800',
-        warning: 'bg-yellow-50 border-yellow-200 text-yellow-800',
-        danger: 'bg-red-50 border-red-200 text-red-800',
-        success: 'bg-green-50 border-green-200 text-green-800',
-        tip: 'bg-purple-50 border-purple-200 text-purple-800',
+        info: 'bg-blue-50 dark:bg-blue-950/40 border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-200',
+        warning: 'bg-yellow-50 dark:bg-yellow-950/40 border-yellow-200 dark:border-yellow-800 text-yellow-900 dark:text-yellow-200',
+        danger: 'bg-red-50 dark:bg-red-950/40 border-red-200 dark:border-red-800 text-red-900 dark:text-red-200',
+        success: 'bg-green-50 dark:bg-green-950/40 border-green-200 dark:border-green-800 text-green-900 dark:text-green-200',
+        tip: 'bg-purple-50 dark:bg-purple-950/40 border-purple-200 dark:border-purple-800 text-purple-900 dark:text-purple-200',
     };
 
     const icons = {

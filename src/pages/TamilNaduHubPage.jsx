@@ -93,12 +93,12 @@ export default function TamilNaduHubPage() {
                             const content = t(sector);
                             
                             const colorStyles = {
-                                blue: { bg: 'bg-blue-50', text: 'text-blue-700', border: 'border-blue-100' },
+                                blue: { bg: 'bg-blue-50 dark:bg-blue-950/40', text: 'text-blue-700 dark:text-blue-300', border: 'border-blue-100 dark:border-blue-900/40' },
                                 gray: { bg: 'bg-gray-50 dark:bg-gray-900', text: 'text-gray-700 dark:text-gray-300', border: 'border-gray-200 dark:border-gray-700' },
-                                orange: { bg: 'bg-orange-50', text: 'text-orange-700', border: 'border-orange-100' },
-                                yellow: { bg: 'bg-yellow-50', text: 'text-yellow-700', border: 'border-yellow-100' },
+                                orange: { bg: 'bg-orange-50 dark:bg-orange-950/40', text: 'text-orange-700 dark:text-orange-300', border: 'border-orange-100 dark:border-orange-900/40' },
+                                yellow: { bg: 'bg-yellow-50 dark:bg-yellow-950/40', text: 'text-yellow-700 dark:text-yellow-300', border: 'border-yellow-100 dark:border-yellow-900/40' },
                             };
-                            const style = colorStyles[sector.color];
+                            const style = colorStyles[sector.color] || colorStyles.gray;
 
                             return (
                                 <Link 
@@ -111,24 +111,24 @@ export default function TamilNaduHubPage() {
                                             <Icon className="w-8 h-8" />
                                         </div>
                                         <div>
-                                            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-blue-600 transition-colors">
+                                            <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                                 {content.title}
                                             </h3>
-                                            <p className="text-gray-500 dark:text-gray-400 text-sm">{content.description}</p>
+                                            <p className="text-gray-600 dark:text-gray-400 text-sm">{content.description}</p>
                                         </div>
                                     </div>
                                     <div className="space-y-4">
                                         <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800">
-                                            <span className="text-xs font-bold uppercase text-gray-400 block mb-1">
+                                            <span className="text-xs font-bold uppercase text-gray-600 dark:text-gray-400 block mb-1">
                                                 {lang === 'en' ? 'Working Hours' : 'வேலை நேரம்'}
                                             </span>
-                                            <p className="text-gray-800 dark:text-gray-200 text-sm">{content.content.workingHours}</p>
+                                            <p className="text-gray-900 dark:text-gray-100 text-sm font-medium">{content.content.workingHours}</p>
                                         </div>
                                         <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-xl border border-gray-100 dark:border-gray-800">
-                                            <span className="text-xs font-bold uppercase text-gray-400 block mb-1">
+                                            <span className="text-xs font-bold uppercase text-gray-600 dark:text-gray-400 block mb-1">
                                                 {lang === 'en' ? 'Leave Policy' : 'விடுமுறை விதிகள்'}
                                             </span>
-                                            <p className="text-gray-800 dark:text-gray-200 text-sm">{content.content.leaves}</p>
+                                            <p className="text-gray-900 dark:text-gray-100 text-sm font-medium">{content.content.leaves}</p>
                                         </div>
                                     </div>
                                     <div className="mt-6 flex items-center justify-end text-blue-600 font-bold text-sm">

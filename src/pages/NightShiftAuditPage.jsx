@@ -99,21 +99,21 @@ export default function NightShiftAuditPage() {
                         ) : (
                             <div className="sticky top-24 space-y-6">
                                 {violations.length > 0 ? (
-                                    <div className="bg-red-50 border border-red-200 p-8 rounded-2xl shadow-sm animate-fade-in">
+                                    <div className="bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 p-8 rounded-2xl shadow-sm animate-fade-in">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <AlertTriangle className="w-10 h-10 text-red-600" />
-                                            <h3 className="font-black text-2xl text-red-800">Safety Violations Detected</h3>
+                                            <AlertTriangle className="w-10 h-10 text-red-600 dark:text-red-400" />
+                                            <h3 className="font-black text-2xl text-red-800 dark:text-red-300">Safety Violations Detected</h3>
                                         </div>
-                                        <p className="font-medium text-red-700 mb-4">
-                                            Your employer is failing <span className="font-bold text-red-900 text-xl">{violations.length}</span> critical safety requirements.
+                                        <p className="font-medium text-red-700 dark:text-red-200 mb-4">
+                                            Your employer is failing <span className="font-bold text-red-900 dark:text-red-100 text-xl">{violations.length}</span> critical safety requirements.
                                         </p>
-                                        <p className="text-sm text-red-800 mb-6">
+                                        <p className="text-sm text-red-800 dark:text-red-200 mb-6">
                                             Under the State Shops & Establishments Act, these are non-negotiable prerequisites. If they fail to provide these, it is illegal for them to schedule you for a night shift.
                                         </p>
                                         
-                                        <div className="bg-white p-4 rounded-xl border border-red-100 mb-4">
-                                            <p className="font-bold text-red-800 mb-2">What you should do:</p>
-                                            <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                                        <div className="bg-white dark:bg-gray-900 p-4 rounded-xl border border-red-100 dark:border-red-900/50 mb-4">
+                                            <p className="font-bold text-red-800 dark:text-red-300 mb-2">What you should do:</p>
+                                            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
                                                 <li>You have the legal right to refuse the night shift until these conditions are met.</li>
                                                 <li>Send an email to HR pointing out the exact safety lapses (e.g., lack of cab security).</li>
                                                 <li>If forced, you can file a complaint with the regional Labour Commissioner for violation of safety exemptions.</li>
@@ -121,15 +121,15 @@ export default function NightShiftAuditPage() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="bg-green-50 border border-green-200 p-8 rounded-2xl shadow-sm animate-fade-in">
+                                    <div className="bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 p-8 rounded-2xl shadow-sm animate-fade-in">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <CheckCircle className="w-10 h-10 text-green-600" />
-                                            <h3 className="font-black text-2xl text-green-800">Fully Compliant</h3>
+                                            <CheckCircle className="w-10 h-10 text-green-600 dark:text-green-400" />
+                                            <h3 className="font-black text-2xl text-green-800 dark:text-green-300">Fully Compliant</h3>
                                         </div>
-                                        <p className="font-medium text-green-700">
+                                        <p className="font-medium text-green-700 dark:text-green-200">
                                             Based on your answers, your employer is complying with all standard legal safety prerequisites for employing women during night shifts in India.
                                         </p>
-                                        <p className="text-sm text-green-800 mt-4">
+                                        <p className="text-sm text-green-800 dark:text-green-200 mt-4">
                                             Remember: Your explicit written consent is still required, and you can revoke it if you feel unsafe or if these facilities are withdrawn.
                                         </p>
                                     </div>

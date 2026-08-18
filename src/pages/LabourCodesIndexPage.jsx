@@ -76,10 +76,10 @@ export default function LabourCodesIndexPage() {
                             const Icon = code.icon;
                             
                             const colorStyles = {
-                                blue: { bg: 'bg-blue-50', text: 'text-blue-700', iconBg: 'bg-blue-100', hoverBg: 'group-hover:bg-blue-600', link: 'text-blue-600 group-hover:text-blue-700' },
-                                indigo: { bg: 'bg-indigo-50', text: 'text-indigo-700', iconBg: 'bg-indigo-100', hoverBg: 'group-hover:bg-indigo-600', link: 'text-indigo-600 group-hover:text-indigo-700' },
-                                green: { bg: 'bg-green-50', text: 'text-green-700', iconBg: 'bg-green-100', hoverBg: 'group-hover:bg-green-600', link: 'text-green-600 group-hover:text-green-700' },
-                                red: { bg: 'bg-red-50', text: 'text-red-700', iconBg: 'bg-red-100', hoverBg: 'group-hover:bg-red-600', link: 'text-red-600 group-hover:text-red-700' },
+                                blue: { bg: 'bg-blue-50 dark:bg-blue-950/40', text: 'text-blue-700 dark:text-blue-300', iconBg: 'bg-blue-100 dark:bg-blue-900/60', hoverBg: 'group-hover:bg-blue-600', link: 'text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300' },
+                                indigo: { bg: 'bg-indigo-50 dark:bg-indigo-950/40', text: 'text-indigo-700 dark:text-indigo-300', iconBg: 'bg-indigo-100 dark:bg-indigo-900/60', hoverBg: 'group-hover:bg-indigo-600', link: 'text-indigo-600 dark:text-indigo-400 group-hover:text-indigo-700 dark:group-hover:text-indigo-300' },
+                                green: { bg: 'bg-green-50 dark:bg-green-950/40', text: 'text-green-700 dark:text-green-300', iconBg: 'bg-green-100 dark:bg-green-900/60', hoverBg: 'group-hover:bg-green-600', link: 'text-green-600 dark:text-green-400 group-hover:text-green-700 dark:group-hover:text-green-300' },
+                                red: { bg: 'bg-red-50 dark:bg-red-950/40', text: 'text-red-700 dark:text-red-300', iconBg: 'bg-red-100 dark:bg-red-900/60', hoverBg: 'group-hover:bg-red-600', link: 'text-red-600 dark:text-red-400 group-hover:text-red-700 dark:group-hover:text-red-300' },
                             };
                             const style = colorStyles[code.color];
 

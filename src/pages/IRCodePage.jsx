@@ -34,8 +34,8 @@ export default function IRCodePage() {
                         <p className="mb-4">
                             For decades, foreign and domestic companies complained that Indian labour laws were too rigid, primarily because the government made it nearly impossible to fire employees in large companies. The IR Code has completely changed this threshold to improve "Ease of Doing Business".
                         </p>
-                        <div className="bg-red-50 border border-red-200 rounded-xl p-6 my-6">
-                            <h3 className="font-bold text-red-900 mb-2">The 300 Employee Threshold</h3>
+                        <div className="bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 rounded-xl p-6 my-6">
+                            <h3 className="font-bold text-red-900 dark:text-red-300 mb-2">The 300 Employee Threshold</h3>
                             <p className="text-gray-800 dark:text-gray-200">
                                 Previously, any company with 100 or more employees needed prior government permission before conducting mass layoffs, retrenchments, or shutting down. The new IR Code <strong>increases this threshold to 300 employees</strong>. This means the vast majority of IT startups, mid-size agencies, and manufacturing units can now layoff workers without seeking government approval.
                             </p>

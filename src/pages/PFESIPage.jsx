@@ -62,17 +62,17 @@ export default function PFESIPage() {
                             <h2 className="text-2xl font-bold">Compliance Checklist</h2>
                         </div>
                         <ul className="space-y-4">
-                            <li className="flex gap-3 text-gray-600 dark:text-gray-400 text-sm p-3 bg-red-50 rounded-lg border border-red-100">
+                            <li className="flex gap-3 text-gray-700 dark:text-gray-300 text-sm p-3 bg-red-50 dark:bg-red-950/40 rounded-lg border border-red-100 dark:border-red-900/40">
                                 <ShieldAlert className="w-5 h-5 text-danger shrink-0" />
-                                <span><strong>Red Flag:</strong> Employer asking money to "close" or "transfer" your PF account. This is illegal; PF is automated.</span>
+                                <span><strong className="text-red-900 dark:text-red-300">Red Flag:</strong> Employer asking money to "close" or "transfer" your PF account. This is illegal; PF is automated.</span>
                             </li>
-                            <li className="flex gap-3 text-gray-600 dark:text-gray-400 text-sm p-3 bg-red-50 rounded-lg border border-red-100">
+                            <li className="flex gap-3 text-gray-700 dark:text-gray-300 text-sm p-3 bg-red-50 dark:bg-red-950/40 rounded-lg border border-red-100 dark:border-red-900/40">
                                 <ShieldAlert className="w-5 h-5 text-danger shrink-0" />
-                                <span><strong>Red Flag:</strong> Both employer (12%) and employee (12%) PF shares being deducted from your Net salary.</span>
+                                <span><strong className="text-red-900 dark:text-red-300">Red Flag:</strong> Both employer (12%) and employee (12%) PF shares being deducted from your Net salary.</span>
                             </li>
-                            <li className="flex gap-3 text-gray-600 dark:text-gray-400 text-sm p-3 bg-yellow-50 rounded-lg border border-yellow-100">
+                            <li className="flex gap-3 text-gray-700 dark:text-gray-300 text-sm p-3 bg-yellow-50 dark:bg-yellow-950/40 rounded-lg border border-yellow-100 dark:border-yellow-900/40">
                                 <ShieldAlert className="w-5 h-5 text-warning shrink-0" />
-                                <span><strong>Warning:</strong> PF/ESI contributions must show on your monthly slip. Check UAN portal monthly for deposits.</span>
+                                <span><strong className="text-yellow-900 dark:text-yellow-300">Warning:</strong> PF/ESI contributions must show on your monthly slip. Check UAN portal monthly for deposits.</span>
                             </li>
                         </ul>
                     </div>

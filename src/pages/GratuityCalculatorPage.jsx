@@ -141,12 +141,12 @@ export default function GratuityCalculatorPage() {
                             </div>
                         ) : results.isEligible ? (
                             <>
-                                <div className="bg-green-50 border border-green-200 p-6 rounded-2xl shadow-sm">
+                                <div className="bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 p-6 rounded-2xl shadow-sm">
                                     <div className="flex items-center gap-3 mb-2">
-                                        <CheckCircle className="w-8 h-8 text-green-600" />
-                                        <h3 className="text-2xl font-bold text-green-800">You Are Eligible!</h3>
+                                        <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />
+                                        <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">You Are Eligible!</h3>
                                     </div>
-                                    <p className="text-green-700 text-sm ml-11">
+                                    <p className="text-green-700 dark:text-green-200 text-sm ml-11">
                                         Because your tenure of {results.yrs} years and {results.mths} months legally qualifies for statutory gratuity payout.
                                     </p>
                                 </div>
@@ -156,9 +156,9 @@ export default function GratuityCalculatorPage() {
                                         Estimated Gratuity Amount
                                     </h3>
                                     
-                                    <div className="flex justify-between items-center bg-primary/10 p-5 rounded-xl mb-4 border border-primary/20">
-                                        <p className="font-bold text-primary text-lg">Total Payout</p>
-                                        <p className="text-3xl font-black text-primary">₹{results.payout.toLocaleString()}</p>
+                                    <div className="flex justify-between items-center bg-primary/10 dark:bg-primary/20 p-5 rounded-xl mb-4 border border-primary/20">
+                                        <p className="font-bold text-primary dark:text-blue-400 text-lg">Total Payout</p>
+                                        <p className="text-3xl font-black text-primary dark:text-blue-400">₹{results.payout.toLocaleString()}</p>
                                     </div>
 
                                     <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-xl text-sm text-gray-600 dark:text-gray-400">
@@ -170,26 +170,26 @@ export default function GratuityCalculatorPage() {
                                 </div>
                                 
                                 {results.payout > 2000000 && (
-                                    <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 rounded-r-xl">
-                                        <p className="text-yellow-800 text-sm font-medium flex gap-2">
-                                            <AlertTriangle className="w-5 h-5 flex-shrink-0" />
+                                    <div className="bg-yellow-50 dark:bg-yellow-950/30 border-l-4 border-yellow-500 p-4 rounded-r-xl">
+                                        <p className="text-yellow-800 dark:text-yellow-200 text-sm font-medium flex gap-2">
+                                            <AlertTriangle className="w-5 h-5 flex-shrink-0 text-yellow-600 dark:text-yellow-400" />
                                             Gratuity is tax-free only up to ₹20,00,000 (20 Lakhs). Any amount exceeding this limit will be subject to income tax under the "Salary" head.
                                         </p>
                                     </div>
                                 )}
                             </>
                         ) : (
-                            <div className="bg-red-50 border border-red-200 p-6 rounded-2xl shadow-sm">
+                            <div className="bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 p-6 rounded-2xl shadow-sm">
                                 <div className="flex items-center gap-3 mb-2">
-                                    <XCircle className="w-8 h-8 text-red-600" />
-                                    <h3 className="text-2xl font-bold text-red-800">Not Eligible</h3>
+                                    <XCircle className="w-8 h-8 text-red-600 dark:text-red-400" />
+                                    <h3 className="text-2xl font-bold text-red-800 dark:text-red-300">Not Eligible</h3>
                                 </div>
-                                <p className="text-red-700 text-sm ml-11 mb-4">
+                                <p className="text-red-700 dark:text-red-200 text-sm ml-11 mb-4">
                                     You have only completed {results.yrs} years and {results.mths} months. To qualify for gratuity, you must complete at least 4 years and 240 days (approx. 8 months) of continuous service with the same employer.
                                 </p>
-                                <div className="bg-white/60 p-4 rounded-xl border border-red-100">
-                                    <p className="text-sm font-bold text-red-900 mb-1">Are you being terminated?</p>
-                                    <p className="text-sm text-red-800">If the company is firing/laying you off before you reach the 5-year mark, you may not get Gratuity, but you are legally entitled to <a href="/tools/severance-calculator" className="underline font-bold">Retrenchment Severance Pay</a>.</p>
+                                <div className="bg-white/60 dark:bg-gray-900/60 p-4 rounded-xl border border-red-100 dark:border-red-900/40">
+                                    <p className="text-sm font-bold text-red-900 dark:text-red-300 mb-1">Are you being terminated?</p>
+                                    <p className="text-sm text-red-800 dark:text-red-200">If the company is firing/laying you off before you reach the 5-year mark, you may not get Gratuity, but you are legally entitled to <a href="/tools/severance-calculator" className="underline font-bold">Retrenchment Severance Pay</a>.</p>
                                 </div>
                             </div>
                         )}

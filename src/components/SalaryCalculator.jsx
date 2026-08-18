@@ -62,12 +62,12 @@ export default function SalaryCalculator() {
                         </div>
                     </div>
 
-                    <div className="p-4 bg-orange-50 rounded-xl border border-orange-100">
-                        <div className="flex items-center gap-2 mb-2 text-accent">
+                    <div className="p-4 bg-orange-50 dark:bg-orange-950/30 rounded-xl border border-orange-100 dark:border-orange-900/40">
+                        <div className="flex items-center gap-2 mb-2 text-accent dark:text-orange-400">
                             <Info className="w-4 h-4" />
                             <span className="text-xs font-bold uppercase">Standard Assumptions</span>
                         </div>
-                        <p className="text-[10px] text-orange-800/70 leading-relaxed">
+                        <p className="text-[10px] text-orange-800/80 dark:text-orange-200 leading-relaxed">
                             Calculations assume Basic = 40% of Gross. Actual company structures may vary.
                             PF is calculated as 12% of Basic. ESI is 0.75% (Employee) and 3.25% (Employer) of Gross.
                         </p>
@@ -82,46 +82,46 @@ export default function SalaryCalculator() {
                         </h4>
 
                         <div className="space-y-4">
-                            <div className="flex justify-between items-center p-3 bg-white dark:bg-gray-950 rounded-lg shadow-sm">
+                            <div className="flex justify-between items-center p-3 bg-white dark:bg-gray-950 rounded-lg shadow-sm border border-gray-100 dark:border-gray-800">
                                 <div className="text-sm">
-                                    <p className="font-bold">Monthly Gross</p>
-                                    <p className="text-[10px] text-gray-400">Total payable before deductions</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-100">Monthly Gross</p>
+                                    <p className="text-[10px] text-gray-500 dark:text-gray-400">Total payable before deductions</p>
                                 </div>
-                                <p className="font-black text-lg">₹{sal.toLocaleString()}</p>
+                                <p className="font-black text-lg text-gray-900 dark:text-gray-100">₹{sal.toLocaleString()}</p>
                             </div>
 
                             <div className="grid grid-cols-2 gap-4">
-                                <div className="p-3 bg-red-50 rounded-lg border border-red-100">
-                                    <p className="text-[10px] uppercase font-bold text-red-600 mb-1">Deductions (PF)</p>
-                                    <p className="font-bold text-gray-900 dark:text-gray-100">₹{employeePF.toLocaleString()}</p>
+                                <div className="p-3 bg-red-50 dark:bg-red-950/40 rounded-lg border border-red-100 dark:border-red-900/50">
+                                    <p className="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 mb-1">Deductions (PF)</p>
+                                    <p className="font-bold text-red-950 dark:text-red-100">₹{employeePF.toLocaleString()}</p>
                                 </div>
-                                <div className="p-3 bg-red-50 rounded-lg border border-red-100">
-                                    <p className="text-[10px] uppercase font-bold text-red-600 mb-1">Deductions (ESI)</p>
-                                    <p className="font-bold text-gray-900 dark:text-gray-100">₹{employeeESI.toLocaleString()}</p>
+                                <div className="p-3 bg-red-50 dark:bg-red-950/40 rounded-lg border border-red-100 dark:border-red-900/50">
+                                    <p className="text-[10px] uppercase font-bold text-red-600 dark:text-red-400 mb-1">Deductions (ESI)</p>
+                                    <p className="font-bold text-red-950 dark:text-red-100">₹{employeeESI.toLocaleString()}</p>
                                 </div>
                             </div>
 
                             <div className="flex justify-between items-center p-4 bg-success/10 rounded-xl border border-success/20">
                                 <div>
                                     <p className="font-bold text-success">Net Take Home</p>
-                                    <p className="text-[10px] text-success/70">Estimated In-hand salary</p>
+                                    <p className="text-[10px] text-success/80 dark:text-success/70">Estimated In-hand salary</p>
                                 </div>
                                 <p className="font-black text-2xl text-success font-mono">₹{netTakeHome.toLocaleString()}</p>
                             </div>
 
-                            <div className="flex justify-between items-center p-4 bg-primary/5 rounded-xl border border-primary/10">
+                            <div className="flex justify-between items-center p-4 bg-primary/10 dark:bg-primary/20 rounded-xl border border-primary/20">
                                 <div>
-                                    <p className="font-bold text-primary">Monthly CTC</p>
-                                    <p className="text-[10px] text-primary/70">Gross + Employer PF/ESI</p>
+                                    <p className="font-bold text-primary dark:text-blue-400">Monthly CTC</p>
+                                    <p className="text-[10px] text-primary/80 dark:text-blue-300/80">Gross + Employer PF/ESI</p>
                                 </div>
-                                <p className="font-bold text-xl text-primary font-mono">₹{totalCTC.toLocaleString()}</p>
+                                <p className="font-bold text-xl text-primary dark:text-blue-400 font-mono">₹{totalCTC.toLocaleString()}</p>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex items-start gap-3 p-4 bg-yellow-50 rounded-xl border border-yellow-100">
-                        <AlertTriangle className="w-5 h-5 text-yellow-600 shrink-0" />
-                        <p className="text-xs text-yellow-800 leading-tight">
+                    <div className="flex items-start gap-3 p-4 bg-yellow-50 dark:bg-yellow-950/30 rounded-xl border border-yellow-100 dark:border-yellow-900/40">
+                        <AlertTriangle className="w-5 h-5 text-yellow-600 dark:text-yellow-400 shrink-0" />
+                        <p className="text-xs text-yellow-800 dark:text-yellow-200 leading-tight">
                             <strong>Red Flag:</strong> If your company deducts "Employer PF" from your Gross Salary, it is an <strong>illegal practice</strong>. Employers must pay their share over and above the Gross.
                         </p>
                     </div>

@@ -140,14 +140,26 @@ export default function ShamContractorScannerPage() {
                             </div>
                         ) : (
                             <>
-                                <div className={`p-8 rounded-2xl shadow-sm border ${verdict.color === 'red' ? 'bg-red-50 border-red-200' : verdict.color === 'yellow' ? 'bg-yellow-50 border-yellow-200' : 'bg-green-50 border-green-200'} animate-fade-in`}>
+                                <div className={`p-8 rounded-2xl shadow-sm border ${
+                                    verdict.color === 'red' ? 'bg-red-50 dark:bg-red-950/40 border-red-200 dark:border-red-800' : 
+                                    verdict.color === 'yellow' ? 'bg-yellow-50 dark:bg-yellow-950/40 border-yellow-200 dark:border-yellow-800' : 
+                                    'bg-green-50 dark:bg-green-950/40 border-green-200 dark:border-green-800'
+                                } animate-fade-in`}>
                                     <div className="flex items-center gap-3 mb-4">
-                                        {verdict.color === 'red' ? <AlertTriangle className="w-8 h-8 text-red-600" /> : <CheckCircle className="w-8 h-8 text-green-600" />}
-                                        <h3 className={`font-black text-xl ${verdict.color === 'red' ? 'text-red-800' : verdict.color === 'yellow' ? 'text-yellow-800' : 'text-green-800'}`}>
+                                        {verdict.color === 'red' ? <AlertTriangle className="w-8 h-8 text-red-600 dark:text-red-400" /> : <CheckCircle className="w-8 h-8 text-green-600 dark:text-green-400" />}
+                                        <h3 className={`font-black text-xl ${
+                                            verdict.color === 'red' ? 'text-red-800 dark:text-red-300' : 
+                                            verdict.color === 'yellow' ? 'text-yellow-800 dark:text-yellow-300' : 
+                                            'text-green-800 dark:text-green-300'
+                                        }`}>
                                             {verdict.title}
                                         </h3>
                                     </div>
-                                    <p className={`font-medium ${verdict.color === 'red' ? 'text-red-700' : verdict.color === 'yellow' ? 'text-yellow-700' : 'text-green-700'}`}>
+                                    <p className={`font-medium ${
+                                        verdict.color === 'red' ? 'text-red-700 dark:text-red-200' : 
+                                        verdict.color === 'yellow' ? 'text-yellow-700 dark:text-yellow-200' : 
+                                        'text-green-700 dark:text-green-200'
+                                    }`}>
                                         {verdict.text}
                                     </p>
                                 </div>

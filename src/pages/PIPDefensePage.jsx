@@ -155,11 +155,23 @@ Sincerely,
                             </div>
                         ) : (
                             <>
-                                <div className={`p-6 rounded-2xl shadow-sm border ${verdict.color === 'red' ? 'bg-red-50 border-red-200' : verdict.color === 'yellow' ? 'bg-yellow-50 border-yellow-200' : 'bg-green-50 border-green-200'}`}>
-                                    <h3 className={`font-bold text-lg mb-2 ${verdict.color === 'red' ? 'text-red-800' : verdict.color === 'yellow' ? 'text-yellow-800' : 'text-green-800'}`}>
+                                <div className={`p-6 rounded-2xl shadow-sm border ${
+                                    verdict.color === 'red' ? 'bg-red-50 dark:bg-red-950/40 border-red-200 dark:border-red-800' : 
+                                    verdict.color === 'yellow' ? 'bg-yellow-50 dark:bg-yellow-950/40 border-yellow-200 dark:border-yellow-800' : 
+                                    'bg-green-50 dark:bg-green-950/40 border-green-200 dark:border-green-800'
+                                }`}>
+                                    <h3 className={`font-bold text-lg mb-2 ${
+                                        verdict.color === 'red' ? 'text-red-800 dark:text-red-300' : 
+                                        verdict.color === 'yellow' ? 'text-yellow-800 dark:text-yellow-300' : 
+                                        'text-green-800 dark:text-green-300'
+                                    }`}>
                                         {verdict.title}
                                     </h3>
-                                    <p className={verdict.color === 'red' ? 'text-red-700' : verdict.color === 'yellow' ? 'text-yellow-700' : 'text-green-700'}>
+                                    <p className={
+                                        verdict.color === 'red' ? 'text-red-700 dark:text-red-200' : 
+                                        verdict.color === 'yellow' ? 'text-yellow-700 dark:text-yellow-200' : 
+                                        'text-green-700 dark:text-green-200'
+                                    }>
                                         {verdict.text}
                                     </p>
                                 </div>

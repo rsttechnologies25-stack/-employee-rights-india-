@@ -97,21 +97,21 @@ export default function LayoffSurvivalKitPage() {
                         ) : (
                             <div className="sticky top-24 space-y-6">
                                 {violations.length > 0 ? (
-                                    <div className="bg-red-50 border border-red-200 p-8 rounded-2xl shadow-sm animate-fade-in">
+                                    <div className="bg-red-50 dark:bg-red-950/40 border border-red-200 dark:border-red-800 p-8 rounded-2xl shadow-sm animate-fade-in">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <AlertTriangle className="w-10 h-10 text-red-600" />
-                                            <h3 className="font-black text-2xl text-red-800">Illegal Severance Detected</h3>
+                                            <AlertTriangle className="w-10 h-10 text-red-600 dark:text-red-400" />
+                                            <h3 className="font-black text-2xl text-red-800 dark:text-red-300">Illegal Severance Detected</h3>
                                         </div>
-                                        <p className="font-medium text-red-700 mb-4">
-                                            Your employer is illegally withholding <span className="font-bold text-red-900 text-xl">{violations.length}</span> statutory payout components.
+                                        <p className="font-medium text-red-700 dark:text-red-200 mb-4">
+                                            Your employer is illegally withholding <span className="font-bold text-red-900 dark:text-red-100 text-xl">{violations.length}</span> statutory payout components.
                                         </p>
-                                        <p className="text-sm text-red-800 mb-6">
+                                        <p className="text-sm text-red-800 dark:text-red-200 mb-6">
                                             Mass layoffs (Retrenchment) in India are highly regulated. If they fail to pay you 15 days per year of service + notice pay, the layoff is legally void.
                                         </p>
                                         
-                                        <div className="bg-white p-4 rounded-xl border border-red-100 mb-4">
-                                            <p className="font-bold text-red-800 mb-2">Immediate Action Steps:</p>
-                                            <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                                        <div className="bg-white dark:bg-gray-900 p-4 rounded-xl border border-red-100 dark:border-red-900/50 mb-4">
+                                            <p className="font-bold text-red-800 dark:text-red-300 mb-2">Immediate Action Steps:</p>
+                                            <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-2 list-disc list-inside">
                                                 <li>Do NOT sign the "Full & Final Settlement" or "No Dues Certificate" if they force you.</li>
                                                 <li>If forced to sign, write <i>"Signed Under Protest for pending statutory dues"</i> next to your signature.</li>
                                                 <li>File a grievance with the Regional Labour Commissioner for violation of Section 25F of the IDA.</li>
@@ -119,15 +119,15 @@ export default function LayoffSurvivalKitPage() {
                                         </div>
                                     </div>
                                 ) : (
-                                    <div className="bg-green-50 border border-green-200 p-8 rounded-2xl shadow-sm animate-fade-in">
+                                    <div className="bg-green-50 dark:bg-green-950/40 border border-green-200 dark:border-green-800 p-8 rounded-2xl shadow-sm animate-fade-in">
                                         <div className="flex items-center gap-3 mb-4">
-                                            <CheckCircle className="w-10 h-10 text-green-600" />
-                                            <h3 className="font-black text-2xl text-green-800">Severance Compliant</h3>
+                                            <CheckCircle className="w-10 h-10 text-green-600 dark:text-green-400" />
+                                            <h3 className="font-black text-2xl text-green-800 dark:text-green-300">Severance Compliant</h3>
                                         </div>
-                                        <p className="font-medium text-green-700">
+                                        <p className="font-medium text-green-700 dark:text-green-200">
                                             Your employer appears to be complying with the mandatory statutory payouts required during a mass layoff in India.
                                         </p>
-                                        <p className="text-sm text-green-800 mt-4">
+                                        <p className="text-sm text-green-800 dark:text-green-200 mt-4">
                                             Always double-check the exact math on your F&F statement to ensure they calculated your basic salary properly and didn't make illegal deductions.
                                         </p>
                                     </div>
