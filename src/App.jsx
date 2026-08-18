@@ -61,155 +61,200 @@ const NoticeAdjustmentCalculatorPage = lazy(() => import('./pages/NoticeAdjustme
 const POSHComplaintBuilderPage = lazy(() => import('./pages/POSHComplaintBuilderPage'));
 const GigWorkerRightsPage = lazy(() => import('./pages/GigWorkerRightsPage'));
 const LegalNoticeGeneratorPage = lazy(() => import('./pages/LegalNoticeGeneratorPage'));
+
+// New Guided Decision Tools
+const AuthorityFinderPage = lazy(() => import('./pages/AuthorityFinderPage'));
+const ProblemAssessmentWizardPage = lazy(() => import('./pages/ProblemAssessmentWizardPage'));
+const EvidenceChecklistPage = lazy(() => import('./pages/EvidenceChecklistPage'));
+const TimelineBuilderPage = lazy(() => import('./pages/TimelineBuilderPage'));
+
+// New Dispute Guides
+const AbscondingDisputePage = lazy(() => import('./pages/AbscondingDisputePage'));
+const NoRecordDisputePage = lazy(() => import('./pages/NoRecordDisputePage'));
+const HandoverAssetDisputePage = lazy(() => import('./pages/HandoverAssetDisputePage'));
+const DataMisuseAllegationPage = lazy(() => import('./pages/DataMisuseAllegationPage'));
+const TraineeRightsPage = lazy(() => import('./pages/TraineeRightsPage'));
+
+// Trust & Governance Pages
+const AboutPage = lazy(() => import('./pages/AboutPage'));
+const ContactPage = lazy(() => import('./pages/ContactPage'));
+const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
+const TermsPage = lazy(() => import('./pages/TermsPage'));
+const DisclaimerPage = lazy(() => import('./pages/DisclaimerPage'));
+const EditorialPolicyPage = lazy(() => import('./pages/EditorialPolicyPage'));
+
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
+
 const PIPGuidePage = lazy(() => import('./pages/PIPGuidePage'));
 const ForcedResignationPage = lazy(() => import('./pages/ForcedResignationPage'));
+
 const MoonlightingPage = lazy(() => import('./pages/MoonlightingPage'));
 const DataPrivacyPage = lazy(() => import('./pages/DataPrivacyPage'));
+
 const Form16RightsPage = lazy(() => import('./pages/Form16RightsPage'));
-const IncomeTaxCalculatorPage = lazy(() => import('./pages/IncomeTaxCalculatorPage'));
 const ComplaintGuidePage = lazy(() => import('./pages/ComplaintGuidePage'));
 
-// New Programmatic SEO Module
+// State Laws
 const StateLawsIndexPage = lazy(() => import('./pages/StateLawsIndexPage'));
 const StateLawDetailPage = lazy(() => import('./pages/StateLawDetailPage'));
 
-// Tamil Nadu Mega-Hub
+// Tamil Nadu Hub
 const TamilNaduHubPage = lazy(() => import('./pages/TamilNaduHubPage'));
 const TNSectorDetailPage = lazy(() => import('./pages/TNSectorDetailPage'));
 const TNMinimumWagesPage = lazy(() => import('./pages/TNMinimumWagesPage'));
 const MinimumWagesPage = lazy(() => import('./pages/MinimumWagesPage'));
 
-// New Labour Codes Module
+// What's New
+const WhatsNewPage = lazy(() => import('./pages/WhatsNewPage'));
+
+// New Labour Codes
 const LabourCodesIndexPage = lazy(() => import('./pages/LabourCodesIndexPage'));
 const WageCodePage = lazy(() => import('./pages/WageCodePage'));
 const SocialSecurityCodePage = lazy(() => import('./pages/SocialSecurityCodePage'));
 const OSHCodePage = lazy(() => import('./pages/OSHCodePage'));
 const IRCodePage = lazy(() => import('./pages/IRCodePage'));
-const WhatsNewPage = lazy(() => import('./pages/WhatsNewPage'));
 
 function App() {
     return (
         <ThemeProvider>
             <Router>
-                <ScrollToTop />
-                <div className="min-h-screen flex flex-col selection:bg-primary/10 selection:text-primary bg-white dark:bg-gray-950 transition-colors duration-300">
+                <div className="flex flex-col min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 font-sans transition-colors duration-200">
+                    <ScrollToTop />
                     <Navbar />
-                <main className="flex-grow">
-                    <Suspense fallback={<div className="flex items-center justify-center min-h-[60vh] text-primary"><div className="animate-pulse flex flex-col items-center gap-4"><div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div><span className="font-bold text-gray-500 dark:text-gray-400">Loading...</span></div></div>}>
-                        <Routes>
-                        {/* Existing Routes */}
-                        <Route path="/" element={<Home />} />
-                        <Route path="/pf-esi" element={<PFESIPage />} />
-                        <Route path="/contracts" element={<ContractsPage />} />
-                        <Route path="/notice-period" element={<NoticePage />} />
-                        <Route path="/working-hours" element={<WorkingHoursPage />} />
-                        <Route path="/leave-holidays" element={<LeavePage />} />
-                        <Route path="/illegal-practices" element={<IllegalPracticesPage />} />
-                        <Route path="/rights" element={<RightsIndexPage />} />
-                        <Route path="/rights/:categoryId" element={<RightsDetailPage />} />
+                    <main className="flex-grow">
+                        <Suspense fallback={
+                            <div className="flex items-center justify-center min-h-[60vh] text-primary">
+                                <div className="animate-pulse flex flex-col items-center gap-4">
+                                    <div className="w-12 h-12 border-4 border-primary/20 border-t-primary rounded-full animate-spin"></div>
+                                    <span className="font-bold text-gray-500 dark:text-gray-400">Loading guidance...</span>
+                                </div>
+                            </div>
+                        }>
+                            <Routes>
+                                {/* Core Home & Rights */}
+                                <Route path="/" element={<Home />} />
+                                <Route path="/pf-esi" element={<PFESIPage />} />
+                                <Route path="/contracts" element={<ContractsPage />} />
+                                <Route path="/notice-period" element={<NoticePage />} />
+                                <Route path="/working-hours" element={<WorkingHoursPage />} />
+                                <Route path="/leave-holidays" element={<LeavePage />} />
+                                <Route path="/illegal-practices" element={<IllegalPracticesPage />} />
+                                <Route path="/rights" element={<RightsIndexPage />} />
+                                <Route path="/rights/:categoryId" element={<RightsDetailPage />} />
 
-                        {/* Termination Module */}
-                        <Route path="/termination/probation" element={<TerminationProbationPage />} />
-                        <Route path="/termination/after-confirmation" element={<TerminationConfirmedPage />} />
-                        <Route path="/termination/wrongful" element={<WrongfulTerminationPage />} />
+                                {/* Decision Wizards & Diagnostic Suite */}
+                                <Route path="/tools/authority-finder" element={<AuthorityFinderPage />} />
+                                <Route path="/tools/problem-wizard" element={<ProblemAssessmentWizardPage />} />
+                                <Route path="/tools/evidence-checklist" element={<EvidenceChecklistPage />} />
+                                <Route path="/tools/case-timeline-builder" element={<TimelineBuilderPage />} />
 
-                        {/* F&F & Exit Module */}
-                        <Route path="/full-final-settlement" element={<FFSettlementPage />} />
-                        <Route path="/exit-process" element={<ExitProcessPage />} />
+                                {/* Dispute Guides */}
+                                <Route path="/disputes/absconding-allegation" element={<AbscondingDisputePage />} />
+                                <Route path="/disputes/no-employment-record" element={<NoRecordDisputePage />} />
+                                <Route path="/disputes/handover-asset-dispute" element={<HandoverAssetDisputePage />} />
+                                <Route path="/disputes/data-misuse-allegation" element={<DataMisuseAllegationPage />} />
+                                <Route path="/trainee-apprentice-rights" element={<TraineeRightsPage />} />
 
-                        {/* Letters Module */}
-                        <Route path="/experience-letter" element={<ExperienceLetterPage />} />
-                        <Route path="/relieving-letter" element={<RelievingLetterPage />} />
-                        <Route path="/service-certificate" element={<ServiceCertificatePage />} />
+                                {/* Termination & Exits */}
+                                <Route path="/termination/probation" element={<TerminationProbationPage />} />
+                                <Route path="/termination/after-confirmation" element={<TerminationConfirmedPage />} />
+                                <Route path="/termination/wrongful" element={<WrongfulTerminationPage />} />
+                                <Route path="/full-final-settlement" element={<FFSettlementPage />} />
+                                <Route path="/exit-process" element={<ExitProcessPage />} />
+                                <Route path="/experience-letter" element={<ExperienceLetterPage />} />
+                                <Route path="/relieving-letter" element={<RelievingLetterPage />} />
+                                <Route path="/service-certificate" element={<ServiceCertificatePage />} />
 
-                        {/* Salary Module */}
-                        <Route path="/salary-calculation" element={<SalaryCalculationPage />} />
-                        <Route path="/pay-cycle" element={<PayCyclePage />} />
-                        <Route path="/delayed-salary" element={<DelayedSalaryPage />} />
+                                {/* Salary & Benefits */}
+                                <Route path="/salary-calculation" element={<SalaryCalculationPage />} />
+                                <Route path="/pay-cycle" element={<PayCyclePage />} />
+                                <Route path="/delayed-salary" element={<DelayedSalaryPage />} />
+                                <Route path="/gratuity" element={<GratuityPage />} />
 
-                        {/* Gratuity */}
-                        <Route path="/gratuity" element={<GratuityPage />} />
+                                {/* Tools & Calculators */}
+                                <Route path="/tools" element={<ToolsPage />} />
+                                <Route path="/salary-calculator" element={<SalaryCalculatorPage />} />
+                                <Route path="/pf-checker" element={<PFCheckerPage />} />
+                                <Route path="/tools/notice-buyout-calculator" element={<NoticeBuyoutCalculatorPage />} />
+                                <Route path="/tools/leave-encashment-calculator" element={<LeaveEncashmentCalculatorPage />} />
+                                <Route path="/tools/ff-calculator" element={<FFCalculatorPage />} />
+                                <Route path="/tools/salary-proration-calculator" element={<SalaryProrationCalculatorPage />} />
+                                <Route path="/tools/income-tax-calculator" element={<IncomeTaxCalculatorPage />} />
+                                <Route path="/tools/minimum-wage-checker" element={<MinimumWageCheckerPage />} />
+                                <Route path="/tools/overtime-tracker" element={<OvertimeTrackerPage />} />
+                                <Route path="/tools/grievance-generator" element={<GrievanceGeneratorPage />} />
+                                <Route path="/tools/clause-analyzer" element={<ClauseAnalyzerPage />} />
+                                <Route path="/tools/labour-directory" element={<LabourDirectoryPage />} />
+                                <Route path="/tools/severance-calculator" element={<SeveranceCalculatorPage />} />
+                                <Route path="/tools/pf-analyzer" element={<PFAnalyzerPage />} />
+                                <Route path="/tools/pip-defense" element={<PIPDefensePage />} />
+                                <Route path="/tools/gratuity-calculator" element={<GratuityCalculatorPage />} />
+                                <Route path="/tools/exit-scanner" element={<ExitScannerPage />} />
+                                <Route path="/legal-map" element={<LegalMapPage />} />
+                                <Route path="/tools/sham-contractor" element={<ShamContractorScannerPage />} />
+                                <Route path="/tools/hra-calculator" element={<HRACalculatorPage />} />
+                                <Route path="/tools/maternity-tracker" element={<MaternityTrackerPage />} />
+                                <Route path="/tools/night-shift-audit" element={<NightShiftAuditPage />} />
+                                <Route path="/tools/bonus-analyzer" element={<BonusAnalyzerPage />} />
+                                <Route path="/tools/offer-revocation" element={<OfferRevocationPage />} />
+                                <Route path="/tools/bgv-shield" element={<BGVShieldPage />} />
+                                <Route path="/tools/layoff-survival" element={<LayoffSurvivalKitPage />} />
+                                <Route path="/tools/employment-bond-scanner" element={<EmploymentBondScannerPage />} />
+                                <Route path="/tools/notice-adjustment-calculator" element={<NoticeAdjustmentCalculatorPage />} />
+                                <Route path="/tools/posh-complaint-builder" element={<POSHComplaintBuilderPage />} />
+                                <Route path="/tools/gig-worker-rights" element={<GigWorkerRightsPage />} />
+                                <Route path="/tools/legal-notice-generator" element={<LegalNoticeGeneratorPage />} />
 
-                        {/* Tools & Calculators */}
-                        <Route path="/tools" element={<ToolsPage />} />
-                        <Route path="/salary-calculator" element={<SalaryCalculatorPage />} />
-                        <Route path="/pf-checker" element={<PFCheckerPage />} />
-                        <Route path="/tools/notice-buyout-calculator" element={<NoticeBuyoutCalculatorPage />} />
-                        <Route path="/tools/leave-encashment-calculator" element={<LeaveEncashmentCalculatorPage />} />
-                        <Route path="/tools/ff-calculator" element={<FFCalculatorPage />} />
-                        <Route path="/tools/salary-proration-calculator" element={<SalaryProrationCalculatorPage />} />
-                        <Route path="/tools/income-tax-calculator" element={<IncomeTaxCalculatorPage />} />
-                        <Route path="/tools/minimum-wage-checker" element={<MinimumWageCheckerPage />} />
-                        <Route path="/tools/overtime-tracker" element={<OvertimeTrackerPage />} />
-                        <Route path="/tools/grievance-generator" element={<GrievanceGeneratorPage />} />
-                        <Route path="/tools/clause-analyzer" element={<ClauseAnalyzerPage />} />
-                        <Route path="/tools/labour-directory" element={<LabourDirectoryPage />} />
-                        <Route path="/tools/severance-calculator" element={<SeveranceCalculatorPage />} />
-                        <Route path="/tools/pf-analyzer" element={<PFAnalyzerPage />} />
-                        <Route path="/tools/pip-defense" element={<PIPDefensePage />} />
-                        <Route path="/tools/gratuity-calculator" element={<GratuityCalculatorPage />} />
-                        <Route path="/tools/exit-scanner" element={<ExitScannerPage />} />
-                        <Route path="/legal-map" element={<LegalMapPage />} />
-                        <Route path="/tools/sham-contractor" element={<ShamContractorScannerPage />} />
-                        <Route path="/tools/hra-calculator" element={<HRACalculatorPage />} />
-                        <Route path="/tools/maternity-tracker" element={<MaternityTrackerPage />} />
-                        <Route path="/tools/night-shift-audit" element={<NightShiftAuditPage />} />
-                        <Route path="/tools/bonus-analyzer" element={<BonusAnalyzerPage />} />
-                        <Route path="/tools/offer-revocation" element={<OfferRevocationPage />} />
-                        <Route path="/tools/bgv-shield" element={<BGVShieldPage />} />
-                        <Route path="/tools/layoff-survival" element={<LayoffSurvivalKitPage />} />
-                        <Route path="/tools/employment-bond-scanner" element={<EmploymentBondScannerPage />} />
-                        <Route path="/tools/notice-adjustment-calculator" element={<NoticeAdjustmentCalculatorPage />} />
-                        <Route path="/tools/posh-complaint-builder" element={<POSHComplaintBuilderPage />} />
-                        <Route path="/tools/gig-worker-rights" element={<GigWorkerRightsPage />} />
-                        <Route path="/tools/legal-notice-generator" element={<LegalNoticeGeneratorPage />} />
+                                {/* Harassment, Privacy & Performance */}
+                                <Route path="/maternity-rights" element={<MaternityRightsPage />} />
+                                <Route path="/posh-act" element={<POSHActPage />} />
+                                <Route path="/pip-guide" element={<PIPGuidePage />} />
+                                <Route path="/forced-resignation" element={<ForcedResignationPage />} />
+                                <Route path="/moonlighting" element={<MoonlightingPage />} />
+                                <Route path="/data-privacy" element={<DataPrivacyPage />} />
+                                <Route path="/form-16-rights" element={<Form16RightsPage />} />
+                                <Route path="/complaint-guide" element={<ComplaintGuidePage />} />
 
-                        <Route path="/maternity-rights" element={<MaternityRightsPage />} />
-                        <Route path="/posh-act" element={<POSHActPage />} />
-                        
-                        <Route path="/pip-guide" element={<PIPGuidePage />} />
-                        <Route path="/forced-resignation" element={<ForcedResignationPage />} />
-                        
-                        <Route path="/moonlighting" element={<MoonlightingPage />} />
-                        <Route path="/data-privacy" element={<DataPrivacyPage />} />
-                        
-                        <Route path="/form-16-rights" element={<Form16RightsPage />} />
-                        <Route path="/complaint-guide" element={<ComplaintGuidePage />} />
+                                {/* Templates & FAQs */}
+                                <Route path="/templates" element={<TemplatesPage />} />
+                                <Route path="/faq" element={<FAQPage />} />
 
-                        {/* Templates */}
-                        <Route path="/templates" element={<TemplatesPage />} />
+                                {/* Trust & Governance Suite */}
+                                <Route path="/about" element={<AboutPage />} />
+                                <Route path="/contact" element={<ContactPage />} />
+                                <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+                                <Route path="/terms" element={<TermsPage />} />
+                                <Route path="/disclaimer" element={<DisclaimerPage />} />
+                                <Route path="/editorial-policy" element={<EditorialPolicyPage />} />
 
-                        {/* Master FAQ */}
-                        <Route path="/faq" element={<FAQPage />} />
+                                {/* State Laws */}
+                                <Route path="/state-labour-laws" element={<StateLawsIndexPage />} />
+                                <Route path="/state-labour-laws/tamil-nadu" element={<Navigate to="/tamil-nadu" replace />} />
+                                <Route path="/state-labour-laws/:stateSlug" element={<StateLawDetailPage />} />
 
-                        {/* State Laws */}
-                        <Route path="/state-labour-laws" element={<StateLawsIndexPage />} />
-                        <Route path="/state-labour-laws/tamil-nadu" element={<Navigate to="/tamil-nadu" replace />} />
-                        <Route path="/state-labour-laws/:stateSlug" element={<StateLawDetailPage />} />
+                                {/* Tamil Nadu Mega-Hub */}
+                                <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
+                                <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
+                                <Route path="/tamil-nadu-minimum-wages" element={<TNMinimumWagesPage />} />
+                                <Route path="/minimum-wages" element={<MinimumWagesPage />} />
 
-                        {/* Tamil Nadu Mega-Hub */}
-                        <Route path="/tamil-nadu" element={<TamilNaduHubPage />} />
-                        <Route path="/tamil-nadu/:sectorId" element={<TNSectorDetailPage />} />
-                        <Route path="/tamil-nadu-minimum-wages" element={<TNMinimumWagesPage />} />
-                        <Route path="/minimum-wages" element={<MinimumWagesPage />} />
+                                {/* What's New & 4 Labour Codes */}
+                                <Route path="/whats-new" element={<WhatsNewPage />} />
+                                <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />
+                                <Route path="/new-labour-codes/wage-code" element={<WageCodePage />} />
+                                <Route path="/new-labour-codes/social-security-code" element={<SocialSecurityCodePage />} />
+                                <Route path="/new-labour-codes/osh-code" element={<OSHCodePage />} />
+                                <Route path="/new-labour-codes/ir-code" element={<IRCodePage />} />
 
-                        {/* What's New */}
-                        <Route path="/whats-new" element={<WhatsNewPage />} />
-
-                        {/* New Labour Codes */}
-                        <Route path="/new-labour-codes" element={<LabourCodesIndexPage />} />
-                        <Route path="/new-labour-codes/wage-code" element={<WageCodePage />} />
-                        <Route path="/new-labour-codes/social-security-code" element={<SocialSecurityCodePage />} />
-                        <Route path="/new-labour-codes/osh-code" element={<OSHCodePage />} />
-                        <Route path="/new-labour-codes/ir-code" element={<IRCodePage />} />
-                        </Routes>
-                    </Suspense>
-                </main>
-                <Footer />
-                <Chatbot />
-            </div>
+                                {/* 404 Fallback */}
+                                <Route path="*" element={<Navigate to="/" replace />} />
+                            </Routes>
+                        </Suspense>
+                    </main>
+                    <Footer />
+                    <Chatbot />
+                </div>
             </Router>
         </ThemeProvider>
     );

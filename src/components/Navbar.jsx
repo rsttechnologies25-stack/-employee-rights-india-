@@ -1,107 +1,96 @@
 import { Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun, Compass, HelpCircle, FileText, Scale } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
 
 const navGroups = [
     {
-        label: "Tamil Nadu Hub",
+        label: "Dispute Guides",
         items: [
-            { to: '/tamil-nadu', label: 'TN Mega-Hub (தமிழ்)' },
-            { to: '/tamil-nadu-minimum-wages', label: 'TN Minimum Wages 2025' },
+            { to: '/tools/authority-finder', label: '🧭 Who Should I Complain To? (Authority Finder)' },
+            { to: '/tools/problem-wizard', label: '❓ Workplace Problem Wizard' },
+            { to: '/disputes/absconding-allegation', label: '🏃 Absconding Allegation Guide' },
+            { to: '/disputes/no-employment-record', label: '📁 No Appointment / Offer Letter Guide' },
+            { to: '/disputes/handover-asset-dispute', label: '💻 Laptop & Asset Return Dispute' },
+            { to: '/disputes/data-misuse-allegation', label: '🔒 Data Misuse / IP Threat Defense' },
+            { to: '/trainee-apprentice-rights', label: '🎓 Trainee & Apprentice Rights' },
+            { to: '/complaint-guide', label: '📋 Official Government Portals Guide' },
         ]
     },
     {
-        label: "Women's Rights",
+        label: "Tools & Kits",
         items: [
-            { to: '/maternity-rights', label: 'Maternity Benefits' },
-            { to: '/posh-act', label: 'POSH Act (Harassment)' },
+            { to: '/tools', label: '🛠️ Master Calculators & Tools Hub' },
+            { to: '/tools/authority-finder', label: '🧭 Authority Finder Tool' },
+            { to: '/tools/evidence-checklist', label: '📁 Evidence Preservation Checklist' },
+            { to: '/tools/case-timeline-builder', label: '⏱️ Case Timeline Builder' },
+            { to: '/tools/grievance-generator', label: '✍️ Grievance Complaint Generator' },
+            { to: '/tools/legal-notice-generator', label: '📜 Legal Notice Generator' },
+            { to: '/tools/posh-complaint-builder', label: '⚠️ POSH Complaint Builder' },
+            { to: '/salary-calculator', label: '💰 Take-Home Salary Calculator' },
+            { to: '/tools/gratuity-calculator', label: '🏆 Gratuity Calculator' },
+            { to: '/tools/notice-buyout-calculator', label: '📝 Notice Buyout Calculator' },
+            { to: '/tools/notice-adjustment-calculator', label: '🏖️ Leave vs Notice Offsetter' },
+            { to: '/tools/ff-calculator', label: '💼 Full & Final Settlement Calculator' },
+            { to: '/tools/employment-bond-scanner', label: '⚖️ Bond Legality Scanner' },
+            { to: '/tools/pip-defense', label: '🛡️ PIP Defense Kit' },
+            { to: '/tools/bgv-shield', label: '🛡️ BGV Defamation Shield' },
+            { to: '/tools/overtime-tracker', label: '⏰ 2x Overtime Tracker' },
+            { to: '/tools/minimum-wage-checker', label: '📊 Minimum Wage Checker' },
+            { to: '/templates', label: '📄 Letter Templates (Resignations/Requests)' },
         ]
     },
     {
-        label: 'Workplace Rules',
+        label: "Salary & Exit",
         items: [
-            { to: '/whats-new', label: '🆕 What\'s New 2025–2026' },
-            { to: '/new-labour-codes', label: 'New Labour Codes (2025)' },
-            { to: '/state-labour-laws', label: 'State-Wise Labour Laws' },
-            { to: '/working-hours', label: 'Working Hours & Overtime' },
-            { to: '/leave-holidays', label: 'Leave & Holidays' },
-            { to: '/contracts', label: 'Contracts & Bonds' },
-            { to: '/illegal-practices', label: 'Illegal Employer Practices' },
-            { to: '/moonlighting', label: 'Moonlighting & Dual Jobs' },
-            { to: '/data-privacy', label: 'Data Privacy & Tracking' },
-        ]
-    },
-    {
-        label: 'Termination & Exit',
-        items: [
-            { to: '/notice-period', label: 'Notice Period Rules' },
-            { to: '/pip-guide', label: 'PIP (Performance Plan) Rights' },
-            { to: '/forced-resignation', label: 'Forced Resignation' },
-            { to: '/termination/probation', label: 'Termination During Probation' },
-            { to: '/termination/after-confirmation', label: 'Termination After Confirmation' },
-            { to: '/termination/wrongful', label: 'Wrongful Termination' },
-            { to: '/full-final-settlement', label: 'Full & Final Settlement' },
-            { to: '/exit-process', label: 'Exit Process' },
-        ]
-    },
-    {
-        label: 'Salary & Tax',
-        items: [
-            { to: '/minimum-wages', label: 'Minimum Wages' },
+            { to: '/delayed-salary', label: 'Unpaid / Delayed Salary' },
             { to: '/salary-calculation', label: 'Salary Calculation Rules' },
-            { to: '/pay-cycle', label: 'Pay Cycle Guide' },
-            { to: '/delayed-salary', label: 'Delayed Salary' },
+            { to: '/full-final-settlement', label: 'Full & Final (F&F) Settlement' },
+            { to: '/notice-period', label: 'Notice Period Rules' },
+            { to: '/termination/probation', label: 'Termination in Probation' },
+            { to: '/termination/after-confirmation', label: 'Termination / Retrenchment' },
+            { to: '/termination/wrongful', label: 'Wrongful Termination' },
+            { to: '/relieving-letter', label: 'Relieving Letter Rights' },
+            { to: '/experience-letter', label: 'Experience Certificate Rights' },
+            { to: '/gratuity', label: 'Gratuity Payout Rights' },
             { to: '/form-16-rights', label: 'Form 16 & TDS Rights' },
         ]
     },
     {
-        label: 'Benefits & Docs',
+        label: "Statutes & States",
         items: [
-            { to: '/gratuity', label: 'Gratuity Rights' },
-            { to: '/pf-esi', label: 'PF & ESI Rules' },
-            { to: '/experience-letter', label: 'Experience Letter' },
-            { to: '/relieving-letter', label: 'Relieving Letter' },
-            { to: '/service-certificate', label: 'Service Certificate' },
+            { to: '/state-labour-laws', label: 'State-Wise Labour Laws (28 States)' },
+            { to: '/tamil-nadu', label: 'Tamil Nadu Mega-Hub (தமிழ்)' },
+            { to: '/tamil-nadu-minimum-wages', label: 'TN Minimum Wages 2025' },
+            { to: '/minimum-wages', label: 'All-India Minimum Wages' },
+            { to: '/whats-new', label: '🆕 What\'s New 2025–2026' },
+            { to: '/new-labour-codes', label: '4 New Labour Codes' },
+            { to: '/maternity-rights', label: 'Maternity Benefits (26 Weeks)' },
+            { to: '/posh-act', label: 'POSH Act (Harassment)' },
+            { to: '/working-hours', label: 'Working Hours & Overtime' },
+            { to: '/leave-holidays', label: 'Leave & Holidays' },
+            { to: '/contracts', label: 'Employment Contracts & Bonds' },
+            { to: '/data-privacy', label: 'Workplace Data Privacy' },
+            { to: '/moonlighting', label: 'Moonlighting & Dual Jobs' },
         ]
     },
     {
-        label: 'Tools & FAQ',
+        label: "Trust & FAQ",
         items: [
-            { to: '/tools', label: 'Calculators & Tools Hub' },
-            { to: '/legal-map', label: 'State Legal Hub (Map)' },
-            { to: '/tools/legal-notice-generator', label: 'Legal Notice Generator' },
-            { to: '/tools/employment-bond-scanner', label: 'Bond & Non-Compete Scanner' },
-            { to: '/tools/notice-adjustment-calculator', label: 'Notice & Leave Adjustment' },
-            { to: '/tools/posh-complaint-builder', label: 'POSH Complaint Builder' },
-            { to: '/tools/gig-worker-rights', label: 'Gig Worker Rights Hub' },
-            { to: '/tools/bonus-analyzer', label: 'Bonus & Variable Pay Analyzer' },
-            { to: '/tools/offer-revocation', label: 'Offer Revocation Guide' },
-            { to: '/tools/bgv-shield', label: 'BGV Defamation Shield' },
-            { to: '/tools/layoff-survival', label: 'Mass Layoff Survival Kit' },
-            { to: '/tools/sham-contractor', label: 'Sham Contractor Scanner' },
-            { to: '/tools/hra-calculator', label: 'HRA Exemption Optimizer' },
-            { to: '/tools/maternity-tracker', label: 'Maternity Benefit Tracker' },
-            { to: '/tools/night-shift-audit', label: 'Night Shift Safety Audit' },
-            { to: '/tools/pf-analyzer', label: 'PF & Pension Analyzer' },
-            { to: '/tools/pip-defense', label: 'PIP Defense Kit' },
-            { to: '/tools/gratuity-calculator', label: 'Gratuity Calculator' },
-            { to: '/tools/exit-scanner', label: 'Exit Interview Scanner' },
-            { to: '/tools/minimum-wage-checker', label: 'Minimum Wage Checker' },
-            { to: '/tools/overtime-tracker', label: 'Overtime Tracker' },
-            { to: '/tools/grievance-generator', label: 'Grievance Generator' },
-            { to: '/tools/clause-analyzer', label: 'Contract Clause Analyzer' },
-            { to: '/tools/labour-directory', label: 'Labour Office Directory' },
-            { to: '/tools/severance-calculator', label: 'Severance Calculator' },
-            { to: '/templates', label: 'Letter Templates' },
-            { to: '/complaint-guide', label: 'How to File Complaint' },
-            { to: '/faq', label: 'Master FAQ' },
+            { to: '/about', label: 'About RexonSoftTech' },
+            { to: '/editorial-policy', label: 'Editorial & Verification Policy' },
+            { to: '/disclaimer', label: 'Legal Disclaimer' },
+            { to: '/privacy-policy', label: 'Privacy Policy' },
+            { to: '/terms', label: 'Terms of Use' },
+            { to: '/contact', label: 'Contact Editorial Desk' },
+            { to: '/faq', label: 'Master FAQ (180+ Questions)' },
         ]
-    },
+    }
 ];
 
 const directLinks = [
-    { to: '/rights', label: 'All Rights Index', highlight: true },
+    { to: '/tools/authority-finder', label: '🧭 Authority Finder', highlight: true },
+    { to: '/rights', label: 'All Rights Index' },
 ];
 
 function DropdownMenu({ group, isOpen, onToggle, onClose }) {
@@ -119,19 +108,24 @@ function DropdownMenu({ group, isOpen, onToggle, onClose }) {
         <div ref={ref} className="relative">
             <button
                 onClick={onToggle}
-                className="flex items-center gap-1 text-gray-600 dark:text-gray-400 hover:text-primary font-medium transition-colors text-sm"
+                className={`flex items-center gap-1 text-xs font-semibold px-2.5 py-1.5 rounded-lg transition-colors ${
+                    isOpen
+                        ? 'text-primary bg-primary/10'
+                        : 'text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800'
+                }`}
             >
                 {group.label}
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} />
             </button>
+
             {isOpen && (
-                <div className="absolute top-full left-0 mt-2 bg-white dark:bg-gray-950 rounded-xl shadow-lg border border-gray-100 dark:border-gray-800 py-2 min-w-[220px] z-50 animate-in fade-in slide-in-from-top-2 duration-200">
+                <div className="absolute top-full left-0 mt-1.5 w-72 bg-white dark:bg-gray-950 border border-gray-150 dark:border-gray-800 rounded-2xl shadow-xl py-2 z-50 animate-fade-in max-h-[420px] overflow-y-auto">
                     {group.items.map((item) => (
                         <Link
                             key={item.to}
                             to={item.to}
                             onClick={onClose}
-                            className="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 transition-colors"
+                            className="block px-4 py-2 text-xs text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/5 dark:hover:bg-primary/10 font-medium transition-colors"
                         >
                             {item.label}
                         </Link>
@@ -143,94 +137,120 @@ function DropdownMenu({ group, isOpen, onToggle, onClose }) {
 }
 
 export default function Navbar() {
-    const [isOpen, setIsOpen] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
-    const [mobileExpanded, setMobileExpanded] = useState(null);
+    const [mobileExpandedGroup, setMobileExpandedGroup] = useState(null);
     const location = useLocation();
-    const { theme, toggleTheme } = useTheme();
+    const { isDark, toggleTheme } = useTheme();
 
-    // Close mobile menu on route change
     useEffect(() => {
-        setIsOpen(false);
-        setMobileExpanded(null);
-    }, [location.pathname]);
+        setMobileMenuOpen(false);
+        setOpenDropdown(null);
+    }, [location]);
+
+    const handleDropdownToggle = (index) => {
+        setOpenDropdown(openDropdown === index ? null : index);
+    };
 
     return (
-        <nav className="bg-white dark:bg-gray-950 border-b border-gray-100 dark:border-gray-800 sticky top-0 z-50 shadow-sm transition-colors duration-300">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between h-16">
-                    <div className="flex items-center flex-1">
-                        <Link to="/" className="flex items-center gap-2 group">
-                            <ShieldCheck className="w-8 h-8 text-primary group-hover:scale-110 transition-transform" />
-                            <div className="hidden sm:flex flex-col">
-                                <span className="font-bold text-xl leading-none tracking-tight text-gray-900 dark:text-white group-hover:text-primary transition-colors">Employee Rights</span>
-                                <span className="text-[10px] font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest">India Guide</span>
-                            </div>
-                        </Link>
-                    </div>
+        <nav className="bg-white/95 dark:bg-gray-950/95 backdrop-blur-md border-b border-gray-150 dark:border-gray-800 sticky top-0 z-40">
+            <div className="max-w-7xl mx-auto px-4">
+                <div className="flex items-center justify-between h-16">
+                    
+                    {/* Brand Logo */}
+                    <Link to="/" className="flex items-center gap-2 text-primary font-black text-lg tracking-tight shrink-0">
+                        <ShieldCheck className="w-7 h-7 text-primary fill-primary/10" />
+                        <span className="text-gray-900 dark:text-gray-100">Employee Rights</span>
+                        <span className="text-primary text-xs font-bold px-1.5 py-0.5 bg-primary/10 rounded">India</span>
+                    </Link>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden lg:flex items-center space-x-5">
-                        <button 
-                            onClick={toggleTheme}
-                            className="p-2 text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
-                            aria-label="Toggle Dark Mode"
-                        >
-                            {theme === 'dark' ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
-                        </button>
-                        <Link to="/rights" className="text-accent hover:text-accent-dark font-bold transition-colors text-sm">All Rights</Link>
-                        {navGroups.map((group, idx) => (
+                    {/* Desktop Navigation Groups */}
+                    <div className="hidden lg:flex items-center gap-1">
+                        {navGroups.map((group, index) => (
                             <DropdownMenu
-                                key={idx}
+                                key={group.label}
                                 group={group}
-                                isOpen={openDropdown === idx}
-                                onToggle={() => setOpenDropdown(openDropdown === idx ? null : idx)}
+                                isOpen={openDropdown === index}
+                                onToggle={() => handleDropdownToggle(index)}
                                 onClose={() => setOpenDropdown(null)}
                             />
                         ))}
                     </div>
 
-                    {/* Mobile Toggle */}
-                    <div className="lg:hidden flex items-center">
-                        <button onClick={() => setIsOpen(!isOpen)} className="text-gray-600 dark:text-gray-400 focus:outline-none p-2">
-                            {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            {/* Mobile Menu */}
-            {isOpen && (
-                <div className="lg:hidden bg-white dark:bg-gray-950 border-t border-gray-100 dark:border-gray-800 shadow-lg max-h-[80vh] overflow-y-auto">
-                    <div className="p-4 space-y-1">
-                        {/* Direct links */}
+                    {/* Direct Highlight Links & Dark Mode */}
+                    <div className="hidden lg:flex items-center gap-3">
                         {directLinks.map((link) => (
                             <Link
                                 key={link.to}
                                 to={link.to}
-                                className={`block px-4 py-3 rounded-lg font-medium transition-colors ${link.highlight ? 'text-accent hover:bg-accent/5 font-bold' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:bg-gray-900 hover:text-primary'}`}
+                                className={`text-xs font-bold px-3.5 py-2 rounded-xl transition-all ${
+                                    link.highlight
+                                        ? 'bg-primary text-white hover:bg-primary/90 shadow-soft'
+                                        : 'text-gray-700 dark:text-gray-300 hover:text-primary'
+                                }`}
                             >
                                 {link.label}
                             </Link>
                         ))}
 
-                        {/* Grouped sections */}
-                        {navGroups.map((group, idx) => (
-                            <div key={idx} className="border-t border-gray-50 dark:border-gray-800 pt-1 mt-1">
+                        <button
+                            onClick={toggleTheme}
+                            aria-label="Toggle Dark Mode"
+                            className="p-2 rounded-xl text-gray-500 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                        >
+                            {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-gray-600" />}
+                        </button>
+                    </div>
+
+                    {/* Mobile Hamburger Menu Toggle */}
+                    <div className="flex items-center gap-2 lg:hidden">
+                        <button
+                            onClick={toggleTheme}
+                            aria-label="Toggle Dark Mode"
+                            className="p-2 rounded-xl text-gray-500 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-800"
+                        >
+                            {isDark ? <Sun className="w-4 h-4 text-amber-400" /> : <Moon className="w-4 h-4 text-gray-600" />}
+                        </button>
+                        <button
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            aria-label="Open Navigation Menu"
+                            className="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        >
+                            {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+            {/* Mobile Drawer */}
+            {mobileMenuOpen && (
+                <div className="lg:hidden bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 px-4 py-4 space-y-3 max-h-[80vh] overflow-y-auto animate-fade-in">
+                    <Link
+                        to="/tools/authority-finder"
+                        className="block w-full py-3 px-4 bg-primary text-white text-center rounded-xl font-bold text-xs shadow-soft"
+                    >
+                        🧭 Launch Authority Finder
+                    </Link>
+
+                    {navGroups.map((group, idx) => {
+                        const isExpanded = mobileExpandedGroup === idx;
+                        return (
+                            <div key={group.label} className="border border-gray-150 dark:border-gray-800 rounded-xl overflow-hidden">
                                 <button
-                                    onClick={() => setMobileExpanded(mobileExpanded === idx ? null : idx)}
-                                    className="w-full flex items-center justify-between px-4 py-3 text-gray-800 dark:text-gray-200 font-semibold hover:bg-gray-50 dark:bg-gray-900 rounded-lg transition-colors"
+                                    onClick={() => setMobileExpandedGroup(isExpanded ? null : idx)}
+                                    className="w-full flex items-center justify-between p-3 text-xs font-bold text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-gray-900"
                                 >
                                     <span>{group.label}</span>
-                                    <ChevronDown className={`w-4 h-4 text-gray-400 transition-transform ${mobileExpanded === idx ? 'rotate-180' : ''}`} />
+                                    <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                                 </button>
-                                {mobileExpanded === idx && (
-                                    <div className="pl-4 space-y-0.5 pb-2">
+                                {isExpanded && (
+                                    <div className="p-2 space-y-1 bg-white dark:bg-gray-950">
                                         {group.items.map((item) => (
                                             <Link
                                                 key={item.to}
                                                 to={item.to}
-                                                className="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:bg-primary/5 rounded-lg transition-colors"
+                                                className="block px-3 py-2 text-xs text-gray-600 dark:text-gray-400 hover:text-primary"
                                             >
                                                 {item.label}
                                             </Link>
@@ -238,8 +258,8 @@ export default function Navbar() {
                                     </div>
                                 )}
                             </div>
-                        ))}
-                    </div>
+                        );
+                    })}
                 </div>
             )}
         </nav>

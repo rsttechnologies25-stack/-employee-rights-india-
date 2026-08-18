@@ -1,96 +1,111 @@
-import { ExternalLink, Heart, Instagram, Facebook } from 'lucide-react';
+import { ExternalLink, Heart, Instagram, Facebook, ShieldCheck, FileText, Scale, Lock, Mail, Info } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
-        <footer className="bg-gray-900 text-gray-400 py-12 px-4 mt-auto">
+        <footer className="bg-gray-900 text-gray-400 py-12 px-4 mt-auto border-t border-gray-800">
             <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    
                     {/* Platform Purpose */}
-                    <div>
-                        <h3 className="text-white font-bold text-lg mb-4">Educational Awareness Only</h3>
-                        <p className="text-sm leading-relaxed mb-4">
-                            This platform is intended only for employees who want to learn about PF, ESI, salary rules, labour laws, and employee benefits.
+                    <div className="space-y-3">
+                        <h3 className="text-white font-bold text-base flex items-center gap-2">
+                            <Scale className="w-5 h-5 text-primary" /> Educational Guidance Only
+                        </h3>
+                        <p className="text-xs leading-relaxed">
+                            This platform provides general educational information and procedural guidance on Indian labour laws, PF, ESI, gratuity, and complaint mechanisms.
                         </p>
-                        <p className="text-sm leading-relaxed">
-                            The content provided is for general awareness and educational purposes only and <strong className="text-yellow-500">does not constitute legal or professional advice</strong>.
+                        <p className="text-xs leading-relaxed text-amber-400 font-medium">
+                            It does not constitute formal legal representation or create an advocate-client relationship.
                         </p>
                     </div>
 
-                    {/* Official Resources */}
-                    <div>
-                        <h3 className="text-white font-bold text-lg mb-4">Official Resources</h3>
-                        <div className="flex flex-col space-y-2 text-sm">
-                            <a href="https://www.epfindia.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                EPFO Portal <ExternalLink className="w-3 h-3" />
-                            </a>
-                            <a href="https://epfigms.gov.in/grievance/grievancemaster" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                EPFO Grievance Portal <ExternalLink className="w-3 h-3" />
-                            </a>
-                            <a href="https://www.esic.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                ESIC Portal <ExternalLink className="w-3 h-3" />
-                            </a>
+                    {/* Trust & Governance Links */}
+                    <div className="space-y-3">
+                        <h3 className="text-white font-bold text-base flex items-center gap-2">
+                            <ShieldCheck className="w-5 h-5 text-primary" /> Trust & Policies
+                        </h3>
+                        <div className="flex flex-col space-y-2 text-xs">
+                            <Link to="/about" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <Info className="w-3.5 h-3.5 text-blue-400" /> About RexonSoftTech
+                            </Link>
+                            <Link to="/editorial-policy" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <FileText className="w-3.5 h-3.5 text-blue-400" /> Editorial & Verification Policy
+                            </Link>
+                            <Link to="/disclaimer" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <Scale className="w-3.5 h-3.5 text-blue-400" /> Legal Disclaimer
+                            </Link>
+                            <Link to="/privacy-policy" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <Lock className="w-3.5 h-3.5 text-blue-400" /> Privacy Policy (DPDP Act)
+                            </Link>
+                            <Link to="/terms" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <FileText className="w-3.5 h-3.5 text-blue-400" /> Terms of Use
+                            </Link>
+                            <Link to="/contact" className="hover:text-white transition-colors flex items-center gap-1.5">
+                                <Mail className="w-3.5 h-3.5 text-blue-400" /> Contact & Feedback Desk
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Official Portals */}
+                    <div className="space-y-3">
+                        <h3 className="text-white font-bold text-base">Official Portals</h3>
+                        <div className="flex flex-col space-y-1.5 text-xs">
                             <a href="https://labour.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
                                 Ministry of Labour <ExternalLink className="w-3 h-3" />
                             </a>
                             <a href="https://samadhan.labour.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                Samadhan Portal (Disputes) <ExternalLink className="w-3 h-3" />
+                                SAMADHAN Portal (Disputes) <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href="https://epfigms.gov.in/grievance/grievancemaster" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                EPFiGMS (PF Grievance) <ExternalLink className="w-3 h-3" />
+                            </a>
+                            <a href="https://www.esic.gov.in" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                ESIC Medical Portal <ExternalLink className="w-3 h-3" />
                             </a>
                             <a href="https://pgportal.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                CPGRAMS (Grievance) <ExternalLink className="w-3 h-3" />
+                                CPGRAMS Public Grievance <ExternalLink className="w-3 h-3" />
                             </a>
-                            <a href="https://www.incometax.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                Income Tax Dept (ITR/TDS) <ExternalLink className="w-3 h-3" />
-                            </a>
-                            <a href="https://labour.tn.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-primary-light font-medium">
+                            <a href="https://labour.tn.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-primary-light">
                                 Tamil Nadu Labour Dept <ExternalLink className="w-3 h-3" />
                             </a>
                         </div>
                     </div>
 
-                    {/* Data & Privacy */}
-                    <div>
-                        <h3 className="text-white font-bold text-lg mb-4">Privacy & Third-Party Tools</h3>
-                        <p className="text-sm leading-relaxed mb-3">
-                            We do not collect, request, or store personal or sensitive user data.
+                    {/* Data Privacy & Social */}
+                    <div className="space-y-3">
+                        <h3 className="text-white font-bold text-base">Privacy-First Architecture</h3>
+                        <p className="text-xs leading-relaxed text-gray-400">
+                            Zero server PII collection. All letters, calculators, and dispute timelines operate client-side in your device's browser memory.
                         </p>
-                        <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">This website uses:</p>
-                        <ul className="text-xs text-gray-500 dark:text-gray-400 space-y-1 mb-4">
-                            <li>• <strong>Google Analytics</strong> – to understand website usage</li>
-                            <li>• <strong>Google AdSense</strong> – to display relevant advertisements</li>
-                        </ul>
 
-                        {/* Social Media */}
-                        <h4 className="text-white font-semibold text-sm mb-2">Follow Us</h4>
-                        <div className="flex items-center gap-4">
-                            <a href="https://www.instagram.com/rexonsofttech/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-sm">
-                                <Instagram className="w-4 h-4" /> Instagram
+                        <h4 className="text-white font-semibold text-xs pt-1">Connect with RexonSoftTech</h4>
+                        <div className="flex items-center gap-4 text-xs">
+                            <a href="https://www.instagram.com/rexonsofttech/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                <Instagram className="w-3.5 h-3.5" /> Instagram
                             </a>
-                            <a href="https://www.facebook.com/people/Rexonsofttech-Rexonsofttech/pfbid0ZVtdv6PMbpnEUAMtoZqVVhkUZD37YrqvjefAaGPT6idmYzzYZDRDdL4eTcDwGsMsl/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1 text-sm">
-                                <Facebook className="w-4 h-4" /> Facebook
+                            <a href="https://www.facebook.com/people/Rexonsofttech-Rexonsofttech/pfbid0ZVtdv6PMbpnEUAMtoZqVVhkUZD37YrqvjefAaGPT6idmYzzYZDRDdL4eTcDwGsMsl/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                <Facebook className="w-3.5 h-3.5" /> Facebook
                             </a>
                         </div>
                     </div>
+
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs gap-4">
-                    <div className="flex items-center gap-1">
+                <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs gap-3">
+                    <div className="flex items-center gap-1 text-gray-400">
                         Built with <Heart className="w-3 h-3 text-red-500 fill-current" /> for Indian Employees
                     </div>
                     <div className="text-center text-gray-400">
-                        Empowering awareness, created by{' '}
+                        A public knowledge initiative created by{' '}
                         <a href="https://www.rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-primary transition-colors">
                             RexonSoftTech
                         </a>
                     </div>
-                    <div className="text-gray-500 dark:text-gray-400">
+                    <div className="text-gray-500">
                         © {new Date().getFullYear()} RexonSoftTech. All Rights Reserved.
                     </div>
-                </div>
-
-                {/* Terms Notice */}
-                <div className="text-center mt-6 text-[10px] text-gray-600 dark:text-gray-400">
-                    By using this website, you agree to our Privacy Policy and Terms & Conditions.
                 </div>
             </div>
         </footer>

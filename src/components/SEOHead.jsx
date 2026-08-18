@@ -411,6 +411,81 @@ const seoData = {
         description: 'Official Tamil Nadu minimum wages 2025 for IT/BPO, shops, factories and construction. Bilingual (EN+Tamil) guide with complaint rights and official sources.',
         keywords: 'tamil nadu minimum wages 2025, TN minimum wage IT sector, tamilnadu factory wages, minimum salary tamilnadu',
     },
+    '/tools/authority-finder': {
+        title: 'Authority Finder — Where to File Labour Complaints in India',
+        description: 'Find out whether to complain to Central ALC, State Labour Commissioner, EPFO, or ICC. Verified government portals, laws, and evidence requirements.',
+        keywords: 'where to file labour complaint, who should i complain to, labour commissioner jurisdiction, samadhan portal, epfigms complaint',
+    },
+    '/tools/problem-wizard': {
+        title: 'Workplace Problem Assessment Wizard — Case Evaluation',
+        description: 'Answer 7 quick questions to receive tailored procedural guidance, evidence preservation steps, and warning signs for workplace disputes.',
+        keywords: 'employee problem wizard, workplace dispute evaluation, labour law guidance tool, employment assessment india',
+    },
+    '/tools/evidence-checklist': {
+        title: 'Evidence Preservation Checklist — 17 Crucial Documents',
+        description: 'Interactive 17-point legal evidence preservation checklist to prepare before filing labour complaints or demanding unpaid salary in India.',
+        keywords: 'evidence checklist employment dispute, labour court evidence, proving salary not paid, preserving emails payslips',
+    },
+    '/tools/case-timeline-builder': {
+        title: 'Employment Case Timeline Builder — Incident Chronology Tool',
+        description: 'Build and print an organized chronological incident timeline with evidence links for Labour Commissioner conciliation and legal notices.',
+        keywords: 'case timeline builder, dispute chronology tool, employment incident log, labour petition annexure format',
+    },
+    '/disputes/absconding-allegation': {
+        title: 'Employer Says I Am Absconding — Legal Rights & Defense Protocol',
+        description: 'What to do if your employer falsely tags you as an absconder after you resigned, took medical leave, or faced a toxic workplace in India.',
+        keywords: 'employer says absconding, job abandonment india, absconding notice reply, relieving letter after absconding threat',
+    },
+    '/disputes/no-employment-record': {
+        title: 'Employer Denies Employment Record — How to Legally Prove Service',
+        description: 'Worked without an appointment letter? Learn how Indian courts establish employment through bank statements, EPFO, and tax records.',
+        keywords: 'proving employment without appointment letter, employer denying work record, 26as proof of employment, master servant test',
+    },
+    '/disputes/handover-asset-dispute': {
+        title: 'Laptop Return & Handover Disputes — Asset Deductions Law',
+        description: 'How to legally return company laptops, avoid false property damage deductions, and obtain formal clearance acknowledgements on resignation.',
+        keywords: 'laptop return dispute, company asset damage deduction, payment of wages section 7, clearance receipt resignation',
+    },
+    '/disputes/data-misuse-allegation': {
+        title: 'Employer Alleges Data Misuse / IP Theft — Rights & Defense Protocol',
+        description: 'What to do if an employer in India threatens IT Act Section 66 or confidentiality breach allegations to block your resignation.',
+        keywords: 'data misuse allegation employee, it act threats resignation, confidentiality breach defense, section 27 non compete',
+    },
+    '/trainee-apprentice-rights': {
+        title: 'Trainee & Apprentice Rights in India — Stipend Rules & Bonds',
+        description: 'Complete statutory guide for interns, trainees, and apprentices under the Apprentices Act 1961. Minimum stipend rules, bond enforceability, and hours.',
+        keywords: 'apprentice rights india, trainee stipend rules, unpaid internship legal india, apprentices act 1961, trainee bond',
+    },
+    '/about': {
+        title: 'About Employee Rights India — Mission & Editorial Standards',
+        description: 'Learn about the mission, research methodology, and team behind Employee Rights India — operated by RexonSoftTech.',
+        keywords: 'about employee rights india, rexonsofttech, rst technologies, labour law research india',
+    },
+    '/contact': {
+        title: 'Contact & Feedback Desk — Employee Rights India',
+        description: 'Reach out to the editorial and legal-information team at Employee Rights India for corrections, queries, and feedback.',
+        keywords: 'contact employee rights india, suggest labour law correction, editorial desk rexonsofttech',
+    },
+    '/privacy-policy': {
+        title: 'Privacy Policy — DPDP Act 2023 Compliant',
+        description: 'Privacy policy compliant with India DPDP Act 2023. Learn how Employee Rights India operates with zero server-side personal data collection.',
+        keywords: 'privacy policy employee rights india, dpdp act compliance, zero pii storage, client side privacy',
+    },
+    '/terms': {
+        title: 'Terms of Use — Employee Rights India',
+        description: 'Terms of use and conditions for accessing educational labour law tools and guides on Employee Rights India.',
+        keywords: 'terms of use, terms and conditions employee rights india, educational usage disclaimer',
+    },
+    '/disclaimer': {
+        title: 'Legal Disclaimer — Educational Guidance Notice',
+        description: 'Important legal disclaimer regarding procedural information, non-advocate relationship, and legal accuracy parameters.',
+        keywords: 'legal disclaimer, non advocate notice, educational labour law guidance, no legal advice guarantee',
+    },
+    '/editorial-policy': {
+        title: 'Editorial & Legal Verification Policy — Sources & Cadence',
+        description: 'Learn about our rigorous legal research methodology, statute verification process, and correction guidelines.',
+        keywords: 'editorial policy, statute verification methodology, primary legal sources india, labour law update cadence',
+    },
 };
 
 export default function SEOHead({ path, schema }) {
