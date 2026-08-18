@@ -11,15 +11,16 @@ export default function RightsDetailPage() {
 
     if (!category) {
         return (
-            <div className="py-20 px-4 text-center min-h-[60vh] flex flex-col items-center justify-center">
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Rights Category Not Found</h1>
-                <p className="text-gray-500 mb-6 text-sm">The category you requested does not exist or has moved.</p>
+            <div className="py-20 px-4 text-center min-h-[60vh] flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+                <h1 className="text-2xl font-bold mb-4">Rights Category Not Found</h1>
+                <p className="text-gray-500 dark:text-gray-400 mb-6 text-sm">The category "{categoryId}" does not exist or has moved.</p>
                 <Link to="/rights" className="btn-primary text-xs">← Back to All Employee Rights</Link>
             </div>
         );
     }
 
-    const Icon = category.icon;
+    const Icon = category.icon || Scale;
+    const cleanLabel = category.title ? category.title.replace(/^[^\w\s]+/, '').trim() : 'Rights Guide';
 
     return (
         <div className="py-12 px-4 bg-gray-50 dark:bg-gray-900 min-h-screen">
@@ -28,8 +29,8 @@ export default function RightsDetailPage() {
                 schema={{
                     "@context": "https://schema.org",
                     "@type": "Article",
-                    "headline": `${category.title} — Complete Statutory Guide in India`,
-                    "description": category.summary,
+                    "headline": `${cleanLabel} — Complete Statutory Guide in India`,
+                    "description": category.summary || "Comprehensive guide to statutory employee rights in India.",
                     "publisher": {
                         "@type": "Organization",
                         "name": "Employee Rights India",
@@ -43,7 +44,7 @@ export default function RightsDetailPage() {
                 {/* Navigation Breadcrumb */}
                 <Breadcrumb items={[
                     { label: 'All Rights', path: '/rights' },
-                    { label: category.title.replace(/^[^\w]+/, ''), path: `/rights/${category.id}` }
+                    { label: cleanLabel, path: `/rights/${category.id}` }
                 ]} />
 
                 {/* Hero Card */}
@@ -74,7 +75,7 @@ export default function RightsDetailPage() {
                 />
 
                 {/* ── SECTION 1: GOVERNING ACTS & STATUTORY CITATIONS ── */}
-                {category.acts && (
+                {category.acts && category.acts.length > 0 && (
                     <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-4">
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <BookOpen className="w-5 h-5 text-primary" /> Governing Legislative Acts & Sections
@@ -94,7 +95,7 @@ export default function RightsDetailPage() {
                 )}
 
                 {/* ── SECTION 2: IN-DEPTH LEGAL PRINCIPLES & RULES ── */}
-                {category.legalPrinciples && (
+                {category.legalPrinciples && category.legalPrinciples.length > 0 && (
                     <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <Scale className="w-5 h-5 text-primary" /> In-Depth Legal Rules & Judicial Doctrines
@@ -111,39 +112,43 @@ export default function RightsDetailPage() {
                 )}
 
                 {/* ── SECTION 3: YOUR STATUTORY ENTITLEMENTS ── */}
-                <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
-                    <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
-                        <CheckCircle2 className="w-5 h-5 text-green-500" /> Your Lawful Entitlements as an Employee
-                    </h2>
-                    <div className="space-y-3">
-                        {category.entitlements.map((item, idx) => (
-                            <div key={idx} className="p-4 bg-green-50/40 dark:bg-green-950/20 rounded-2xl border border-green-200/60 dark:border-green-900/40 flex items-start gap-3 text-xs sm:text-sm text-gray-800 dark:text-gray-200">
-                                <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
-                                    {idx + 1}
-                                </span>
-                                <span className="leading-relaxed font-medium">{item}</span>
-                            </div>
-                        ))}
+                {category.entitlements && category.entitlements.length > 0 && (
+                    <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
+                        <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
+                            <CheckCircle2 className="w-5 h-5 text-green-500" /> Your Lawful Entitlements as an Employee
+                        </h2>
+                        <div className="space-y-3">
+                            {category.entitlements.map((item, idx) => (
+                                <div key={idx} className="p-4 bg-green-50/40 dark:bg-green-950/20 rounded-2xl border border-green-200/60 dark:border-green-900/40 flex items-start gap-3 text-xs sm:text-sm text-gray-800 dark:text-gray-200">
+                                    <span className="w-6 h-6 bg-green-600 text-white rounded-full flex items-center justify-center text-xs font-black shrink-0 mt-0.5">
+                                        {idx + 1}
+                                    </span>
+                                    <span className="leading-relaxed font-medium">{item}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* ── SECTION 4: WHAT IS STRICTLY ILLEGAL ── */}
-                <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
-                    <h2 className="text-xl font-black text-red-600 dark:text-red-400 flex items-center gap-2">
-                        <Ban className="w-5 h-5 text-red-600" /> What Your Employer CANNOT Legally Do
-                    </h2>
-                    <div className="space-y-3">
-                        {category.prohibitions.map((item, idx) => (
-                            <div key={idx} className="p-4 bg-red-50/40 dark:bg-red-950/20 rounded-2xl border border-red-200/60 dark:border-red-900/40 flex items-start gap-3 text-xs sm:text-sm text-red-950 dark:text-red-200">
-                                <span className="text-red-500 font-bold shrink-0 text-base">⚠️</span>
-                                <span className="leading-relaxed font-medium">{item.replace(/^🚫\s*/, '')}</span>
-                            </div>
-                        ))}
+                {category.prohibitions && category.prohibitions.length > 0 && (
+                    <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
+                        <h2 className="text-xl font-black text-red-600 dark:text-red-400 flex items-center gap-2">
+                            <Ban className="w-5 h-5 text-red-600" /> What Your Employer CANNOT Legally Do
+                        </h2>
+                        <div className="space-y-3">
+                            {category.prohibitions.map((item, idx) => (
+                                <div key={idx} className="p-4 bg-red-50/40 dark:bg-red-950/20 rounded-2xl border border-red-200/60 dark:border-red-900/40 flex items-start gap-3 text-xs sm:text-sm text-red-950 dark:text-red-200">
+                                    <span className="text-red-500 font-bold shrink-0 text-base">⚠️</span>
+                                    <span className="leading-relaxed font-medium">{typeof item === 'string' ? item.replace(/^🚫\s*/, '') : item}</span>
+                                </div>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                )}
 
                 {/* ── SECTION 5: STEP-BY-STEP ACTION ROADMAP ── */}
-                {category.actionSteps && (
+                {category.actionSteps && category.actionSteps.length > 0 && (
                     <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <Compass className="w-5 h-5 text-primary" /> Step-by-Step Resolution Roadmap
@@ -159,7 +164,7 @@ export default function RightsDetailPage() {
                 )}
 
                 {/* ── SECTION 6: MANDATORY EVIDENCE CHECKLIST ── */}
-                {category.evidenceRequired && (
+                {category.evidenceRequired && category.evidenceRequired.length > 0 && (
                     <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-4">
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <FileText className="w-5 h-5 text-primary" /> Documents & Evidence to Preserve
@@ -179,7 +184,7 @@ export default function RightsDetailPage() {
                 )}
 
                 {/* ── SECTION 7: INTERACTIVE TOOLS & CALCULATORS ── */}
-                {category.relatedTools && (
+                {category.relatedTools && category.relatedTools.length > 0 && (
                     <div className="bg-white dark:bg-gray-950 p-8 rounded-3xl border border-gray-150 dark:border-gray-800 shadow-soft space-y-6">
                         <h2 className="text-xl font-black text-gray-900 dark:text-gray-100 flex items-center gap-2">
                             <Calculator className="w-5 h-5 text-primary" /> Interactive Calculators & Action Tools
@@ -241,14 +246,16 @@ export default function RightsDetailPage() {
                 </div>
 
                 {/* ── SECTION 9: WHY THIS MATTERS ── */}
-                <div className="bg-white dark:bg-gray-950 p-6 rounded-2xl border border-gray-150 dark:border-gray-800 shadow-soft">
-                    <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2 mb-2">
-                        <Info className="w-4 h-4 text-primary" /> Constitutional & Human Significance
-                    </h3>
-                    <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {category.whyItMatters}
-                    </p>
-                </div>
+                {category.whyItMatters && (
+                    <div className="bg-white dark:bg-gray-950 p-6 rounded-2xl border border-gray-150 dark:border-gray-800 shadow-soft">
+                        <h3 className="text-sm font-bold text-gray-900 dark:text-gray-100 flex items-center gap-2 mb-2">
+                            <Info className="w-4 h-4 text-primary" /> Constitutional & Human Significance
+                        </h3>
+                        <p className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+                            {category.whyItMatters}
+                        </p>
+                    </div>
+                )}
 
             </div>
         </div>
