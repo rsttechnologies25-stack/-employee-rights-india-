@@ -1,6 +1,9 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetModule from 'react-helmet-async';
 import { ChevronRight, Home } from 'lucide-react';
+
+const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.default.Helmet) || HelmetModule.default;
 
 export default function Breadcrumb({ items }) {
     const schemaData = {

@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetModule from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+
+const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.default.Helmet) || HelmetModule.default;
 import { Zap, ArrowRight, ExternalLink, Filter, Calendar, TrendingUp } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';

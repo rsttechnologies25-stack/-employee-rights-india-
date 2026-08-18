@@ -1,3 +1,4 @@
+import React from 'react';
 import { Calendar, ShieldCheck, Scale, ExternalLink } from 'lucide-react';
 
 export default function LegalMetadataBadge({ 

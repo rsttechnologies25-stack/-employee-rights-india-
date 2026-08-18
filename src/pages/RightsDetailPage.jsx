@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { rightsCategories } from '../data/rightsData';
 import { ArrowLeft, CheckCircle2, Ban, Info, ExternalLink, Scale, ShieldCheck, FileText, ArrowRight, Compass, Calculator, AlertTriangle, Building2, BookOpen } from 'lucide-react';

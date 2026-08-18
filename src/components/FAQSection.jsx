@@ -1,6 +1,8 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
-import { ChevronDown, HelpCircle } from 'lucide-react';
+import * as HelmetModule from 'react-helmet-async';
+import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+
+const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.default.Helmet) || HelmetModule.default;
 
 export default function FAQSection({ faqs, title = "Frequently Asked Questions", schemaEnabled = true }) {
     const [openIndex, setOpenIndex] = useState(null);

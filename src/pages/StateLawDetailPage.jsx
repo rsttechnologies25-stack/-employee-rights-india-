@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useParams, Navigate } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import * as HelmetModule from 'react-helmet-async';
 import { MapPin, Clock, Calendar, Moon, AlertTriangle, ShieldCheck, FileText, IndianRupee, ExternalLink, Info, Globe } from 'lucide-react';
+
+const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.default.Helmet) || HelmetModule.default;
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';

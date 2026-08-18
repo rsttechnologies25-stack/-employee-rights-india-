@@ -1,4 +1,7 @@
-import { Helmet } from 'react-helmet-async';
+import React from 'react';
+import * as HelmetModule from 'react-helmet-async';
+
+const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.default.Helmet) || HelmetModule.default;
 
 const BASE_URL = 'https://employee-rights.rexonsofttech.in';
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
