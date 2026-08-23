@@ -6,6 +6,8 @@ import PageHero from '../components/PageHero';
 import FAQSection from '../components/FAQSection';
 import InternalLinks from '../components/InternalLinks';
 import ContentSection, { ContentList, CalloutBox } from '../components/ContentSection';
+import QuickAnswer from '../components/QuickAnswer';
+import NextStepActions from '../components/NextStepActions';
 import { delayedSalaryFaqs } from '../data/salaryData';
 
 const relatedLinks = [
@@ -51,7 +53,23 @@ export default function DelayedSalaryPage() {
                         { label: 'Delayed Salary', path: '/delayed-salary' }
                     ]} />
 
-                    {/* Quick summary */}
+                    {/* Quick 3-Second Answer Banner */}
+                    <QuickAnswer
+                        verdict="NO"
+                        headline="Can an employer delay or withhold your earned salary?"
+                        shortAnswer="No. Under Section 5 of the Payment of Wages Act 1936, employers must disburse monthly wages by the 7th (for companies with <1,000 workers) or 10th day of the following month. Withholding wages for notice disputes, asset return, or resignation is unlawful."
+                        keyFactors={[
+                            'Statutory deadline: 7th or 10th of every month',
+                            'Labour Commissioner complaints carry 0 court fees',
+                            'Section 15 allows up to 10x penalty compensation for illegal deductions',
+                            'Notice period disputes must be settled separately, not by holding monthly wages'
+                        ]}
+                        legalCitation="Payment of Wages Act, 1936 — Section 5 & 15"
+                        primaryActionPath="/tools/grievance-generator"
+                        primaryActionLabel="Draft Salary Recovery Letter"
+                    />
+
+                    {/* Quick summary metrics */}
                     <div className="bg-white dark:bg-gray-950 rounded-2xl p-6 border border-gray-100 dark:border-gray-800 shadow-soft mb-8">
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
                             <div className="p-4 bg-danger/5 rounded-xl">
@@ -133,6 +151,10 @@ export default function DelayedSalaryPage() {
                     </div>
 
                     <FAQSection faqs={delayedSalaryFaqs} title="FAQs — Delayed & Withheld Salary" />
+                    
+                    {/* Contextual Next Step Action Guide */}
+                    <NextStepActions category="salary" />
+                    
                     <InternalLinks currentPath="/delayed-salary" links={relatedLinks} />
                 </div>
             </div>

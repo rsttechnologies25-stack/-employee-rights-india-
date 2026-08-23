@@ -23,6 +23,15 @@
   ::selection {
     @apply bg-primary/20 text-primary-dark dark:text-primary-light;
   }
+
+  /* Accessibility Focus Rings */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-white dark:ring-offset-gray-950 transition-shadow;
+  }
 }
 
 @layer components {
@@ -39,11 +48,11 @@
   }
 
   .btn-primary {
-    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-soft hover:bg-primary-dark active:scale-[0.98] transition-all duration-200 ease-out;
+    @apply bg-primary text-white px-6 py-3 rounded-xl font-semibold shadow-soft hover:bg-primary-dark active:scale-[0.98] transition-all duration-200 ease-out min-h-[44px] inline-flex items-center justify-center;
   }
 
   .btn-accent {
-    @apply bg-accent text-white px-6 py-3 rounded-xl font-semibold shadow-soft hover:bg-accent-dark active:scale-[0.98] transition-all duration-200 ease-out;
+    @apply bg-accent text-white px-6 py-3 rounded-xl font-semibold shadow-soft hover:bg-accent-dark active:scale-[0.98] transition-all duration-200 ease-out min-h-[44px] inline-flex items-center justify-center;
   }
 
   .glass-panel {
@@ -60,6 +69,18 @@
 
   .status-red {
     @apply border-l-4 border-danger;
+  }
+}
+
+/* Reduced Motion Override for Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
