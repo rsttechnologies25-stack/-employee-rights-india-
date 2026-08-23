@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun, Compass, HelpCircle, FileText, Scale } from 'lucide-react';
+import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun, Search } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 import { useTheme } from '../context/ThemeContext';
+import SearchModal from './SearchModal';
 
 const navGroups = [
     {
@@ -22,6 +23,7 @@ const navGroups = [
         label: "Tools & Kits",
         items: [
             { to: '/tools', label: '🛠️ Master Calculators & Tools Hub' },
+            { to: '/tools/ctc-deduction-scanner', label: '📊 CTC & Salary Slip Hidden Deduction Scanner' },
             { to: '/tools/authority-finder', label: '🧭 Authority Finder Tool' },
             { to: '/tools/evidence-checklist', label: '📁 Evidence Preservation Checklist' },
             { to: '/tools/case-timeline-builder', label: '⏱️ Case Timeline Builder' },
@@ -141,6 +143,7 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [openDropdown, setOpenDropdown] = useState(null);
     const [mobileExpandedGroup, setMobileExpandedGroup] = useState(null);
+    const [searchOpen, setSearchOpen] = useState(false);
     const location = useLocation();
     const { isDark, toggleTheme } = useTheme();
 
@@ -148,6 +151,12 @@ export default function Navbar() {
         setMobileMenuOpen(false);
         setOpenDropdown(null);
     }, [location]);
+
+    useEffect(() => {
+        const handleOpenEvent = () => setSearchOpen(true);
+        window.addEventListener('open-search-modal', handleOpenEvent);
+        return () => window.removeEventListener('open-search-modal', handleOpenEvent);
+    }, []);
 
     const handleDropdownToggle = (index) => {
         setOpenDropdown(openDropdown === index ? null : index);
@@ -178,8 +187,23 @@ export default function Navbar() {
                         ))}
                     </div>
 
-                    {/* Direct Highlight Links & Dark Mode */}
-                    <div className="hidden lg:flex items-center gap-3">
+                    {/* Search Trigger, Direct Highlight Links & Dark Mode */}
+                    <div className="hidden lg:flex items-center gap-2.5">
+                        
+                        {/* Search Button */}
+                        <button
+                            type="button"
+                            onClick={() => setSearchOpen(true)}
+                            className="flex items-center gap-2 px-3 py-1.5 text-xs font-semibold rounded-xl bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-600 dark:text-gray-400 hover:border-primary/40 hover:text-primary transition-all"
+                            aria-label="Open Search Modal"
+                        >
+                            <Search className="w-3.5 h-3.5 text-primary" />
+                            <span>Search...</span>
+                            <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-bold bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-gray-500">
+                                ⌘K
+                            </kbd>
+                        </button>
+
                         {directLinks.map((link) => (
                             <Link
                                 key={link.to}
@@ -203,8 +227,16 @@ export default function Navbar() {
                         </button>
                     </div>
 
-                    {/* Mobile Hamburger Menu Toggle */}
+                    {/* Mobile Hamburger Menu & Search Toggle */}
                     <div className="flex items-center gap-2 lg:hidden">
+                        <button
+                            type="button"
+                            onClick={() => setSearchOpen(true)}
+                            aria-label="Open Search"
+                            className="p-2 rounded-xl text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                        >
+                            <Search className="w-5 h-5 text-primary" />
+                        </button>
                         <button
                             onClick={toggleTheme}
                             aria-label="Toggle Dark Mode"
@@ -224,9 +256,21 @@ export default function Navbar() {
                 </div>
             </div>
 
+            {/* Global Search Overlay Modal */}
+            <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
+
             {/* Mobile Drawer */}
             {mobileMenuOpen && (
                 <div className="lg:hidden bg-white dark:bg-gray-950 border-b border-gray-200 dark:border-gray-800 px-4 py-4 space-y-3 max-h-[80vh] overflow-y-auto animate-fade-in">
+                    <button
+                        type="button"
+                        onClick={() => { setMobileMenuOpen(false); setSearchOpen(true); }}
+                        className="w-full py-3 px-4 bg-gray-100 dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-gray-800 dark:text-gray-200 text-center rounded-xl font-bold text-xs flex items-center justify-center gap-2"
+                    >
+                        <Search className="w-4 h-4 text-primary" />
+                        Search All Tools, Laws & Guides (⌘K)
+                    </button>
+
                     <Link
                         to="/tools/authority-finder"
                         className="block w-full py-3 px-4 bg-primary text-white text-center rounded-xl font-bold text-xs shadow-soft"

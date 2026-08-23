@@ -259,6 +259,11 @@ const seoData = {
         description: 'Draft an official, advocate-grade legal demand notice for unpaid salary, withheld relieving letters, illegal notice pay deductions, and delayed PF contributions.',
         keywords: 'legal notice format for unpaid salary, legal notice for relieving letter, legal demand letter to employer india, section 15 payment of wages legal notice',
     },
+    '/tools/ctc-deduction-scanner': {
+        title: 'Salary Slip & CTC Hidden Deduction Scanner India — Audit Payslip',
+        description: 'Audit your monthly salary slip for illegal employer PF shifts, monthly gratuity deductions, and Basic < 50% CTC issues under Indian labour laws.',
+        keywords: 'ctc deduction scanner india, salary slip audit, hidden pf deduction illegal, employer pf deducted from gross, basic salary under 50 percent',
+    },
     '/tools/labour-directory': {
         title: 'Regional Labour Commissioner Office Directory — Contacts',
         description: 'Find contact phone numbers, official email addresses, physical office addresses, and official websites of local and district labour departments across India.',

@@ -63,6 +63,7 @@ const NoticeAdjustmentCalculatorPage = lazy(() => import('./pages/NoticeAdjustme
 const POSHComplaintBuilderPage = lazy(() => import('./pages/POSHComplaintBuilderPage'));
 const GigWorkerRightsPage = lazy(() => import('./pages/GigWorkerRightsPage'));
 const LegalNoticeGeneratorPage = lazy(() => import('./pages/LegalNoticeGeneratorPage'));
+const CTCDeductionScannerPage = lazy(() => import('./pages/CTCDeductionScannerPage'));
 
 // New Guided Decision Tools
 const AuthorityFinderPage = lazy(() => import('./pages/AuthorityFinderPage'));
@@ -84,6 +85,7 @@ const PrivacyPolicyPage = lazy(() => import('./pages/PrivacyPolicyPage'));
 const TermsPage = lazy(() => import('./pages/TermsPage'));
 const DisclaimerPage = lazy(() => import('./pages/DisclaimerPage'));
 const EditorialPolicyPage = lazy(() => import('./pages/EditorialPolicyPage'));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 const MaternityRightsPage = lazy(() => import('./pages/MaternityRightsPage'));
 const POSHActPage = lazy(() => import('./pages/POSHActPage'));
@@ -207,6 +209,7 @@ function App() {
                                 <Route path="/tools/posh-complaint-builder" element={<POSHComplaintBuilderPage />} />
                                 <Route path="/tools/gig-worker-rights" element={<GigWorkerRightsPage />} />
                                 <Route path="/tools/legal-notice-generator" element={<LegalNoticeGeneratorPage />} />
+                                <Route path="/tools/ctc-deduction-scanner" element={<CTCDeductionScannerPage />} />
 
                                 {/* Harassment, Privacy & Performance */}
                                 <Route path="/maternity-rights" element={<MaternityRightsPage />} />
@@ -250,7 +253,7 @@ function App() {
                                 <Route path="/new-labour-codes/ir-code" element={<IRCodePage />} />
 
                                 {/* 404 Fallback */}
-                                <Route path="*" element={<Navigate to="/" replace />} />
+                                <Route path="*" element={<NotFoundPage />} />
                             </Routes>
                         </Suspense>
                     </main>

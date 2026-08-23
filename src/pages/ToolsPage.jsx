@@ -23,6 +23,14 @@ const calculators = [
         badgeClass: 'bg-primary/10 text-primary font-bold',
     },
     {
+        icon: Calculator,
+        title: 'CTC & Payslip Deduction Scanner',
+        description: 'Audit illegal employer PF shifts, monthly gratuity deductions, and Basic < 50% CTC issues.',
+        path: '/tools/ctc-deduction-scanner',
+        badge: 'Audit Tool',
+        badgeClass: 'bg-red-100 text-red-700 font-bold',
+    },
+    {
         icon: Scale,
         title: 'Bond & Non-Compete Scanner',
         description: 'Check whether service bonds or post-employment non-compete clauses are legally void.',
