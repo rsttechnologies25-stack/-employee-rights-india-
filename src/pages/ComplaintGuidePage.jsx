@@ -2,7 +2,8 @@ import React from 'react';
 import SEOHead from '../components/SEOHead';
 import Breadcrumb from '../components/Breadcrumb';
 import PageHero from '../components/PageHero';
-import { ShieldAlert, ExternalLink, FileText, CheckCircle2, Clock, Landmark } from 'lucide-react';
+import ComplaintTimelineGuide from '../components/ComplaintTimelineGuide';
+import { ShieldAlert, ExternalLink, FileText, CheckCircle2, Clock, Landmark, Scale } from 'lucide-react';
 
 export default function ComplaintGuidePage() {
     const steps = [
@@ -21,22 +22,22 @@ export default function ComplaintGuidePage() {
             bg: "bg-amber-50 dark:bg-amber-900/20"
         },
         {
-            title: "File on the Samadhan Portal",
-            description: "If the legal notice fails, file a petition with the Labour Commissioner. The Ministry of Labour operates the 'Samadhan' portal (samadhan.labour.gov.in) for online dispute resolution.",
+            title: "File on Official Portals (Samadhan / EPFiGMS / SHe-Box)",
+            description: "If the legal notice fails, file an official grievance on Samadhan (samadhan.labour.gov.in), EPFiGMS (epfigms.gov.in), or SHe-Box (shebox.wcd.gov.in).",
             icon: Landmark,
             color: "text-indigo-600 dark:text-indigo-400",
             bg: "bg-indigo-50 dark:bg-indigo-900/20"
         },
         {
             title: "Conciliation Proceedings",
-            description: "The Labour Commissioner will summon the employer for a conciliation meeting. If they don't attend or refuse to settle, the conciliation fails.",
+            description: "The Labour Officer summons both employee and employer for a joint conciliation hearing. If the employer defaults or refuses to settle, conciliation fails.",
             icon: Clock,
             color: "text-purple-600 dark:text-purple-400",
             bg: "bg-purple-50 dark:bg-purple-900/20"
         },
         {
-            title: "Labour Court (Final Step)",
-            description: "If conciliation fails, the Labour Officer provides a 'Failure of Conciliation' (FOC) report. You can then use this FOC report to file a case in the Labour Court.",
+            title: "Recovery Certificate (RC) / Labour Court",
+            description: "If conciliation fails, the Labour Officer issues a Recovery Certificate (RC) to the District Collector to attach employer bank accounts or an FOC report for Labour Court.",
             icon: CheckCircle2,
             color: "text-emerald-600 dark:text-emerald-400",
             bg: "bg-emerald-50 dark:bg-emerald-900/20"
@@ -47,13 +48,13 @@ export default function ComplaintGuidePage() {
         <div className="bg-white dark:bg-gray-950 min-h-screen">
             <SEOHead 
                 path="/complaint-guide" 
-                title="How to File a Complaint Against Your Employer in India | Step-by-Step Guide"
-                description="Learn the exact step-by-step legal process to file an official complaint against your employer in India for unpaid salary, wrongful termination, or harassment."
+                title="Complaint Resolution Timelines & Process India | How Long Does It Take?"
+                description="Exact resolution timelines (7 to 90 days) and step-by-step procedure after filing a complaint against an employer on EPFiGMS, SAMADHAN, POSH, or Labour Commissioner."
             />
             
             <PageHero 
-                title="Official Complaint Process" 
-                subtitle="A step-by-step guide to escalating workplace disputes to the Labour Commissioner and filing official complaints."
+                title="Official Complaint Process & Resolution Timelines" 
+                subtitle="Know how many days complaint resolution takes and what step-by-step process happens after you file an official grievance."
                 icon={ShieldAlert}
                 gradient="danger"
             />
@@ -61,17 +62,28 @@ export default function ComplaintGuidePage() {
             <div className="max-w-4xl mx-auto px-4 py-8">
                 <Breadcrumb items={[{ label: 'Complaint Guide', path: '/complaint-guide' }]} />
 
-                <div className="mt-12 bg-gray-50 dark:bg-gray-900 p-8 rounded-2xl border border-gray-100 dark:border-gray-800 mb-12">
-                    <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Official Government Portals</h2>
-                    <p className="text-gray-700 dark:text-gray-300 mb-6">
-                        Before initiating legal proceedings, you can register grievances on these official Indian Government portals:
+                {/* ── INTERACTIVE TIMELINES & POST-COMPLAINT PROCESS GUIDE ── */}
+                <ComplaintTimelineGuide />
+
+                <div className="mt-12 bg-gray-50 dark:bg-gray-900 p-8 rounded-3xl border border-gray-100 dark:border-gray-800 mb-12 space-y-6">
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Official Government Portals (.gov.in)</h2>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm">
+                        Register grievances directly on these verified Indian Government portals for official statutory action:
                     </p>
                     
                     <div className="grid md:grid-cols-2 gap-4">
                         <a href="https://samadhan.labour.gov.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors group">
                             <div>
                                 <h3 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">Samadhan Portal</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">For Industrial Disputes</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">Industrial & Salary Disputes (Central Sphere)</p>
+                            </div>
+                            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary" />
+                        </a>
+
+                        <a href="https://epfigms.gov.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors group">
+                            <div>
+                                <h3 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">EPFiGMS Portal</h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">PF Default & UAN Disputes (7–15 Days)</p>
                             </div>
                             <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary" />
                         </a>
@@ -79,14 +91,22 @@ export default function ComplaintGuidePage() {
                         <a href="https://pgportal.gov.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors group">
                             <div>
                                 <h3 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">CPGRAMS</h3>
-                                <p className="text-sm text-gray-500 dark:text-gray-400">General Public Grievance</p>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">General Public Grievance (21–30 Days)</p>
+                            </div>
+                            <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary" />
+                        </a>
+
+                        <a href="https://shebox.wcd.gov.in/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 hover:border-primary transition-colors group">
+                            <div>
+                                <h3 className="font-bold text-gray-900 dark:text-gray-100 group-hover:text-primary transition-colors">SHe-Box Portal</h3>
+                                <p className="text-sm text-gray-500 dark:text-gray-400">POSH Workplace Harassment (90 Days Inquiry)</p>
                             </div>
                             <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-primary" />
                         </a>
                     </div>
                 </div>
 
-                <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-8">Step-by-Step Escalation Process</h2>
+                <h2 className="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-8">Step-by-Step Escalation Hierarchy</h2>
 
                 <div className="space-y-6">
                     {steps.map((step, index) => {
@@ -119,7 +139,7 @@ export default function ComplaintGuidePage() {
                     <ShieldAlert className="w-8 h-8 text-red-600 dark:text-red-500 shrink-0" />
                     <div>
                         <h3 className="text-lg font-bold text-red-800 dark:text-red-400 mb-2">Important Legal Advice</h3>
-                        <p className="text-red-700 dark:text-red-300">
+                        <p className="text-red-700 dark:text-red-300 text-sm leading-relaxed">
                             Labour laws apply differently based on your designation. If you are in a managerial or supervisory role earning above ₹10,000/month, you are not considered a "Workman" under the Industrial Disputes Act, and cannot approach the Labour Court. You must file a civil suit for breach of contract instead.
                         </p>
                     </div>
