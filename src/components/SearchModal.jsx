@@ -85,6 +85,14 @@ const SITE_INDEX = [
         keywords: ['data misuse allegation', 'it act 66 threat', 'confidentiality breach', 'ip theft allegation'],
         icon: Shield
     },
+    {
+        title: 'Micromanagement & Excessive Workplace Control',
+        category: 'Dispute Guide',
+        path: '/micromanagement-weekend-work',
+        description: '10-way management spectrum, 12-question diagnostic wizard, 13-sector scenarios, and incident evidence log.',
+        keywords: ['micromanagement', 'excessive control', 'weekend meetings', 'keylogger tracking', 'is micromanagement legal', 'sunday calls'],
+        icon: Shield
+    },
 
     // ── GUIDED DECISION TOOLS ──
     {

@@ -31,7 +31,8 @@ const navGroups = [
             { to: '/disputes/handover-asset-dispute', label: '💻 Laptop & Asset Return Dispute' },
             { to: '/disputes/data-misuse-allegation', label: '🔒 Data Misuse & IP Threat Defense' },
             { to: '/tools/employment-bond-scanner', label: '⚖️ Bond Legality & Penalty Audit' },
-            { to: '/tools/pip-defense', label: '🛡️ Biased PIP Defense Kit' }
+            { to: '/tools/pip-defense', label: '🛡️ Biased PIP Defense Kit' },
+            { to: '/micromanagement-weekend-work', label: '🔍 Micromanagement & Workplace Control' }
         ]
     },
     {
