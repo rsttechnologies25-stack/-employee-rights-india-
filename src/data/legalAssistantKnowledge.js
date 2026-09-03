@@ -39,6 +39,38 @@ export const intentKnowledgeBase = [
         ]
     },
     {
+        id: 'micromanagement_weekend',
+        keywords: ['weekend', 'sunday', 'saturday', 'micromanagement', 'keylogger', 'laptop tracking', 'off day', 'comp off', 'after hours', 'overtime meeting', 'surveillance'],
+        topic: 'Micromanagement, Weekend Work & Overtime Rights',
+        law: 'Section 52 Factories Act 1948 & State Shops & Commercial Establishments Acts',
+        jurisdiction: 'Inspector of Shops & Establishments / Labour Officer',
+        shortAnswer: 'Every employee in India is legally entitled to at least 1 day of weekly rest. Mandatory weekend meetings count as work hours. If total weekly hours exceed 48 hours, employers must pay 2x Overtime wages or grant a Compensatory Off (Comp-Off). Active keylogging or webcam tracking without written policy disclosure violates DPDP Act 2023 & Article 21 Privacy Rights.',
+        whatMayApply: [
+            'Mandatory 24-hour weekly rest rule under State Shops Acts.',
+            'Hours worked beyond 48 hours/week mandate 2x Overtime pay or a Comp-Off within 30 days.',
+            'Surveillance on personal devices (BYOD) or unannounced keylogging is illegal under IT Act & DPDP Act 2023.'
+        ],
+        whatYouShouldCheck: [
+            'Timestamps of weekend meeting invites and email logs',
+            'Weekly attendance records exceeding 48 hours',
+            'Company IT and Privacy Policy disclosures'
+        ],
+        possibleNextSteps: [
+            'Send a written email requesting Compensatory Off (Comp-Off) or 2x Overtime pay for weekend hours.',
+            'Audit your weekend work compliance using our interactive Micromanagement Guide.',
+            'Escalate unpaid off-day work to the Assistant Labour Commissioner under the Payment of Wages Act.'
+        ],
+        relevantTools: [
+            { label: 'Micromanagement & Weekend Work Guide', path: '/micromanagement-weekend-work' },
+            { label: 'Overtime Pay Tracker', path: '/tools/overtime-tracker' },
+            { label: 'Grievance Letter Generator', path: '/tools/grievance-generator' }
+        ],
+        officialResources: [
+            { name: 'Shram Suvidha Central Portal', url: 'https://shramsuvidha.gov.in' },
+            { name: 'Ministry of Labour & Employment', url: 'https://labour.gov.in' }
+        ]
+    },
+    {
         id: 'pf_deduction',
         keywords: ['pf', 'provident fund', 'epfo', 'uan', 'passbook', 'pf not deposited', 'epf', 'pf deduction'],
         topic: 'Provident Fund (EPF) Non-Deposit & Passbook Issues',

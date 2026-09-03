@@ -13,6 +13,7 @@ const PFESIPage = lazy(() => import('./pages/PFESIPage'));
 const ContractsPage = lazy(() => import('./pages/ContractsPage'));
 const NoticePage = lazy(() => import('./pages/NoticePage'));
 const WorkingHoursPage = lazy(() => import('./pages/WorkingHoursPage'));
+const MicromanagementPage = lazy(() => import('./pages/MicromanagementPage'));
 const LeavePage = lazy(() => import('./pages/LeavePage'));
 const IllegalPracticesPage = lazy(() => import('./pages/IllegalPracticesPage'));
 const RightsIndexPage = lazy(() => import('./pages/RightsIndexPage'));
@@ -142,6 +143,7 @@ function App() {
                                 <Route path="/contracts" element={<ContractsPage />} />
                                 <Route path="/notice-period" element={<NoticePage />} />
                                 <Route path="/working-hours" element={<WorkingHoursPage />} />
+                                <Route path="/micromanagement-weekend-work" element={<MicromanagementPage />} />
                                 <Route path="/leave-holidays" element={<LeavePage />} />
                                 <Route path="/illegal-practices" element={<IllegalPracticesPage />} />
                                 <Route path="/rights" element={<RightsIndexPage />} />
