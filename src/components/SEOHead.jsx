@@ -40,9 +40,14 @@ const seoData = {
         keywords: 'working hours india, overtime pay india, maximum working hours, overtime rules 2025, 12 hour work day legal india',
     },
     '/micromanagement-weekend-work': {
-        title: 'Micromanagement & Weekend Meeting Rights India — Legal Rules',
-        description: 'Are weekend meetings legal in India? Mandatory weekly off laws, 2x overtime rates, compensatory off rules, and laptop surveillance privacy protections.',
-        keywords: 'weekend meetings legal in india, micromanagement labour law india, forced Sunday calls legal, comp off rules india, keylogger employee tracking legal, DPDP act privacy workplace',
+        title: 'Micromanagement & Excessive Workplace Control — Rights & Diagnostic',
+        description: 'Is micromanagement legal? 10-way management framework, 12-question diagnostic wizard, 13-sector real-world scenarios, and client-side evidence recorder.',
+        keywords: 'micromanagement rights, excessive control workplace, is micromanagement legal, workplace harassment, weekend calls legal india, keylogger surveillance law',
+    },
+    '/micromanagement': {
+        title: 'Micromanagement & Excessive Workplace Control — Rights & Diagnostic',
+        description: 'Is micromanagement legal? 10-way management framework, 12-question diagnostic wizard, 13-sector real-world scenarios, and client-side evidence recorder.',
+        keywords: 'micromanagement rights, excessive control workplace, is micromanagement legal, workplace harassment, weekend calls legal india, keylogger surveillance law',
     },
     '/leave-holidays': {
         title: 'Leave Entitlements India 2025 — Earned, Casual, Sick & Festival',

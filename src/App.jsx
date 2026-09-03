@@ -144,6 +144,7 @@ function App() {
                                 <Route path="/notice-period" element={<NoticePage />} />
                                 <Route path="/working-hours" element={<WorkingHoursPage />} />
                                 <Route path="/micromanagement-weekend-work" element={<MicromanagementPage />} />
+                                <Route path="/micromanagement" element={<MicromanagementPage />} />
                                 <Route path="/leave-holidays" element={<LeavePage />} />
                                 <Route path="/illegal-practices" element={<IllegalPracticesPage />} />
                                 <Route path="/rights" element={<RightsIndexPage />} />
