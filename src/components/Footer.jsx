@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Heart, Instagram, Facebook, ShieldCheck, FileText, Scale, Lock, Mail, Info } from 'lucide-react';
+import { ExternalLink, Heart, Instagram, Facebook, ShieldCheck, FileText, Scale, Lock, Mail, Info, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -80,14 +80,19 @@ export default function Footer() {
                             Zero server PII collection. All letters, calculators, and dispute timelines operate client-side in your device's browser memory.
                         </p>
 
-                        <h4 className="text-white font-semibold text-xs pt-1">Connect with RexonSoftTech</h4>
-                        <div className="flex items-center gap-4 text-xs">
-                            <a href="https://www.instagram.com/rexonsofttech/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                <Instagram className="w-3.5 h-3.5" /> Instagram
+                        <h4 className="text-white font-semibold text-xs pt-1">Company Website & Social</h4>
+                        <div className="flex flex-col space-y-2 text-xs">
+                            <a href="https://rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-primary-light font-bold hover:text-white flex items-center gap-1.5">
+                                <Globe className="w-3.5 h-3.5" /> rexonsofttech.in <ExternalLink className="w-3 h-3" />
                             </a>
-                            <a href="https://www.facebook.com/people/Rexonsofttech-Rexonsofttech/pfbid0ZVtdv6PMbpnEUAMtoZqVVhkUZD37YrqvjefAaGPT6idmYzzYZDRDdL4eTcDwGsMsl/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
-                                <Facebook className="w-3.5 h-3.5" /> Facebook
-                            </a>
+                            <div className="flex items-center gap-4 text-xs pt-1">
+                                <a href="https://www.instagram.com/rexonsofttech/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                    <Instagram className="w-3.5 h-3.5 text-pink-400" /> Instagram
+                                </a>
+                                <a href="https://www.facebook.com/people/Rexonsofttech-Rexonsofttech/pfbid0ZVtdv6PMbpnEUAMtoZqVVhkUZD37YrqvjefAaGPT6idmYzzYZDRDdL4eTcDwGsMsl/" target="_blank" rel="noopener noreferrer" className="hover:text-white flex items-center gap-1">
+                                    <Facebook className="w-3.5 h-3.5 text-blue-400" /> Facebook
+                                </a>
+                            </div>
                         </div>
                     </div>
 
@@ -100,9 +105,14 @@ export default function Footer() {
                     </div>
                     <div className="text-center text-gray-400">
                         A public knowledge initiative created by{' '}
-                        <a href="https://www.rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-primary transition-colors">
+                        <a href="https://rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-primary transition-colors">
                             RexonSoftTech
+                        </a>{' '}
+                        (
+                        <a href="https://rexonsofttech.in" target="_blank" rel="noopener noreferrer" className="text-primary-light font-semibold hover:underline">
+                            rexonsofttech.in
                         </a>
+                        )
                     </div>
                     <div className="text-gray-500">
                         © {new Date().getFullYear()} RexonSoftTech. All Rights Reserved.
