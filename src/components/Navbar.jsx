@@ -18,7 +18,8 @@ const navGroups = [
             { to: '/posh-act', label: '⚠️ Workplace Harassment (POSH Act)' },
             { to: '/maternity-rights', label: '👩 Maternity Benefit Rights (26 Weeks)' },
             { to: '/working-hours', label: '⏰ Working Hours & Overtime Rules' },
-            { to: '/leave-holidays', label: '🏖️ Earned Leave & Encashment' }
+            { to: '/leave-holidays', label: '🏖️ Earned Leave & Encashment' },
+            { to: '/professional-tax', label: '📊 Professional Tax & TDS Rights' }
         ]
     },
     {

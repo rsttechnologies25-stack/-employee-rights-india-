@@ -27,6 +27,7 @@ const ExperienceLetterPage = lazy(() => import('./pages/ExperienceLetterPage'));
 const RelievingLetterPage = lazy(() => import('./pages/RelievingLetterPage'));
 const ServiceCertificatePage = lazy(() => import('./pages/ServiceCertificatePage'));
 const SalaryCalculationPage = lazy(() => import('./pages/SalaryCalculationPage'));
+const ProfessionalTaxPage = lazy(() => import('./pages/ProfessionalTaxPage'));
 const PayCyclePage = lazy(() => import('./pages/PayCyclePage'));
 const DelayedSalaryPage = lazy(() => import('./pages/DelayedSalaryPage'));
 const GratuityPage = lazy(() => import('./pages/GratuityPage'));
@@ -182,6 +183,7 @@ function App() {
                                 {/* Tools & Calculators */}
                                 <Route path="/tools" element={<ToolsPage />} />
                                 <Route path="/salary-calculator" element={<SalaryCalculatorPage />} />
+                                <Route path="/professional-tax" element={<ProfessionalTaxPage />} />
                                 <Route path="/pf-checker" element={<PFCheckerPage />} />
                                 <Route path="/tools/notice-buyout-calculator" element={<NoticeBuyoutCalculatorPage />} />
                                 <Route path="/tools/leave-encashment-calculator" element={<LeaveEncashmentCalculatorPage />} />

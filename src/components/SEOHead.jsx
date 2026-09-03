@@ -64,6 +64,11 @@ const seoData = {
         description: 'Comprehensive index of all employee rights under Indian labour law. Salary, termination, leave, PF, ESI, gratuity — browse by category.',
         keywords: 'employee rights india complete, labour rights india, worker protection, all employment law india, rexonsofttech',
     },
+    '/professional-tax': {
+        title: 'Professional Tax, TDS & Salary Deductions India — Slabs & Rules',
+        description: 'State-wise Professional Tax (PT) slabs, Article 276 Rs 2,500 cap, Income Tax TDS Sec 192 rules, Form 16 rights, and Sec 7 50% deduction limit.',
+        keywords: 'professional tax slabs india, pt rates 2025, tds on salary section 192, form 16 rights, payment of wages act 50 percent deduction limit',
+    },
     '/termination/probation': {
         title: 'Termination During Probation India — Rights & Notice Period',
         description: 'Can employer terminate during probation? Notice period rules, illegal termination scenarios, salary dues, and PF rights during probation in India.',

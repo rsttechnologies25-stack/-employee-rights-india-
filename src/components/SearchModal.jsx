@@ -135,6 +135,14 @@ const SITE_INDEX = [
         keywords: ['ctc deduction scanner', 'salary slip audit', 'employer pf deduction illegal', 'hidden salary deduction'],
         icon: Calculator
     },
+    {
+        title: 'Professional Tax, TDS & Salary Deductions Hub',
+        category: 'Dispute Guide',
+        path: '/professional-tax',
+        description: 'State-wise Professional Tax (PT) slabs, Art 276 Rs 2,500 cap, Income Tax TDS Sec 192 rules, and Form 16 rights.',
+        keywords: ['professional tax', 'pt rates', 'tds on salary', 'form 16', 'salary deductions', 'section 7 limit'],
+        icon: Scale
+    },
 
     // ── CALCULATORS & AUDITORS ──
     {
