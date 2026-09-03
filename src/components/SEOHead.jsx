@@ -5,34 +5,34 @@ const Helmet = HelmetModule.Helmet || (HelmetModule.default && HelmetModule.defa
 
 const BASE_URL = 'https://employee-rights.rexonsofttech.in';
 const OG_IMAGE = `${BASE_URL}/og-image.png`;
-const SITE_NAME = 'Employee Rights India';
-const BRAND = 'EmployeeRightsIndia.in';
+const SITE_NAME = 'Employee Rights India — RexonSoftTech';
+const BRAND = 'RexonSoftTech';
 
 const seoData = {
     '/': {
-        title: 'Employee Rights India — Know Your Labour Law Rights',
-        description: 'Free guide to Indian labour laws. PF, ESI, minimum wages, notice period, gratuity, leave rules, salary rights and how to file complaints. Know your rights today!',
-        keywords: 'employee rights india, indian labour law, worker rights, pf esi rules, notice period india, minimum wages india 2025',
+        title: 'Employee Rights India — RexonSoftTech | Know Your Labour Law Rights',
+        description: 'Free Indian labour law guide by RexonSoftTech (RST Technologies). Salary delay rules, PF, ESI, minimum wages 2025-2026, notice period, gratuity, POSH act, and labour complaint portals.',
+        keywords: 'employee rights rexonsofttech, rexonsofttech employee rights, employee rights india, RST Technologies, indian labour law, worker rights, pf esi rules, notice period india, minimum wages india 2025',
     },
     '/whats-new': {
         title: 'New Labour Laws 2025-2026 India — What Changed for Employees',
         description: 'All latest Indian labour law updates — Budget 2025 ₹12L tax exemption, PF interest 8.25%, 4 Labour Codes status, gig worker rights, POSH digital updates, maternity rights.',
-        keywords: 'new labour laws india 2025 2026, budget 2025 tax exemption, labour code updates india, gig worker rights india, pf interest rate 2025',
+        keywords: 'new labour laws india 2025 2026, budget 2025 tax exemption, labour code updates india, gig worker rights india, pf interest rate 2025, rexonsofttech',
     },
     '/pf-esi': {
         title: 'PF & ESI Rules in India 2025 — Eligibility, Contribution & Rights',
         description: 'Complete guide to Provident Fund (PF) and ESI rules in India. Eligibility, contribution rates, UAN, EPFO grievance and your rights as an employee.',
-        keywords: 'PF rules india 2025, ESI eligibility, EPF contribution, UAN portal, EPFO grievance, ESI benefits india',
+        keywords: 'PF rules india 2025, ESI eligibility, EPF contribution, UAN portal, EPFO grievance, ESI benefits india, rexonsofttech',
     },
     '/contracts': {
         title: 'Employment Bonds & Contracts in India — Are They Legal?',
         description: 'Understanding employment bonds, service agreements, and training bonds in India. Which bonds are legally enforceable and how to protect yourself.',
-        keywords: 'employment bond india, service agreement, bond validity india, training bond legal, employment contract india',
+        keywords: 'employment bond india, service agreement, bond validity india, training bond legal, employment contract india, section 27 contract act',
     },
     '/notice-period': {
         title: 'Notice Period Rules in India 2025 — Salary, Buyout & Rights',
         description: 'Complete guide to notice period rules in India. Salary during notice, buyout options, garden leave, and legal requirements for resignation.',
-        keywords: 'notice period india, notice period salary, buyout notice period, notice period rules 2025',
+        keywords: 'notice period india, notice period salary, buyout notice period, notice period rules 2025, rexonsofttech',
     },
     '/working-hours': {
         title: 'Working Hours & Overtime Rules India 2025 — Know Your Limit',
@@ -52,7 +52,7 @@ const seoData = {
     '/rights': {
         title: 'All Employee Rights India — Complete Labour Law Index',
         description: 'Comprehensive index of all employee rights under Indian labour law. Salary, termination, leave, PF, ESI, gratuity — browse by category.',
-        keywords: 'employee rights india complete, labour rights india, worker protection, all employment law india',
+        keywords: 'employee rights india complete, labour rights india, worker protection, all employment law india, rexonsofttech',
     },
     '/termination/probation': {
         title: 'Termination During Probation India — Rights & Notice Period',
@@ -115,8 +115,8 @@ const seoData = {
         keywords: 'gratuity india 2025, gratuity calculation, gratuity eligibility 5 years, payment of gratuity act, gratuity formula',
     },
     '/tools': {
-        title: 'Free Employee Rights Calculators India — Salary, Gratuity & More',
-        description: 'Free online calculators for Indian employees — salary calculator, gratuity calculator, notice buyout, leave encashment, F&F settlement and income tax.',
+        title: 'Free Employee Rights Calculators India — Salary, Gratuity & Dues',
+        description: 'Free online statutory calculators for Indian employees — take-home salary, gratuity, notice buyout, leave encashment, F&F settlement and income tax.',
         keywords: 'salary calculator india, gratuity calculator india, notice period buyout calculator, FF calculator india, employee tools',
     },
     '/salary-calculator': {
@@ -466,7 +466,7 @@ const seoData = {
     },
     '/about': {
         title: 'About Employee Rights India — Mission & Editorial Standards',
-        description: 'Learn about the mission, research methodology, and team behind Employee Rights India — operated by RexonSoftTech.',
+        description: 'Learn about the mission, research methodology, and team behind Employee Rights India — operated by RexonSoftTech (RST Technologies).',
         keywords: 'about employee rights india, rexonsofttech, rst technologies, labour law research india',
     },
     '/contact': {
@@ -500,13 +500,33 @@ export default function SEOHead({ path, schema }) {
     const data = seoData[path] || seoData['/'];
     const fullUrl = `${BASE_URL}${path}`;
 
+    // Automatic BreadcrumbList Schema for Rich Search Results
+    const breadcrumbSchema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": BASE_URL
+            },
+            ...(path !== '/' ? [{
+                "@type": "ListItem",
+                "position": 2,
+                "name": data.title.split('—')[0].trim(),
+                "item": fullUrl
+            }] : [])
+        ]
+    };
+
     return (
         <Helmet>
             {/* ── Primary ── */}
             <title>{data.title} | {BRAND}</title>
             <meta name="description" content={data.description} />
             <meta name="keywords" content={data.keywords} />
-            <meta name="author" content="RST Technologies" />
+            <meta name="author" content="RexonSoftTech / RST Technologies" />
             <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
             <link rel="canonical" href={fullUrl} />
 
@@ -535,7 +555,12 @@ export default function SEOHead({ path, schema }) {
             <meta name="geo.region" content="IN" />
             <meta name="geo.country" content="India" />
 
-            {/* ── Schema.org JSON-LD ── */}
+            {/* ── Automatic Breadcrumb Schema ── */}
+            <script type="application/ld+json">
+                {JSON.stringify(breadcrumbSchema)}
+            </script>
+
+            {/* ── Custom Schema.org JSON-LD ── */}
             {schema && (
                 <script type="application/ld+json">
                     {JSON.stringify(schema)}
