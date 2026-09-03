@@ -53,7 +53,7 @@ export default function PFChecker() {
                             type="number"
                             value={salary}
                             onChange={(e) => setSalary(e.target.value)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all"
                             placeholder="e.g. 25000"
                             required
                         />
@@ -64,7 +64,7 @@ export default function PFChecker() {
                         <select
                             value={empType}
                             onChange={(e) => setEmpType(e.target.value)}
-                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white dark:bg-gray-950"
+                            className="w-full px-4 py-3 rounded-lg border border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100"
                         >
                             <option value="full-time">Full-time / Probation</option>
                             <option value="paid-intern">Paid Intern</option>
@@ -73,9 +73,9 @@ export default function PFChecker() {
                     </div>
                 </div>
 
-                <div className="bg-blue-50 p-4 rounded-lg flex items-start gap-3">
+                <div className="bg-blue-50 dark:bg-blue-950/30 p-4 rounded-lg flex items-start gap-3 border border-blue-100 dark:border-blue-900/40">
                     <Info className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                    <p className="text-xs text-primary/80 leading-relaxed">
+                    <p className="text-xs text-primary/80 dark:text-blue-300 leading-relaxed">
                         Note: These rules apply only to companies with 20 or more employees (for PF) and 10 or more (for ESI).
                         PF is mandatory from Day 1 for all eligible employees.
                     </p>

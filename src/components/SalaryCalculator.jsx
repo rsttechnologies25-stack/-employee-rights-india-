@@ -42,7 +42,7 @@ export default function SalaryCalculator() {
                             type="number"
                             value={gross}
                             onChange={(e) => setGross(e.target.value)}
-                            className="w-full px-4 py-4 rounded-xl border-2 border-gray-100 dark:border-gray-800 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-xl font-bold"
+                            className="w-full px-4 py-4 rounded-xl border-2 border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-accent focus:ring-4 focus:ring-accent/10 outline-none transition-all text-xl font-bold"
                             placeholder="e.g. 50000"
                         />
                     </div>
@@ -51,15 +51,15 @@ export default function SalaryCalculator() {
                         <h4 className="font-bold text-gray-900 dark:text-gray-100 border-b pb-2">Components Breakdown</h4>
                         <div className="flex justify-between text-sm py-2">
                             <span className="text-gray-500 dark:text-gray-400">Basic Salary (40%)</span>
-                            <span className="font-semibold">₹{basic.toLocaleString()}</span>
+                            <span className="font-semibold text-gray-900 dark:text-gray-100">₹{basic.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between text-sm py-2">
                             <span className="text-gray-500 dark:text-gray-400">HRA (40% of Basic)</span>
-                            <span className="font-semibold">₹{hra.toLocaleString()}</span>
+                            <span className="font-semibold text-gray-900 dark:text-gray-100">₹{hra.toLocaleString()}</span>
                         </div>
                         <div className="flex justify-between text-sm py-2">
                             <span className="text-gray-500 dark:text-gray-400">Other Allowances</span>
-                            <span className="font-semibold">₹{other.toLocaleString()}</span>
+                            <span className="font-semibold text-gray-900 dark:text-gray-100">₹{other.toLocaleString()}</span>
                         </div>
                     </div>
 
