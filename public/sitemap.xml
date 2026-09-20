@@ -1,682 +1,412 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ═══ HOMEPAGE ═══ -->
+  <!-- ═══ HOMEPAGE & HIGHLIGHTS ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <priority>1.00</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/whats-new</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <!-- ═══ CORE RIGHTS ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/rights</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/pf-esi</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/working-hours</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/micromanagement-weekend-work</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/micromanagement</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/micromanagement-weekend-work</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/professional-tax</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.95</priority>
+  </url>
+
+  <!-- ═══ CORE RIGHTS INDEX & GUIDES ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/rights</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/pf-esi</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/working-hours</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/leave-holidays</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/gratuity</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
-
-  <!-- ═══ TERMINATION & EXIT ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/notice-period</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/termination/probation</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/contracts</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/illegal-practices</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <!-- ═══ TERMINATION & EXITS ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/termination/probation</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/termination/after-confirmation</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/termination/wrongful</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/full-final-settlement</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/exit-process</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/pip-guide</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/experience-letter</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/forced-resignation</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/relieving-letter</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/service-certificate</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <!-- ═══ SALARY & TAX ═══ -->
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/minimum-wages</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
     <loc>https://employee-rights.rexonsofttech.in/salary-calculation</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/pay-cycle</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.85</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/delayed-salary</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/form-16-rights</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ═══ DOCUMENTS & LETTERS ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/experience-letter</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/relieving-letter</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/service-certificate</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/templates</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ═══ WORKPLACE RULES ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/contracts</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/illegal-practices</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/moonlighting</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/data-privacy</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ═══ WOMEN'S RIGHTS ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/maternity-rights</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/posh-act</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- ═══ TOOLS & CALCULATORS ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/salary-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/ff-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/form-16-rights</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/notice-buyout-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/leave-encashment-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/salary-proration-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/income-tax-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/minimum-wage-checker</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/overtime-tracker</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/grievance-generator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/clause-analyzer</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/labour-directory</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/severance-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/pf-analyzer</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/pip-defense</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/gratuity-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/exit-scanner</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/legal-map</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/sham-contractor</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/hra-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/maternity-tracker</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/night-shift-audit</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/bonus-analyzer</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/offer-revocation</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/bgv-shield</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/layoff-survival</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/employment-bond-scanner</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/notice-adjustment-calculator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/posh-complaint-builder</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/gig-worker-rights</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/legal-notice-generator</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/ctc-deduction-scanner</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.90</priority>
   </url>
 
-  <!-- ═══ FAQ & COMPLAINT ═══ -->
+  <!-- ═══ GUIDED DECISION TOOLS & CALCULATORS ═══ -->
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/faq</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/tools</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.95</priority>
   </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/complaint-guide</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- ═══ NEW LABOUR CODES ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/wage-code</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/social-security-code</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/osh-code</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes/ir-code</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- ═══ STATE LABOUR LAWS INDEX ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- ═══ STATE DETAIL PAGES — MINIMUM WAGES 2025 ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/tamil-nadu</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/karnataka</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/maharashtra</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/telangana</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/delhi</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/haryana</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/uttar-pradesh</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/kerala</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/west-bengal</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/gujarat</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/punjab</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/andhra-pradesh</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/madhya-pradesh</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/rajasthan</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws/odisha</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ═══ TAMIL NADU HUB ═══ -->
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu-minimum-wages</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/it-software</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/manufacturing</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu/shops-establishments</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- ═══ DECISION TOOLS & DISPUTE GUIDES ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/tools/authority-finder</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.95</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/tools/problem-wizard</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/income-tax-calculator</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/ctc-deduction-scanner</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/grievance-generator</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/legal-notice-generator</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/clause-analyzer</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/employment-bond-scanner</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/pip-defense</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/gratuity-calculator</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tools/minimum-wage-checker</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/tools/evidence-checklist</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/tools/case-timeline-builder</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/tools/posh-complaint-builder</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/disputes/absconding-allegation</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/tools/labour-directory</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/disputes/no-employment-record</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/tools/ff-calculator</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
   <url>
-    <loc>https://employee-rights.rexonsofttech.in/disputes/handover-asset-dispute</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/disputes/data-misuse-allegation</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/trainee-apprentice-rights</loc>
-    <lastmod>2026-09-03</lastmod>
+    <loc>https://employee-rights.rexonsofttech.in/tools/notice-buyout-calculator</loc>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
 
-  <!-- ═══ TRUST & GOVERNANCE ═══ -->
+  <!-- ═══ DISPUTES & DEFENSE ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/disputes/absconding-allegation</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/disputes/no-employment-record</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/disputes/handover-asset-dispute</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/disputes/data-misuse-allegation</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- ═══ HARASSMENT, PRIVACY & WOMEN'S RIGHTS ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/posh-act</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/maternity-rights</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/pip-guide</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/forced-resignation</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- ═══ STATE LAWS & LABOUR CODES ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/state-labour-laws</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/tamil-nadu-minimum-wages</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/minimum-wages</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/new-labour-codes</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <!-- ═══ TEMPLATES, FAQ & GOVERNANCE ═══ -->
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/templates</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/faq</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/complaint-guide</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/about</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.80</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/contact</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/privacy-policy</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/terms</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://employee-rights.rexonsofttech.in/disclaimer</loc>
-    <lastmod>2026-09-03</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/editorial-policy</loc>
-    <lastmod>2026-09-03</lastmod>
+    <lastmod>2026-09-20</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.70</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/privacy-policy</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/terms</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/disclaimer</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
   </url>
 
 </urlset>

@@ -1,12 +1,36 @@
-# robots.txt — Employee Rights India
-# https://employee-rights.rexonsofttech.in
+# ═══════════════════════════════════════════════════════════════════════════════
+# ROBOTS.TXT — RexonSoftTech Employee Rights Portal India
+# Domain: https://employee-rights.rexonsofttech.in
+# Primary Purpose: Search Engine Crawling & Indexing Optimization
+# Last Updated: September 2026
+# ═══════════════════════════════════════════════════════════════════════════════
 
 User-agent: *
 Allow: /
+Allow: /public/
+Allow: /assets/
+Allow: /sitemap.xml
 
-# Disallow build artifacts
+# Block internal build directories, source code, and temp logs
 Disallow: /src/
 Disallow: /.git/
+Disallow: /scratch/
+Disallow: /.system_generated/
+Disallow: /node_modules/
 
-# Sitemaps
+# Specific Search Engine Crawler Directives
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# Sitemap Index Declaration
 Sitemap: https://employee-rights.rexonsofttech.in/sitemap.xml
+Host: https://employee-rights.rexonsofttech.in
