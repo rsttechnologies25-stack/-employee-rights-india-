@@ -42,6 +42,20 @@ export default function PFESIPage() {
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl">Understanding your social security benefits and mandatory contributions under Indian Law.</p>
                 </div>
 
+                {/* EPF Wage Ceiling Hike Info Box */}
+                <div className="mb-8 p-6 bg-blue-50 dark:bg-blue-950/30 rounded-2xl border border-blue-200 dark:border-blue-900/50 space-y-2 text-xs sm:text-sm">
+                    <div className="flex items-center justify-between">
+                        <span className="font-extrabold text-blue-900 dark:text-blue-200 text-base">📈 EPF Statutory Wage Ceiling Revision: ₹15,000 ➔ ₹25,000 Proposal</span>
+                        <span className="badge bg-blue-100 text-blue-800 font-bold">2026 Policy Status</span>
+                    </div>
+                    <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
+                        <strong>Current Rule:</strong> Mandatory EPF contribution is capped at 12% of <strong>₹15,000 Basic pay (max ₹1,800/month)</strong> unless employee & employer voluntarily contribute on full basic.
+                    </p>
+                    <p className="text-blue-800 dark:text-blue-300 leading-relaxed">
+                        <strong>Proposed Revision:</strong> Raising statutory wage ceiling from <strong>₹15,000 to ₹25,000/month</strong> will raise the mandatory monthly PF deduction cap from <strong>₹1,800 to ₹3,000/month</strong>, boosting pension benefits (EPS max cap increases from ₹1,250 to ₹2,083/mo) and extending mandatory EPF protection to millions more salaried workers.
+                    </p>
+                </div>
+
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
                     {cards.map((card, idx) => (
                         <LawCard key={idx} {...card} />
