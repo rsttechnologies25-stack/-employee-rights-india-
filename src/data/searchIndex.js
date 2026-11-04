@@ -26,6 +26,7 @@ export const searchIndex = [
     { title: "HRA Exemption Optimizer (Section 10-13A)", path: "/tools/hra-calculator", type: "Calculator", tags: ["hra", "house rent allowance", "tax exemption", "metro 50%", "rent receipt"] },
     { title: "Maternity Leave Calendar & Tracker", path: "/tools/maternity-tracker", type: "Calculator", tags: ["maternity", "26 weeks", "pregnancy leave", "maternity benefit", "80 days rule"] },
     { title: "Statutory Bonus Analyzer (8.33% to 20%)", path: "/tools/bonus-analyzer", type: "Calculator", tags: ["bonus", "annual bonus", "payment of bonus act", "8.33%", "statutory bonus"] },
+    { title: "Diwali Bonus Rules 2026 & Festive Bonus Calculator", path: "/diwali-bonus", type: "Calculator", tags: ["diwali bonus", "festive bonus", "statutory bonus", "railway bonus 78 days", "central govt adhoc bonus", "november 30 deadline", "payment of bonus act"] },
     { title: "Severance Pay Calculator (Section 25F)", path: "/tools/severance-calculator", type: "Calculator", tags: ["severance", "retrenchment", "layoff compensation", "15 days average pay"] },
 
     // ── Complaint & Generator Tools ──

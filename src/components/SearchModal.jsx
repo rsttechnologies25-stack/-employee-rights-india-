@@ -143,6 +143,14 @@ const SITE_INDEX = [
         keywords: ['professional tax', 'pt rates', 'tds on salary', 'form 16', 'salary deductions', 'section 7 limit'],
         icon: Scale
     },
+    {
+        title: 'Diwali Bonus Rules 2026 & Statutory Festive Bonus Calculator',
+        category: 'Dispute Guide',
+        path: '/diwali-bonus',
+        description: 'Payment of Bonus Act 1965 rules, 8.33% to 20% calculation, ₹7,000 ceiling, Railway 78-day PLB, Central Govt ad-hoc bonus, and notice period rights.',
+        keywords: ['diwali bonus', 'festive bonus', 'statutory bonus', 'payment of bonus act', '8.33% bonus', 'railway bonus 78 days', 'central govt bonus 30 days', 'diwali gift tax'],
+        icon: Scale
+    },
 
     // ── CALCULATORS & AUDITORS ──
     {

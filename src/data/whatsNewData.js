@@ -1,10 +1,31 @@
 /* ─────────────────────────────────────────────────────────────────────────────
    WHAT'S NEW 2025-2026 — Indian Labour Law & Statutory Updates
-   Sources: Budget 2025-2026, EPFO Circulars, MoL Notifications, State Gazettes, DPDP Rules
-   Last Verified: September 2026
+   Sources: Budget 2025-2026, EPFO Circulars, MoL Notifications, Railway Board Orders, State Gazettes
+   Last Verified: November 2026
 ───────────────────────────────────────────────────────────────────────────── */
 
 export const latestUpdates = [
+    {
+        id: 'diwali-statutory-bonus-2026',
+        category: 'Benefits',
+        badge: '🪔 Diwali 2026 Live',
+        badgeColor: 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-300',
+        icon: '🪔',
+        title: 'Diwali Bonus 2026: 78-Day Railway PLB, 30-Day Central Govt Ad-hoc & Nov 30 Deadline',
+        effectiveDate: 'Festive Season (November 2026)',
+        summary: 'Statutory deadline for private employers to pay annual bonus (8.33% to 20%) under Payment of Bonus Act closes on 30th November. Railways notified 78 days PLB (RBE No. 84/2026, max ₹17,951) and Central Govt released 30-day non-PLB ad-hoc bonus (max ₹6,908).',
+        details: [
+            'Payment of Bonus Act Section 19: All eligible private sector employees must receive statutory bonus by 30th November.',
+            'Minimum 8.33% Bonus: Mandatory for all employees with Basic ≤ ₹21,000 who worked 30+ days, even if the employer incurs a net financial loss.',
+            'Notice Period Safe: Employers cannot forfeit statutory bonus if an employee is on notice period or has resigned; active employee clauses are void.',
+            'Indian Railways 78-Day PLB: Railway Board (RBE No. 84/2026) sanctioned 78 days wages (capped at ₹17,951) for eligible non-gazetted staff.',
+            'Central Government 30-Day Ad-hoc: Ministry of Finance authorized 30 days emoluments (max ₹6,908 based on ₹7,000 ceiling) for Group C & Non-Gazetted Group B.',
+            'Diwali Gift Vouchers: Non-cash gifts/vouchers in kind are tax-exempt up to an aggregate of ₹15,000 per financial year under updated perquisite rules.',
+        ],
+        link: '/diwali-bonus',
+        linkLabel: 'Diwali Bonus Hub & Calculator',
+        severity: 'high',
+    },
     {
         id: 'epfo-3-auto-settlement-2026',
         category: 'PF & ESI',

@@ -19,7 +19,8 @@ const navGroups = [
             { to: '/maternity-rights', label: '👩 Maternity Benefit Rights (26 Weeks)' },
             { to: '/working-hours', label: '⏰ Working Hours & Overtime Rules' },
             { to: '/leave-holidays', label: '🏖️ Earned Leave & Encashment' },
-            { to: '/professional-tax', label: '📊 Professional Tax & TDS Rights' }
+            { to: '/professional-tax', label: '📊 Professional Tax & TDS Rights' },
+            { to: '/diwali-bonus', label: '🪔 Diwali & Statutory Bonus Rules (2026)' }
         ]
     },
     {

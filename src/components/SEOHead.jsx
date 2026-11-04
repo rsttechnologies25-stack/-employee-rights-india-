@@ -69,6 +69,16 @@ const seoData = {
         description: 'State-wise Professional Tax (PT) slabs, Article 276 Rs 2,500 cap, Income Tax TDS Sec 192 rules, Form 16 rights, and Sec 7 50% deduction limit.',
         keywords: 'professional tax slabs india, pt rates 2025, tds on salary section 192, form 16 rights, payment of wages act 50 percent deduction limit',
     },
+    '/diwali-bonus': {
+        title: 'Diwali Bonus Rules 2026: 8.33% to 20% Calculator, Central Govt & Railway PLB',
+        description: 'Comprehensive guide to Diwali & Statutory Festive Bonus under Payment of Bonus Act 1965. Calculate statutory bonus, check 78-day Railway PLB, Central Govt 30-day ad-hoc bonus, and notice period rights.',
+        keywords: 'diwali bonus rules 2026, payment of bonus act 1965, diwali bonus calculator, 8.33 percent statutory bonus, railway plb 78 days 2026, central govt adhoc bonus 30 days, can employer withhold diwali bonus, diwali gift tax exemption',
+    },
+    '/festive-bonus': {
+        title: 'Festive & Statutory Bonus Rules India (2026)',
+        description: 'Know your statutory rights to annual festive bonus under Payment of Bonus Act, 1965.',
+        keywords: 'festive bonus india, diwali bonus 2026, payment of bonus act 1965',
+    },
     '/termination/probation': {
         title: 'Termination During Probation India — Rights & Notice Period',
         description: 'Can employer terminate during probation? Notice period rules, illegal termination scenarios, salary dues, and PF rights during probation in India.',

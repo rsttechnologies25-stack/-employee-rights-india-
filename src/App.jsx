@@ -28,6 +28,7 @@ const RelievingLetterPage = lazy(() => import('./pages/RelievingLetterPage'));
 const ServiceCertificatePage = lazy(() => import('./pages/ServiceCertificatePage'));
 const SalaryCalculationPage = lazy(() => import('./pages/SalaryCalculationPage'));
 const ProfessionalTaxPage = lazy(() => import('./pages/ProfessionalTaxPage'));
+const DiwaliBonusPage = lazy(() => import('./pages/DiwaliBonusPage'));
 const PayCyclePage = lazy(() => import('./pages/PayCyclePage'));
 const DelayedSalaryPage = lazy(() => import('./pages/DelayedSalaryPage'));
 const GratuityPage = lazy(() => import('./pages/GratuityPage'));
@@ -179,6 +180,8 @@ function App() {
                                 <Route path="/pay-cycle" element={<PayCyclePage />} />
                                 <Route path="/delayed-salary" element={<DelayedSalaryPage />} />
                                 <Route path="/gratuity" element={<GratuityPage />} />
+                                <Route path="/diwali-bonus" element={<DiwaliBonusPage />} />
+                                <Route path="/festive-bonus" element={<Navigate to="/diwali-bonus" replace />} />
 
                                 {/* Tools & Calculators */}
                                 <Route path="/tools" element={<ToolsPage />} />

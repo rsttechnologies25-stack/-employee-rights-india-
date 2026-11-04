@@ -4,13 +4,13 @@
   <!-- ═══ HOMEPAGE & HIGHLIGHTS ═══ -->
   <url>
     <loc>https://employee-rights.rexonsofttech.in/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/whats-new</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
@@ -28,7 +28,13 @@
   </url>
   <url>
     <loc>https://employee-rights.rexonsofttech.in/professional-tax</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://employee-rights.rexonsofttech.in/diwali-bonus</loc>
+    <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
