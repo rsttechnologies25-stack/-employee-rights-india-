@@ -1,7 +1,7 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
-import { Gift, AlertTriangle, CheckCircle, Scale, Coins, Briefcase } from 'lucide-react';
+import { Gift, AlertTriangle, CheckCircle, Scale, Coins, Briefcase, ArrowRight, Sparkles } from 'lucide-react';
 import Breadcrumb from '../components/Breadcrumb';
 
 export default function BonusAnalyzerPage() {
@@ -86,6 +86,20 @@ export default function BonusAnalyzerPage() {
                     <p className="text-gray-600 dark:text-gray-400 text-lg">
                         HR often claims you forfeit your annual bonus or variable pay if you resign. Use this tool to instantly check if their claim is legally enforceable or an illegal wage deduction.
                     </p>
+
+                    <div className="mt-4 p-4 bg-gradient-to-r from-amber-500/10 via-orange-500/10 to-red-500/10 rounded-2xl border border-amber-500/20 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
+                        <div className="flex items-center gap-2.5 text-sm font-medium text-gray-800 dark:text-gray-200">
+                            <Sparkles className="w-5 h-5 text-amber-500 flex-shrink-0" />
+                            <span>Looking for 2026 Diwali Bonus rules, IT Sector Variable Pay, or 78-day Railway PLB calculations?</span>
+                        </div>
+                        <Link 
+                            to="/diwali-bonus" 
+                            className="inline-flex items-center gap-1.5 px-4 py-2 bg-amber-600 text-white rounded-xl text-xs font-bold hover:bg-amber-700 transition-colors whitespace-nowrap self-start sm:self-auto"
+                        >
+                            Open Diwali & IT Hub
+                            <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
+                    </div>
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">

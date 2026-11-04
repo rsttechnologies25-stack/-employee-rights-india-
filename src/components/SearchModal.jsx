@@ -144,11 +144,11 @@ const SITE_INDEX = [
         icon: Scale
     },
     {
-        title: 'Diwali Bonus Rules 2026 & Statutory Festive Bonus Calculator',
+        title: 'Diwali & IT Employee Bonus Hub (2026): Statutory & Variable Pay',
         category: 'Dispute Guide',
         path: '/diwali-bonus',
-        description: 'Payment of Bonus Act 1965 rules, 8.33% to 20% calculation, ₹7,000 ceiling, Railway 78-day PLB, Central Govt ad-hoc bonus, and notice period rights.',
-        keywords: ['diwali bonus', 'festive bonus', 'statutory bonus', 'payment of bonus act', '8.33% bonus', 'railway bonus 78 days', 'central govt bonus 30 days', 'diwali gift tax'],
+        description: 'Payment of Bonus Act 1965 rules, IT sector variable pay, active employee clause defense, joining bonus clawbacks, 78-day Railway PLB, and tax rules.',
+        keywords: ['diwali bonus', 'it employee bonus', 'variable pay notice period', 'signing bonus clawback', 'pli bonus', 'statutory bonus', 'payment of bonus act', '8.33% bonus', 'railway bonus 78 days', 'central govt bonus 30 days'],
         icon: Scale
     },
 

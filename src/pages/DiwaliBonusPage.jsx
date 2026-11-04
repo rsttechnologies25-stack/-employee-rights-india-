@@ -6,7 +6,8 @@ import InternalLinks from '../components/InternalLinks';
 import { 
     Gift, Sparkles, Calculator, Scale, AlertTriangle, CheckCircle2, 
     HelpCircle, FileText, Building2, Calendar, Coins, ShieldCheck, 
-    Copy, Check, Info, Train, Percent
+    Copy, Check, Info, Train, Percent, Laptop, Code, Terminal, 
+    Briefcase, Layers, ArrowRight, AlertCircle
 } from 'lucide-react';
 
 export default function DiwaliBonusPage() {
@@ -19,8 +20,12 @@ export default function DiwaliBonusPage() {
     const [corpBonusType, setCorpBonusType] = useState('fixed'); // fixed or percent
     const [corpAmount, setCorpAmount] = useState(25000);
 
-    // Copy template state
-    const [copied, setCopied] = useState(false);
+    // IT Bonus Explorer Tab
+    const [itBonusTab, setItBonusTab] = useState('variable'); // variable, quarterly, joining, retention, freshers
+
+    // Copy template states
+    const [copiedStatutory, setCopiedStatutory] = useState(false);
+    const [copiedIT, setCopiedIT] = useState(false);
 
     // Diagnostic Wizard States
     const [wizardSector, setWizardSector] = useState('private'); // private, central, railway, tech
@@ -170,8 +175,8 @@ export default function DiwaliBonusPage() {
         };
     }, [wizardSector, wizardBasic, wizardDays, wizardStatus]);
 
-    // Copy demand letter
-    const copyTemplate = () => {
+    // Copy statutory demand letter
+    const copyStatutoryTemplate = () => {
         const text = `To,
 The Head of Human Resources / Payroll Department
 [Company / Establishment Name]
@@ -209,14 +214,77 @@ Yours sincerely,
 Date: [Current Date]`;
 
         navigator.clipboard.writeText(text);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 3000);
+        setCopiedStatutory(true);
+        setTimeout(() => setCopiedStatutory(false), 3000);
+    };
+
+    // Copy IT Variable Pay demand letter
+    const copyITTemplate = () => {
+        const text = `To,
+The Head of Human Resources & Payroll
+[IT / Tech Company Name]
+[Company Address / Location]
+
+Subject: Formal Request for Disbursement of Earned Variable Pay / Performance Bonus in Full & Final Settlement — Ref: [Employee ID]
+
+Dear HR Team,
+
+I am writing regarding my Full and Final (F&F) settlement following my resignation tendered on [Date of Resignation] and subsequent relief on [Last Working Day].
+
+I note with concern that my earned Variable Pay / Performance-Linked Incentive (PLI) amounting to approximately ₹[Estimated Amount] for the performance appraisal cycle [e.g., FY 2024-25 / Q3-Q4] has been withheld, citing an internal "active employee on date of disbursement" policy.
+
+I wish to bring the following legal and contractual principles to your attention:
+
+1. Performance Cycle Completed:
+I have rendered 100% of my services and achieved my assigned project milestones and KPIs for the appraisal period [Start Date to End Date]. The corresponding performance appraisal rating granted to me was [Your Rating / Score].
+
+2. Earned Wages vs. Discretionary Gift:
+Under the Indian Contract Act, 1872, variable compensation that has accrued based on services rendered and targets met constitutes earned wages. It is not an ex-gratia gift that can be arbitrarily cancelled after the work has been extracted.
+
+3. Invalidity of Forfeiture under Section 27:
+Withholding earned compensation solely because an employee exercised their lawful right to resign and served a contractual notice period is an unfair restraint of employment and an unconscionable contractual forfeiture under Section 27 of the Indian Contract Act. Indian High Courts and Labour Tribunals have repeatedly held that companies cannot unjustly enrich themselves by denying accrued performance remuneration to separating employees.
+
+4. Demand:
+I request you to release my earned variable pay pro-rata / in full in my revised Full & Final (F&F) statement within seven (7) working days, along with a detailed computation sheet.
+
+Kindly confirm receipt and the expected date of disbursement.
+
+Yours sincerely,
+[Your Name]
+[Employee ID]
+[Designation]
+[Phone Number]
+[Email Address]`;
+
+        navigator.clipboard.writeText(text);
+        setCopiedIT(true);
+        setTimeout(() => setCopiedIT(false), 3000);
     };
 
     const diwaliFaqs = [
         {
             question: "Is Diwali Bonus mandatory for all private companies in India?",
             answer: "Under the Payment of Bonus Act, 1965, statutory bonus is MANDATORY for every factory and every establishment employing 20 or more persons (and 10+ in certain states like Maharashtra). Any employee drawing a Basic Salary + DA up to ₹21,000 per month who has worked for at least 30 working days in the financial year has an absolute statutory right to receive a minimum bonus of 8.33% of their salary, even if the employer incurs financial losses."
+        },
+        {
+            question: "Does the Payment of Bonus Act apply to IT/Software companies like TCS, Infosys, and Wipro?",
+            answer: "YES. IT and software service companies are registered commercial establishments under State Shops and Establishments Acts. Therefore, the Payment of Bonus Act, 1965 legally applies to them. However, it is mandatory only for employees whose monthly Basic Salary + DA is ₹21,000 or less (such as freshers, trainees, BPO/ITES executives, and technical support staff). For engineers earning > ₹21,000 basic, bonuses are contractual (Variable Pay / PLI)."
+        },
+        {
+            question: "Why does my IT company salary slip show 'Advance Statutory Bonus' or 'Bonus Allowance' every month?",
+            answer: "To avoid paying a large lump-sum bonus ahead of Diwali and to ensure compliance with the Payment of Bonus Act, many large IT companies (including TCS, Infosys, and Cognizant) split the 8.33% annual statutory bonus into 12 monthly installments. If your payslip has a line item called 'Statutory Bonus' or 'Advance Bonus' every month, your employer is prepaying your annual bonus in your monthly salary."
+        },
+        {
+            question: "Can an IT employer forfeit my variable pay if I resign during the notice period after completing the full appraisal year?",
+            answer: "Under Indian Contract law (Section 27 & doctrine of quantum meruit), if you completed 100% of the appraisal cycle and met your targets, that variable pay is 'earned wages', not an unaccrued future benefit. While companies insert 'active employee on payout date' clauses in their HR policies, withholding earned pay solely because you exercised your right to resign can be legally contested through an advocate notice or labour commissioner complaint."
+        },
+        {
+            question: "Is a Joining/Sign-on Bonus clawback legal if I leave the IT company within 1 year?",
+            answer: "YES. Under Section 74 of the Indian Contract Act, reasonable sign-on bonus clawback clauses are enforceable as liquidated damages. However, the employer CANNOT recover more than what they paid you, and they cannot demand the gross amount if they already deducted TDS without offering a tax adjustment certificate (revised Form 24Q)."
+        },
+        {
+            question: "Can IT companies cut quarterly variable pay (e.g. paying only 60% instead of 100%) due to project margins?",
+            answer: "If your appointment letter or company policy states that variable pay is 'discretionary and linked to company, business unit, and individual performance', broad-based company-wide cuts (e.g., 60% or 70% payouts across a business unit) are contractual and legally defensible. However, singling out an individual for zero payout without a documented negative appraisal can be challenged."
         },
         {
             question: "What is the statutory deadline for employers to pay the Diwali Bonus?",
@@ -228,7 +296,7 @@ Date: [Current Date]`;
         },
         {
             question: "Can HR withhold my Diwali bonus because I am serving my notice period or recently resigned?",
-            answer: "ABSOLUTELY NOT. Under the Payment of Bonus Act, statutory bonus is an earned wage right based on the working days completed in the preceding financial year. Employers often cite internal 'active employee on payout date' policies, but Indian courts have consistently ruled that contractual employment clauses cannot override statutory enactments. Pro-rata bonus must be paid in your Full & Final (F&F) settlement."
+            answer: "ABSOLUTELY NOT for statutory bonus. Under the Payment of Bonus Act, statutory bonus is an earned wage right based on the working days completed in the preceding financial year. Employers often cite internal 'active employee on payout date' policies, but Indian courts have consistently ruled that contractual employment clauses cannot override statutory enactments. Pro-rata bonus must be paid in your Full & Final (F&F) settlement."
         },
         {
             question: "What is the minimum and maximum statutory bonus percentage?",
@@ -275,10 +343,10 @@ Date: [Current Date]`;
     return (
         <div className="py-10 px-4 bg-gray-50 dark:bg-gray-900 min-h-screen">
             <SEOHead 
-                title="Diwali Bonus Rules 2026: Eligibility, 8.33% to 20% Calculator & Legal Rights India"
-                description="Comprehensive guide to Diwali & Statutory Bonus in India under Payment of Bonus Act 1965. Calculate your bonus, check notice period rules, 78-day Railway PLB, Central Govt 30-day ad-hoc bonus, and tax rules."
+                title="Diwali Bonus Rules 2026: IT Variable Pay, 8.33% Calculator & Legal Rights India"
+                description="Comprehensive guide to Diwali & Statutory Bonus in India under Payment of Bonus Act 1965. Covers IT variable pay notice period rights, signing bonus clawbacks, 78-day Railway PLB, and tax rules."
                 path="/diwali-bonus"
-                keywords="diwali bonus rules 2026, payment of bonus act 1965, diwali bonus calculator india, statutory bonus 8.33 percent, railway plb 78 days 2026, central govt adhoc bonus 30 days, can employer withhold diwali bonus notice period, diwali bonus tax exemption gift voucher 15000"
+                keywords="diwali bonus rules 2026, payment of bonus act 1965, it employees bonus rules india, variable pay notice period, signing bonus clawback legal, diwali bonus calculator india, statutory bonus 8.33 percent, railway plb 78 days 2026, central govt adhoc bonus 30 days"
             />
 
             <div className="max-w-5xl mx-auto space-y-10">
@@ -295,14 +363,14 @@ Date: [Current Date]`;
                     <div className="relative z-10">
                         <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/20 backdrop-blur-md text-amber-100 text-xs md:text-sm font-semibold mb-4 border border-white/20">
                             <Sparkles className="w-4 h-4 text-yellow-300" />
-                            Festive & Statutory Bonus Master Hub • Updated November 2026
+                            Festive, Statutory & IT Variable Pay Master Hub • Updated November 2026
                         </div>
                         <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4 flex items-center gap-3">
                             <Gift className="w-9 h-9 md:w-12 h-12 text-yellow-300 flex-shrink-0" />
-                            Diwali Bonus & Statutory Rights Guide (2026)
+                            Diwali & IT Employee Bonus Rights Guide (2026)
                         </h1>
                         <p className="text-amber-100 text-lg md:text-xl max-w-3xl leading-relaxed">
-                            Everything you need to know about your annual festive bonus in India: <strong>Payment of Bonus Act 1965</strong>, 8.33% to 20% statutory calculations, 30-day Central Govt ad-hoc bonus, 78-day Railway PLB, and legal protections against HR withholding.
+                            Complete guide covering <strong>Payment of Bonus Act 1965</strong> (8.33% to 20%), <strong>IT Sector Variable Pay & Notice Period Rights</strong>, Signing Bonus Clawback rules, 30-day Central Govt ad-hoc bonus, and 78-day Railway PLB.
                         </p>
 
                         <div className="mt-8 flex flex-wrap gap-4 text-sm font-medium">
@@ -311,8 +379,8 @@ Date: [Current Date]`;
                                 <span>Statutory Deadline: <strong>30th November</strong> (Sec 19)</span>
                             </div>
                             <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15 flex items-center gap-2">
-                                <Scale className="w-4 h-4 text-yellow-300" />
-                                <span>Wage Eligibility: <strong>Basic ≤ ₹21,000/mo</strong></span>
+                                <Laptop className="w-4 h-4 text-yellow-300" />
+                                <span>IT & Tech: <strong>Variable Pay & Active Clause Defense</strong></span>
                             </div>
                             <div className="bg-white/10 backdrop-blur-md px-4 py-2 rounded-xl border border-white/15 flex items-center gap-2">
                                 <Percent className="w-4 h-4 text-yellow-300" />
@@ -328,9 +396,19 @@ Date: [Current Date]`;
                         <div className="w-10 h-10 rounded-xl bg-amber-100 dark:bg-amber-900/40 text-amber-600 dark:text-amber-400 flex items-center justify-center mb-3">
                             <Scale className="w-5 h-5" />
                         </div>
-                        <h2 className="font-bold text-gray-900 dark:text-white mb-1">Private Sector</h2>
+                        <h2 className="font-bold text-gray-900 dark:text-white mb-1">Private / Factory</h2>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
                             Min 8.33% to Max 20% under Payment of Bonus Act. Mandatory for ₹21k basic in 20+ worker units.
+                        </p>
+                    </div>
+
+                    <div className="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
+                        <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
+                            <Laptop className="w-5 h-5" />
+                        </div>
+                        <h2 className="font-bold text-gray-900 dark:text-white mb-1">IT & Software Tech</h2>
+                        <p className="text-xs text-gray-600 dark:text-gray-400">
+                            Freshers covered under Act; mid/senior protected against arbitrary variable pay forfeiture on exit.
                         </p>
                     </div>
 
@@ -351,16 +429,6 @@ Date: [Current Date]`;
                         <h2 className="font-bold text-gray-900 dark:text-white mb-1">Central Government</h2>
                         <p className="text-xs text-gray-600 dark:text-gray-400">
                             30 days Non-PLB (ad-hoc) bonus for Group C & Non-Gazetted Group B capped at ₹6,908.
-                        </p>
-                    </div>
-
-                    <div className="bg-white dark:bg-gray-800 p-5 rounded-2xl border border-gray-200 dark:border-gray-700 shadow-sm">
-                        <div className="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-3">
-                            <ShieldCheck className="w-5 h-5" />
-                        </div>
-                        <h2 className="font-bold text-gray-900 dark:text-white mb-1">Notice Period Safe</h2>
-                        <p className="text-xs text-gray-600 dark:text-gray-400">
-                            Resigning or serving notice DOES NOT forfeit your statutory bonus. Active clauses are illegal.
                         </p>
                     </div>
                 </div>
@@ -390,6 +458,12 @@ Date: [Current Date]`;
                                 🏭 Statutory (Private)
                             </button>
                             <button
+                                onClick={() => setCalcTab('corporate')}
+                                className={`px-3 py-2 rounded-xl transition-all ${calcTab === 'corporate' ? 'bg-white dark:bg-gray-800 text-emerald-600 dark:text-emerald-400 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                💻 IT / Corporate Variable
+                            </button>
+                            <button
                                 onClick={() => setCalcTab('railway_plb')}
                                 className={`px-3 py-2 rounded-xl transition-all ${calcTab === 'railway_plb' ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
                             >
@@ -400,12 +474,6 @@ Date: [Current Date]`;
                                 className={`px-3 py-2 rounded-xl transition-all ${calcTab === 'central_adhoc' ? 'bg-white dark:bg-gray-800 text-purple-600 dark:text-purple-400 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
                             >
                                 🏛️ Central Govt (30 Days)
-                            </button>
-                            <button
-                                onClick={() => setCalcTab('corporate')}
-                                className={`px-3 py-2 rounded-xl transition-all ${calcTab === 'corporate' ? 'bg-white dark:bg-gray-800 text-emerald-600 dark:text-emerald-400 shadow-sm' : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
-                            >
-                                💻 IT / Corporate Ex-Gratia
                             </button>
                         </div>
                     </div>
@@ -529,7 +597,102 @@ Date: [Current Date]`;
                         </div>
                     )}
 
-                    {/* Mode 2: Railway PLB */}
+                    {/* Mode 2: Corporate / IT */}
+                    {calcTab === 'corporate' && (
+                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                            <div className="lg:col-span-6 space-y-5">
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
+                                        Festive / Variable Bonus Structure in IT Offer Letter
+                                    </label>
+                                    <div className="flex gap-3">
+                                        <button 
+                                            onClick={() => setCorpBonusType('fixed')}
+                                            className={`flex-1 py-2.5 rounded-xl font-semibold text-xs border transition-all ${corpBonusType === 'fixed' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700'}`}
+                                        >
+                                            Fixed Amount (₹)
+                                        </button>
+                                        <button 
+                                            onClick={() => setCorpBonusType('percent')}
+                                            className={`flex-1 py-2.5 rounded-xl font-semibold text-xs border transition-all ${corpBonusType === 'percent' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700'}`}
+                                        >
+                                            % of Annual CTC / Basic
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
+                                        {corpBonusType === 'fixed' ? 'Annual Variable Component / Festive Bonus (₹)' : 'Variable Pay Percentage (%)'}
+                                    </label>
+                                    <input 
+                                        type="number"
+                                        value={corpAmount}
+                                        onChange={(e) => setCorpAmount(e.target.value)}
+                                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-emerald-500 font-medium"
+                                        placeholder={corpBonusType === 'fixed' ? "e.g. 150000" : "e.g. 15"}
+                                    />
+                                </div>
+
+                                <div>
+                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
+                                        Months Worked in Performance Appraisal Year
+                                    </label>
+                                    <select 
+                                        value={monthsWorked}
+                                        onChange={(e) => setMonthsWorked(Number(e.target.value))}
+                                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-emerald-500 font-medium"
+                                    >
+                                        {[...Array(12)].map((_, i) => (
+                                            <option key={i + 1} value={i + 1}>{i + 1} Month{i > 0 ? 's' : ''}</option>
+                                        ))}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div className="lg:col-span-6 bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 flex flex-col justify-between">
+                                <div>
+                                    <div className="flex items-center justify-between mb-4">
+                                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
+                                            Contractual Pro-Rata Variable Pay
+                                        </span>
+                                        <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
+                                            IT Industry Standard
+                                        </span>
+                                    </div>
+
+                                    <div className="text-4xl md:text-5xl font-black text-emerald-900 dark:text-emerald-100 mb-2">
+                                        ₹{Math.round(((Number(corpAmount) || 0) * monthsWorked) / 12).toLocaleString('en-IN')}
+                                    </div>
+                                    <p className="text-xs text-emerald-800/80 dark:text-emerald-300/80 mb-6">
+                                        Pro-rata share for {monthsWorked} month{monthsWorked > 1 ? 's' : ''} service out of full 12 months.
+                                    </p>
+
+                                    <div className="space-y-2 text-xs text-gray-700 dark:text-gray-300 bg-white/70 dark:bg-gray-900/70 p-4 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Governing Statute:</span>
+                                            <span className="font-bold text-gray-900 dark:text-white">Indian Contract Act, 1872</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Notice Period Withholding:</span>
+                                            <span className="font-semibold text-amber-600 dark:text-amber-400">Contestable under Sec 27 & Quantum Meruit</span>
+                                        </div>
+                                        <div className="flex justify-between">
+                                            <span className="text-gray-500">Tax Treatment:</span>
+                                            <span className="font-bold text-gray-900 dark:text-white">TDS Sec 192 Applies</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div className="mt-5 pt-4 border-t border-emerald-200/60 dark:border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-900 dark:text-emerald-200">
+                                    <Info className="w-4 h-4 text-emerald-600 flex-shrink-0" />
+                                    <span>If you completed 100% of the appraisal cycle, variable pay is earned wages.</span>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+
+                    {/* Mode 3: Railway PLB */}
                     {calcTab === 'railway_plb' && (
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                             <div className="lg:col-span-6 space-y-5">
@@ -604,7 +767,7 @@ Date: [Current Date]`;
                         </div>
                     )}
 
-                    {/* Mode 3: Central Govt Adhoc */}
+                    {/* Mode 4: Central Govt Adhoc */}
                     {calcTab === 'central_adhoc' && (
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
                             <div className="lg:col-span-6 space-y-5">
@@ -680,101 +843,6 @@ Date: [Current Date]`;
                             </div>
                         </div>
                     )}
-
-                    {/* Mode 4: Corporate / IT */}
-                    {calcTab === 'corporate' && (
-                        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-                            <div className="lg:col-span-6 space-y-5">
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                                        Festive Bonus Arrangement in Offer Letter / CTC
-                                    </label>
-                                    <div className="flex gap-3">
-                                        <button 
-                                            onClick={() => setCorpBonusType('fixed')}
-                                            className={`flex-1 py-2.5 rounded-xl font-semibold text-xs border transition-all ${corpBonusType === 'fixed' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700'}`}
-                                        >
-                                            Fixed Festive Amount (₹)
-                                        </button>
-                                        <button 
-                                            onClick={() => setCorpBonusType('percent')}
-                                            className={`flex-1 py-2.5 rounded-xl font-semibold text-xs border transition-all ${corpBonusType === 'percent' ? 'bg-emerald-600 text-white border-emerald-600' : 'bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border-gray-200 dark:border-gray-700'}`}
-                                        >
-                                            % of Annual CTC / Basic
-                                        </button>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                                        {corpBonusType === 'fixed' ? 'Contracted Festive Amount (₹)' : 'Bonus Percentage (%)'}
-                                    </label>
-                                    <input 
-                                        type="number"
-                                        value={corpAmount}
-                                        onChange={(e) => setCorpAmount(e.target.value)}
-                                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-emerald-500 font-medium"
-                                        placeholder={corpBonusType === 'fixed' ? "e.g. 25000" : "e.g. 10"}
-                                    />
-                                </div>
-
-                                <div>
-                                    <label className="block text-sm font-semibold text-gray-800 dark:text-gray-200 mb-1">
-                                        Months Worked in Current Appraisal Year
-                                    </label>
-                                    <select 
-                                        value={monthsWorked}
-                                        onChange={(e) => setMonthsWorked(Number(e.target.value))}
-                                        className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl focus:ring-2 focus:ring-emerald-500 font-medium"
-                                    >
-                                        {[...Array(12)].map((_, i) => (
-                                            <option key={i + 1} value={i + 1}>{i + 1} Month{i > 0 ? 's' : ''}</option>
-                                        ))}
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="lg:col-span-6 bg-emerald-50 dark:bg-emerald-950/30 p-6 rounded-2xl border border-emerald-200 dark:border-emerald-800 flex flex-col justify-between">
-                                <div>
-                                    <div className="flex items-center justify-between mb-4">
-                                        <span className="text-xs font-bold uppercase tracking-wider text-emerald-800 dark:text-emerald-300">
-                                            Contractual Pro-Rata Bonus
-                                        </span>
-                                        <span className="px-2.5 py-1 rounded-full text-xs font-bold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
-                                            Private Contract Law
-                                        </span>
-                                    </div>
-
-                                    <div className="text-4xl md:text-5xl font-black text-emerald-900 dark:text-emerald-100 mb-2">
-                                        ₹{Math.round(((Number(corpAmount) || 0) * monthsWorked) / 12).toLocaleString('en-IN')}
-                                    </div>
-                                    <p className="text-xs text-emerald-800/80 dark:text-emerald-300/80 mb-6">
-                                        Pro-rata share for {monthsWorked} month{monthsWorked > 1 ? 's' : ''} service out of full 12 months.
-                                    </p>
-
-                                    <div className="space-y-2 text-xs text-gray-700 dark:text-gray-300 bg-white/70 dark:bg-gray-900/70 p-4 rounded-xl border border-emerald-100 dark:border-emerald-900/50">
-                                        <div className="flex justify-between">
-                                            <span className="text-gray-500">Governing Statute:</span>
-                                            <span className="font-bold text-gray-900 dark:text-white">Indian Contract Act, 1872</span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-gray-500">Notice Period Withholding:</span>
-                                            <span className="font-semibold text-amber-600 dark:text-amber-400">Contestable if cycle completed</span>
-                                        </div>
-                                        <div className="flex justify-between">
-                                            <span className="text-gray-500">Tax Treatment:</span>
-                                            <span className="font-bold text-gray-900 dark:text-white">TDS Sec 192 Applies</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="mt-5 pt-4 border-t border-emerald-200/60 dark:border-emerald-800/60 flex items-center gap-2 text-xs text-emerald-900 dark:text-emerald-200">
-                                    <Info className="w-4 h-4 text-emerald-600 flex-shrink-0" />
-                                    <span>If "Bonus" is part of your CTC breakdown, withholding it is an illegal salary deduction.</span>
-                                </div>
-                            </div>
-                        </div>
-                    )}
                 </div>
 
                 {/* ── "Am I Entitled to Diwali Bonus?" Diagnostic Wizard ── */}
@@ -804,9 +872,9 @@ Date: [Current Date]`;
                                 className="w-full p-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm font-semibold"
                             >
                                 <option value="private">Private Company / Factory</option>
+                                <option value="tech">IT / Startup / Corporate</option>
                                 <option value="railway">Indian Railways</option>
                                 <option value="central">Central Govt Civilian</option>
-                                <option value="tech">IT / Startup / Corporate</option>
                             </select>
                         </div>
 
@@ -895,6 +963,240 @@ Date: [Current Date]`;
                                     </p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* ── IT & SOFTWARE EMPLOYEES COMPREHENSIVE GUIDE ── */}
+                <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 border border-emerald-200 dark:border-emerald-800/60 shadow-sm space-y-8">
+                    <div>
+                        <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400 mb-1">
+                            <Laptop className="w-4 h-4" />
+                            Tech Sector Special Focus
+                        </div>
+                        <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">
+                            IT & Software Employees Bonus & Variable Pay Guide
+                        </h2>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                            How bonuses really work in Indian IT companies (TCS, Infosys, Wipro, Startups, Product MNCs), notice period traps, and clawback rights.
+                        </p>
+                    </div>
+
+                    {/* IT 2-Tier Reality Alert */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div className="p-5 rounded-2xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800">
+                            <div className="flex items-center gap-2 text-blue-900 dark:text-blue-200 font-bold mb-2">
+                                <Code className="w-5 h-5 text-blue-600" />
+                                Tier 1: Freshers & Trainees (Basic ≤ ₹21,000)
+                            </div>
+                            <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                                Entry-level engineers with packages between ₹3 LPA and ₹4.5 LPA usually have basic salaries between ₹12,000 and ₹16,000. <strong>You are 100% covered under the Payment of Bonus Act, 1965.</strong>
+                            </p>
+                            <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-400">
+                                <li>• Minimum 8.33% statutory bonus is legally mandatory.</li>
+                                <li>• Often paid monthly as "Advance Statutory Bonus" on your salary slip.</li>
+                                <li>• Cannot be withheld if you resign or serve notice.</li>
+                            </ul>
+                        </div>
+
+                        <div className="p-5 rounded-2xl bg-purple-50 dark:bg-purple-950/40 border border-purple-200 dark:border-purple-800">
+                            <div className="flex items-center gap-2 text-purple-900 dark:text-purple-200 font-bold mb-2">
+                                <Terminal className="w-5 h-5 text-purple-600" />
+                                Tier 2: Mid & Senior Engineers (Basic &gt; ₹21,000)
+                            </div>
+                            <p className="text-xs text-gray-700 dark:text-gray-300 leading-relaxed mb-3">
+                                Software Engineers, Leads, and Architects earn basic pay above ₹21,000. Your bonus is <strong>contractual (Variable Pay / PLI / QVA)</strong>, governed by your offer letter and the Indian Contract Act, 1872.
+                            </p>
+                            <ul className="text-xs space-y-1 text-gray-600 dark:text-gray-400">
+                                <li>• If you completed the appraisal year, it is "earned wages".</li>
+                                <li>• Active employee clauses can be challenged under Section 27.</li>
+                                <li>• Signing bonus clawbacks are subject to strict legal limits.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* IT Bonus Type Tabs */}
+                    <div>
+                        <div className="text-xs font-bold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
+                            The 5 Primary Types of Bonuses in Indian IT
+                        </div>
+                        <div className="flex flex-wrap gap-2 mb-4">
+                            <button
+                                onClick={() => setItBonusTab('variable')}
+                                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${itBonusTab === 'variable' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                🎯 Annual Variable Pay (PLI)
+                            </button>
+                            <button
+                                onClick={() => setItBonusTab('quarterly')}
+                                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${itBonusTab === 'quarterly' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                📅 Quarterly Allowance (QVA)
+                            </button>
+                            <button
+                                onClick={() => setItBonusTab('joining')}
+                                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${itBonusTab === 'joining' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                🤝 Joining Bonus & Clawback
+                            </button>
+                            <button
+                                onClick={() => setItBonusTab('retention')}
+                                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${itBonusTab === 'retention' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                ⏳ Retention / Milestone Bonus
+                            </button>
+                            <button
+                                onClick={() => setItBonusTab('freshers')}
+                                className={`px-3 py-2 rounded-xl text-xs font-bold transition-all ${itBonusTab === 'freshers' ? 'bg-emerald-600 text-white shadow-sm' : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white'}`}
+                            >
+                                🧾 Monthly Advance Statutory
+                            </button>
+                        </div>
+
+                        {/* Tab Content Display */}
+                        <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900/60 border border-gray-200 dark:border-gray-700 text-xs md:text-sm text-gray-700 dark:text-gray-300 space-y-3">
+                            {itBonusTab === 'variable' && (
+                                <>
+                                    <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                        <Briefcase className="w-5 h-5 text-emerald-600" />
+                                        Annual Performance-Linked Incentive (PLI / Variable Pay)
+                                    </div>
+                                    <p className="leading-relaxed">
+                                        Typically comprises 10% to 25% of your total CTC. Payout is determined by a 3-way matrix: <strong>Company Growth × Business Unit (BU) Margin × Individual Performance Rating</strong>.
+                                    </p>
+                                    <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-black/5 dark:border-white/5 space-y-1">
+                                        <div className="font-bold text-gray-900 dark:text-white">Legal Protection on Exit:</div>
+                                        <div>If you completed the 12-month appraisal cycle before resigning, this bonus has <strong>legally accrued</strong> as earned remuneration. Employers cannot arbitrarily reduce your rating to zero purely as retaliation for resigning.</div>
+                                    </div>
+                                </>
+                            )}
+
+                            {itBonusTab === 'quarterly' && (
+                                <>
+                                    <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                        <Calendar className="w-5 h-5 text-emerald-600" />
+                                        Quarterly Variable Allowance (QVA)
+                                    </div>
+                                    <p className="leading-relaxed">
+                                        Common in IT service giants (TCS, Infosys, Wipro, Cognizant, Tech Mahindra). Paid every 3 months based on company-wide quarterly earnings and bench utilization.
+                                    </p>
+                                    <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-black/5 dark:border-white/5 space-y-1">
+                                        <div className="font-bold text-gray-900 dark:text-white">Can the company cut QVA to 60% or 70%?</div>
+                                        <div>Yes. Because QVA policies state payout is tied to quarterly operating margins, broad-based cuts across an entire band or business unit are contractual. However, you must be paid whatever percentage was declared for your band.</div>
+                                    </div>
+                                </>
+                            )}
+
+                            {itBonusTab === 'joining' && (
+                                <>
+                                    <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                        <Coins className="w-5 h-5 text-emerald-600" />
+                                        Joining Bonus & The "Double TDS Deduction" Clawback Trap
+                                    </div>
+                                    <p className="leading-relaxed">
+                                        Paid upon onboarding to attract talent from competitors, usually accompanied by a 1-year or 2-year service commitment. If you leave early, HR demands repayment.
+                                    </p>
+                                    <div className="p-3 bg-red-50 dark:bg-red-950/30 rounded-xl border border-red-200 dark:border-red-900 text-red-900 dark:text-red-200 space-y-1">
+                                        <div className="font-bold">The Gross vs Net TDS Trap:</div>
+                                        <div>If you received ₹2,00,000 joining bonus, the employer deducted 30% TDS, giving you only ₹1,40,000 in hand. When you resign, HR frequently demands the <strong>gross ₹2,00,000</strong>. This is unfair unless the employer files a revised Form 24Q or provides a formal tax credit adjustment certificate so you can claim your refund when filing ITR.</div>
+                                    </div>
+                                </>
+                            )}
+
+                            {itBonusTab === 'retention' && (
+                                <>
+                                    <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                        <ShieldCheck className="w-5 h-5 text-emerald-600" />
+                                        Retention & Project Milestone Bonus
+                                    </div>
+                                    <p className="leading-relaxed">
+                                        Contracted to prevent talent attrition during critical digital transformation projects or company acquisitions. Paid after a specified lock-in date (e.g., 18 or 24 months).
+                                    </p>
+                                    <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-black/5 dark:border-white/5 space-y-1">
+                                        <div className="font-bold text-gray-900 dark:text-white">Legal Enforceability:</div>
+                                        <div>Once the milestone date or deliverable is reached, the retention bonus is a guaranteed debt under Section 73 of the Indian Contract Act. If the company delays or denies payout, you can issue an advocate legal demand notice.</div>
+                                    </div>
+                                </>
+                            )}
+
+                            {itBonusTab === 'freshers' && (
+                                <>
+                                    <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                        <FileText className="w-5 h-5 text-emerald-600" />
+                                        Monthly Advance Statutory Bonus on Payslip
+                                    </div>
+                                    <p className="leading-relaxed">
+                                        If your monthly salary slip shows a line item named <strong>"Statutory Bonus"</strong>, <strong>"Advance Bonus"</strong>, or <strong>"Bonus Allowance"</strong> (usually ₹1,000 to ₹1,500/month):
+                                    </p>
+                                    <div className="p-3 bg-white dark:bg-gray-800 rounded-xl border border-black/5 dark:border-white/5 space-y-1">
+                                        <div className="font-bold text-gray-900 dark:text-white">What This Means:</div>
+                                        <div>Your IT employer has divided your mandatory 8.33% annual bonus across 12 monthly pay cycles. While this satisfies the Payment of Bonus Act, it means you will not receive an additional lump-sum bonus ahead of Diwali.</div>
+                                    </div>
+                                </>
+                            )}
+                        </div>
+                    </div>
+
+                    {/* The Active Employee Clause Legal Deep-Dive */}
+                    <div className="p-6 rounded-2xl bg-amber-50 dark:bg-amber-950/40 border border-amber-300 dark:border-amber-800 space-y-3">
+                        <div className="flex items-center gap-2 font-black text-amber-900 dark:text-amber-100 text-base md:text-lg">
+                            <AlertTriangle className="w-6 h-6 text-amber-600 flex-shrink-0" />
+                            How to Defend Against the "Active Employee on Payout Date" Clause
+                        </div>
+                        <p className="text-xs md:text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Many IT companies insert this clause into their variable pay policy: <em className="font-semibold text-gray-900 dark:text-white">"Employee must be an active employee and not serving notice on the date of bonus disbursement."</em>
+                        </p>
+                        
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-xs pt-2">
+                            <div className="p-3 bg-white/80 dark:bg-gray-900/80 rounded-xl border border-amber-200 dark:border-amber-900">
+                                <div className="font-bold text-gray-900 dark:text-white mb-1">⚖️ Section 27, Indian Contract Act:</div>
+                                <div>Using earned remuneration as a financial hostage to prevent employees from exercising their lawful right to resign constitutes an indirect restraint of trade/profession.</div>
+                            </div>
+                            <div className="p-3 bg-white/80 dark:bg-gray-900/80 rounded-xl border border-amber-200 dark:border-amber-900">
+                                <div className="font-bold text-gray-900 dark:text-white mb-1">📜 Doctrine of Quantum Meruit:</div>
+                                <div>Where an employee has completed the full period of work that generated the bonus entitlement, the employer cannot enjoy the benefit of that labor without paying the promised compensation.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Copyable IT Demand Email */}
+                    <div className="p-6 rounded-2xl bg-gray-50 dark:bg-gray-900 border border-gray-200 dark:border-gray-700 space-y-4">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                            <div>
+                                <div className="font-bold text-gray-900 dark:text-white text-base flex items-center gap-2">
+                                    <Terminal className="w-5 h-5 text-emerald-600" />
+                                    IT Grievance Template: Withheld Variable Pay Upon Resignation
+                                </div>
+                                <p className="text-xs text-gray-500 dark:text-gray-400">
+                                    Copy and email this to your IT company HR & Exit Desk if your variable pay was withheld during notice.
+                                </p>
+                            </div>
+                            <button
+                                onClick={copyITTemplate}
+                                className="inline-flex items-center gap-2 px-4 py-2.5 bg-emerald-600 text-white text-xs font-bold rounded-xl hover:bg-emerald-700 transition-all shadow-sm"
+                            >
+                                {copiedIT ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                                {copiedIT ? 'Copied to Clipboard!' : 'Copy IT Demand Email'}
+                            </button>
+                        </div>
+
+                        <div className="p-4 bg-white dark:bg-gray-950 rounded-xl border border-gray-200 dark:border-gray-800 text-xs font-mono text-gray-700 dark:text-gray-300 overflow-x-auto whitespace-pre-wrap max-h-60">
+{`Subject: Formal Request for Disbursement of Earned Variable Pay in F&F Settlement — Ref: [Employee ID]
+
+Dear HR Team,
+
+I am writing regarding my Full & Final (F&F) settlement following my resignation tendered on [Date] and relief on [Last Working Day].
+
+I note with concern that my earned Variable Pay / PLI amounting to approx ₹[Amount] for the appraisal cycle [Dates] has been withheld, citing an "active employee on payout date" policy.
+
+1. I have rendered 100% of my services and achieved my assigned project milestones for the appraisal period [Dates] with a performance rating of [Rating].
+2. Under the Indian Contract Act, 1872, variable compensation that has accrued based on services rendered constitutes earned wages, not an ex-gratia gift.
+3. Withholding earned compensation solely because an employee exercised their lawful right to resign and served notice is an unfair restraint under Section 27 and violates the doctrine of quantum meruit.
+
+I request you to release my earned variable pay in my revised F&F statement within seven (7) working days.
+
+Yours sincerely,
+[Your Name] | [Employee ID] | [Designation]`}
                         </div>
                     </div>
                 </div>
@@ -1009,32 +1311,32 @@ Date: [Current Date]`;
                     </div>
                 </div>
 
-                {/* ── Copyable HR Demand Notice ── */}
+                {/* ── Copyable Statutory HR Demand Notice ── */}
                 <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 border border-gray-200 dark:border-gray-700 shadow-sm space-y-4">
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                         <div>
                             <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-1">
                                 <FileText className="w-4 h-4" />
-                                Legal Recourse
+                                Legal Recourse (Statutory Bonus)
                             </div>
                             <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white">
-                                Formal Demand Letter for Withheld Diwali Bonus
+                                Formal Demand Letter for Withheld Statutory Diwali Bonus
                             </h2>
                             <p className="text-xs text-gray-500 dark:text-gray-400">
-                                Send this notice to HR/Payroll if your statutory bonus is withheld or delayed beyond November 30.
+                                Send this notice to HR/Payroll if your statutory bonus (for Basic ≤ ₹21,000) is withheld or delayed beyond November 30.
                             </p>
                         </div>
 
                         <button
-                            onClick={copyTemplate}
+                            onClick={copyStatutoryTemplate}
                             className="inline-flex items-center gap-2 px-4 py-2.5 bg-primary text-white text-xs font-bold rounded-xl hover:bg-primary/90 transition-all shadow-sm"
                         >
-                            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-                            {copied ? 'Copied to Clipboard!' : 'Copy Demand Letter'}
+                            {copiedStatutory ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                            {copiedStatutory ? 'Copied to Clipboard!' : 'Copy Demand Letter'}
                         </button>
                     </div>
 
-                    <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 text-xs font-mono text-gray-700 dark:text-gray-300 overflow-x-auto whitespace-pre-wrap max-h-72">
+                    <div className="p-4 bg-gray-50 dark:bg-gray-900 rounded-2xl border border-gray-200 dark:border-gray-700 text-xs font-mono text-gray-700 dark:text-gray-300 overflow-x-auto whitespace-pre-wrap max-h-60">
 {`To,
 The Head of Human Resources / Payroll Department
 [Company Name]
@@ -1071,7 +1373,7 @@ Yours sincerely,
                             Frequent Inquiries
                         </div>
                         <h2 className="text-2xl md:text-3xl font-extrabold text-gray-900 dark:text-white">
-                            Diwali Bonus: Frequently Asked Questions
+                            Diwali & IT Employee Bonus: Frequently Asked Questions
                         </h2>
                     </div>
 
