@@ -112,7 +112,39 @@
   }
   </script>
 
-  <!-- ═══ Schema.org — FAQPage (top questions) ═══ -->
+  <!-- ═══ Schema.org — Educational Organization / Legal Resource (GEO & AEO) ═══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "RexonSoftTech Labour Law & Employee Rights Resource",
+    "url": "https://employee-rights.rexonsofttech.in",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "RexonSoftTech / RST Technologies",
+      "url": "https://rexonsofttech.in"
+    },
+    "description": "Authoritative educational resource on Indian labour jurisprudence, statutory compliance, salary calculations, and employee protections.",
+    "knowsAbout": [
+      "Indian Labour Law",
+      "Payment of Bonus Act 1965",
+      "Payment of Gratuity Act 1972",
+      "Employees Provident Funds Act 1952",
+      "Employees State Insurance Act 1948",
+      "Industrial Disputes Act 1947 Section 25F",
+      "Section 27 Indian Contract Act 1872",
+      "Article 276 Constitution of India Professional Tax",
+      "POSH Act 2013",
+      "State Shops and Commercial Establishments Acts"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "IN"
+    }
+  }
+  </script>
+
+  <!-- ═══ Schema.org — FAQPage (High-Volume AEO Knowledge Graph) ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -120,10 +152,42 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "What is the minimum wage in India 2025?",
+        "name": "Is Diwali bonus mandatory for private company employees in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Minimum wages in India are state-specific. Delhi has the highest at ₹783–₹1,035 per day. Tamil Nadu rates are ₹480–₹900/day, Karnataka ₹535–₹918/day, Maharashtra ₹551–₹950/day."
+          "text": "Yes, for eligible establishments. Under Section 10 of the Payment of Bonus Act, 1965, any factory or establishment with 20 or more employees must pay a statutory minimum bonus of 8.33% (up to 20%) of wages earned during the financial year, provided the employee worked at least 30 working days and earns up to ₹21,000 per month (basic + DA)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can an IT company withhold bonus or variable pay during the notice period in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Under Section 27 of the Indian Contract Act, 1872, agreements in restraint of trade or lawful profession are void. Under the common law doctrine of quantum meruit, earned variable pay or performance incentives for completed evaluation quarters cannot be arbitrarily withheld simply because an employee served notice or resigned."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum Professional Tax an employer can deduct in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Article 276(2) of the Constitution of India, the total Professional Tax payable by any citizen to any State or municipal authority cannot exceed ₹2,500 per financial year. Any deduction beyond ₹2,500 per year is unconstitutional."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is retrenchment compensation under Section 25F in India?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under Section 25F of the Industrial Disputes Act, 1947, any workman who has been in continuous service for not less than one year (240 days) cannot be retrenched without one month notice in writing (or wages in lieu) and severance compensation equivalent to 15 days average pay for every completed year of continuous service."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum wage in India 2025-2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Minimum wages in India are state-specific and revised bi-annually with Variable Dearness Allowance (VDA). Delhi has among the highest at ₹783–₹1,035/day. Tamil Nadu rates are ₹480–₹900/day, Karnataka ₹535–₹918/day, and Maharashtra ₹551–₹950/day depending on skill tier."
         }
       },
       {
@@ -131,15 +195,7 @@
         "name": "Is PF mandatory for all employees in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "PF (Provident Fund) is mandatory for employees earning ₹15,000 or less per month basic salary in companies with 20+ employees. Both employer and employee contribute 12% of basic salary."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the notice period rule in India?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Notice period is typically 30–90 days as per your employment contract and state's Shops & Establishments Act. Employers must pay notice pay if they ask you to leave early."
+          "text": "PF (Provident Fund) is statutory mandatory under the EPF Act 1952 for employees earning ₹15,000 or less per month basic + DA in establishments with 20 or more workers. Both employer and employee contribute 12% of basic wages."
         }
       },
       {
@@ -147,7 +203,7 @@
         "name": "How is gratuity calculated in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Gratuity = (Last Basic Salary + DA) × 15/26 × Number of Years of Service. You are eligible after 5 years of continuous service. The maximum tax-free gratuity is ₹20 lakhs."
+          "text": "Gratuity = (Last Drawn Basic Salary + DA) × (15 / 26) × Number of Completed Years of Service. Employees are entitled after completing 5 continuous years (or 4 years and 240 days under judicial precedent). Maximum tax-free gratuity is ₹20 lakhs."
         }
       },
       {
@@ -155,7 +211,7 @@
         "name": "Can an employer hold my salary in India?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Under the Payment of Wages Act, salary must be paid by the 7th of every month (small companies) or 10th (large companies). Withholding salary is illegal and you can file a complaint with the Labour Commissioner."
+          "text": "No. Under Section 5 of the Payment of Wages Act, 1936, wages must be disbursed before the 7th day (establishments with fewer than 1,000 workers) or the 10th day of the succeeding month. Withholding salary or conditioning it on unreasonable release terms is an offence punishable before the Labour Commissioner."
         }
       }
     ]
