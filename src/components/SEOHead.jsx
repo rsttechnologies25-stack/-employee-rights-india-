@@ -519,6 +519,36 @@ const seoData = {
         description: 'Learn about our rigorous legal research methodology, statute verification process, and correction guidelines.',
         keywords: 'editorial policy, statute verification methodology, primary legal sources india, labour law update cadence',
     },
+    '/pf-checker': {
+        title: 'EPF Eligibility & ₹25,000 Wage Ceiling Rule Checker',
+        description: 'Check EPF mandatory deduction eligibility, employer match rules, and statutory salary threshold under EPF & MP Act 1952.',
+        keywords: 'pf eligibility checker, epf 25000 ceiling, pf calculation rules india, uan epf compliance',
+    },
+    '/templates': {
+        title: 'Employment Letter Templates — Resignation, Legal Notice, Grievance',
+        description: 'Free customizable legal templates: formal resignation letters, delayed salary demand notices, relieving letter requests, and POSH complaints.',
+        keywords: 'resignation letter format, delayed salary legal notice template, relieving letter demand format, employment letter templates india',
+    },
+    '/new-labour-codes/wage-code': {
+        title: 'Code on Wages 2019 — 50% Basic Pay Rule & Minimum Wage Floor',
+        description: 'Comprehensive analysis of the Code on Wages 2019: the 50% basic pay restructuring, 2-day F&F settlement timeline, and national floor minimum wage.',
+        keywords: 'code on wages 2019, 50 percent basic pay rule, 2 day fnf settlement rule, national minimum wage floor',
+    },
+    '/new-labour-codes/social-security-code': {
+        title: 'Code on Social Security 2020 — Gig Worker Aggregator Cess & EPF',
+        description: 'Detailed analysis of Code on Social Security 2020: gig and platform worker social security fund (1-2% aggregator turnover cess) and gratuity reform.',
+        keywords: 'code on social security 2020, gig worker benefits india, platform worker cess, fixed term gratuity',
+    },
+    '/new-labour-codes/osh-code': {
+        title: 'Occupational Safety, Health & Working Conditions Code (OSH) 2020',
+        description: 'Guide to OSH Code 2020: annual leave accumulation, overtime regulations, mandatory annual health checkups, and women night shift safeguards.',
+        keywords: 'osh code 2020, occupational safety code india, women night shift safety, overtime rules osh',
+    },
+    '/new-labour-codes/ir-code': {
+        title: 'Industrial Relations Code 2020 — Retrenchment & Layoff Thresholds',
+        description: 'Guide to IR Code 2020: 300-worker threshold for government closure permission, fixed-term employment standing orders, and 14-day strike notice rules.',
+        keywords: 'industrial relations code 2020, 300 worker retrenchment threshold, fixed term employment rights, labour dispute mechanism',
+    },
 };
 
 export default function SEOHead({ path, schema }) {
