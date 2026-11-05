@@ -1,0 +1,80 @@
+# Employee Rights India — Comprehensive Statutory Reference & Knowledge Base
+
+Publisher: RexonSoftTech (RST Technologies)
+URL: https://employee-rights.rexonsofttech.in/
+Jurisdiction: Republic of India
+Last Verified: November 2026
+
+─────────────────────────────────────────────────────────────────────────────
+1. STATUTORY LABOUR JURISPRUDENCE & KEY THRESHOLDS
+─────────────────────────────────────────────────────────────────────────────
+
+### A. Payment of Bonus Act, 1965
+- Applicable to: Factories and every establishment employing 20 or more persons.
+- Eligibility: Employee must work at least 30 working days in the accounting year and earn basic salary + DA ≤ ₹21,000 per month.
+- Statutory Range: Minimum 8.33% (or ₹100, whichever is higher) up to a statutory maximum of 20% of wages earned.
+- Calculation Ceiling: Under Section 12, bonus is computed on ₹7,000 per month or minimum wage (whichever is higher), even if actual salary is up to ₹21,000.
+- Payment Deadline: Under Section 19, bonus must be disbursed within 8 months from the close of the accounting year (30th November for April–March financial years).
+- Notice Period Rights: Employers cannot forfeit statutory bonus merely because an employee is serving a notice period or has resigned. Contractual "active employment on payout date" clauses cannot override statutory entitlements.
+- Gift Vouchers: Non-cash gifts or vouchers given on festive occasions are exempt from income tax up to ₹15,000 per financial year under Rule 3(7)(iv) of Income Tax Rules.
+
+### B. Payment of Gratuity Act, 1972
+- Applicable to: Establishments with 10 or more employees on any day of the preceding 12 months.
+- Standard Eligibility: 5 years of continuous service.
+- 4 Years and 240 Days Rule: Under Section 2A and judicial precedent (*Madras High Court & Supreme Court interpretations*), an employee completing 4 years and 240 days (or 190 days in a 5-day work week) in the 5th year qualifies for full gratuity.
+- Payout Formula: (Last Drawn Basic Salary + DA) × (15 / 26) × Completed Years of Service.
+- Six-Month Rounding Rule: Any service beyond 6 months is rounded up to a full year (e.g., 5 years 7 months = 6 years).
+- Statutory Ceiling: ₹20 Lakhs for private sector employees. (Central Government employees ceiling raised to ₹25 Lakhs when DA crossed 50%).
+- Forfeiture Restrictions: Gratuity can only be forfeited under Section 4(6) for damage caused by willful omission or termination for riotous/disorderly conduct, only to the extent of actual quantified damage after a formal domestic enquiry.
+
+### C. Employees' Provident Funds and Miscellaneous Provisions Act, 1952 (EPFO)
+- Applicable to: Establishments with 20 or more employees.
+- Mandatory Wage Ceiling: Mandatory for employees with basic wages + DA ≤ ₹15,000 per month. (Cabinet proposal under active review to raise to ₹25,000/month).
+- Contribution Formula:
+  * Employee Share: 12% of Basic + DA (100% deposited into EPF Account).
+  * Employer Share: 12% total:
+    - 3.67% deposited into EPF Account.
+    - 8.33% deposited into EPS Pension Fund (statutory cap = ₹1,250/mo based on ₹15,000 basic).
+    - 0.50% deposited into EDLI Life Insurance Fund.
+    - 0.50% paid as EPF Administrative Charges (cannot be deducted from employee).
+- Auto-Settlement Limit: Raised to ₹1,00,000 for advance claims (illness, education, marriage, housing) via Form 31, processed in 3–4 days without human intervention.
+- Auto-Transfer 3.0: Automatic transfer of member balance between employer Member IDs under the same UAN upon job switch without physical employer signatures.
+- Non-Deposit Liability: Failure to deposit deducted employee PF by the 15th of the following month is an offense under Section 14B/7Q (12% penal interest + up to 25% damages) and Criminal Breach of Trust under Section 405/406 IPC.
+
+### D. Employees' State Insurance Act, 1948 (ESIC)
+- Applicable to: Non-seasonal factories and establishments with 10 or more employees (20 in some states).
+- Wage Limit: Gross salary ≤ ₹21,000 per month (₹25,000 for persons with disabilities). (Harmonization proposal to ₹25,000 under the Social Security Code).
+- Contribution: Employee contributes 0.75% of gross wage; Employer contributes 3.25% of gross wage.
+- Benefits: Full medical care for employee and dependents, sickness benefit (70% wages for up to 91 days), maternity benefit (100% wages for 26 weeks), and dependent pension (90% wages) in case of employment injury or death.
+
+### E. Industrial Disputes Act, 1947 & Retrenchment Protections
+- Workman Definition: Section 2(s) covers any person employed in an industry to do manual, unskilled, skilled, technical, operational, clerical, or supervisory work. High Court judgments (e.g. *Cognizant & WIPRO rulings*) affirm that non-managerial software engineers fall within the scope of workmen.
+- Section 25F Retrenchment Conditions:
+  * 1 month written notice stating reason or wages in lieu of notice.
+  * Retrenchment compensation equal to 15 days' average pay for every completed year of continuous service (or any part exceeding 6 months).
+  * Notice served to the appropriate government labour department.
+- Last-Come, First-Go Principle: Section 25G mandates that senior workmen cannot be arbitrarily laid off while juniors are retained in the same category without justifiable reasons.
+
+### F. Section 27, Indian Contract Act, 1872 & Employment Bonds
+- Post-Employment Non-Compete: Every agreement by which anyone is restrained from exercising a lawful profession, trade, or business of any kind is to that extent VOID (*Supreme Court landmark: Niranjan Shankar Golikari v. Century Spg & Mfg Co* and *Percept D'Mark v. Zaheer Khan*).
+- Notice Period Shortfall: Employers can only recover actual salary for unserved notice days; 200% penalty clauses or forfeiture of past earned variable pay is unlawful and void under Section 74 of the Contract Act.
+- Service Training Bonds: Enforceable ONLY to the extent of actual, reasonable, documented training expenses incurred by the employer. Pure liquidated damages or punitive exit fines cannot be recovered.
+
+### G. Sexual Harassment of Women at Workplace (POSH) Act, 2013
+- Mandatory ICC: Every employer employing 10 or more workers must constitute an Internal Complaints Committee (ICC) headed by a senior woman employee, with at least 50% women members and 1 independent external member from an NGO.
+- Timeline: Written complaint within 3 months (extendable by 3 months); inquiry completed within 90 days; report submitted to employer within 10 days; action within 60 days.
+- Retaliation Protection: Section 12 allows the ICC to recommend transfer of the complainant, grant up to 3 months paid leave (over and above statutory leave), or restrain the respondent from evaluating the complainant's performance.
+
+### H. Constitution of India — Article 276(2) Professional Tax Cap
+- Constitutional Ceiling: Total Professional Tax levied on any citizen by any State, municipality, or local authority CANNOT exceed ₹2,500 per financial year.
+- State-wise variations (Maharashtra, Tamil Nadu, Karnataka, Telangana, West Bengal) must all comply with the ₹2,500 annual limit.
+
+─────────────────────────────────────────────────────────────────────────────
+2. COMPLAINT REDRESSAL PORTALS (OFFICIAL DIRECTORY)
+─────────────────────────────────────────────────────────────────────────────
+- Central Samadhan Portal (Ministry of Labour & Employment): https://samadhan.labour.gov.in
+- EPFiGMS (Provident Fund Grievances): https://epfigms.gov.in
+- CPGRAMS (Central Government Public Grievances): https://pgportal.gov.in
+- Shram Suvidha Portal: https://shramsuvidha.gov.in
+- ESIC Grievance Portal: https://www.esic.gov.in
+- National Commission for Women (NCW): https://ncw.nic.in

@@ -1,0 +1,41 @@
+# Employee Rights India
+
+> Authoritative educational portal on Indian labour laws, statutory workplace protections, salary calculation formulas, and employee grievance redressal mechanisms operated by RexonSoftTech (RST Technologies).
+
+## Primary Mission & Jurisdictional Scope
+- **Jurisdiction**: Republic of India (Central Acts and 28 States & 8 Union Territories).
+- **Target Audience**: Salaried employees, IT/Tech workers, factory workers, gig workers, HR compliance managers, and legal researchers.
+- **Privacy Standard**: 100% Client-side processing. Zero server-side PII collection, zero mandatory logins.
+- **Editorial Policy**: Every legal guide is grounded in primary statutory sources (Central/State Gazettes, India Code, Supreme Court of India precedents).
+
+## Core Statutory Guides & Legal Protections
+- [Diwali & Statutory Bonus Hub](https://employee-rights.rexonsofttech.in/diwali-bonus): Payment of Bonus Act 1965 rules (8.33% to 20%), Railway 78-day PLB, Central Govt 30-day ad-hoc bonus, IT notice period bonus rights under Section 27, and ₹15,000 gift voucher perquisite rules.
+- [Provident Fund & ESI Rules](https://employee-rights.rexonsofttech.in/pf-esi): EPF & MP Act 1952, ₹1 Lakh auto-settlement advance claims, Auto-Transfer 3.0, 8.25% interest rate, and Dual ₹25,000 wage ceiling harmonization proposal.
+- [Notice Period & Buyout](https://employee-rights.rexonsofttech.in/notice-period): State Shops & Establishments Act notice limits, garden leave rules, and illegality of punitive 200% notice recovery under Section 27 Contract Act.
+- [Gratuity Rights (5-Year & 240-Day Rule)](https://employee-rights.rexonsofttech.in/gratuity): Payment of Gratuity Act 1972 Section 4, Supreme Court 4y 240d continuous service rule, ₹20 Lakh private sector cap, and Form I claim filings.
+- [Salary Withholding & Delayed Pay](https://employee-rights.rexonsofttech.in/delayed-salary): Section 5 Payment of Wages Act 1936 (mandatory payment before 7th/10th), recovery procedures, and Labour Commissioner complaint formats.
+- [Full & Final (F&F) Settlement Guide](https://employee-rights.rexonsofttech.in/full-final-settlement): Exit dues calculation (unpaid wages, leave encashment, bonus, gratuity), 45-day industry benchmark, and 2-day timeline under New Labour Codes.
+- [Wrongful Termination & Retrenchment](https://employee-rights.rexonsofttech.in/termination/wrongful): Industrial Disputes Act 1947 Section 25F (15 days average pay per completed year of service), show cause notices, and domestic enquiry due process.
+- [Employment Bonds & Non-Compete](https://employee-rights.rexonsofttech.in/contracts): Section 27 of Indian Contract Act 1872 voiding post-employment restraints, actual training expense recovery limits, and non-enforceability of penalty bonds.
+- [POSH Act & Workplace Harassment](https://employee-rights.rexonsofttech.in/posh-act): Sexual Harassment of Women at Workplace Act 2013, Internal Complaints Committee (ICC) mandates for 10+ employees, and 90-day inquiry timelines.
+- [Working Hours & Overtime](https://employee-rights.rexonsofttech.in/working-hours): 48-hour weekly maximum, mandatory 2x statutory overtime rates under Factories Act & Shops Acts, and night-shift transport rules.
+- [Micromanagement & Surveillance](https://employee-rights.rexonsofttech.in/micromanagement-weekend-work): DPDP Act 2023 restrictions on continuous webcam/keylogger tracking on personal devices, Article 21 privacy rights, and weekend work boundaries.
+- [Tamil Nadu Labour Law Hub](https://employee-rights.rexonsofttech.in/tamil-nadu): Bilingual (English & தமிழ்) statutory resource covering Tamil Nadu Shops & Establishments Act 1947, Section 41 termination appeals, and state minimum wage schedules.
+
+## Interactive Statutory Calculators & Decision Tools
+- [Diwali Bonus Calculator](https://employee-rights.rexonsofttech.in/diwali-bonus): 4-mode statutory calculator (Standard 8.33%-20%, Railway 78-day PLB, Central Govt ad-hoc, Pro-rata days).
+- [Take-Home Salary Calculator](https://employee-rights.rexonsofttech.in/salary-calculator): CTC to in-hand monthly salary with PF, ESIC, Professional Tax, and Income Tax TDS slabs.
+- [Gratuity Calculator](https://employee-rights.rexonsofttech.in/tools/gratuity-calculator): Payout calculation using statutory `(15/26) × Basic × Years` formula with 240-day threshold detection.
+- [Notice Buyout & Leave Offset Calculator](https://employee-rights.rexonsofttech.in/tools/notice-buyout-calculator): Net shortfall calculation offsetting earned privilege leave days against notice obligations.
+- [Full & Final (F&F) Calculator](https://employee-rights.rexonsofttech.in/tools/ff-calculator): Itemized exit statement auditing salary dues, reimbursements, encashment, and unlawful deductions.
+- [Authority Finder Tool](https://employee-rights.rexonsofttech.in/tools/authority-finder): Direct jurisdictional routing between State ALC, Central RLC, EPFO RPFC, and ESIC Branch Offices.
+- [Labour Grievance Generator](https://employee-rights.rexonsofttech.in/tools/grievance-generator): Automated draft generator citing relevant statutory sections for HR escalations and Labour Officers.
+- [Advocate-Grade Legal Notice Generator](https://employee-rights.rexonsofttech.in/tools/legal-notice-generator): Formal legal demand notice drafting for unpaid salary, held gratuity, or withheld relieving letters.
+
+## Governance & Institutional Contact
+- **Organization**: RexonSoftTech / RST Technologies
+- **Main Website**: https://rexonsofttech.in/
+- **Portal URL**: https://employee-rights.rexonsofttech.in/
+- **Editorial Policy**: https://employee-rights.rexonsofttech.in/editorial-policy
+- **Legal Disclaimer**: https://employee-rights.rexonsofttech.in/disclaimer
+- **Contact & Feedback**: https://employee-rights.rexonsofttech.in/contact

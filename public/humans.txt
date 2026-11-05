@@ -1,0 +1,19 @@
+/* TEAM */
+Organization: RexonSoftTech (RST Technologies)
+Site: https://employee-rights.rexonsofttech.in
+Parent: https://rexonsofttech.in
+Contact: contact@rexonsofttech.in
+Location: India
+
+/* EDITORIAL & RESEARCH METHODOLOGY */
+Mission: Democratizing Indian labour law awareness through plain-language guidance, privacy-first calculators, and official filing templates.
+Standards: Grounded in the Constitution of India, Central Acts, State Gazettes, and Supreme Court of India precedents.
+Review Cadence: Bi-annual for Minimum Wages & VDA (April/October), Annual for Tax & TDS (Union Budget).
+
+/* SITE & TECHNOLOGY */
+Architecture: Single Page Application (SPA) with Progressive Web App (PWA) offline caching
+Framework: React 18, Vite, Tailwind CSS, Lucide Icons
+Standards: W3C Semantic HTML5, Schema.org JSON-LD (FAQPage, Article, Organization, BreadcrumbList)
+Privacy: 100% Client-Side Processing. No personal data collected or stored server-side.
+IndexNow: Supported via API key verification
+Last Updated: November 2026

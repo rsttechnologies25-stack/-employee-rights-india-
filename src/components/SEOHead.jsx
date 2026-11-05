@@ -524,6 +524,9 @@ const seoData = {
 export default function SEOHead({ path, schema }) {
     const data = seoData[path] || seoData['/'];
     const fullUrl = `${BASE_URL}${path}`;
+    const cleanTitle = data.title.includes(BRAND) ? data.title : `${data.title} — ${BRAND}`;
+    const ogType = path === '/' ? 'website' : 'article';
+    const isArticle = path !== '/' && !path.startsWith('/tools') && path !== '/about' && path !== '/contact' && path !== '/privacy-policy' && path !== '/terms' && path !== '/disclaimer';
 
     // Automatic BreadcrumbList Schema for Rich Search Results
     const breadcrumbSchema = {
@@ -545,18 +548,60 @@ export default function SEOHead({ path, schema }) {
         ]
     };
 
+    // Automated Schema.org Article / WebPage Entity
+    const entitySchema = {
+        "@context": "https://schema.org",
+        "@type": isArticle ? "Article" : "WebPage",
+        "headline": data.title,
+        "name": data.title,
+        "description": data.description,
+        "url": fullUrl,
+        "inLanguage": path.startsWith('/tamil-nadu') ? ["en-IN", "ta"] : "en-IN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": fullUrl
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": BRAND,
+            "url": BASE_URL,
+            "logo": {
+                "@type": "ImageObject",
+                "url": `${BASE_URL}/icon-512.png`,
+                "width": 512,
+                "height": 512
+            }
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "RexonSoftTech Labour Law Editorial Team",
+            "url": `${BASE_URL}/editorial-policy`
+        },
+        "datePublished": "2025-01-01",
+        "dateModified": "2026-11-05"
+    };
+
     return (
         <Helmet>
-            {/* ── Primary ── */}
-            <title>{data.title} | {BRAND}</title>
+            {/* ── Primary Meta Tags ── */}
+            <title>{cleanTitle}</title>
             <meta name="description" content={data.description} />
             <meta name="keywords" content={data.keywords} />
             <meta name="author" content="RexonSoftTech / RST Technologies" />
             <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+            <meta name="language" content="en-IN" />
+            <meta name="revisit-after" content="3 days" />
             <link rel="canonical" href={fullUrl} />
 
-            {/* ── Open Graph ── */}
-            <meta property="og:type" content="article" />
+            {/* ── Multilingual Hreflang Tags ── */}
+            <link rel="alternate" hrefLang="en-IN" href={fullUrl} />
+            <link rel="alternate" hrefLang="x-default" href={fullUrl} />
+            {path.startsWith('/tamil-nadu') && (
+                <link rel="alternate" hrefLang="ta" href={fullUrl} />
+            )}
+
+            {/* ── Open Graph / Facebook ── */}
+            <meta property="og:type" content={ogType} />
             <meta property="og:site_name" content={SITE_NAME} />
             <meta property="og:title" content={data.title} />
             <meta property="og:description" content={data.description} />
@@ -576,16 +621,22 @@ export default function SEOHead({ path, schema }) {
             <meta name="twitter:image" content={OG_IMAGE} />
             <meta name="twitter:url" content={fullUrl} />
 
-            {/* ── Geo (India) ── */}
+            {/* ── Geo Tags (India) ── */}
             <meta name="geo.region" content="IN" />
             <meta name="geo.country" content="India" />
+            <meta name="ICBM" content="20.5937, 78.9629" />
 
-            {/* ── Automatic Breadcrumb Schema ── */}
+            {/* ── Automated BreadcrumbList Schema ── */}
             <script type="application/ld+json">
                 {JSON.stringify(breadcrumbSchema)}
             </script>
 
-            {/* ── Custom Schema.org JSON-LD ── */}
+            {/* ── Automated Article / WebPage Entity Schema ── */}
+            <script type="application/ld+json">
+                {JSON.stringify(entitySchema)}
+            </script>
+
+            {/* ── Custom Schema.org JSON-LD (e.g. AboutPage, FAQPage) ── */}
             {schema && (
                 <script type="application/ld+json">
                     {JSON.stringify(schema)}

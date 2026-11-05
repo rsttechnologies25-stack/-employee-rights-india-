@@ -10,6 +10,9 @@ Allow: /
 Allow: /public/
 Allow: /assets/
 Allow: /sitemap.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
+Allow: /humans.txt
 
 # Block internal build directories, source code, and temp logs
 Disallow: /src/
@@ -18,7 +21,7 @@ Disallow: /scratch/
 Disallow: /.system_generated/
 Disallow: /node_modules/
 
-# ═══ Traditional Search Engine Crawlers (SEO) ═══
+# ═══ 1. Traditional Search Engine Crawlers (SEO Discovery) ═══
 User-agent: Googlebot
 Allow: /
 
@@ -34,18 +37,22 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# ═══ AI Answer Engine & Generative Search Crawlers (AEO & GEO) ═══
-# Explicitly permitted to crawl and cite statutory legal guides in AI Overviews & summaries
-User-agent: GPTBot
+# ═══ 2. AI Search & Answer Engine Bots (AEO & GEO Direct Answers) ═══
+# Grounded real-time search crawlers permitted to cite guides in search answers
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: OAI-SearchBot
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: PerplexityBot
+User-agent: Claude-SearchBot
+Allow: /
+
+# ═══ 3. Generative AI Training & Knowledge Graph Scrapers ═══
+User-agent: GPTBot
 Allow: /
 
 User-agent: ClaudeBot
@@ -66,7 +73,8 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
-# Sitemap Index Declaration
+# ═══ 4. Discovery Declarations ═══
 Sitemap: https://employee-rights.rexonsofttech.in/sitemap.xml
 Host: https://employee-rights.rexonsofttech.in
+
 
