@@ -8,6 +8,7 @@ import Chatbot from './components/Chatbot';
 import { ThemeProvider } from './context/ThemeContext';
 
 // Lazy loaded pages
+const RawStaticViewer = lazy(() => import('./components/RawStaticViewer'));
 const Home = lazy(() => import('./pages/Home'));
 const PFESIPage = lazy(() => import('./pages/PFESIPage'));
 const ContractsPage = lazy(() => import('./pages/ContractsPage'));
@@ -259,6 +260,15 @@ function App() {
                                 <Route path="/new-labour-codes/social-security-code" element={<SocialSecurityCodePage />} />
                                 <Route path="/new-labour-codes/osh-code" element={<OSHCodePage />} />
                                 <Route path="/new-labour-codes/ir-code" element={<IRCodePage />} />
+
+                                {/* Fail-Safe Static File Routes (Protects Against Stale PWA Service Worker Interceptions) */}
+                                <Route path="/robots.txt" element={<RawStaticViewer file="/robots.txt" contentType="text/plain" />} />
+                                <Route path="/sitemap.xml" element={<RawStaticViewer file="/sitemap.xml" contentType="application/xml" />} />
+                                <Route path="/sitemap_index.xml" element={<Navigate to="/sitemap.xml" replace />} />
+                                <Route path="/llms.txt" element={<RawStaticViewer file="/llms.txt" contentType="text/plain" />} />
+                                <Route path="/llms-full.txt" element={<RawStaticViewer file="/llms-full.txt" contentType="text/plain" />} />
+                                <Route path="/humans.txt" element={<RawStaticViewer file="/humans.txt" contentType="text/plain" />} />
+                                <Route path="/BingSiteAuth.xml" element={<RawStaticViewer file="/BingSiteAuth.xml" contentType="application/xml" />} />
 
                                 {/* 404 Fallback */}
                                 <Route path="*" element={<NotFoundPage />} />

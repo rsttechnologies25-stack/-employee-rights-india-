@@ -1,7 +1,9 @@
 {
+  "cleanUrls": false,
+  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/((?!assets/|robots\\.txt|sitemap\\.xml|sitemap_index\\.xml|llms\\.txt|llms-full\\.txt|humans\\.txt|BingSiteAuth\\.xml|[\\w-]+\\.[a-z0-9]+).*)",
       "destination": "/index.html"
     }
   ],
@@ -41,8 +43,38 @@
       ]
     },
     {
-      "source": "/(sitemap.xml|robots.txt|llms.txt|llms-full.txt|humans.txt)",
+      "source": "/robots.txt",
       "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(sitemap.xml|sitemap_index.xml)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(llms.txt|llms-full.txt|humans.txt)",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600, stale-while-revalidate=86400"

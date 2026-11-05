@@ -1,1 +1,13 @@
-/*    /index.html   200
+# Direct static pass-throughs for Cloudflare Pages / Netlify
+/robots.txt       /robots.txt       200
+/robots.txt/      /robots.txt       301
+/sitemap.xml      /sitemap.xml      200
+/sitemap.xml/     /sitemap.xml      301
+/sitemap_index.xml /sitemap.xml     301
+/llms.txt         /llms.txt         200
+/llms-full.txt    /llms-full.txt    200
+/humans.txt       /humans.txt       200
+/BingSiteAuth.xml /BingSiteAuth.xml 200
+
+# SPA fallback
+/*                /index.html       200

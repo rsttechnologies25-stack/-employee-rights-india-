@@ -8,6 +8,18 @@ export default defineConfig({
         react(),
         VitePWA({
             registerType: 'autoUpdate',
+            workbox: {
+                navigateFallbackDenylist: [
+                    /^\/robots\.txt$/,
+                    /^\/sitemap\.xml$/,
+                    /^\/sitemap_index\.xml$/,
+                    /^\/llms\.txt$/,
+                    /^\/llms-full\.txt$/,
+                    /^\/humans\.txt$/,
+                    /^\/BingSiteAuth\.xml$/,
+                    /\.[a-zA-Z0-9]+$/
+                ]
+            },
             manifest: {
                 name: 'Employee Rights India',
                 short_name: 'EmployeeRights',
