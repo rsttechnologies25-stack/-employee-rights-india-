@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ShieldCheck, Menu, X, ChevronDown, Moon, Sun, Search, Compass, Scale, HelpCircle } from 'lucide-react';
 import { useTheme } from '../context/ThemeContext';
 import SearchModal from './SearchModal';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const navGroups = [
     {
@@ -170,6 +171,9 @@ export default function Navbar() {
                     {/* Search & Theme Controls */}
                     <div className="hidden lg:flex items-center gap-2.5">
                         
+                        {/* Language Switcher */}
+                        <LanguageSwitcher />
+
                         {/* Search Button */}
                         <button
                             type="button"
@@ -196,6 +200,8 @@ export default function Navbar() {
 
                     {/* Mobile Hamburger Menu & Search Toggle */}
                     <div className="flex items-center gap-1.5 lg:hidden">
+                        <LanguageSwitcher />
+
                         <button
                             type="button"
                             onClick={() => setSearchOpen(true)}

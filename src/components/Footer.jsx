@@ -98,6 +98,38 @@ export default function Footer() {
 
                 </div>
 
+                {/* Multilingual India Hub */}
+                <div className="border-t border-gray-800 pt-6 pb-6 my-6">
+                    <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+                        <div>
+                            <h4 className="text-white font-bold text-xs flex items-center gap-2">
+                                <Globe className="w-4 h-4 text-primary" /> Multilingual India Knowledge Hub (12 Constitutional Languages)
+                            </h4>
+                            <p className="text-[11px] text-gray-400 mt-1">
+                                Zero unreviewed machine translation. Statutory employee guidance is authored in English and certified by human legal contributors.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-2 text-xs">
+                            <Link to="/" className="px-2.5 py-1 bg-primary/20 text-primary-light border border-primary/30 rounded-lg font-bold">
+                                English (Active)
+                            </Link>
+                            <Link to="/tamil-nadu" className="px-2.5 py-1 bg-gray-800 hover:bg-gray-700 text-gray-200 border border-gray-700 rounded-lg font-semibold transition-colors">
+                                தமிழ் (Tamil Hub)
+                            </Link>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">हिन्दी</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">తెలుగు</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">ಕನ್ನಡ</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">മലയാളം</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">বাংলা</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">मराठी</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">ગુજરાતી</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">ਪੰਜਾਬੀ</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">ଓଡ଼ିଆ</span>
+                            <span className="px-2 py-0.5 bg-gray-800/60 text-gray-400 rounded-md text-[10px]" title="Under legal verification">اردو</span>
+                        </div>
+                    </div>
+                </div>
+
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row justify-between items-center text-xs gap-3">
                     <div className="flex items-center gap-1 text-gray-400">
