@@ -103,25 +103,86 @@ export default function PFESIPage() {
                     </p>
                 </div>
 
-                {/* ── EPF Wage Ceiling Hike Info Box ── */}
-                <div className="p-6 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/40 dark:to-indigo-950/40 rounded-2xl border border-blue-200 dark:border-blue-900/50 space-y-3">
-                    <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-2">
-                            <span className="p-1.5 rounded-lg bg-blue-600 text-white font-black text-xs">2026</span>
-                            <span className="font-extrabold text-blue-950 dark:text-blue-100 text-base sm:text-lg">
-                                📈 EPF Statutory Wage Ceiling Revision: ₹15,000 ➔ ₹25,000 Proposal
-                            </span>
+                {/* ── Dual 25k Social Security Harmonization (EPF & ESI) ── */}
+                <div className="p-6 sm:p-8 bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/40 dark:via-indigo-950/40 dark:to-purple-950/40 rounded-3xl border border-blue-200 dark:border-blue-900/50 space-y-5">
+                    <div className="flex flex-wrap items-center justify-between gap-3">
+                        <div className="flex items-center gap-2.5">
+                            <span className="p-2 rounded-xl bg-blue-600 text-white font-black text-xs">2026 Policy</span>
+                            <div>
+                                <h3 className="font-extrabold text-blue-950 dark:text-blue-100 text-lg sm:text-xl">
+                                    The Dual "₹25,000" Harmonization: EPF (₹15k ➔ ₹25k) & ESI (₹21k ➔ ₹25k)
+                                </h3>
+                                <p className="text-xs text-blue-700 dark:text-blue-300">
+                                    Ministry of Labour & Central Board of Trustees proposal to unify social security thresholds under the Social Security Code.
+                                </p>
+                            </div>
                         </div>
-                        <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-blue-200/60 dark:bg-blue-900 text-blue-900 dark:text-blue-200">
+                        <span className="text-xs font-bold px-3 py-1.5 rounded-full bg-blue-200/70 dark:bg-blue-900 text-blue-950 dark:text-blue-200 border border-blue-300 dark:border-blue-800">
                             Active Cabinet Review
                         </span>
                     </div>
-                    <p className="text-xs sm:text-sm text-blue-900 dark:text-blue-200 leading-relaxed">
-                        <strong>Current Rule:</strong> Mandatory EPF contribution applies to employees earning up to <strong>₹15,000 Basic pay (statutory PF deduction cap = ₹1,800/month)</strong> unless both employee and employer voluntarily opt to contribute on actual full basic wages.
-                    </p>
-                    <p className="text-xs sm:text-sm text-blue-900 dark:text-blue-200 leading-relaxed">
-                        <strong>Proposed Revision:</strong> Raising the statutory ceiling from <strong>₹15,000 to ₹25,000/month</strong> will raise the mandatory monthly deduction cap from <strong>₹1,800 to ₹3,000/month</strong>, boost the maximum EPS pension contribution from ₹1,250 to ₹2,083/month, and bring millions of additional private-sector workers under mandatory social security.
-                    </p>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+                        {/* EPF Card */}
+                        <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-blue-150 dark:border-blue-900 shadow-sm space-y-3">
+                            <div className="flex items-center justify-between">
+                                <span className="font-bold text-sm text-gray-900 dark:text-white flex items-center gap-1.5">
+                                    <Landmark className="w-4 h-4 text-blue-600" /> 1. EPF Wage Ceiling (Basic Pay)
+                                </span>
+                                <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300">
+                                    ₹15,000 ➔ ₹25,000
+                                </span>
+                            </div>
+                            <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-2">
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0" />
+                                    <span><strong>Current:</strong> Mandatory 12% deduction capped at ₹15,000 basic = <strong>₹1,800/month</strong>.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0" />
+                                    <span><strong>Proposed:</strong> Cap moves to ₹25,000 basic = <strong>₹3,000/month</strong> (12% of ₹25,000).</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0" />
+                                    <span><strong>Pension Boost:</strong> EPS max contribution jumps from <strong>₹1,250 to ₹2,083/month</strong> (8.33% of ₹25k).</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-blue-600 mt-1.5 shrink-0" />
+                                    <span><strong>Coverage:</strong> Employees with basic between ₹15,001 and ₹25,000 get mandatory PF protection.</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* ESI Card */}
+                        <div className="p-5 rounded-2xl bg-white dark:bg-gray-900 border border-blue-150 dark:border-blue-900 shadow-sm space-y-3">
+                            <div className="flex items-center justify-between">
+                                <span className="font-bold text-sm text-gray-900 dark:text-white flex items-center gap-1.5">
+                                    <Heart className="w-4 h-4 text-rose-500" /> 2. ESI Wage Ceiling (Gross Pay)
+                                </span>
+                                <span className="text-xs font-extrabold px-2.5 py-0.5 rounded-full bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300">
+                                    ₹21,000 ➔ ₹25,000
+                                </span>
+                            </div>
+                            <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-2">
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0" />
+                                    <span><strong>Current:</strong> Free ESI medical care restricted to gross salary ≤ <strong>₹21,000/month</strong>.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0" />
+                                    <span><strong>Proposed:</strong> Ceiling harmonized up to <strong>₹25,000/month</strong> gross salary.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0" />
+                                    <span><strong>Coverage:</strong> Salaried workers earning between ₹21,001 and ₹25,000 regain hospital, OPD, and maternity benefits.</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-rose-500 mt-1.5 shrink-0" />
+                                    <span><strong>Disability/Death:</strong> Extends 90% wage dependent pension for workplace injuries to higher wage earners.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
                 {/* ── 2026 EPFO Digital Reforms Hub ── */}

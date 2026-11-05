@@ -19,19 +19,21 @@ export default function PFChecker() {
 
         // ESI Rules: Gross <= 21000
         const esiEligible = sal <= 21000;
+        const inProposed25kZone = sal > 15000 && sal <= 25000;
 
         setResult({
             pf: pfEligible,
             pfType: pfMandatory ? 'Mandatory' : 'Optional (Employer Policy)',
             esi: esiEligible,
+            inProposed25kZone,
             pfDesc: pfEligible
                 ? (pfMandatory
                     ? "Your employer MUST contribute to your PF by law since your basic salary is below ₹15,000. It applies from Day 1."
-                    : "PF is still standard, but mandatory limits apply to Basic ≤ ₹15k. Most companies provide it regardless.")
+                    : "PF is standard, but mandatory statutory limits apply to Basic ≤ ₹15,000. Most companies offer it voluntarily on full basic.")
                 : "PF doesn't typically apply to genuine unpaid student interns or statutory apprentices.",
             esiDesc: esiEligible
                 ? "You are eligible for medical benefits under ESIC since your salary is ₹21,000 or less."
-                : "Gross salary exceeds ₹21,000. You are not covered under ESI. Your company should provide private insurance."
+                : "Gross salary exceeds ₹21,000. You are currently not covered under ESI. (Under review to expand to ₹25,000)."
         });
     };
 
@@ -109,6 +111,17 @@ export default function PFChecker() {
                                 <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{result.esiDesc}</p>
                             </div>
                         </div>
+
+                        {result.inProposed25kZone && (
+                            <div className="p-4 rounded-xl bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-900/60 text-xs text-blue-900 dark:text-blue-200 space-y-1">
+                                <div className="font-bold flex items-center gap-1.5 text-blue-800 dark:text-blue-300">
+                                    <span>📈</span> 2026 Dual ₹25,000 Social Security Revision Zone
+                                </div>
+                                <p className="leading-relaxed">
+                                    Your salary falls in the <strong>₹15,001 – ₹25,000</strong> bracket! Under the proposed ₹25,000 statutory wage ceiling revision, your EPF will become <strong>100% mandatory</strong> (up to ₹3,000/mo deduction) and gross salary up to ₹25,000 will be brought under <strong>ESI health coverage</strong>.
+                                </p>
+                            </div>
+                        )}
 
                         <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400">
                             <Landmark className="w-4 h-4" />
