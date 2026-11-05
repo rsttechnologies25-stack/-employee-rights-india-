@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, HelpCircle, Compass, Scale, ShieldCheck, Lock, Calculator, FileText, ChevronDown, ChevronUp, Sparkles, BookOpen, Zap, Calendar, ExternalLink } from 'lucide-react';
+import { ArrowRight, HelpCircle, Compass, Scale, ShieldCheck, Lock, Calculator, FileText, ChevronDown, ChevronUp, Sparkles, BookOpen, Zap, Calendar, ExternalLink, Gift } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import SearchBar from '../components/SearchBar';
 import TrustEducationalNotice from '../components/TrustEducationalNotice';
@@ -9,6 +9,7 @@ import OfficialGovResources from '../components/OfficialGovResources';
 import { latestUpdates } from '../data/whatsNewData';
 
 const topProblemCards = [
+    { title: 'Diwali & Statutory Bonus (2026)', desc: '8.33% to 20% bonus rules, IT notice period rights & ₹21k cap', path: '/diwali-bonus', icon: '🪔', badge: 'Nov 30 Deadline' },
     { title: 'Salary Not Paid / Withheld', desc: 'Employer delayed salary past 7th/10th or stopped payment', path: '/delayed-salary', icon: '💰', badge: 'Urgent' },
     { title: 'Notice Period & Buyout Rules', desc: 'Notice buyout disputes, early release, garden leave rules', path: '/notice-period', icon: '📝' },
     { title: 'Fired / Retrenched / Layoff', desc: 'Termination without notice, domestic enquiry, severance pay', path: '/termination/after-confirmation', icon: '🚪' },
@@ -31,6 +32,7 @@ const secondaryProblemCards = [
 ];
 
 const popularTools = [
+    { title: 'Diwali & Statutory Bonus Calculator', desc: '4-mode bonus calculator (8.33%-20%), Railway 78-day PLB, and Central Govt rules.', path: '/diwali-bonus', icon: Gift, badge: '🪔 Festive 2026' },
     { title: 'Take-Home Salary Calculator', desc: 'Calculate CTC to in-hand salary with PF, tax, and HRA.', path: '/salary-calculator', icon: Calculator, badge: 'Popular' },
     { title: 'Gratuity Eligibility Calculator', desc: 'Calculate gratuity payout under 4y 240d Supreme Court rule.', path: '/tools/gratuity-calculator', icon: Calculator, badge: 'High Utility' },
     { title: 'Authority Finder Tool', desc: 'Find exact Labour Commissioner office (State ALC / Central RLC).', path: '/tools/authority-finder', icon: Compass, badge: 'Essential' },
@@ -53,9 +55,19 @@ export default function Home() {
             <section className="bg-gradient-to-br from-primary via-[#1e3a8a] to-indigo-950 py-14 sm:py-20 px-4 text-white">
                 <div className="max-w-4xl mx-auto text-center space-y-6">
                     
-                    <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-200 text-xs font-bold tracking-wide uppercase">
-                        <Sparkles className="w-3.5 h-3.5 text-accent" />
-                        Free & Privacy-First Legal Guidance
+                    <div className="flex flex-wrap items-center justify-center gap-2">
+                        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-blue-200 text-xs font-bold tracking-wide uppercase">
+                            <Sparkles className="w-3.5 h-3.5 text-accent" />
+                            Free & Privacy-First Legal Guidance
+                        </div>
+                        <Link 
+                            to="/diwali-bonus"
+                            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-400/20 border border-amber-300/40 text-amber-200 hover:text-white hover:bg-amber-400/30 text-xs font-black tracking-wide transition-all shadow-sm"
+                        >
+                            <span>🪔</span>
+                            <span>Diwali Bonus 2026 Rules & Calculator Live</span>
+                            <ArrowRight className="w-3.5 h-3.5" />
+                        </Link>
                     </div>
 
                     <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight leading-tight">
@@ -298,8 +310,8 @@ export default function Home() {
                                     <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 leading-relaxed">
                                         {upd.summary}
                                     </p>
-                                    <Link to="/whats-new" className="text-xs font-bold text-primary inline-flex items-center gap-1 pt-1">
-                                        Read Update Details <ArrowRight className="w-3 h-3" />
+                                    <Link to={upd.link || "/whats-new"} className="text-xs font-bold text-primary inline-flex items-center gap-1 pt-1 hover:underline">
+                                        {upd.linkLabel || "Read Update Details"} <ArrowRight className="w-3 h-3" />
                                     </Link>
                                 </div>
                             ))}
